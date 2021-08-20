@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PicoMobileController.cpp.obj": [
+			"PicoMobileController.cpp.obj",
+			"PicoMobileControllerBFlib.cpp.obj",
+			"PicoMobileControllerKeys.cpp.obj",
+			"PicoMobileControllerState.cpp.obj"
+		],
+		"Module.PicoMobileController.gen.cpp.obj": [
+			"PicoMobileController.init.gen.cpp.obj",
+			"PicoMobileControllerBFlib.gen.cpp.obj"
+		]
+	}
+}

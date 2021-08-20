@@ -1,0 +1,28 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PicoMobile.cpp.obj": [
+			"EyeMaskComponent.cpp.obj",
+			"PicoBlueprintFunctionLibrary.cpp.obj",
+			"PicoCustomPresent.cpp.obj",
+			"PicoEyeTracker.cpp.obj",
+			"PicoImport.cpp.obj",
+			"PicoJava.cpp.obj",
+			"PicoMobile.cpp.obj",
+			"PicoMobileRender.cpp.obj",
+			"PicoMobileSettings.cpp.obj",
+			"PicoSettingsCustomization.cpp.obj",
+			"PicoSystemToolService.cpp.obj",
+			"PicoVRSplash.cpp.obj",
+			"PicoVRStereoLayers.cpp.obj"
+		],
+		"Module.PicoMobile.gen.cpp.obj": [
+			"EyeMaskComponent.gen.cpp.obj",
+			"PicoBlueprintFunctionLibrary.gen.cpp.obj",
+			"PicoMobile.init.gen.cpp.obj",
+			"PicoMobileSettings.gen.cpp.obj",
+			"PicoSplashTypes.gen.cpp.obj",
+			"PicoSystemToolService.gen.cpp.obj"
+		]
+	}
+}

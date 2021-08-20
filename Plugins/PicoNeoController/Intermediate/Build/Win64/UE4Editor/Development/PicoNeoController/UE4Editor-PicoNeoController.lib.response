@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-PicoNeoController.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Unreal\Pico_Layer_Demo\Intermediate\Build\Win64\UE4Editor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.obj"
+"D:\Unreal\Pico_Layer_Demo\Plugins\PicoNeoController\Intermediate\Build\Win64\UE4Editor\Development\PicoNeoController\Module.PicoNeoController.cpp.obj"
+"D:\Unreal\Pico_Layer_Demo\Plugins\PicoNeoController\Intermediate\Build\Win64\UE4Editor\Development\PicoNeoController\Module.PicoNeoController.gen.cpp.obj"
+"D:\Unreal\Pico_Layer_Demo\Plugins\PicoNeoController\Intermediate\Build\Win64\UE4Editor\Development\PicoNeoController\Default.rc2.res"
+/OUT:"D:\Unreal\Pico_Layer_Demo\Plugins\PicoNeoController\Intermediate\Build\Win64\UE4Editor\Development\PicoNeoController\UE4Editor-PicoNeoController.lib"
+/INCLUDE:IMPLEMENT_MODULE_PicoNeoController

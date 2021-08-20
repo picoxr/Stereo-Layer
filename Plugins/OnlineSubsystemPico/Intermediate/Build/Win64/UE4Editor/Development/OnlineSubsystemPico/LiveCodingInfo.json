@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.OnlineSubsystemPico.cpp.obj": [
+			"OnlineAchievementsInterfacePico.cpp.obj",
+			"OnlineLeaderboardInterfacePico.cpp.obj",
+			"OnlineMessageMultiTaskPico.cpp.obj",
+			"OnlineMessageTaskManagerPico.cpp.obj",
+			"OnlinePlatformInterfacePico.cpp.obj",
+			"OnlineSubsystemPico.cpp.obj",
+			"OnlineSubsystemPicoModule.cpp.obj"
+		]
+	}
+}

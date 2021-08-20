@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.PicoNeoController.cpp.obj": [
+			"PicoNeoController.cpp.obj",
+			"PicoNeoControllerBPlib.cpp.obj",
+			"PicoNeoControllerJni.cpp.obj",
+			"PicoNeoControllerKey.cpp.obj"
+		],
+		"Module.PicoNeoController.gen.cpp.obj": [
+			"PicoNeoController.init.gen.cpp.obj",
+			"PicoNeoControllerBPlib.gen.cpp.obj"
+		]
+	}
+}
