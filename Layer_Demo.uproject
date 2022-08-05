@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.26",
+	"EngineAssociation": "4.27",
 	"Category": "",
 	"Description": "",
 	"Plugins": [
@@ -27,16 +27,12 @@
 			"Enabled": true
 		},
 		{
-			"Name": "PicoMobile",
-			"Enabled": true
-		},
-		{
-			"Name": "PicoMobileController",
-			"Enabled": true
-		},
-		{
-			"Name": "PicoNeoController",
-			"Enabled": true
+			"Name": "PicoXR",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"Android"
+			]
 		}
 	]
 }
