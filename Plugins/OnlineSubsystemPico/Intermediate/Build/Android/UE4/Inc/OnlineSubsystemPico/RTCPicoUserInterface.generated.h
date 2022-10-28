@@ -14,11 +14,38 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define ONLINESUBSYSTEMPICO_RTCPicoUserInterface_generated_h
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Public_RTCPicoUserInterface_h
+#define CURRENT_FILE_ID Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Public_RTCPicoUserInterface_h
 
+
+#define FOREACH_ENUM_ERTCSTREAMREMOVEREASON(op) \
+	op(ERtcStreamRemoveReason::Unpublish) \
+	op(ERtcStreamRemoveReason::PublishFailed) \
+	op(ERtcStreamRemoveReason::KeepLiveFailed) \
+	op(ERtcStreamRemoveReason::ClientDisconnected) \
+	op(ERtcStreamRemoveReason::Republish) \
+	op(ERtcStreamRemoveReason::Other) \
+	op(ERtcStreamRemoveReason::None) 
+
+enum class ERtcStreamRemoveReason : uint8;
+template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcStreamRemoveReason>();
+
+#define FOREACH_ENUM_ERTCMEDIASTREAMTYPE(op) \
+	op(ERtcMediaStreamType::Audio) \
+	op(ERtcMediaStreamType::Video) \
+	op(ERtcMediaStreamType::Both) \
+	op(ERtcMediaStreamType::None) 
+
+enum class ERtcMediaStreamType : uint8;
+template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcMediaStreamType>();
+
+#define FOREACH_ENUM_ERTCSYNCINFOSTREAMTYPE(op) \
+	op(ERtcSyncInfoStreamType::Audio) \
+	op(ERtcSyncInfoStreamType::None) 
+
+enum class ERtcSyncInfoStreamType : uint8;
+template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcSyncInfoStreamType>();
 
 #define FOREACH_ENUM_ERTCMEDIADEVICEERROR(op) \
-	op(ERtcMediaDeviceError::None) \
 	op(ERtcMediaDeviceError::Ok) \
 	op(ERtcMediaDeviceError::NoPermission) \
 	op(ERtcMediaDeviceError::DeviceBusy) \
@@ -26,129 +53,130 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(ERtcMediaDeviceError::DeviceNotFound) \
 	op(ERtcMediaDeviceError::DeviceDisconnected) \
 	op(ERtcMediaDeviceError::DeviceNoCallback) \
-	op(ERtcMediaDeviceError::UnSupporttedFormat) 
+	op(ERtcMediaDeviceError::UnSupporttedFormat) \
+	op(ERtcMediaDeviceError::None) 
 
 enum class ERtcMediaDeviceError : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcMediaDeviceError>();
 
 #define FOREACH_ENUM_ERTCMEDIADEVICESTATE(op) \
-	op(ERtcMediaDeviceState::None) \
 	op(ERtcMediaDeviceState::Started) \
 	op(ERtcMediaDeviceState::Stopped) \
 	op(ERtcMediaDeviceState::RuntimeError) \
 	op(ERtcMediaDeviceState::Added) \
-	op(ERtcMediaDeviceState::Removed) 
+	op(ERtcMediaDeviceState::Removed) \
+	op(ERtcMediaDeviceState::None) 
 
 enum class ERtcMediaDeviceState : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcMediaDeviceState>();
 
 #define FOREACH_ENUM_ERTCMEDIADEVICETYPE(op) \
-	op(ERtcMediaDeviceType::None) \
 	op(ERtcMediaDeviceType::AudioUnknown) \
 	op(ERtcMediaDeviceType::AudioRenderDevice) \
-	op(ERtcMediaDeviceType::AudioCaptureDevice) 
+	op(ERtcMediaDeviceType::AudioCaptureDevice) \
+	op(ERtcMediaDeviceType::None) 
 
 enum class ERtcMediaDeviceType : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcMediaDeviceType>();
 
 #define FOREACH_ENUM_ERTCUSERLEAVEREASONTYPE(op) \
-	op(ERtcUserLeaveReasonType::None) \
 	op(ERtcUserLeaveReasonType::Quit) \
-	op(ERtcUserLeaveReasonType::Dropped) 
+	op(ERtcUserLeaveReasonType::Dropped) \
+	op(ERtcUserLeaveReasonType::None) 
 
 enum class ERtcUserLeaveReasonType : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcUserLeaveReasonType>();
 
 #define FOREACH_ENUM_ERTCJOINROOMTYPE(op) \
-	op(ERtcJoinRoomType::None) \
 	op(ERtcJoinRoomType::First) \
-	op(ERtcJoinRoomType::Reconnected) 
+	op(ERtcJoinRoomType::Reconnected) \
+	op(ERtcJoinRoomType::None) 
 
 enum class ERtcJoinRoomType : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcJoinRoomType>();
 
 #define FOREACH_ENUM_ERTCEARMONITORMODE(op) \
-	op(ERtcEarMonitorMode::None) \
 	op(ERtcEarMonitorMode::Off) \
-	op(ERtcEarMonitorMode::On) 
+	op(ERtcEarMonitorMode::On) \
+	op(ERtcEarMonitorMode::None) 
 
 enum class ERtcEarMonitorMode : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcEarMonitorMode>();
 
 #define FOREACH_ENUM_ERTCSTREAMINDEX(op) \
-	op(ERtcStreamIndex::None) \
 	op(ERtcStreamIndex::Main) \
-	op(ERtcStreamIndex::Screen) 
+	op(ERtcStreamIndex::Screen) \
+	op(ERtcStreamIndex::None) 
 
 enum class ERtcStreamIndex : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcStreamIndex>();
 
 #define FOREACH_ENUM_ERTCAUDIOSCENARIOTYPE(op) \
-	op(ERtcAudioScenarioType::None) \
 	op(ERtcAudioScenarioType::Music) \
 	op(ERtcAudioScenarioType::HighQualityCommunication) \
 	op(ERtcAudioScenarioType::Communication) \
 	op(ERtcAudioScenarioType::Media) \
-	op(ERtcAudioScenarioType::GameStreaming) 
+	op(ERtcAudioScenarioType::GameStreaming) \
+	op(ERtcAudioScenarioType::None) 
 
 enum class ERtcAudioScenarioType : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcAudioScenarioType>();
 
 #define FOREACH_ENUM_ERTCAUDIOPLAYBACKDEVICE(op) \
-	op(ERtcAudioPlaybackDevice::None) \
 	op(ERtcAudioPlaybackDevice::Headset) \
 	op(ERtcAudioPlaybackDevice::EarPiece) \
 	op(ERtcAudioPlaybackDevice::SpeakerPhone) \
 	op(ERtcAudioPlaybackDevice::HeadsetBlueTooth) \
-	op(ERtcAudioPlaybackDevice::HeadsetUsb) 
+	op(ERtcAudioPlaybackDevice::HeadsetUsb) \
+	op(ERtcAudioPlaybackDevice::None) 
 
 enum class ERtcAudioPlaybackDevice : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcAudioPlaybackDevice>();
 
 #define FOREACH_ENUM_ERTCPAUSERESUMEMEDIATYPE(op) \
-	op(ERtcPauseResumeMediaType::None) \
 	op(ERtcPauseResumeMediaType::Audio) \
 	op(ERtcPauseResumeMediaType::Video) \
-	op(ERtcPauseResumeMediaType::AudioAndVideo) 
+	op(ERtcPauseResumeMediaType::AudioAndVideo) \
+	op(ERtcPauseResumeMediaType::None) 
 
 enum class ERtcPauseResumeMediaType : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcPauseResumeMediaType>();
 
 #define FOREACH_ENUM_ERTCMUTESTATE(op) \
-	op(ERtcMuteState::None) \
 	op(ERtcMuteState::Off) \
-	op(ERtcMuteState::On) 
+	op(ERtcMuteState::On) \
+	op(ERtcMuteState::None) 
 
 enum class ERtcMuteState : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcMuteState>();
 
 #define FOREACH_ENUM_ERTCROOMPROFILETYPE(op) \
-	op(ERtcRoomProfileType::None) \
 	op(ERtcRoomProfileType::Communication) \
 	op(ERtcRoomProfileType::LiveBroadcasting) \
 	op(ERtcRoomProfileType::Game) \
 	op(ERtcRoomProfileType::CloundGame) \
-	op(ERtcRoomProfileType::LowLatency) 
+	op(ERtcRoomProfileType::LowLatency) \
+	op(ERtcRoomProfileType::None) 
 
 enum class ERtcRoomProfileType : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcRoomProfileType>();
 
 #define FOREACH_ENUM_ERTCENGINEINITRESULT(op) \
-	op(ERtcEngineInitResult::None) \
 	op(ERtcEngineInitResult::Unknow) \
 	op(ERtcEngineInitResult::AlreadyInitialized) \
 	op(ERtcEngineInitResult::InvalidConfig) \
-	op(ERtcEngineInitResult::Success) 
+	op(ERtcEngineInitResult::Success) \
+	op(ERtcEngineInitResult::None) 
 
 enum class ERtcEngineInitResult : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcEngineInitResult>();
 
 #define FOREACH_ENUM_ERTCPRIVILEGE(op) \
-	op(ERtcPrivilege::None) \
 	op(ERtcPrivilege::PublishStream) \
 	op(ERtcPrivilege::PublishAudioStream) \
 	op(ERtcPrivilege::PublishVideoStream) \
-	op(ERtcPrivilege::SubscribeStream) 
+	op(ERtcPrivilege::SubscribeStream) \
+	op(ERtcPrivilege::None) 
 
 enum class ERtcPrivilege : uint8;
 template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<ERtcPrivilege>();

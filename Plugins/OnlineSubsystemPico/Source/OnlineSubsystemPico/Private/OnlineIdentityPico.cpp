@@ -45,6 +45,7 @@ bool FUserOnlineAccountPico::GetAuthAttribute(const FString& AttrName, FString& 
 bool FOnlineIdentityPico::Login(int32 LocalUserNum, const FOnlineAccountCredentials& AccountCredentials)
 {
     UE_LOG_ONLINE_IDENTITY(Log, TEXT("FOnlineIdentityPico::Login"));
+    Logout(LocalUserNum);
 #if PLATFORM_ANDROID
     FString ErrorStr;
     TSharedPtr<FUserOnlineAccountPico> UserAccountPtr;
@@ -55,7 +56,14 @@ bool FOnlineIdentityPico::Login(int32 LocalUserNum, const FOnlineAccountCredenti
     }
     else
     {
+#if ENGINE_MAJOR_VERSION > 4
         FUniqueNetIdRef* UserId = UserIds.Find(LocalUserNum);
+#elif ENGINE_MINOR_VERSION > 26
+        FUniqueNetIdRef* UserId = UserIds.Find(LocalUserNum);
+#elif ENGINE_MINOR_VERSION > 24
+        TSharedPtr<const FUniqueNetId>* UserId = UserIds.Find(LocalUserNum);
+#endif
+
         if (UserId == nullptr)
         {
             UE_LOG_ONLINE_IDENTITY(Log, TEXT("Login Request"));
@@ -69,13 +77,25 @@ bool FOnlineIdentityPico::Login(int32 LocalUserNum, const FOnlineAccountCredenti
         else
         {
             UE_LOG_ONLINE_IDENTITY(Log, TEXT("Local user vaild."));
+#if ENGINE_MAJOR_VERSION > 4
             TriggerOnLoginCompleteDelegates(LocalUserNum, true, **UserId, *ErrorStr);
+#elif ENGINE_MINOR_VERSION > 26
+            TriggerOnLoginCompleteDelegates(LocalUserNum, true, **UserId, *ErrorStr);
+#elif ENGINE_MINOR_VERSION > 24
+            TriggerOnLoginCompleteDelegates(LocalUserNum, true, *UserId->Get(), *ErrorStr);
+#endif
         }
     }
     if (!ErrorStr.IsEmpty())
     {
         UE_LOG_ONLINE_IDENTITY(Warning, TEXT("Failed Pico login. %s"), *ErrorStr);
+#if ENGINE_MAJOR_VERSION > 4
         TriggerOnLoginCompleteDelegates(LocalUserNum, false, *FUniqueNetIdPico::EmptyId(), ErrorStr);
+#elif ENGINE_MINOR_VERSION > 26
+        TriggerOnLoginCompleteDelegates(LocalUserNum, false, *FUniqueNetIdPico::EmptyId(), ErrorStr);
+#elif ENGINE_MINOR_VERSION > 24
+        TriggerOnLoginCompleteDelegates(LocalUserNum, false, FUniqueNetIdPico(), ErrorStr);
+#endif
     }
 #endif
     return false;   
@@ -85,11 +105,25 @@ bool FOnlineIdentityPico::Logout(int32 LocalUserNum)
 {
     UE_LOG_ONLINE_IDENTITY(Log, TEXT("FOnlineIdentityPico::Logout"));
 #if PLATFORM_ANDROID
+
+#if ENGINE_MAJOR_VERSION > 4
     FUniqueNetIdPtr UserId = GetUniquePlayerId(LocalUserNum);
     if (UserId.IsValid())
     {
         UserAccounts.Remove(UserId.ToSharedRef());
+#elif ENGINE_MINOR_VERSION > 26
+    FUniqueNetIdPtr UserId = GetUniquePlayerId(LocalUserNum);
+    if (UserId.IsValid())
+    {
+        UserAccounts.Remove(UserId.ToSharedRef());
+#elif ENGINE_MINOR_VERSION > 24
+    TSharedPtr<const FUniqueNetId> UserId = GetUniquePlayerId(LocalUserNum);
+    if (UserId.IsValid())
+    {
+        UserAccounts.Remove(FUniqueNetIdPico(*UserId));
+#endif
         UserIds.Remove(LocalUserNum);
+        LoginPicoUserMap.Remove(LocalUserNum);
         TriggerOnLogoutCompleteDelegates(LocalUserNum, true);
         TriggerOnLoginStatusChangedDelegates(LocalUserNum, ELoginStatus::LoggedIn, ELoginStatus::NotLoggedIn, *UserId);
         return true;
@@ -113,7 +147,14 @@ TSharedPtr<FUserOnlineAccount> FOnlineIdentityPico::GetUserAccount(const FUnique
 {
     UE_LOG_ONLINE_IDENTITY(Log, TEXT("FOnlineIdentityPico::GetUserAccount"));
     TSharedPtr<FUserOnlineAccount> Result;
+#if ENGINE_MAJOR_VERSION > 4
     const TSharedRef<FUserOnlineAccountPico>* FoundUserAccount = UserAccounts.Find(UserId.AsShared());
+#elif ENGINE_MINOR_VERSION > 26
+    const TSharedRef<FUserOnlineAccountPico>* FoundUserAccount = UserAccounts.Find(UserId.AsShared());
+#elif ENGINE_MINOR_VERSION > 24
+    FUniqueNetIdPico PicoUserId(UserId);
+    const TSharedRef<FUserOnlineAccountPico>* FoundUserAccount = UserAccounts.Find(PicoUserId);
+#endif
     if (FoundUserAccount != nullptr)
     {
         Result = *FoundUserAccount;
@@ -125,23 +166,60 @@ TArray<TSharedPtr<FUserOnlineAccount> > FOnlineIdentityPico::GetAllUserAccounts(
 {
     UE_LOG_ONLINE_IDENTITY(Log, TEXT("FOnlineIdentityPico::GetAllUserAccounts"));
     TArray<TSharedPtr<FUserOnlineAccount>> Result;
+#if ENGINE_MAJOR_VERSION > 4
     for (TUniqueNetIdMap<TSharedRef<FUserOnlineAccountPico>>::TConstIterator It(UserAccounts); It; ++It)
+#elif ENGINE_MINOR_VERSION > 26
+    for (TUniqueNetIdMap<TSharedRef<FUserOnlineAccountPico>>::TConstIterator It(UserAccounts); It; ++It)
+#elif ENGINE_MINOR_VERSION > 24
+    for (TMap<FUniqueNetIdPico, TSharedRef<FUserOnlineAccountPico>>::TConstIterator It(UserAccounts); It; ++It)
+#endif
     {
         Result.Add(It.Value());
     }
     return Result;
 }
 
+#if ENGINE_MAJOR_VERSION > 4
 FUniqueNetIdPtr FOnlineIdentityPico::GetUniquePlayerId(int32 LocalUserNum) const
 {
     UE_LOG_ONLINE_IDENTITY(Log, TEXT("FOnlineIdentityPico::GetUniquePlayerId"));
     if (const FUniqueNetIdRef* FoundId = UserIds.Find(LocalUserNum))
+#elif ENGINE_MINOR_VERSION > 26
+FUniqueNetIdPtr FOnlineIdentityPico::GetUniquePlayerId(int32 LocalUserNum) const
+{
+    UE_LOG_ONLINE_IDENTITY(Log, TEXT("FOnlineIdentityPico::GetUniquePlayerId"));
+    if (const FUniqueNetIdRef* FoundId = UserIds.Find(LocalUserNum))
+#elif ENGINE_MINOR_VERSION > 24
+TSharedPtr<const FUniqueNetId> FOnlineIdentityPico::GetUniquePlayerId(int32 LocalUserNum) const
+{
+    UE_LOG_ONLINE_IDENTITY(Log, TEXT("FOnlineIdentityPico::GetUniquePlayerId"));
+    const TSharedPtr<const FUniqueNetId>* FoundId = UserIds.Find(LocalUserNum);
+    if (FoundId != nullptr)
+#endif
     {
         return *FoundId;
     }
     return nullptr;
 }
 
+#if ENGINE_MAJOR_VERSION > 4
+FUniqueNetIdPtr FOnlineIdentityPico::CreateUniquePlayerId(uint8* Bytes, int32 Size)
+{
+    UE_LOG_ONLINE_IDENTITY(Log, TEXT("FOnlineIdentityPico::CreateUniquePlayerId"));
+    if (Bytes != nullptr && Size == sizeof(ppfID))
+    {
+        uint64* RawUniqueId = (uint64*)Bytes;
+        ppfID PicoId(*RawUniqueId);
+        return FUniqueNetIdPico::Create(PicoId);
+    }
+    return nullptr;
+}
+
+FUniqueNetIdPtr FOnlineIdentityPico::CreateUniquePlayerId(const FString& Str)
+{
+    return FUniqueNetIdPico::Create(Str);
+}
+#elif ENGINE_MINOR_VERSION > 26
 FUniqueNetIdPtr FOnlineIdentityPico::CreateUniquePlayerId(uint8* Bytes, int32 Size)
 {
     UE_LOG_ONLINE_IDENTITY(Log, TEXT("FOnlineIdentityPico::CreateUniquePlayerId"));
@@ -159,10 +237,37 @@ FUniqueNetIdPtr FOnlineIdentityPico::CreateUniquePlayerId(const FString& Str)
     return FUniqueNetIdPico::Create(Str);
 }
 
+#elif ENGINE_MINOR_VERSION > 24
+TSharedPtr<const FUniqueNetId> FOnlineIdentityPico::CreateUniquePlayerId(uint8* Bytes, int32 Size)
+{
+    UE_LOG_ONLINE_IDENTITY(Log, TEXT("FOnlineIdentityPico::CreateUniquePlayerId"));
+    if (Bytes != nullptr && Size == sizeof(ppfID))
+    {
+        uint64* RawUniqueId = (uint64*)Bytes;
+        ppfID PicoId(*RawUniqueId);
+        return MakeShareable(new FUniqueNetIdPico(PicoId));
+    }
+    return nullptr;
+}
+
+TSharedPtr<const FUniqueNetId> FOnlineIdentityPico::CreateUniquePlayerId(const FString& Str)
+{
+    return MakeShareable(new FUniqueNetIdPico(Str));
+}
+#endif
+
+
+
 ELoginStatus::Type FOnlineIdentityPico::GetLoginStatus(int32 LocalUserNum) const
 {
     UE_LOG_ONLINE_IDENTITY(Log, TEXT("FOnlineIdentityPico::GetLoginStatus"));
+#if ENGINE_MAJOR_VERSION > 4
     FUniqueNetIdPtr UserId = GetUniquePlayerId(LocalUserNum);
+#elif ENGINE_MINOR_VERSION > 26
+    FUniqueNetIdPtr UserId = GetUniquePlayerId(LocalUserNum);
+#elif ENGINE_MINOR_VERSION > 24
+    TSharedPtr<const FUniqueNetId> UserId = GetUniquePlayerId(LocalUserNum);
+#endif
     if (UserId.IsValid())
     {
         return GetLoginStatus(*UserId);
@@ -185,7 +290,13 @@ ELoginStatus::Type FOnlineIdentityPico::GetLoginStatus(const FUniqueNetId& UserI
 FString FOnlineIdentityPico::GetPlayerNickname(int32 LocalUserNum) const
 {
     UE_LOG_ONLINE_IDENTITY(Log, TEXT("FOnlineIdentityPico::GetPlayerNickname"));
+#if ENGINE_MAJOR_VERSION > 4
     FUniqueNetIdPtr UniqueId = GetUniquePlayerId(LocalUserNum);
+#elif ENGINE_MINOR_VERSION > 26
+    FUniqueNetIdPtr UniqueId = GetUniquePlayerId(LocalUserNum);
+#elif ENGINE_MINOR_VERSION > 24
+    TSharedPtr<const FUniqueNetId> UniqueId = GetUniquePlayerId(LocalUserNum);
+#endif
     if (UniqueId.IsValid())
     {
         return GetPlayerNickname(*UniqueId);
@@ -209,7 +320,14 @@ FString FOnlineIdentityPico::GetAuthToken(int32 LocalUserNum) const
 {
     // Testing
     UE_LOG_ONLINE_IDENTITY(Log, TEXT("FOnlineIdentityPico::GetAuthToken"));
+#if ENGINE_MAJOR_VERSION > 4
     FUniqueNetIdPtr UserId = GetUniquePlayerId(LocalUserNum);
+#elif ENGINE_MINOR_VERSION > 26
+    FUniqueNetIdPtr UserId = GetUniquePlayerId(LocalUserNum);
+#elif ENGINE_MINOR_VERSION > 24
+    TSharedPtr<const FUniqueNetId> UserId = GetUniquePlayerId(LocalUserNum);
+#endif
+
     if (UserId.IsValid())
     {
         TSharedPtr<FUserOnlineAccount> UserAccount = GetUserAccount(*UserId);
@@ -224,7 +342,13 @@ FString FOnlineIdentityPico::GetAuthToken(int32 LocalUserNum) const
 void FOnlineIdentityPico::RevokeAuthToken(const FUniqueNetId& UserId, const FOnRevokeAuthTokenCompleteDelegate& Delegate)
 {
     UE_LOG_ONLINE_IDENTITY(Display, TEXT("FOnlineIdentityPico::RevokeAuthToken not implemented"));
+#if ENGINE_MAJOR_VERSION > 4
     FUniqueNetIdRef UserIdRef(UserId.AsShared());
+#elif ENGINE_MINOR_VERSION > 26
+    FUniqueNetIdRef UserIdRef(UserId.AsShared());
+#elif ENGINE_MINOR_VERSION > 24
+    TSharedRef<const FUniqueNetId> UserIdRef(UserId.AsShared());
+#endif
     PicoSubsystem.ExecuteNextTick([UserIdRef, Delegate]()
         {
             Delegate.ExecuteIfBound(*UserIdRef, FOnlineError(FString(TEXT("RevokeAuthToken not implemented"))));
@@ -245,7 +369,11 @@ FPlatformUserId FOnlineIdentityPico::GetPlatformUserIdFromUniqueNetId(const FUni
         auto CurrentUniqueId = GetUniquePlayerId(i);
         if (CurrentUniqueId.IsValid() && (*CurrentUniqueId == UniqueNetId))
         {
+#if ENGINE_MAJOR_VERSION > 4
+            return GetPlatformUserIdFromLocalUserNum(i);
+#elif ENGINE_MINOR_VERSION > 24
             return i;
+#endif
         }
     }
 
@@ -258,16 +386,30 @@ FString FOnlineIdentityPico::GetAuthType() const
 }
 
 
+UPico_User* FOnlineIdentityPico::GetLoginPicoUser(int32 LocalUserNum)
+{
+    if (LoginPicoUserMap.Contains(LocalUserNum))
+    {
+        return *LoginPicoUserMap.Find(LocalUserNum);
+    }
+    return nullptr;
+}
+
 FOnlineIdentityPico::FOnlineIdentityPico(FOnlineSubsystemPico& InSubsystem)
     : PicoSubsystem(InSubsystem)
 {
-//    FOnlineIdentityPico::AutoLogin(0);
+    //FOnlineIdentityPico::AutoLogin(0);
 }
 
 void FOnlineIdentityPico::OnLoginComplete(ppfMessageHandle Message, bool bIsError, int32 LocalUserNum)
 {
-    UE_LOG_ONLINE_IDENTITY(Log, TEXT("Login Complete!"));
+    UE_LOG_ONLINE_IDENTITY(Display, TEXT("FOnlineIdentityPico::OnLoginComplete"));
 #if PLATFORM_ANDROID
+    if (!Message)
+    {
+        return;
+    }
+    UE_LOG_ONLINE_IDENTITY(Log, TEXT("Login Complete!"));
     FString ErrorStr;
     if (bIsError)
     {
@@ -277,9 +419,12 @@ void FOnlineIdentityPico::OnLoginComplete(ppfMessageHandle Message, bool bIsErro
     else
     {
         auto User = ppf_Message_GetUser(Message);
+        
+        UPico_User* Userobj = NewObject<UPico_User>();
+        Userobj->InitParams(User);
         FString Id = UTF8_TO_TCHAR(ppf_User_GetID(User));
+        UE_LOG_ONLINE_IDENTITY(Display, TEXT("FOnlineIdentityPico::OnLoginComplete, %s"), *Id);
 
-        // GetPicoID ?
         FString Name = UTF8_TO_TCHAR(ppf_User_GetDisplayName(User));
         FString ImageUrl = UTF8_TO_TCHAR(ppf_User_GetImageUrl(User));
         ppfUserPresenceStatus ppfUPS = ppf_User_GetPresenceStatus(User);
@@ -302,15 +447,15 @@ void FOnlineIdentityPico::OnLoginComplete(ppfMessageHandle Message, bool bIsErro
         {
             UserPresenceStatus = EUserPresenceStatus::OnLine;
         }
-        FUserInformation UserInfo;
+        FPicoUserInfo UserInfo;
         UserInfo.DisplayName = Name;
         UserInfo.Gender = Gender;
         UserInfo.ImageUrl = ImageUrl;
         UserInfo.UserId = Id;
         UserInfo.UserPresenceStatus = UserPresenceStatus;
         UE_LOG_ONLINE_IDENTITY(Log, TEXT("Pico login. %s"), *Id);
+#if ENGINE_MAJOR_VERSION > 4
         FUniqueNetIdRef LocalUserId = FUniqueNetIdPico::Create(Id);
-
         if (!LocalUserId->IsValid())
         {
             ErrorStr = FString(TEXT("Unable to get a valid ID"));
@@ -318,16 +463,57 @@ void FOnlineIdentityPico::OnLoginComplete(ppfMessageHandle Message, bool bIsErro
         else
         {
             UserIds.Add(LocalUserNum, LocalUserId);
-
+            LoginPicoUserMap.Add(LocalUserNum, Userobj);
             // update/add cached entry for user
             UserAccounts.Add(LocalUserId, TSharedRef<FUserOnlineAccountPico>(new FUserOnlineAccountPico(LocalUserId, Name)));
-
-            UserInfos.Add(LocalUserNum, UserInfo);
+            //UserInfos.Add(LocalUserNum, UserInfo);
             TriggerOnLoginCompleteDelegates(LocalUserNum, true, *LocalUserId, *ErrorStr);
             TriggerOnLoginStatusChangedDelegates(LocalUserNum, ELoginStatus::NotLoggedIn, ELoginStatus::LoggedIn, *LocalUserId);
             return;
 
         }
+#elif ENGINE_MINOR_VERSION > 26
+        FUniqueNetIdRef LocalUserId = FUniqueNetIdPico::Create(Id);
+        if (!LocalUserId->IsValid())
+        {
+            ErrorStr = FString(TEXT("Unable to get a valid ID"));
+        }
+        else
+        {
+            UserIds.Add(LocalUserNum, LocalUserId);
+            LoginPicoUserMap.Add(LocalUserNum, Userobj);
+            // update/add cached entry for user
+            UserAccounts.Add(LocalUserId, TSharedRef<FUserOnlineAccountPico>(new FUserOnlineAccountPico(LocalUserId, Name)));
+            //UserInfos.Add(LocalUserNum, UserInfo);
+            TriggerOnLoginCompleteDelegates(LocalUserNum, true, *LocalUserId, *ErrorStr);
+            TriggerOnLoginStatusChangedDelegates(LocalUserNum, ELoginStatus::NotLoggedIn, ELoginStatus::LoggedIn, *LocalUserId);
+            return;
+
+        }
+#elif ENGINE_MINOR_VERSION > 24
+        TSharedPtr<const FUniqueNetId>* NewUserId = UserIds.Find(LocalUserNum);
+        if (NewUserId == nullptr || !NewUserId->IsValid() || static_cast<const FUniqueNetIdPico>(*NewUserId->Get()).ToString() != Id)
+        {
+            UserIds.Add(LocalUserNum, MakeShareable(new FUniqueNetIdPico(Id)));
+            NewUserId = UserIds.Find(LocalUserNum);
+        }
+
+        if (!NewUserId->IsValid())
+        {
+            ErrorStr = FString(TEXT("Unable to get a valid ID"));
+        }
+        else
+        {
+            TSharedRef<FUserOnlineAccountPico> UserAccountRef(new FUserOnlineAccountPico(NewUserId->ToSharedRef(), Name));
+            LoginPicoUserMap.Add(LocalUserNum, Userobj);
+            // update/add cached entry for user
+            UserAccounts.Add(static_cast<FUniqueNetIdPico>(*UserAccountRef->GetUserId()), UserAccountRef);
+
+            TriggerOnLoginCompleteDelegates(LocalUserNum, true, *UserAccountRef->GetUserId(), *ErrorStr);
+            TriggerOnLoginStatusChangedDelegates(LocalUserNum, ELoginStatus::NotLoggedIn, ELoginStatus::LoggedIn, *UserAccountRef->GetUserId());
+            return;
+        }
+#endif
     }
 
     TriggerOnLoginCompleteDelegates(LocalUserNum, false, *FUniqueNetIdPico::EmptyId(), *ErrorStr);

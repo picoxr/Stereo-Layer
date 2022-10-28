@@ -11,207 +11,18 @@
 #include "RTCPicoUserInterface.h"
 #include "OnlineSessionSettings.h"
 #include "OnlineSessionInterfacePico.h"
+#include "OnlineLeaderboardInterfacePico.h"
 #include "UObject/Object.h"
+#include "PicoPresenceInterface.h"
+#include "PicoApplicationInterface.h"
+#include "ApplicationLifecycleInterface.h"
+#include "Pico_Leaderboard.h"
+#include "Pico_AssetFile.h"
 #include "OnlineSubsystemPicoManager.generated.h"
 /**
  * 
  */
 
-UENUM(BlueprintType)
-enum class EPresenceStatus : uint8
-{
-    Unknow,
-    OnLine,
-    OffLine
-};
-UENUM(BlueprintType)
-enum class EOnlineAsyncTaskStatePicoType : uint8
-{
-    NotStarted,
-    InProgress,
-    Done,
-    Failed
-};
-UENUM(BlueprintType)
-enum class EOnJoinSessionCompleteResultPicoType : uint8
-{
-    Success,
-    SessionIsFull,
-    SessionDoesNotExist,
-    CouldNotRetrieveAddress,
-    AlreadyInSession,
-    UnknownError
-};
-UENUM(BlueprintType)
-enum class EOnlineSessionStatePicoType : uint8
-{
-    NoSession,
-    Creating,
-    Pending,
-    Starting,
-    InProgress,
-    Ending,
-    Ended,
-    Destroying
-};
-USTRUCT(BlueprintType, meta = (DisplayName = "OnlinePicoFriend"))
-struct FPicoFriend
-{
-    GENERATED_USTRUCT_BODY()
-
-    UPROPERTY(BlueprintReadWrite, Category = "OnlinePicoFriend")
-    FString UserId;
-
-    UPROPERTY(BlueprintReadWrite, Category = "OnlinePicoFriend")
-    FString DisPlayName;
-
-    UPROPERTY(BlueprintReadWrite, Category = "OnlinePicoFriend")
-    EPresenceStatus FriendPresenceStatus;
-};
-
-USTRUCT(BlueprintType, meta = (DisplayName = "PicoOnlineSessionSettings"))
-struct FPicoOnlineSessionSettings
-{
-    GENERATED_USTRUCT_BODY()
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSettings")
-    int NumPublicConnections;
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSettings")
-    int NumPrivateConnections;
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSettings")
-    bool bShouldAdvertise;
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSettings")
-    bool bAllowInvites;
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSettings")
-    bool bUsesPresence;
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSettings")
-    bool bAllowJoinViaPresence;
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSettings")
-    bool bAllowJoinViaPresenceFriendsOnly;
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSettings")
-    int BuildUniqueId;
-
-    // Settings
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSettings")
-    TArray<FString> KeyArray;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSettings")
-    TArray<FString> ValueArray;
-};
-USTRUCT(BlueprintType, meta = (DisplayName = "PicoOnlineSession"))
-struct FPicoOnlineSession
-{
-    GENERATED_USTRUCT_BODY()
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSession")
-    FString OwningUserId;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSession")
-    FString OwningUserName;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSession")
-    FPicoOnlineSessionSettings SessionSettings;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSession")
-    FString SessionInfoRoomID;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSession")
-    int32 NumOpenPrivateConnections;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSession")
-    int32 NumOpenPublicConnections;
-};
-USTRUCT(BlueprintType, meta = (DisplayName = "PicoNamedOnlineSession"))
-struct FPicoNamedOnlineSession
-{
-    GENERATED_USTRUCT_BODY()
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoNamedOnlineSession")
-    FString SessionName;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoNamedOnlineSession")
-    int32 HostingPlayerNum;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoNamedOnlineSession")
-    bool bHosting;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoNamedOnlineSession")
-    FString LocalOwnerId;
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoNamedOnlineSession")
-    TArray< FString > RegisteredPlayers;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoNamedOnlineSession")
-    EOnlineSessionStatePicoType SessionState;
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoNamedOnlineSession")
-    FString OwningUserId;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoNamedOnlineSession")
-    FString OwningUserName;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoNamedOnlineSession")
-    FPicoOnlineSessionSettings SessionSettings;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoNamedOnlineSession")
-    FString SessionInfoRoomID;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoNamedOnlineSession")
-    int32 NumOpenPrivateConnections;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoNamedOnlineSession")
-    int32 NumOpenPublicConnections;
-};
-USTRUCT(BlueprintType, meta = (DisplayName = "PicoOnlineSessionSearchResult"))
-struct FPicoOnlineSessionSearchResult
-{
-    GENERATED_USTRUCT_BODY()
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSearchResult")
-    FPicoOnlineSession Session;
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSearchResult")
-    int32 PingInMs;
-};
-USTRUCT(BlueprintType, meta = (DisplayName = "PicoOnlineSessionSearch"))
-struct FPicoOnlineSessionSearch
-{
-    GENERATED_USTRUCT_BODY()
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSearch")
-    TArray<FPicoOnlineSessionSearchResult> SearchResults;
-
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSearch")
-    EOnlineAsyncTaskStatePicoType SearchState;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSearch")
-    int32 MaxSearchResults;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSearch")
-    TArray<FString> QuerySettingsKeyArray;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSearch")
-    TArray<FString> QuerySettingsValueArray;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSearch")
-    bool bIsLanQuery;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSearch")
-    int32 PingBucketSize;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSearch")
-    int32 PlatformHash;
-    
-    UPROPERTY(BlueprintReadWrite, Category = "PicoOnlineSessionSearch")
-    float TimeoutInSeconds;
-};
 
 
 
@@ -241,7 +52,45 @@ DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_OneParam(FRtcConnectStateChangedDelega
 DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_OneParam(FRtcUserStartAudioCaptureDelegate, UOnlineSubsystemPicoManager, OnRtcUserStartAudioCaptureDelegate, const FString&, StringMessage);
 DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_OneParam(FRtcUserStopAudioCaptureDelegate, UOnlineSubsystemPicoManager, OnRtcUserStopAudioCaptureDelegate, const FString&, StringMessage);
 
+// Rtc V2
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_ThreeParams(FRtcUserPublishInfoDelegate, UOnlineSubsystemPicoManager, OnRtcUserPublishInfoDelegate, const FString&, RoomId, const FString&, UserId, ERtcMediaStreamType, MediaStreamType);
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_FourParams(FRtcUserUnPublishInfoDelegate, UOnlineSubsystemPicoManager, OnRtcUserUnPublishInfoDelegate, const FString&, RoomId, const FString&, UserId, ERtcMediaStreamType, MediaStreamType, ERtcStreamRemoveReason, Reason);
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_FiveParams(FGetRtcStreamSyncInfoDelegate, UOnlineSubsystemPicoManager, OnGetRtcStreamSyncInfoDelegate, const FString&, RoomId, const FString&, UserId, ERtcStreamIndex, StreamIndex, ERtcSyncInfoStreamType, RtcSyncInfoStreamType, const FString&, Info);
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_ThreeParams(FRtcMessageSendResultDelegate, UOnlineSubsystemPicoManager, OnRtcMessageSendResultDelegate, int64, MessageId, int32, Error, const FString&, RoomId);
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_ThreeParams(FRtcBinaryMessageReceivedDelegate, UOnlineSubsystemPicoManager, OnRtcBinaryMessageReceivedDelegate, const FString&, RoomId, const FString&, UserId, const FString&, Info);
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_ThreeParams(FRtcRoomMessageReceivedDelegate, UOnlineSubsystemPicoManager, OnRtcRoomMessageReceivedDelegateDelegate, const FString&, RoomId, const FString&, UserId, const FString&, Message);
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_ThreeParams(FRtcUserMessageReceivedDelegate, UOnlineSubsystemPicoManager, OnRtcUserMessageReceivedDelegate, const FString&, RoomId, const FString&, UserId, const FString&, Message);
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_OneParam(FRtcOnTokenWilExpireCallbackDelegate, UOnlineSubsystemPicoManager, OnRtcTokenWilExpireCallbackDelegate, const FString&, StringMessage);
+
 DECLARE_DYNAMIC_DELEGATE_ThreeParams(FOnlineManagerRtcGetTokenDelegate, FString, Token, bool, IsSuccessed, FString, ErrorMessage);
+
+// Presence
+DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnlineManagerPresenceClearDelegate, bool, IsSuccessed, FString, ErrorMessage);
+DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnlineManagerPresenceReadInvitableUserDelegate, bool, IsSuccessed, FString, ErrorMessage);
+DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnlineManagerPresenceSetDelegate, bool, IsSuccessed, FString, ErrorMessage);
+DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnlineManagerPresenceSetDestinationDelegate, bool, IsSuccessed, FString, ErrorMessage);
+DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnlineManagerPresenceSetIsJoinableDelegate, bool, IsSuccessed, FString, ErrorMessage);
+DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnlineManagerPresenceSetLobbySessionDelegate, bool, IsSuccessed, FString, ErrorMessage);
+DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnlineManagerPresenceSetMatchSessionDelegate, bool, IsSuccessed, FString, ErrorMessage);
+DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnlineManagerPresenceSetExtraDelegate, bool, IsSuccessed, FString, ErrorMessage);
+DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnlineManagerPresenceReadSentInvitesDelegate, bool, IsSuccessed, FString, ErrorMessage);
+DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnlineManagerPresenceSentInvitesDelegate, bool, IsSuccessed, FString, ErrorMessage);
+DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnlineManagerPresenceGetDestinationsDelegate, bool, IsSuccessed, FString, ErrorMessage);
+
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_FourParams(FPresenceJoinIntentReceivedDelegate, UOnlineSubsystemPicoManager, OnPresenceJoinIntentReceivedDelegate, const FString&, DeeplinkMessage, const FString&, DestinationApiName, const FString&, LobbySessionId, const FString&, MatchSessionId);
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_ThreeParams(FPresenceLeaveIntentReceivedDelegate, UOnlineSubsystemPicoManager, OnPresenceLeaveIntentReceivedDelegate, const FString&, DestinationApiName, const FString&, LobbySessionId, const FString&, MatchSessionId);
+
+// ApplicationInterface
+DECLARE_DYNAMIC_DELEGATE_ThreeParams(FOnlineManagerLaunchOtherAppDelegate, FString, StringMessage, bool, IsSuccessed, FString, ErrorMessage);
+DECLARE_DYNAMIC_DELEGATE_ThreeParams(FOnlineManagerLaunchOtherAppByPresenceDelegate, FString, StringMessage, bool, IsSuccessed, FString, ErrorMessage);
+DECLARE_DYNAMIC_DELEGATE_ThreeParams(FOnlineManagerGetVersionDelegate, FString, StringMessage, bool, IsSuccessed, FString, ErrorMessage);
+
+// ApplicationLifecycle
+DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnlineManagerApplicationLifecycleReadDetailsDelegate, bool, IsSuccessed, FString, ErrorMessage);
+
+
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_OneParam(FApplicationLifecycleStringResultDelegate, UOnlineSubsystemPicoManager, OnApplicationLifecycleStringResultDelegate, const FString&, MessageString);
+
 
 // Game
 DECLARE_DYNAMIC_DELEGATE_TwoParams(FPicoManagerOnCreateSessionCompleteDelegate, FName, SessionName, bool, bWasSuccessful);
@@ -271,6 +120,13 @@ DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_TwoParams(FOnRoomUpdateMembershipLockS
 DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_TwoParams(FOnRoomUpdateNotifyDelegate, UOnlineSubsystemPicoManager, OnRoomUpdateNotifyDelegate, const FString&, RoomID, bool, bWasSuccessful);
 DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_TwoParams(FOnRoomInviteAcceptedNotifyDelegate, UOnlineSubsystemPicoManager, OnRoomInviteAcceptedNotifyDelegate, const FString&, RoomID, bool, bWasSuccessful);
 
+// Leaderboard
+DECLARE_DYNAMIC_DELEGATE_OneParam(FPicoManagerOnReadLeaderboardsCompleteDelegate, bool, bWasSuccessful);
+
+// AssetFile
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_OneParam(FAssetFileDownloadUpdateDelegate, UOnlineSubsystemPicoManager, OnAssetFileDownloadUpdateDelegate, UPico_AssetFileDownloadUpdate*, AssetFileDownloadUpdateObj);
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_OneParam(FAssetFileDeleteForSafetyDelegate, UOnlineSubsystemPicoManager, OnAssetFileDeleteForSafetyDelegate, UPico_AssetFileDeleteForSafety*, AssetFileDeleteForSafetyObj);
+
 UCLASS()
 class UOnlineSubsystemPicoManager : public UObject
 {
@@ -283,7 +139,30 @@ public:
 	FOnReadFriendsListComplete ReadCompleteDelegate;
 
     TSharedPtr<FRTCPicoUserInterface> RtcInterface;
+    TSharedPtr<FPicoPresenceInterface> PresenceInterface;
+    TSharedPtr<FPicoAssetFileInterface> PicoAssetFileInterface;
+
     FOnGetTokenComplete RtcGetTokenCompleteDelegate;
+    // Presence
+    FOnPresenceClearComplete PresenceClearCompleteDelegate;
+    FOnReadInvitableUserComplete PresenceReadInvitableUserCompleteDelegate;
+    FOnPresenceSetComplete PresenceSetCompleteDelegate;
+    FOnPresenceSetDestinationComplete PresenceSetDestinationCompleteDelegate;
+    FOnPresenceSetIsJoinableComplete PresenceSetIsJoinableCompleteDelegate;
+    FOnPresenceSetLobbySessionComplete PresenceSetLobbySessionCompleteDelegate;
+    FOnPresenceSetMatchSessionComplete PresenceSetMatchSessionCompleteDelegate;
+    FOnPresenceSetPresenceExtraComplete PresenceSetExtraComleteDelegate;
+    FOnReadSentInvitesComplete PresenceReadSentInvitesCompleteDelegate;
+    FOnSentInvitesComplete PresenceSentInvitesCompleteDelegate;
+    FOnGetDestinationsComplete PresenceGetDestinationsCompleteDelegate;
+
+    // Application
+    FOnLaunchOtherAppComplete LaunchOtherAppCompleteDelegate;
+    FOnLaunchOtherAppByPresenceComplete LaunchOtherAppByPresenceCompleteDelegate;
+    FOnGetVersion GetVersionCompleteDelegate;
+
+    // ApplicationLifecycle
+    //FOnReadDetailsComplete ApplicationLifecycleReadDetailsCompleteDelegate;
 
     FOnlineSessionPicoPtr GameInterface;
 
@@ -292,14 +171,16 @@ public:
 
 	void PicoReadFriendList(UObject* WorldContextObject, int32 LocalUserNum, const FString& ListName, FOnlineManagerReadFriendListDelegate InReadFriendListDelegate);
     void OnReadListComplete(int32 InLocalUserNum/*LocalUserNum*/, bool bWasSuccessful/*bWasSuccessful*/, const FString& ListName/*ListName*/, const FString& ErrorStr/*ErrorStr*/);
-    void PicoGetFriendList(UObject* WorldContextObject, int32 InLocalUserNum, const FString& ListName, TArray<FPicoFriend>& OutFriendList);
-    FPicoFriend PicoGetFriend(UObject* WorldContextObject, int32 LocalUserNum, const FString& FriendId, const FString& ListName);
+    void PicoGetFriendList(UObject* WorldContextObject, int32 InLocalUserNum, const FString& ListName, TArray<FPicoUserInfo>& OutFriendList);
+    FPicoUserInfo PicoGetFriend(UObject* WorldContextObject, int32 LocalUserNum, const FString& FriendId, const FString& ListName);
+    FPicoUserInfo GetBPPicoFriend(const TSharedRef<FOnlinePicoFriend> InOnlinePicoFriend);
 
     // Identity
     static FOnlineManagerLoginCompleteDelegate LoginCompleteDelegate;
 
     void PicoLogin(UObject* WorldContextObject, int32 LocalUserNum, const FString& InUserId, const FString& InType, const FString& InToken, FOnlineManagerLoginCompleteDelegate InLoginCompleteDelegate);
     FString PicoGetNickName(UObject* WorldContextObject, int32 LocalUserNum);
+    UPico_User* GetLoginPicoUser(UObject* WorldContextObject, int32 LocalUserNum);
     void OnLoginComplete(int LocalUserNum, bool bWasSuccessful,const FUniqueNetId& UserId, const FString& ErrorString);
     // Rtc
 
@@ -347,6 +228,23 @@ public:
     void OnRtcConnectStateChanged(const FString& StringMessage);
     void OnRtcUserStartAudioCapture(const FString& StringMessage);
     void OnRtcUserStopAudioCapture(const FString& StringMessage);
+
+    // Rtc V2
+    void OnRtcUserPublishInfo(const FString& RoomId, const FString& UserId, ERtcMediaStreamType MediaStreamType);
+    void OnRtcUserUnPublishInfo(const FString& RoomId, const FString& UserId, ERtcMediaStreamType MediaStreamType, ERtcStreamRemoveReason Reason);
+    void OnGetRtcStreamSyncInfo(const FString& RoomId, const FString& UserId, ERtcStreamIndex StreamIndex, ERtcSyncInfoStreamType RtcSyncInfoStreamType, const FString& Info);
+    void OnRtcMessageSendResult(int64 MessageId, int32 Error, const FString& RoomId);
+    void OnRtcBinaryMessageReceived(const FString& RoomId, const FString& UserId, const FString& Info);
+    void OnRtcRoomMessageReceived(const FString& RoomId, const FString& UserId, const FString& Message);
+    void OnRtcUserMessageReceived(const FString& RoomId, const FString& UserId, const FString& Message);
+    void OnRtcTokenWilExpire(const FString& Message);
+
+    //Presence Notify React
+    void OnPresenceJoinIntentReceivedResult(const FString& DeeplinkMessage, const FString& DestinationApiName, const FString& LobbySessionId, const FString& MatchSessionId);
+    void OnPresenceLeavententReceivedResult(const FString& DestinationApiName, const FString& LobbySessionId, const FString& MatchSessionId);
+
+    //ApplicationLifecycle Notify React
+    void OnLaunchIntentChangedResult(const FString& MessageString);
 
 
     // RTC Notification Delegate
@@ -400,6 +298,30 @@ public:
 
     UPROPERTY(BlueprintAssignable, Category = "Rtc")
     FRtcUserStopAudioCaptureDelegate OnRtcUserStopAudioCaptureDelegate;
+
+    UPROPERTY(BlueprintAssignable, Category = "Rtc")
+    FRtcUserPublishInfoDelegate OnRtcUserPublishInfoDelegate;
+
+    UPROPERTY(BlueprintAssignable, Category = "Rtc")
+    FRtcUserUnPublishInfoDelegate OnRtcUserUnPublishInfoDelegate;
+
+    UPROPERTY(BlueprintAssignable, Category = "Rtc")
+    FGetRtcStreamSyncInfoDelegate OnGetRtcStreamSyncInfoDelegate;
+
+    UPROPERTY(BlueprintAssignable, Category = "Rtc")
+    FRtcMessageSendResultDelegate OnRtcMessageSendResultDelegate;
+
+    UPROPERTY(BlueprintAssignable, Category = "Rtc")
+    FRtcBinaryMessageReceivedDelegate OnRtcBinaryMessageReceivedDelegate;
+
+    UPROPERTY(BlueprintAssignable, Category = "Rtc")
+    FRtcRoomMessageReceivedDelegate OnRtcRoomMessageReceivedDelegateDelegate;
+
+    UPROPERTY(BlueprintAssignable, Category = "Rtc")
+    FRtcUserMessageReceivedDelegate OnRtcUserMessageReceivedDelegate;
+
+    UPROPERTY(BlueprintAssignable, Category = "Rtc")
+    FRtcOnTokenWilExpireCallbackDelegate OnRtcTokenWilExpireCallbackDelegate;
 
 
     // Game Notification Delegate
@@ -460,7 +382,20 @@ public:
     // DECLARE_MULTICAST_DELEGATE_FourParams(FOnSessionUserInviteAccepted, const bool, const int32, FUniqueNetIdPtr, const FOnlineSessionSearchResult&);
     // DECLARE_MULTICAST_DELEGATE_FourParams(FOnSessionInviteReceived, const FUniqueNetId& /*UserId*/, const FUniqueNetId& /*FromId*/, const FString& /*AppId*/, const FOnlineSessionSearchResult& /*InviteResult*/);
 
-    
+    // Leaderboard
+	static FPicoManagerOnReadLeaderboardsCompleteDelegate OnReadLeaderboardsCompleteDelegate;
+
+    // Presence Notification Delegate
+    UPROPERTY(BlueprintAssignable, Category = "Presence")
+    FPresenceJoinIntentReceivedDelegate OnPresenceJoinIntentReceivedDelegate;
+
+    UPROPERTY(BlueprintAssignable, Category = "Presence")
+    FPresenceLeaveIntentReceivedDelegate OnPresenceLeaveIntentReceivedDelegate;
+
+    // ApplicationLifecycle Notification Delegate
+    UPROPERTY(BlueprintAssignable, Category = "ApplicationLifecycle")
+    FApplicationLifecycleStringResultDelegate OnApplicationLifecycleStringResultDelegate;
+
 
     // Game IOnlineSession
     bool CreateSession(UObject* WorldContextObject, int HostingPlayerNum, FName SessionName, const FOnlineSessionSettings& NewSessionSettings, FPicoManagerOnCreateSessionCompleteDelegate OnCreateSessionCompleteDelegate);
@@ -469,9 +404,15 @@ public:
     bool EndSession(UObject* WorldContextObject, FName SessionName, FPicoManagerOnEndSessionCompleteDelegate OnEndSessionCompleteDelegate);
     bool DestroySession(UObject* WorldContextObject, FName SessionName, FPicoManagerOnDestroySessionCompleteDelegate OnDestroySessionCompleteDelegate);
     bool IsPlayerInSession(UObject* WorldContextObject, FName SessionName, const FUniqueNetId& UniqueId);
-    bool StartMatchmaking(UObject* WorldContextObject, const TArray< FUniqueNetIdRef >& LocalPlayers, FName SessionName, const FOnlineSessionSettings& NewSessionSettings, TSharedRef<FOnlineSessionSearch>& SearchSettings, FPicoManagerOnMatchmakingCompleteDelegate OnMatchmakingCompleteDelegate);
+#if ENGINE_MAJOR_VERSION > 4
+    bool StartMatchmaking(UObject* WorldContextObject, const TArray< FUniqueNetIdRef >& LocalPlayers, FName SessionName, const FPicoOnlineSessionSettings& NewSessionSettings, FPicoOnlineSessionSearch& SearchSettings, FPicoManagerOnMatchmakingCompleteDelegate OnMatchmakingCompleteDelegate);
+#elif ENGINE_MINOR_VERSION > 26
+    bool StartMatchmaking(UObject* WorldContextObject, const TArray< FUniqueNetIdRef >& LocalPlayers, FName SessionName, const FPicoOnlineSessionSettings& NewSessionSettings, FPicoOnlineSessionSearch& SearchSettings, FPicoManagerOnMatchmakingCompleteDelegate OnMatchmakingCompleteDelegate);
+#elif ENGINE_MINOR_VERSION > 24
+    bool StartMatchmaking(UObject* WorldContextObject, const TArray< TSharedRef<const FUniqueNetId> >& LocalPlayers, FName SessionName, const FPicoOnlineSessionSettings& NewSessionSettings, FPicoOnlineSessionSearch& SearchSettings, FPicoManagerOnMatchmakingCompleteDelegate OnMatchmakingCompleteDelegate);
+#endif  
     bool CancelMatchmaking(UObject* WorldContextObject, int32 SearchingPlayerNum, FName SessionName, FPicoManagerOnCancelMatchmakingCompleteDelegate OnCancelMatchmakingCompleteDelegate);
-    bool FindSessions(UObject* WorldContextObject, int32 SearchingPlayerNum, const TSharedRef<FOnlineSessionSearch>& SearchSettings, FPicoManagerOnFindSessionCompleteDelegate OnFindSessionCompleteDelegate);
+    bool FindSessions(UObject* WorldContextObject, int32 SearchingPlayerNum, FPicoOnlineSessionSearch& NewSessionSearch, FPicoManagerOnFindSessionCompleteDelegate OnFindSessionCompleteDelegate);
     bool FindSessionById(UObject* WorldContextObject, const FUniqueNetId& SearchingUserId, const FUniqueNetId& SessionId, const FUniqueNetId& FriendId, const FPicoManagerOnSingleSessionResultCompleteDelegate& CompletionDelegate);
     bool JoinSession(UObject* WorldContextObject, int32 PlayerNum, FName SessionName, const FOnlineSessionSearchResult& DesiredSession, const FPicoManagerOnJoinSessionCompleteDelegate& OnJoinSessionCompleteDelegate);
     void DumpSessionState(UObject* WorldContextObject);
@@ -480,6 +421,22 @@ public:
     FNamedOnlineSession* AddNamedSession(UObject* WorldContextObject, FName SessionName, const FOnlineSessionSettings& SessionSettings);
     FNamedOnlineSession* AddNamedSession(UObject* WorldContextObject, FName SessionName, const FOnlineSession& Session);
     FOnlineSessionSettings* GetSessionSettings(UObject* WorldContextObject, FName SessionName);
+	bool SendSessionInviteToFriend(UObject* WorldContextObject, int32 LocalUserNum, FName SessionName, const FUniqueNetId& Friend);
+
+	// findsessions
+	FPicoOnlineSessionSearch* PicoSessionSearchPtr;
+	TSharedPtr<FOnlineSessionSearch> SessionSearchPtr;
+	FOnlineSessionSettings SessionSettings;
+
+	// tool 
+	bool IsInputSessionSearchQueryDataValid(const FPicoOnlineSessionSearch& InputSessionSearch);
+	bool IsInputSessionSettingsDataStoreValid(const FPicoOnlineSessionSettings& UpdatedSessionSettings);
+	void SetOnlineSessionSearch(const FPicoOnlineSessionSearch& InputSessionSearch);
+	FPicoOnlineSessionSettings GetPicoOnlineSessionSettings(const FOnlineSessionSettings& UpdatedSessionSettings);
+	void SetOnlineSessionSettings(const FPicoOnlineSessionSettings& UpdatedSessionSettings);
+	void SetPicoOnlineSessionSearch();
+	FOnlineSessionSettings GetOnlineSessionSettings(const FPicoOnlineSessionSettings& UpdatedSessionSettings);
+	TSharedPtr<FOnlineSessionSearch> GetOnlineSessionSearch(const FPicoOnlineSessionSearch& SessionSearch);
     
     // Game OnComplete
     void OnCreateSessionComplete(FName SessionName, bool bWasSuccessful);
@@ -493,4 +450,117 @@ public:
     void OnFindSessionByIdComplete(int32 LocalUserNum, bool bWasSuccessful, const FOnlineSessionSearchResult& SearchResult);
     void OnJoinSessionComplete(FName SessionName, EOnJoinSessionCompleteResult::Type Type);
 
+
+	// Leaderboard
+#if ENGINE_MAJOR_VERSION > 4
+    bool ReadLeaderboards(UObject* WorldContextObject, const TArray< FUniqueNetIdRef >& Players, FPicoOnlineLeaderboardRead& PicoReadObject, FPicoManagerOnReadLeaderboardsCompleteDelegate OnReadLeaderboardsCompleteDelegate);
+#elif ENGINE_MINOR_VERSION > 26
+    bool ReadLeaderboards(UObject* WorldContextObject, const TArray< FUniqueNetIdRef >& Players, FPicoOnlineLeaderboardRead& PicoReadObject, FPicoManagerOnReadLeaderboardsCompleteDelegate OnReadLeaderboardsCompleteDelegate);
+#elif ENGINE_MINOR_VERSION > 24
+    bool ReadLeaderboards(UObject* WorldContextObject, const TArray< TSharedRef<const FUniqueNetId> >& Players, FPicoOnlineLeaderboardRead& PicoReadObject, FPicoManagerOnReadLeaderboardsCompleteDelegate OnReadLeaderboardsCompleteDelegate);
+#endif
+	
+	bool ReadLeaderboardsForFriends(UObject* WorldContextObject, int32 LocalUserNum, FPicoOnlineLeaderboardRead& PicoReadObject, FPicoManagerOnReadLeaderboardsCompleteDelegate OnReadLeaderboardsCompleteDelegate);
+	bool WriteLeaderboards(UObject* WorldContextObject, const FName& SessionName, const FUniqueNetId& Player, FOnlineLeaderboardWrite& WriteObject);
+	void SetOnlineLeaderboardRead(const FPicoOnlineLeaderboardRead& PicoLeaderboardRead);
+	void RefreshPicoOnlineLeaderboardRead();      
+	
+	
+	// Leaderboard OnComplete
+    void OnReadLeaderboardsComplete(bool bWasSuccessful);
+
+	FPicoOnlineLeaderboardRead* PicoLeaderboardReadPtr;
+	FOnlineLeaderboardReadPtr LeaderboardReadPtr;
+
+
+    // Presence 
+    static FOnlineManagerPresenceClearDelegate PresenceClearDelegate;
+    static FOnlineManagerPresenceReadInvitableUserDelegate PresenceReadInvitableUserDelegate;
+    static FOnlineManagerPresenceSetDelegate PresenceSetDelegate;
+    static FOnlineManagerPresenceSetDestinationDelegate PresenceSetDestinationDelegate;
+    static FOnlineManagerPresenceSetIsJoinableDelegate PresenceSetIsJoinableDelegate;
+    static FOnlineManagerPresenceSetLobbySessionDelegate PresenceSetLobbySessionDelegate;
+    static FOnlineManagerPresenceSetMatchSessionDelegate PresenceSetMatchSessionDelegate;
+    static FOnlineManagerPresenceSetExtraDelegate PresenceSetExtraDelegate;
+    static FOnlineManagerPresenceReadSentInvitesDelegate PresenceReadSentInvitesDelegate;
+    static FOnlineManagerPresenceSentInvitesDelegate PresenceSentInvitesDelegate;
+    static FOnlineManagerPresenceGetDestinationsDelegate PresenceGetDestinationsDelegate;
+
+
+
+    bool PresenceClear(UObject* WorldContextObject, FOnlineManagerPresenceClearDelegate InPresenceClearDelegate);
+    void OnPresenceClearComplete(bool bIsSuccessed, const FString& ErrorMessage);
+
+    void ReadInvitableUser(UObject* WorldContextObject, TArray<FString> SuggestedUserList, FOnlineManagerPresenceReadInvitableUserDelegate InReadInvitableUserDelegate);
+    void OnReadInvitableUserComplete(bool bIsSuccessed, const FString& ErrorMessage);
+    
+    bool GetInvitableFriendList(UObject* WorldContextObject, TArray<FPicoUserInfo>& OutFriendsList);
+
+    bool PresenceSet(UObject* WorldContextObject, const FString& ApiName, const FString& LobbySessionId, const FString& MatchSessionId, bool bIsJoinable, const FString& Extra, FOnlineManagerPresenceSetDelegate InPresenceSetDelegate);
+    void OnPresenceSetComplete(bool bIsSuccessed, const FString& ErrorMessage);
+
+    bool PresenceSetDestination(UObject* WorldContextObject, const FString& ApiName, FOnlineManagerPresenceSetDestinationDelegate InPresenceSetDestinationDelegate);
+    void OnPresenceSetDestinationComplete(bool bIsSuccessed, const FString& ErrorMessage);
+
+    bool PresenceSetIsJoinable(UObject* WorldContextObject, bool bIsJoinable, FOnlineManagerPresenceSetIsJoinableDelegate InPresenceSetIsJoinableDelegate);
+    void OnPresenceSetIsJoinableComplete(bool bIsSuccessed, const FString& ErrorMessage);
+
+    bool PresenceSetLobbySession(UObject* WorldContextObject, const FString& LobbySession, FOnlineManagerPresenceSetLobbySessionDelegate InPresenceSetLobbySessionDelegate);
+    void OnPresenceSetLobbySessionComplete( bool bIsSuccessed, const FString& ErrorMessage);
+
+    bool PresenceSetMatchSession(UObject* WorldContextObject, const FString& MatchSession, FOnlineManagerPresenceSetMatchSessionDelegate InPresenceSetMatchSessionDelegate);
+    void OnPresenceSetMatchSessionComplete(bool bIsSuccessed, const FString& ErrorMessage);
+
+    bool PresenceSetExtra(UObject* WorldContextObject, const FString& Extra, FOnlineManagerPresenceSetExtraDelegate InPresenceSetExtraDelegate);
+    void OnPresenceSetExtraComplete(bool bIsSuccessed, const FString& ErrorMessage);
+
+    bool PresenceReadSendInvites(UObject* WorldContextObject, FOnlineManagerPresenceReadSentInvitesDelegate InPresenceReadSendInvitesDelegate);
+    void OnPresenceReadSendInvitesComplete(bool bIsSuccessed, const FString& ErrorMessage);
+
+
+    bool PresenceSendInvites(UObject* WorldContextObject, TArray<FString> UserIdArray, FOnlineManagerPresenceSentInvitesDelegate InPresenceSentInvitesDelegate);
+    void OnSendInvitesComplete( bool bIsSuccessed, const FString& ErrorMessage);
+
+    bool GetSendInvitesList(UObject* WorldContextObject, TArray<FPicoApplicationInvite>& OutList);
+
+    bool PresenceGetDestinations(UObject* WorldContextObject, FOnlineManagerPresenceGetDestinationsDelegate InPresenceGetDestinationsDelegate);
+    void OnGetDestinationsComplete(bool bIsSuccessed, const FString& ErrorMessage);
+
+    bool PresenceGetDestinationsList(UObject* WorldContextObject, TArray<FPicoDestination>& OutList);
+
+    // ApplicationInterface
+    static FOnlineManagerLaunchOtherAppDelegate LaunchOtherAppDelegate;
+    static FOnlineManagerLaunchOtherAppByPresenceDelegate LaunchOtherAppByPresenceDelegate;
+    static FOnlineManagerGetVersionDelegate GetVersionDelegate;
+
+    bool LaunchOtherApp(UObject* WorldContextObject, const FString& PackageName, const FString& Message, FOnlineManagerLaunchOtherAppDelegate InLaunchOtherAppDelegate);
+    void OnLaunchOtherAppComplete(const FString& Message, bool bIsSuccessed, const FString& ErrorMessage);
+
+    bool GetVersion(UObject* WorldContextObject, FOnlineManagerGetVersionDelegate InGetVersionDelegate);
+    void OnGetVersionComplete(const FString& Message, bool bIsSuccessed, const FString& ErrorMessage);
+
+    bool LaunchOtherAppByPresence(UObject* WorldContextObject, const FString& AppID, const FString& PackageName, const FString& Message, const FString& ApiName, const FString& LobbySessionId, const FString& MatchSessionId, const FString& TrackId, const FString& Extra, FOnlineManagerLaunchOtherAppByPresenceDelegate InLaunchOtherAppByPresenceDelegate);
+    void OnLaunchOtherAppByPresenceComplete(const FString& Message, bool bIsSuccessed, const FString& ErrorMessage);
+
+    // ApplicationLifecycle
+    static FOnlineManagerApplicationLifecycleReadDetailsDelegate ApplicationLifecycleReadDetailsDelegate;
+
+    //bool ReadLaunchDetails(UObject* WorldContextObject, FOnlineManagerApplicationLifecycleReadDetailsDelegate InApplicationLifecycleReadDetailsDelegate);
+    //void OnReadLaunchDetailsComplete(bool bIsSuccessed, const FString& ErrorMessage);
+
+    bool GetLaunchDetails(UObject* WorldContextObject, FLaunchDetails& OutLaunchDetails);
+
+    bool LogDeeplinkResult(UObject* WorldContextObject, const FString& TrackingID, ELaunchResult LaunchResult);
+
+    // 
+
+    UPROPERTY(BlueprintAssignable, Category = "AssetFile")
+    FAssetFileDownloadUpdateDelegate OnAssetFileDownloadUpdateDelegate;
+
+    UPROPERTY(BlueprintAssignable, Category = "AssetFile")
+    FAssetFileDeleteForSafetyDelegate OnAssetFileDeleteForSafetyDelegate;
+
+    void OnAssetFileDownloadUpdate(UPico_AssetFileDownloadUpdate* AssetFileDownloadUpdateObj);
+
+    void OnAssetFileDeleteForSafety(UPico_AssetFileDeleteForSafety* AssetFileDeleteForSafetyObj);
 };

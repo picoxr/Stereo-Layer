@@ -11,6 +11,11 @@
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeOnlineSubsystemPico_init() {}
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_AssetFileDeleteResult__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_AssetFileDownloadResult__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_AssetFileDownloadCancelResult__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetAssetFileStatus__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetAssetFileList__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerLoginCompleteDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerReadFriendListDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcJoinRoomResultDelegate__DelegateSignature();
@@ -30,7 +35,33 @@ void EmptyLinkFunctionForGeneratedCodeOnlineSubsystemPico_init() {}
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcConnectStateChangedDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcUserStartAudioCaptureDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcUserStopAudioCaptureDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcUserPublishInfoDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcUserUnPublishInfoDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_GetRtcStreamSyncInfoDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcMessageSendResultDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcBinaryMessageReceivedDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcRoomMessageReceivedDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcUserMessageReceivedDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcOnTokenWilExpireCallbackDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerRtcGetTokenDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceClearDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceReadInvitableUserDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetDestinationDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetIsJoinableDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetLobbySessionDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetMatchSessionDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetExtraDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceReadSentInvitesDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSentInvitesDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceGetDestinationsDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_PresenceJoinIntentReceivedDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_PresenceLeaveIntentReceivedDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerLaunchOtherAppDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerLaunchOtherAppByPresenceDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerGetVersionDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerApplicationLifecycleReadDetailsDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_ApplicationLifecycleStringResultDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnCreateSessionCompleteDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnStartSessionCompleteDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnUpdateSessionCompleteDelegate__DelegateSignature();
@@ -54,13 +85,44 @@ void EmptyLinkFunctionForGeneratedCodeOnlineSubsystemPico_init() {}
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_OnRoomUpdateMembershipLockStatusNotifyDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_OnRoomUpdateNotifyDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_OnRoomInviteAcceptedNotifyDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnReadLeaderboardsCompleteDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_AssetFileDownloadUpdateDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_AssetFileDeleteForSafetyDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlinePicoVerifyAppDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_AddCount__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_AddFields__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_Unlock__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetAllDefinitions__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetAllProgress__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetDefinitionsByName__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetProgressByName__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetProductsBySKUDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetViewerPurchasesDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetNextProductArrayPageDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_ConsumePurchaseDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetNextPurchaseArrayPageDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_LaunchCheckoutFlowDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetDailySummary__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetSummary__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetSportUserInfo__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetLoggedInUserFriendsAndRooms__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetNextUserAndRoomArrayPage__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetLoggedInUserFriends__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetNextUserPage__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetLoginUser__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetUserInfo__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetPermissionResult__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_OnlineSubsystemPico()
 	{
 		static UPackage* ReturnPackage = nullptr;
 		if (!ReturnPackage)
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_AssetFileDeleteResult__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_AssetFileDownloadResult__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_AssetFileDownloadCancelResult__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetAssetFileStatus__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetAssetFileList__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerLoginCompleteDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerReadFriendListDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcJoinRoomResultDelegate__DelegateSignature,
@@ -80,7 +142,33 @@ void EmptyLinkFunctionForGeneratedCodeOnlineSubsystemPico_init() {}
 				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcConnectStateChangedDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcUserStartAudioCaptureDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcUserStopAudioCaptureDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcUserPublishInfoDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcUserUnPublishInfoDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_GetRtcStreamSyncInfoDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcMessageSendResultDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcBinaryMessageReceivedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcRoomMessageReceivedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcUserMessageReceivedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_RtcOnTokenWilExpireCallbackDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerRtcGetTokenDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceClearDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceReadInvitableUserDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetDestinationDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetIsJoinableDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetLobbySessionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetMatchSessionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetExtraDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceReadSentInvitesDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSentInvitesDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceGetDestinationsDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_PresenceJoinIntentReceivedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_PresenceLeaveIntentReceivedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerLaunchOtherAppDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerLaunchOtherAppByPresenceDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerGetVersionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerApplicationLifecycleReadDetailsDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_ApplicationLifecycleStringResultDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnCreateSessionCompleteDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnStartSessionCompleteDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnUpdateSessionCompleteDelegate__DelegateSignature,
@@ -104,15 +192,41 @@ void EmptyLinkFunctionForGeneratedCodeOnlineSubsystemPico_init() {}
 				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_OnRoomUpdateMembershipLockStatusNotifyDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_OnRoomUpdateNotifyDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_OnRoomInviteAcceptedNotifyDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnReadLeaderboardsCompleteDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_AssetFileDownloadUpdateDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_OnlineSubsystemPico_AssetFileDeleteForSafetyDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlinePicoVerifyAppDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_AddCount__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_AddFields__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_Unlock__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetAllDefinitions__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetAllProgress__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetDefinitionsByName__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetProgressByName__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetProductsBySKUDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetViewerPurchasesDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetNextProductArrayPageDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_ConsumePurchaseDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetNextPurchaseArrayPageDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_LaunchCheckoutFlowDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetDailySummary__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetSummary__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetSportUserInfo__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetLoggedInUserFriendsAndRooms__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetNextUserAndRoomArrayPage__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetLoggedInUserFriends__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetNextUserPage__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetLoginUser__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetUserInfo__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_OnlineSubsystemPico_GetPermissionResult__DelegateSignature,
 			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/OnlineSubsystemPico",
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x50352D47,
-				0x7D1CA0BC,
+				0xBF466AD3,
+				0x5F4931A9,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

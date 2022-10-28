@@ -29,25 +29,49 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnSingleSessionResultCompleteDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UScriptStruct* Z_Construct_UScriptStruct_FPicoOnlineSessionSearch();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnFindSessionCompleteDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UScriptStruct* Z_Construct_UScriptStruct_FPicoUserInfo();
+	ONLINESUBSYSTEMPICO_API UScriptStruct* Z_Construct_UScriptStruct_FLaunchDetails();
+	ONLINESUBSYSTEMPICO_API UClass* Z_Construct_UClass_UPico_User_NoRegister();
 	ONLINESUBSYSTEMPICO_API UClass* Z_Construct_UClass_UOnlineSubsystemPicoManager_NoRegister();
+	ONLINESUBSYSTEMPICO_API UScriptStruct* Z_Construct_UScriptStruct_FPicoApplicationInvite();
 	ONLINESUBSYSTEMPICO_API UEnum* Z_Construct_UEnum_OnlineSubsystemPico_EOnlineSessionStatePicoType();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerGetVersionDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UScriptStruct* Z_Construct_UScriptStruct_FPicoOnlineSessionSearchResult();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnJoinSessionCompleteDelegate__DelegateSignature();
-	ONLINESUBSYSTEMPICO_API UScriptStruct* Z_Construct_UScriptStruct_FPicoFriend();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerLaunchOtherAppDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerLaunchOtherAppByPresenceDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UEnum* Z_Construct_UEnum_OnlineSubsystemPico_ELaunchResult();
 	ONLINESUBSYSTEMPICO_API UEnum* Z_Construct_UEnum_OnlineSubsystemPico_ERtcEngineInitResult();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerLoginCompleteDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerReadFriendListDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerRtcGetTokenDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UEnum* Z_Construct_UEnum_OnlineSubsystemPico_ERtcRoomProfileType();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceClearDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceGetDestinationsDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UScriptStruct* Z_Construct_UScriptStruct_FPicoDestination();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceReadSentInvitesDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSentInvitesDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetDestinationDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetExtraDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetIsJoinableDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetLobbySessionDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetMatchSessionDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceReadInvitableUserDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UScriptStruct* Z_Construct_UScriptStruct_FPicoOnlineLeaderboardRead();
+	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnReadLeaderboardsCompleteDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UEnum* Z_Construct_UEnum_OnlineSubsystemPico_ERtcMuteState();
 	ONLINESUBSYSTEMPICO_API UEnum* Z_Construct_UEnum_OnlineSubsystemPico_ERtcPauseResumeMediaType();
+	ONLINESUBSYSTEMPICO_API UEnum* Z_Construct_UEnum_OnlineSubsystemPico_ERtcMediaStreamType();
+	ONLINESUBSYSTEMPICO_API UEnum* Z_Construct_UEnum_OnlineSubsystemPico_ERtcStreamIndex();
+	ONLINESUBSYSTEMPICO_API UEnum* Z_Construct_UEnum_OnlineSubsystemPico_ERtcSyncInfoStreamType();
 	ONLINESUBSYSTEMPICO_API UEnum* Z_Construct_UEnum_OnlineSubsystemPico_ERtcAudioPlaybackDevice();
 	ONLINESUBSYSTEMPICO_API UEnum* Z_Construct_UEnum_OnlineSubsystemPico_ERtcAudioScenarioType();
-	ONLINESUBSYSTEMPICO_API UEnum* Z_Construct_UEnum_OnlineSubsystemPico_ERtcStreamIndex();
 	ONLINESUBSYSTEMPICO_API UEnum* Z_Construct_UEnum_OnlineSubsystemPico_ERtcEarMonitorMode();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnMatchmakingCompleteDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnStartSessionCompleteDelegate__DelegateSignature();
 	ONLINESUBSYSTEMPICO_API UFunction* Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnUpdateSessionCompleteDelegate__DelegateSignature();
+	ONLINESUBSYSTEMPICO_API UScriptStruct* Z_Construct_UScriptStruct_FPicoOnlineLeaderboardWrite();
 // End Cross Module References
 	struct Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlinePicoVerifyAppDelegate__DelegateSignature_Statics
 	{
@@ -89,13 +113,6 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		}
 		return ReturnFunction;
 	}
-	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execGetOpenId)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(FString*)Z_Param__Result=UOnlinePicoFunctionLibrary::GetOpenId();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPicoGetDeviceSN)
 	{
 		P_FINISH;
@@ -123,6 +140,244 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(UOnlineSubsystemPicoManager**)Z_Param__Result=UOnlinePicoFunctionLibrary::GetOnlineSubsystemPicoManager();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execWriteLeaderboards)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_SessionName);
+		P_GET_PROPERTY(FStrProperty,Z_Param_Player);
+		P_GET_STRUCT_REF(FPicoOnlineLeaderboardWrite,Z_Param_Out_PicoWriteObject);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::WriteLeaderboards(Z_Param_WorldContextObject,Z_Param_SessionName,Z_Param_Player,Z_Param_Out_PicoWriteObject);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execReadLeaderboardsForFriends)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FIntProperty,Z_Param_LocalUserNum);
+		P_GET_STRUCT_REF(FPicoOnlineLeaderboardRead,Z_Param_Out_PicoReadObject);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_OnReadLeaderboardsCompleteDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::ReadLeaderboardsForFriends(Z_Param_WorldContextObject,Z_Param_LocalUserNum,Z_Param_Out_PicoReadObject,FPicoManagerOnReadLeaderboardsCompleteDelegate(Z_Param_OnReadLeaderboardsCompleteDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execReadLeaderboards)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_TARRAY_REF(FString,Z_Param_Out_Players);
+		P_GET_STRUCT_REF(FPicoOnlineLeaderboardRead,Z_Param_Out_PicoReadObject);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_OnReadLeaderboardsCompleteDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::ReadLeaderboards(Z_Param_WorldContextObject,Z_Param_Out_Players,Z_Param_Out_PicoReadObject,FPicoManagerOnReadLeaderboardsCompleteDelegate(Z_Param_OnReadLeaderboardsCompleteDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execLogDeeplinkResult)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_TrackingID);
+		P_GET_ENUM(ELaunchResult,Z_Param_LaunchResult);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::LogDeeplinkResult(Z_Param_WorldContextObject,Z_Param_TrackingID,ELaunchResult(Z_Param_LaunchResult));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execGetLaunchDetails)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_STRUCT_REF(FLaunchDetails,Z_Param_Out_OutLaunchDetails);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::GetLaunchDetails(Z_Param_WorldContextObject,Z_Param_Out_OutLaunchDetails);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execLaunchOtherAppByPresence)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_AppID);
+		P_GET_PROPERTY(FStrProperty,Z_Param_PackageName);
+		P_GET_PROPERTY(FStrProperty,Z_Param_Message);
+		P_GET_PROPERTY(FStrProperty,Z_Param_ApiName);
+		P_GET_PROPERTY(FStrProperty,Z_Param_LobbySessionId);
+		P_GET_PROPERTY(FStrProperty,Z_Param_MatchSessionId);
+		P_GET_PROPERTY(FStrProperty,Z_Param_TrackId);
+		P_GET_PROPERTY(FStrProperty,Z_Param_Extra);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InLaunchOtherAppByPresenceDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::LaunchOtherAppByPresence(Z_Param_WorldContextObject,Z_Param_AppID,Z_Param_PackageName,Z_Param_Message,Z_Param_ApiName,Z_Param_LobbySessionId,Z_Param_MatchSessionId,Z_Param_TrackId,Z_Param_Extra,FOnlineManagerLaunchOtherAppByPresenceDelegate(Z_Param_InLaunchOtherAppByPresenceDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execGetVersion)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InGetVersionDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::GetVersion(Z_Param_WorldContextObject,FOnlineManagerGetVersionDelegate(Z_Param_InGetVersionDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execLaunchOtherApp)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_PackageName);
+		P_GET_PROPERTY(FStrProperty,Z_Param_Message);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InLaunchOtherAppDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::LaunchOtherApp(Z_Param_WorldContextObject,Z_Param_PackageName,Z_Param_Message,FOnlineManagerLaunchOtherAppDelegate(Z_Param_InLaunchOtherAppDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPresenceGetDestinationsList)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_TARRAY_REF(FPicoDestination,Z_Param_Out_OutList);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::PresenceGetDestinationsList(Z_Param_WorldContextObject,Z_Param_Out_OutList);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPresenceGetDestinations)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InPresenceGetDestinationsDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::PresenceGetDestinations(Z_Param_WorldContextObject,FOnlineManagerPresenceGetDestinationsDelegate(Z_Param_InPresenceGetDestinationsDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execGetSendInvitesList)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_TARRAY_REF(FPicoApplicationInvite,Z_Param_Out_OutList);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::GetSendInvitesList(Z_Param_WorldContextObject,Z_Param_Out_OutList);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPresenceSendInvites)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_TARRAY(FString,Z_Param_UserIdArray);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InPresenceSentInvitesDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::PresenceSendInvites(Z_Param_WorldContextObject,Z_Param_UserIdArray,FOnlineManagerPresenceSentInvitesDelegate(Z_Param_InPresenceSentInvitesDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPresenceReadSendInvites)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InPresenceReadSendInvitesDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::PresenceReadSendInvites(Z_Param_WorldContextObject,FOnlineManagerPresenceReadSentInvitesDelegate(Z_Param_InPresenceReadSendInvitesDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPresenceSetExtra)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_Extra);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InPresenceSetExtraDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::PresenceSetExtra(Z_Param_WorldContextObject,Z_Param_Extra,FOnlineManagerPresenceSetExtraDelegate(Z_Param_InPresenceSetExtraDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPresenceSetMatchSession)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_MatchSession);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InPresenceSetMatchSessionDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::PresenceSetMatchSession(Z_Param_WorldContextObject,Z_Param_MatchSession,FOnlineManagerPresenceSetMatchSessionDelegate(Z_Param_InPresenceSetMatchSessionDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPresenceSetLobbySession)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_LobbySession);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InPresenceSetLobbySessionDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::PresenceSetLobbySession(Z_Param_WorldContextObject,Z_Param_LobbySession,FOnlineManagerPresenceSetLobbySessionDelegate(Z_Param_InPresenceSetLobbySessionDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPresenceSetIsJoinable)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_UBOOL(Z_Param_bIsJoinable);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InPresenceSetIsJoinableDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::PresenceSetIsJoinable(Z_Param_WorldContextObject,Z_Param_bIsJoinable,FOnlineManagerPresenceSetIsJoinableDelegate(Z_Param_InPresenceSetIsJoinableDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPresenceSetDestination)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_ApiName);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InPresenceSetDestinationDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::PresenceSetDestination(Z_Param_WorldContextObject,Z_Param_ApiName,FOnlineManagerPresenceSetDestinationDelegate(Z_Param_InPresenceSetDestinationDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPresenceSet)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_ApiName);
+		P_GET_PROPERTY(FStrProperty,Z_Param_LobbySessionId);
+		P_GET_PROPERTY(FStrProperty,Z_Param_MatchSessionId);
+		P_GET_UBOOL(Z_Param_bIsJoinable);
+		P_GET_PROPERTY(FStrProperty,Z_Param_Extra);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InPresenceSetDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::PresenceSet(Z_Param_WorldContextObject,Z_Param_ApiName,Z_Param_LobbySessionId,Z_Param_MatchSessionId,Z_Param_bIsJoinable,Z_Param_Extra,FOnlineManagerPresenceSetDelegate(Z_Param_InPresenceSetDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execGetInvitableFriendList)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_TARRAY_REF(FPicoUserInfo,Z_Param_Out_OutFriendsList);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::GetInvitableFriendList(Z_Param_WorldContextObject,Z_Param_Out_OutFriendsList);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execReadInvitableUser)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_TARRAY(FString,Z_Param_SuggestedUserList);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InReadInvitableUserDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UOnlinePicoFunctionLibrary::ReadInvitableUser(Z_Param_WorldContextObject,Z_Param_SuggestedUserList,FOnlineManagerPresenceReadInvitableUserDelegate(Z_Param_InReadInvitableUserDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPresenceClear)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FDelegateProperty,Z_Param_InPresenceClearDelegate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::PresenceClear(Z_Param_WorldContextObject,FOnlineManagerPresenceClearDelegate(Z_Param_InPresenceClearDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execSendSessionInviteToFriend)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FIntProperty,Z_Param_LocalUserNum);
+		P_GET_PROPERTY(FNameProperty,Z_Param_SessionName);
+		P_GET_PROPERTY(FStrProperty,Z_Param_Friend);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::SendSessionInviteToFriend(Z_Param_WorldContextObject,Z_Param_LocalUserNum,Z_Param_SessionName,Z_Param_Friend);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execGetSessionSettings)
@@ -300,6 +555,113 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		*(bool*)Z_Param__Result=UOnlinePicoFunctionLibrary::CreateSession(Z_Param_WorldContextObject,Z_Param_HostingPlayerNum,Z_Param_SessionName,Z_Param_Out_NewSessionSettings,FPicoManagerOnCreateSessionCompleteDelegate(Z_Param_OnCreateSessionCompleteDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execRtcSendUserMessage)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_RoomId);
+		P_GET_PROPERTY(FStrProperty,Z_Param_UserId);
+		P_GET_PROPERTY(FStrProperty,Z_Param_Message);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(int64*)Z_Param__Result=UOnlinePicoFunctionLibrary::RtcSendUserMessage(Z_Param_WorldContextObject,Z_Param_RoomId,Z_Param_UserId,Z_Param_Message);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execRtcSendUserBinaryMessage)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_RoomId);
+		P_GET_PROPERTY(FStrProperty,Z_Param_UserId);
+		P_GET_PROPERTY(FStrProperty,Z_Param_MessageInfo);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(int64*)Z_Param__Result=UOnlinePicoFunctionLibrary::RtcSendUserBinaryMessage(Z_Param_WorldContextObject,Z_Param_RoomId,Z_Param_UserId,Z_Param_MessageInfo);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execRtcSendRoomMessage)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_RoomId);
+		P_GET_PROPERTY(FStrProperty,Z_Param_Message);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(int64*)Z_Param__Result=UOnlinePicoFunctionLibrary::RtcSendRoomMessage(Z_Param_WorldContextObject,Z_Param_RoomId,Z_Param_Message);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execRtcSendRoomBinaryMessage)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_RoomId);
+		P_GET_PROPERTY(FStrProperty,Z_Param_MessageInfo);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(int64*)Z_Param__Result=UOnlinePicoFunctionLibrary::RtcSendRoomBinaryMessage(Z_Param_WorldContextObject,Z_Param_RoomId,Z_Param_MessageInfo);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execRtcRoomUnsubscribeStream)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_RoomId);
+		P_GET_PROPERTY(FStrProperty,Z_Param_UserId);
+		P_GET_ENUM(ERtcMediaStreamType,Z_Param_InRtcMediaStreamType);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UOnlinePicoFunctionLibrary::RtcRoomUnsubscribeStream(Z_Param_WorldContextObject,Z_Param_RoomId,Z_Param_UserId,ERtcMediaStreamType(Z_Param_InRtcMediaStreamType));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execRtcRoomUnPublishStream)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_RoomId);
+		P_GET_ENUM(ERtcMediaStreamType,Z_Param_InRtcMediaStreamType);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UOnlinePicoFunctionLibrary::RtcRoomUnPublishStream(Z_Param_WorldContextObject,Z_Param_RoomId,ERtcMediaStreamType(Z_Param_InRtcMediaStreamType));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execRtcRoomSubscribeStream)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_RoomId);
+		P_GET_PROPERTY(FStrProperty,Z_Param_UserId);
+		P_GET_ENUM(ERtcMediaStreamType,Z_Param_InRtcMediaStreamType);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UOnlinePicoFunctionLibrary::RtcRoomSubscribeStream(Z_Param_WorldContextObject,Z_Param_RoomId,Z_Param_UserId,ERtcMediaStreamType(Z_Param_InRtcMediaStreamType));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execRtcRoomSetRemoteAudioPlaybackVolume)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_RoomId);
+		P_GET_PROPERTY(FStrProperty,Z_Param_UserId);
+		P_GET_PROPERTY(FIntProperty,Z_Param_Volume);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UOnlinePicoFunctionLibrary::RtcRoomSetRemoteAudioPlaybackVolume(Z_Param_WorldContextObject,Z_Param_RoomId,Z_Param_UserId,Z_Param_Volume);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execRtcRoomPublishStream)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FStrProperty,Z_Param_RoomId);
+		P_GET_ENUM(ERtcMediaStreamType,Z_Param_InRtcMediaStreamType);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		UOnlinePicoFunctionLibrary::RtcRoomPublishStream(Z_Param_WorldContextObject,Z_Param_RoomId,ERtcMediaStreamType(Z_Param_InRtcMediaStreamType));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execRtcSendStreamSyncInfo)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FIntProperty,Z_Param_Info);
+		P_GET_ENUM(ERtcStreamIndex,Z_Param_InStreamIndex);
+		P_GET_PROPERTY(FIntProperty,Z_Param_RepeatCount);
+		P_GET_ENUM(ERtcSyncInfoStreamType,Z_Param_InSyncInfoStreamType);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(int32*)Z_Param__Result=UOnlinePicoFunctionLibrary::RtcSendStreamSyncInfo(Z_Param_WorldContextObject,Z_Param_Info,ERtcStreamIndex(Z_Param_InStreamIndex),Z_Param_RepeatCount,ERtcSyncInfoStreamType(Z_Param_InSyncInfoStreamType));
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execRtcUpdateToken)
@@ -500,7 +862,7 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		P_GET_PROPERTY(FStrProperty,Z_Param_ListName);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(FPicoFriend*)Z_Param__Result=UOnlinePicoFunctionLibrary::PicoGetFriend(Z_Param_WorldContextObject,Z_Param_LocalUserNum,Z_Param_FriendId,Z_Param_ListName);
+		*(FPicoUserInfo*)Z_Param__Result=UOnlinePicoFunctionLibrary::PicoGetFriend(Z_Param_WorldContextObject,Z_Param_LocalUserNum,Z_Param_FriendId,Z_Param_ListName);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPicoGetFriendList)
@@ -508,7 +870,7 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
 		P_GET_PROPERTY(FIntProperty,Z_Param_LocalUserNum);
 		P_GET_PROPERTY(FStrProperty,Z_Param_ListName);
-		P_GET_TARRAY_REF(FPicoFriend,Z_Param_Out_OutFriends);
+		P_GET_TARRAY_REF(FPicoUserInfo,Z_Param_Out_OutFriends);
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		UOnlinePicoFunctionLibrary::PicoGetFriendList(Z_Param_WorldContextObject,Z_Param_LocalUserNum,Z_Param_ListName,Z_Param_Out_OutFriends);
@@ -523,6 +885,15 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		UOnlinePicoFunctionLibrary::PicoReadFriendList(Z_Param_WorldContextObject,Z_Param_LocalUserNum,Z_Param_ListName,FOnlineManagerReadFriendListDelegate(Z_Param_InReadFriendListDelegate));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execGetLoginPicoUser)
+	{
+		P_GET_OBJECT(UObject,Z_Param_WorldContextObject);
+		P_GET_PROPERTY(FIntProperty,Z_Param_LocalUserNum);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UPico_User**)Z_Param__Result=UOnlinePicoFunctionLibrary::GetLoginPicoUser(Z_Param_WorldContextObject,Z_Param_LocalUserNum);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UOnlinePicoFunctionLibrary::execPicoGetNickName)
@@ -560,13 +931,20 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 			{ "EndSession", &UOnlinePicoFunctionLibrary::execEndSession },
 			{ "FindSessionById", &UOnlinePicoFunctionLibrary::execFindSessionById },
 			{ "FindSessions", &UOnlinePicoFunctionLibrary::execFindSessions },
+			{ "GetInvitableFriendList", &UOnlinePicoFunctionLibrary::execGetInvitableFriendList },
+			{ "GetLaunchDetails", &UOnlinePicoFunctionLibrary::execGetLaunchDetails },
+			{ "GetLoginPicoUser", &UOnlinePicoFunctionLibrary::execGetLoginPicoUser },
 			{ "GetNamedSession", &UOnlinePicoFunctionLibrary::execGetNamedSession },
 			{ "GetOnlineSubsystemPicoManager", &UOnlinePicoFunctionLibrary::execGetOnlineSubsystemPicoManager },
-			{ "GetOpenId", &UOnlinePicoFunctionLibrary::execGetOpenId },
+			{ "GetSendInvitesList", &UOnlinePicoFunctionLibrary::execGetSendInvitesList },
 			{ "GetSessionSettings", &UOnlinePicoFunctionLibrary::execGetSessionSettings },
 			{ "GetSessionState", &UOnlinePicoFunctionLibrary::execGetSessionState },
+			{ "GetVersion", &UOnlinePicoFunctionLibrary::execGetVersion },
 			{ "IsPlayerInSession", &UOnlinePicoFunctionLibrary::execIsPlayerInSession },
 			{ "JoinSession", &UOnlinePicoFunctionLibrary::execJoinSession },
+			{ "LaunchOtherApp", &UOnlinePicoFunctionLibrary::execLaunchOtherApp },
+			{ "LaunchOtherAppByPresence", &UOnlinePicoFunctionLibrary::execLaunchOtherAppByPresence },
+			{ "LogDeeplinkResult", &UOnlinePicoFunctionLibrary::execLogDeeplinkResult },
 			{ "PicoEntitlementVerifyAppDelegate", &UOnlinePicoFunctionLibrary::execPicoEntitlementVerifyAppDelegate },
 			{ "PicoEntitlementVerifyCheck", &UOnlinePicoFunctionLibrary::execPicoEntitlementVerifyCheck },
 			{ "PicoGetDeviceSN", &UOnlinePicoFunctionLibrary::execPicoGetDeviceSN },
@@ -578,13 +956,37 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 			{ "PicoReadFriendList", &UOnlinePicoFunctionLibrary::execPicoReadFriendList },
 			{ "PicoRtcGetToken", &UOnlinePicoFunctionLibrary::execPicoRtcGetToken },
 			{ "PicoRtcJoinRoom", &UOnlinePicoFunctionLibrary::execPicoRtcJoinRoom },
+			{ "PresenceClear", &UOnlinePicoFunctionLibrary::execPresenceClear },
+			{ "PresenceGetDestinations", &UOnlinePicoFunctionLibrary::execPresenceGetDestinations },
+			{ "PresenceGetDestinationsList", &UOnlinePicoFunctionLibrary::execPresenceGetDestinationsList },
+			{ "PresenceReadSendInvites", &UOnlinePicoFunctionLibrary::execPresenceReadSendInvites },
+			{ "PresenceSendInvites", &UOnlinePicoFunctionLibrary::execPresenceSendInvites },
+			{ "PresenceSet", &UOnlinePicoFunctionLibrary::execPresenceSet },
+			{ "PresenceSetDestination", &UOnlinePicoFunctionLibrary::execPresenceSetDestination },
+			{ "PresenceSetExtra", &UOnlinePicoFunctionLibrary::execPresenceSetExtra },
+			{ "PresenceSetIsJoinable", &UOnlinePicoFunctionLibrary::execPresenceSetIsJoinable },
+			{ "PresenceSetLobbySession", &UOnlinePicoFunctionLibrary::execPresenceSetLobbySession },
+			{ "PresenceSetMatchSession", &UOnlinePicoFunctionLibrary::execPresenceSetMatchSession },
+			{ "ReadInvitableUser", &UOnlinePicoFunctionLibrary::execReadInvitableUser },
+			{ "ReadLeaderboards", &UOnlinePicoFunctionLibrary::execReadLeaderboards },
+			{ "ReadLeaderboardsForFriends", &UOnlinePicoFunctionLibrary::execReadLeaderboardsForFriends },
 			{ "RtcDestroyRoom", &UOnlinePicoFunctionLibrary::execRtcDestroyRoom },
 			{ "RtcEnableAudioPropertiesReport", &UOnlinePicoFunctionLibrary::execRtcEnableAudioPropertiesReport },
 			{ "RtcLeaveRoom", &UOnlinePicoFunctionLibrary::execRtcLeaveRoom },
 			{ "RtcMuteLocalAudio", &UOnlinePicoFunctionLibrary::execRtcMuteLocalAudio },
 			{ "RtcPublishRoom", &UOnlinePicoFunctionLibrary::execRtcPublishRoom },
 			{ "RtcRoomPauseAllSubscribedStream", &UOnlinePicoFunctionLibrary::execRtcRoomPauseAllSubscribedStream },
+			{ "RtcRoomPublishStream", &UOnlinePicoFunctionLibrary::execRtcRoomPublishStream },
 			{ "RtcRoomResumeAllSubscribedStream", &UOnlinePicoFunctionLibrary::execRtcRoomResumeAllSubscribedStream },
+			{ "RtcRoomSetRemoteAudioPlaybackVolume", &UOnlinePicoFunctionLibrary::execRtcRoomSetRemoteAudioPlaybackVolume },
+			{ "RtcRoomSubscribeStream", &UOnlinePicoFunctionLibrary::execRtcRoomSubscribeStream },
+			{ "RtcRoomUnPublishStream", &UOnlinePicoFunctionLibrary::execRtcRoomUnPublishStream },
+			{ "RtcRoomUnsubscribeStream", &UOnlinePicoFunctionLibrary::execRtcRoomUnsubscribeStream },
+			{ "RtcSendRoomBinaryMessage", &UOnlinePicoFunctionLibrary::execRtcSendRoomBinaryMessage },
+			{ "RtcSendRoomMessage", &UOnlinePicoFunctionLibrary::execRtcSendRoomMessage },
+			{ "RtcSendStreamSyncInfo", &UOnlinePicoFunctionLibrary::execRtcSendStreamSyncInfo },
+			{ "RtcSendUserBinaryMessage", &UOnlinePicoFunctionLibrary::execRtcSendUserBinaryMessage },
+			{ "RtcSendUserMessage", &UOnlinePicoFunctionLibrary::execRtcSendUserMessage },
 			{ "RtcSetAudioPlaybackDevice", &UOnlinePicoFunctionLibrary::execRtcSetAudioPlaybackDevice },
 			{ "RtcSetAudioScenario", &UOnlinePicoFunctionLibrary::execRtcSetAudioScenario },
 			{ "RtcSetCaptureVolume", &UOnlinePicoFunctionLibrary::execRtcSetCaptureVolume },
@@ -595,9 +997,11 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 			{ "RtcStopAudioCapture", &UOnlinePicoFunctionLibrary::execRtcStopAudioCapture },
 			{ "RtcUnPublishRoom", &UOnlinePicoFunctionLibrary::execRtcUnPublishRoom },
 			{ "RtcUpdateToken", &UOnlinePicoFunctionLibrary::execRtcUpdateToken },
+			{ "SendSessionInviteToFriend", &UOnlinePicoFunctionLibrary::execSendSessionInviteToFriend },
 			{ "StartMatchmaking", &UOnlinePicoFunctionLibrary::execStartMatchmaking },
 			{ "StartSession", &UOnlinePicoFunctionLibrary::execStartSession },
 			{ "UpdateSession", &UOnlinePicoFunctionLibrary::execUpdateSession },
+			{ "WriteLeaderboards", &UOnlinePicoFunctionLibrary::execWriteLeaderboards },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -641,9 +1045,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_AddNamedSession_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Adds a session.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param SessionName The session name.\n/// @param Session The session will be added.\n/// @return The session added.\n" },
+		{ "Comment", "/// <summary>Adds a session.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"SessionName\">The session name.</param>\n/// <param name =\"Session\">The session will be added.</param>\n/// <returns>The session added.</returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Adds a session.\n@param WorldContextObject Used to get the information about the current world.\n@param SessionName The session name.\n@param Session The session will be added.\n@return The session added." },
+		{ "ToolTip", "<summary>Adds a session.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"SessionName\">The session name.</param>\n<param name =\"Session\">The session will be added.</param>\n<returns>The session added.</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -697,9 +1101,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_AddNamedSessionBySettings_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Adds session by session settings.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param SessionName The session name.\n/// @param SessionSettings The settings of the session.\n/// @return The session added.\n" },
+		{ "Comment", "/// <summary>Adds session by session settings.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"SessionName\">The session name.</param>\n/// <param name =\"SessionSettings\">The settings of the session.</param>\n/// <returns>The session added.</returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Adds session by session settings.\n@param WorldContextObject Used to get the information about the current world.\n@param SessionName The session name.\n@param SessionSettings The settings of the session.\n@return The session added." },
+		{ "ToolTip", "<summary>Adds session by session settings.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"SessionName\">The session name.</param>\n<param name =\"SessionSettings\">The settings of the session.</param>\n<returns>The session added.</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -754,9 +1158,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_CancelMatchmaking_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Cancels matchmaking for a session.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param SearchingPlayerNum (not used)\n/// @param SessionName The session name.\n/// @param OnCancelMatchmakingCompleteDelegate Executes this parameter after the matchmaking has been canceled.\n/// @return Bool: `true`-success; `false`-falure.\n" },
+		{ "Comment", "/// <summary>Cancels matchmaking for a session.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"SearchingPlayerNum\">(not used)</param>\n/// <param name =\"SessionName\">The session name.</param>\n/// <param name =\"OnCancelMatchmakingCompleteDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Cancels matchmaking for a session.\n@param WorldContextObject Used to get the information about the current world.\n@param SearchingPlayerNum (not used)\n@param SessionName The session name.\n@param OnCancelMatchmakingCompleteDelegate Executes this parameter after the matchmaking has been canceled.\n@return Bool: `true`-success; `false`-falure." },
+		{ "ToolTip", "<summary>Cancels matchmaking for a session.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"SearchingPlayerNum\">(not used)</param>\n<param name =\"SessionName\">The session name.</param>\n<param name =\"OnCancelMatchmakingCompleteDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -823,9 +1227,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_CreateSession_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Creates a private session or a matchmaking session.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param HostingPlayerNum The index in the current userId array.\n/// @param SessionName The session name.\n/// @param NewSessionSettings The session settings.\n/// @param OnCreateSessionCompleteDelegate Executes this parameter after the session has been created.\n/// @return Bool: `true`-success; `false`-falure.\n" },
+		{ "Comment", "/// <summary>Creates a private session or a matchmaking session.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name =\"HostingPlayerNum\">The index in the current userId array.</param> \n/// <param name =\"SessionName\">The session name.</param> \n/// <param name =\"NewSessionSettings\">The session settings.</param> \n/// <param name =\"OnCreateSessionCompleteDelegate\">Will be executed when the request has been completed.</param> \n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Creates a private session or a matchmaking session.\n@param WorldContextObject Used to get the information about the current world.\n@param HostingPlayerNum The index in the current userId array.\n@param SessionName The session name.\n@param NewSessionSettings The session settings.\n@param OnCreateSessionCompleteDelegate Executes this parameter after the session has been created.\n@return Bool: `true`-success; `false`-falure." },
+		{ "ToolTip", "<summary>Creates a private session or a matchmaking session.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"HostingPlayerNum\">The index in the current userId array.</param>\n<param name =\"SessionName\">The session name.</param>\n<param name =\"NewSessionSettings\">The session settings.</param>\n<param name =\"OnCreateSessionCompleteDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -876,9 +1280,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_DestroySession_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "// todo CompletionDelegate\n/// @brief Destroys the current session.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param SessionName The session name.\n/// @param OnDestroySessionCompleteDelegate Executes this parameter after the session has been destroyed.\n/// @return Bool: `true`-success; `false`-falure.\n" },
+		{ "Comment", "// todo CompletionDelegate\n/// <summary>Destroys the current session.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name =\"SessionName\">The session name.</param> \n/// <param name =\"OnDestroySessionCompleteDelegate\">Will be executed when the request has been completed.</param> \n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "todo CompletionDelegate\n@brief Destroys the current session.\n@param WorldContextObject Used to get the information about the current world.\n@param SessionName The session name.\n@param OnDestroySessionCompleteDelegate Executes this parameter after the session has been destroyed.\n@return Bool: `true`-success; `false`-falure." },
+		{ "ToolTip", "todo CompletionDelegate\n<summary>Destroys the current session.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"SessionName\">The session name.</param>\n<param name =\"OnDestroySessionCompleteDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -912,9 +1316,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_DumpSessionState_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Dumps a session.\n/// @param WorldContextObject Used to get the information about the current world.\n" },
+		{ "Comment", "/// <summary>Dumps a session.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Dumps a session.\n@param WorldContextObject Used to get the information about the current world." },
+		{ "ToolTip", "<summary>Dumps a session.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -965,9 +1369,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_EndSession_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Changes the session state to `Ended`.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param SessionName The session name.\n/// @param OnEndSessionCompleteDelegate Executes this parameter after the session has been ended.\n/// @return Bool: `true`-success; `false`-falure.\n" },
+		{ "Comment", "/// <summary>Changes the session state to `Ended`.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name =\"SessionName\">The session name.</param> \n/// <param name =\"OnEndSessionCompleteDelegate\">Will be executed when the request has been completed.</param> \n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Changes the session state to `Ended`.\n@param WorldContextObject Used to get the information about the current world.\n@param SessionName The session name.\n@param OnEndSessionCompleteDelegate Executes this parameter after the session has been ended.\n@return Bool: `true`-success; `false`-falure." },
+		{ "ToolTip", "<summary>Changes the session state to `Ended`.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"SessionName\">The session name.</param>\n<param name =\"OnEndSessionCompleteDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1038,9 +1442,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessionById_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "// todo FriendId /// CompletionDelegate\n/// @brief Gets session data by session ID.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param SearchingUserId The ID of the logged-in player. If the played has not logged in, the session data will be unable to get.\n/// @param SessionId The session ID.\n/// @param OnSingleSessionResultCompleteDelegate Executes this parameter after the session data has been got.\n/// @return Bool: `true`-success; `false`-falure.\n" },
+		{ "Comment", "// todo FriendId /// CompletionDelegate\n/// <summary>Gets session data by session ID.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"SearchingUserId\">The ID of the logged-in player. If the played has not logged in, the session data will be unable to get.</param>\n/// <param name =\"SessionId\">The session ID.</param>\n/// <param name =\"OnSingleSessionResultCompleteDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "todo FriendId  CompletionDelegate\n@brief Gets session data by session ID.\n@param WorldContextObject Used to get the information about the current world.\n@param SearchingUserId The ID of the logged-in player. If the played has not logged in, the session data will be unable to get.\n@param SessionId The session ID.\n@param OnSingleSessionResultCompleteDelegate Executes this parameter after the session data has been got.\n@return Bool: `true`-success; `false`-falure." },
+		{ "ToolTip", "todo FriendId  CompletionDelegate\n<summary>Gets session data by session ID.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"SearchingUserId\">The ID of the logged-in player. If the played has not logged in, the session data will be unable to get.</param>\n<param name =\"SessionId\">The session ID.</param>\n<param name =\"OnSingleSessionResultCompleteDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1066,9 +1470,6 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		};
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_SearchingPlayerNum;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NewSessionSearch_MetaData[];
-#endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_NewSessionSearch;
 		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_OnFindSessionCompleteDelegate;
 		static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -1081,12 +1482,7 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 	};
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessions_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventFindSessions_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessions_Statics::NewProp_SearchingPlayerNum = { "SearchingPlayerNum", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventFindSessions_Parms, SearchingPlayerNum), METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessions_Statics::NewProp_NewSessionSearch_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessions_Statics::NewProp_NewSessionSearch = { "NewSessionSearch", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventFindSessions_Parms, NewSessionSearch), Z_Construct_UScriptStruct_FPicoOnlineSessionSearch, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessions_Statics::NewProp_NewSessionSearch_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessions_Statics::NewProp_NewSessionSearch_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessions_Statics::NewProp_NewSessionSearch = { "NewSessionSearch", nullptr, (EPropertyFlags)0x0010000008000180, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventFindSessions_Parms, NewSessionSearch), Z_Construct_UScriptStruct_FPicoOnlineSessionSearch, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessions_Statics::NewProp_OnFindSessionCompleteDelegate = { "OnFindSessionCompleteDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventFindSessions_Parms, OnFindSessionCompleteDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnFindSessionCompleteDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessions_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 	{
@@ -1103,9 +1499,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessions_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Finds matchmaking sessions or moderated sessions.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param SearchingPlayerNum (not used)\n/// @param NewSessionSearch The search settings.\n/// @param OnFindSessionCompleteDelegate Executes this parameter after the session has been found.\n/// @return Bool: `true`-success; `false`-falure.\n" },
+		{ "Comment", "/// <summary>Finds matchmaking sessions or moderated sessions.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"SearchingPlayerNum\">(not used)</param>\n/// <param name =\"NewSessionSearch\">The search settings.</param>\n/// <param name =\"OnFindSessionCompleteDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Finds matchmaking sessions or moderated sessions.\n@param WorldContextObject Used to get the information about the current world.\n@param SearchingPlayerNum (not used)\n@param NewSessionSearch The search settings.\n@param OnFindSessionCompleteDelegate Executes this parameter after the session has been found.\n@return Bool: `true`-success; `false`-falure." },
+		{ "ToolTip", "<summary>Finds matchmaking sessions or moderated sessions.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"SearchingPlayerNum\">(not used)</param>\n<param name =\"NewSessionSearch\">The search settings.</param>\n<param name =\"OnFindSessionCompleteDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1116,6 +1512,149 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessions_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventGetInvitableFriendList_Parms
+		{
+			UObject* WorldContextObject;
+			TArray<FPicoUserInfo> OutFriendsList;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_OutFriendsList_Inner;
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_OutFriendsList;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventGetInvitableFriendList_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::NewProp_OutFriendsList_Inner = { "OutFriendsList", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FPicoUserInfo, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::NewProp_OutFriendsList = { "OutFriendsList", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventGetInvitableFriendList_Parms, OutFriendsList), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventGetInvitableFriendList_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventGetInvitableFriendList_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::NewProp_OutFriendsList_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::NewProp_OutFriendsList,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Gets a list of invitable friends for a user. These friends are previously retrieved from the online service when `PresenceGetDestinations` is complete.</summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param>    \n/// <param name=\"OutFriendsList\">The [out] array that receives the copied data.</param>\n/// <returns>Bool:\n/// * `true`: the friend list has been found.\n/// * `false`: otherwise\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Gets a list of invitable friends for a user. These friends are previously retrieved from the online service when `PresenceGetDestinations` is complete.</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"OutFriendsList\">The [out] array that receives the copied data.</param>\n<returns>Bool:\n* `true`: the friend list has been found.\n* `false`: otherwise\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "GetInvitableFriendList", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventGetInvitableFriendList_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventGetLaunchDetails_Parms
+		{
+			UObject* WorldContextObject;
+			FLaunchDetails OutLaunchDetails;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_OutLaunchDetails;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventGetLaunchDetails_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::NewProp_OutLaunchDetails = { "OutLaunchDetails", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventGetLaunchDetails_Parms, OutLaunchDetails), Z_Construct_UScriptStruct_FLaunchDetails, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventGetLaunchDetails_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventGetLaunchDetails_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::NewProp_OutLaunchDetails,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|ApplicationLifecycle" },
+		{ "Comment", "/// <summary>Gets information about how the app was launched.</summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name=\"OutLaunchDetails\">The [out] struct of launch details.</param> \n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Gets information about how the app was launched.</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"OutLaunchDetails\">The [out] struct of launch details.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "GetLaunchDetails", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventGetLaunchDetails_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventGetLoginPicoUser_Parms
+		{
+			UObject* WorldContextObject;
+			int32 LocalUserNum;
+			UPico_User* ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_LocalUserNum;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventGetLoginPicoUser_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::NewProp_LocalUserNum = { "LocalUserNum", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventGetLoginPicoUser_Parms, LocalUserNum), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventGetLoginPicoUser_Parms, ReturnValue), Z_Construct_UClass_UPico_User_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::NewProp_LocalUserNum,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Identity" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "GetLoginPicoUser", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventGetLoginPicoUser_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1147,9 +1686,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetNamedSession_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Gets the data about a session.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param SessionName The session name.\n/// @return The data about the session.\n" },
+		{ "Comment", "/// <summary>Gets the data about a session.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"SessionName\">The session name.</param>\n/// <returns>The data about the session.</returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Gets the data about a session.\n@param WorldContextObject Used to get the information about the current world.\n@param SessionName The session name.\n@return The data about the session." },
+		{ "ToolTip", "<summary>Gets the data about a session.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"SessionName\">The session name.</param>\n<returns>The data about the session.</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1183,9 +1722,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOnlineSubsystemPicoManager_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico" },
-		{ "Comment", "/** @defgroup BP_Common BP_Common\n     *  This is the BP_Common group\n     *  @{\n     *//// @brief Gets the class of online subsystem Pico manager for binding notifications.\n/// @return The UOnlineSubsystemPicoManager class.\n" },
+		{ "Comment", "/** @defgroup BP_Common BP_Common\n     *  This is the BP_Common group\n     *  @{\n     *//// <summary>Gets the class of online subsystem Pico manager for binding notifications.</summary>\n/// <returns>The UOnlineSubsystemPicoManager class.</returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@defgroup BP_Common BP_Common\nThis is the BP_Common group\n@{\n    /// @brief Gets the class of online subsystem Pico manager for binding notifications.\n/// @return The UOnlineSubsystemPicoManager class." },
+		{ "ToolTip", "@defgroup BP_Common BP_Common\nThis is the BP_Common group\n@{\n    /// <summary>Gets the class of online subsystem Pico manager for binding notifications.</summary>\n/// <returns>The UOnlineSubsystemPicoManager class.</returns>" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOnlineSubsystemPicoManager_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "GetOnlineSubsystemPicoManager", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventGetOnlineSubsystemPicoManager_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOnlineSubsystemPicoManager_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOnlineSubsystemPicoManager_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOnlineSubsystemPicoManager_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOnlineSubsystemPicoManager_Statics::Function_MetaDataParams)) };
@@ -1198,36 +1737,55 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOpenId_Statics
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics
 	{
-		struct OnlinePicoFunctionLibrary_eventGetOpenId_Parms
+		struct OnlinePicoFunctionLibrary_eventGetSendInvitesList_Parms
 		{
-			FString ReturnValue;
+			UObject* WorldContextObject;
+			TArray<FPicoApplicationInvite> OutList;
+			bool ReturnValue;
 		};
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_OutList_Inner;
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_OutList;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOpenId_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventGetOpenId_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOpenId_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOpenId_Statics::NewProp_ReturnValue,
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventGetSendInvitesList_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::NewProp_OutList_Inner = { "OutList", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FPicoApplicationInvite, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::NewProp_OutList = { "OutList", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventGetSendInvitesList_Parms, OutList), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventGetSendInvitesList_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventGetSendInvitesList_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::NewProp_OutList_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::NewProp_OutList,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::NewProp_ReturnValue,
 	};
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOpenId_Statics::Function_MetaDataParams[] = {
-		{ "Category", "OnlinePico|Platform" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Gets a list of sent invitations when `PresenceSendInvites` or `PresenceReadSendInvites` is complete.</summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name=\"OutList\">The [out] array that receives the copied data.</param>\n/// <returns>Bool:\n/// * `true`: the invitation list has been found.\n/// * `false`: otherwise\n/// </returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Gets a list of sent invitations when `PresenceSendInvites` or `PresenceReadSendInvites` is complete.</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"OutList\">The [out] array that receives the copied data.</param>\n<returns>Bool:\n* `true`: the invitation list has been found.\n* `false`: otherwise\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOpenId_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "GetOpenId", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventGetOpenId_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOpenId_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOpenId_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOpenId_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOpenId_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOpenId()
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "GetSendInvitesList", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventGetSendInvitesList_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOpenId_Statics::FuncParams);
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1259,9 +1817,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSessionSettings_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Gets the settings of a session.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param SessionName The session name.\n/// @return The settings of the session.\n" },
+		{ "Comment", "/// <summary>Gets the settings of a session.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"SessionName\">The session name.</param>\n/// <returns>The settings of the session.</returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Gets the settings of a session.\n@param WorldContextObject Used to get the information about the current world.\n@param SessionName The session name.\n@return The settings of the session." },
+		{ "ToolTip", "<summary>Gets the settings of a session.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"SessionName\">The session name.</param>\n<returns>The settings of the session.</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1306,9 +1864,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSessionState_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Gets the state of a session.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param SessionName The name of the session to get state for.\n/// @return The state of the session.\n" },
+		{ "Comment", "/// <summary>Gets the state of a session.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"SessionName\">The name of the session to get state for.</param>\n/// <returns>The state of the session.</returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Gets the state of a session.\n@param WorldContextObject Used to get the information about the current world.\n@param SessionName The name of the session to get state for.\n@return The state of the session." },
+		{ "ToolTip", "<summary>Gets the state of a session.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"SessionName\">The name of the session to get state for.</param>\n<returns>The state of the session.</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1319,6 +1877,53 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSessionState_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventGetVersion_Parms
+		{
+			UObject* WorldContextObject;
+			FScriptDelegate InGetVersionDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InGetVersionDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventGetVersion_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::NewProp_InGetVersionDelegate = { "InGetVersionDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventGetVersion_Parms, InGetVersionDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerGetVersionDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventGetVersion_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventGetVersion_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::NewProp_InGetVersionDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Application" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "GetVersion", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventGetVersion_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1367,9 +1972,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_IsPlayerInSession_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Checks whether a player is in a session.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param SessionName The session name.\n/// @param UniqueId The unique ID of the player.\n/// @return Bool: `true`-success; `false`-falure.\n" },
+		{ "Comment", "/// <summary>Checks whether a player is in a session.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name =\"SessionName\">The session name.</param> \n/// <param name =\"UniqueId\">The unique ID of the player.</param> \n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Checks whether a player is in a session.\n@param WorldContextObject Used to get the information about the current world.\n@param SessionName The session name.\n@param UniqueId The unique ID of the player.\n@return Bool: `true`-success; `false`-falure." },
+		{ "ToolTip", "<summary>Checks whether a player is in a session.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"SessionName\">The session name.</param>\n<param name =\"UniqueId\">The unique ID of the player.</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1436,9 +2041,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_JoinSession_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Joins a session.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param PlayerNum The `LocalOwnerId` of the session.\n/// @param SessionName The name of the session to join.\n/// @param SearchResult The search session result settings.\n/// @param OnJoinSessionCompleteDelegate Executes this parameter after the session has been joined.\n/// @return Bool: `true`-success; `false`-falure.\n" },
+		{ "Comment", "/// <summary>Joins a session.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"PlayerNum\">The `LocalOwnerId` of the session.</param>\n/// <param name =\"SessionName\">The name of the session to join.</param>\n/// <param name =\"SearchResult\">The search session result settings.</param>\n/// <param name =\"OnJoinSessionCompleteDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Joins a session.\n@param WorldContextObject Used to get the information about the current world.\n@param PlayerNum The `LocalOwnerId` of the session.\n@param SessionName The name of the session to join.\n@param SearchResult The search session result settings.\n@param OnJoinSessionCompleteDelegate Executes this parameter after the session has been joined.\n@return Bool: `true`-success; `false`-falure." },
+		{ "ToolTip", "<summary>Joins a session.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"PlayerNum\">The `LocalOwnerId` of the session.</param>\n<param name =\"SessionName\">The name of the session to join.</param>\n<param name =\"SearchResult\">The search session result settings.</param>\n<param name =\"OnJoinSessionCompleteDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1449,6 +2054,288 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_JoinSession_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventLaunchOtherApp_Parms
+		{
+			UObject* WorldContextObject;
+			FString PackageName;
+			FString Message;
+			FScriptDelegate InLaunchOtherAppDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PackageName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_PackageName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Message_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Message;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InLaunchOtherAppDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherApp_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_PackageName_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_PackageName = { "PackageName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherApp_Parms, PackageName), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_PackageName_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_PackageName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_Message_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_Message = { "Message", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherApp_Parms, Message), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_Message_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_Message_MetaData)) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_InLaunchOtherAppDelegate = { "InLaunchOtherAppDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherApp_Parms, InLaunchOtherAppDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerLaunchOtherAppDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventLaunchOtherApp_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventLaunchOtherApp_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_PackageName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_Message,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_InLaunchOtherAppDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Application" },
+		{ "Comment", "/// <summary>Launches a different app in a user's library.\n/// @note If the user does not have that app installed, the user will be directed to that app's page on the PICO Store.\n/// </summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name=\"PackageName\">The package name of the app to launch.</param>\n/// <param name=\"Message\">A message to be passed to the launched app.</param> \n/// <param name=\"InLaunchOtherAppDelegate\">Will be executed when the request has been completed.</param> \n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Launches a different app in a user's library.\n@note If the user does not have that app installed, the user will be directed to that app's page on the PICO Store.\n</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"PackageName\">The package name of the app to launch.</param>\n<param name=\"Message\">A message to be passed to the launched app.</param>\n<param name=\"InLaunchOtherAppDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "LaunchOtherApp", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventLaunchOtherApp_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms
+		{
+			UObject* WorldContextObject;
+			FString AppID;
+			FString PackageName;
+			FString Message;
+			FString ApiName;
+			FString LobbySessionId;
+			FString MatchSessionId;
+			FString TrackId;
+			FString Extra;
+			FScriptDelegate InLaunchOtherAppByPresenceDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AppID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_AppID;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PackageName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_PackageName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Message_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Message;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ApiName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ApiName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LobbySessionId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_LobbySessionId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MatchSessionId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_MatchSessionId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TrackId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_TrackId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Extra_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Extra;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InLaunchOtherAppByPresenceDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_AppID_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_AppID = { "AppID", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms, AppID), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_AppID_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_AppID_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_PackageName_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_PackageName = { "PackageName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms, PackageName), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_PackageName_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_PackageName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_Message_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_Message = { "Message", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms, Message), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_Message_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_Message_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_ApiName_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_ApiName = { "ApiName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms, ApiName), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_ApiName_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_ApiName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_LobbySessionId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_LobbySessionId = { "LobbySessionId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms, LobbySessionId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_LobbySessionId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_LobbySessionId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_MatchSessionId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_MatchSessionId = { "MatchSessionId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms, MatchSessionId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_MatchSessionId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_MatchSessionId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_TrackId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_TrackId = { "TrackId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms, TrackId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_TrackId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_TrackId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_Extra_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_Extra = { "Extra", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms, Extra), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_Extra_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_Extra_MetaData)) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_InLaunchOtherAppByPresenceDelegate = { "InLaunchOtherAppByPresenceDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms, InLaunchOtherAppByPresenceDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerLaunchOtherAppByPresenceDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_AppID,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_PackageName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_Message,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_ApiName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_LobbySessionId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_MatchSessionId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_TrackId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_Extra,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_InLaunchOtherAppByPresenceDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Application" },
+		{ "Comment", "/// <summary>Launches a different app in a user's library.\n/// @note If the user does not have that app installed, the user will be directed to that app's page on the PICO Store.\n/// </summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name=\"AppID\">The ID of the app to launch.</param>\n/// <param name=\"PackageName\">The package name of the app to launch.</param>\n/// <param name=\"Message\">A message to be passed to the launched app.</param>\n/// <param name=\"ApiName\">The API name of the destination in the app.</param>\n/// <param name=\"LobbySessionId\">The lobby session ID of the user's presence, which identifies a user group or team. Users with the same lobby session ID can play together or form a team in a game.</param>\n/// <param name=\"MatchSessionId\">The match session ID of the user's presence, which identifies all users within the same destination, such as maps and levels. Users with different lobby session IDs will have the same match session ID when playing the same match.</param>\n/// <param name=\"TrackId\">The tracking ID of the app launch event.</param>\n/// <param name=\"Extra\">Extra data defined by the developer.</param>\n/// <param name=\"InLaunchOtherAppByPresenceDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Launches a different app in a user's library.\n@note If the user does not have that app installed, the user will be directed to that app's page on the PICO Store.\n</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"AppID\">The ID of the app to launch.</param>\n<param name=\"PackageName\">The package name of the app to launch.</param>\n<param name=\"Message\">A message to be passed to the launched app.</param>\n<param name=\"ApiName\">The API name of the destination in the app.</param>\n<param name=\"LobbySessionId\">The lobby session ID of the user's presence, which identifies a user group or team. Users with the same lobby session ID can play together or form a team in a game.</param>\n<param name=\"MatchSessionId\">The match session ID of the user's presence, which identifies all users within the same destination, such as maps and levels. Users with different lobby session IDs will have the same match session ID when playing the same match.</param>\n<param name=\"TrackId\">The tracking ID of the app launch event.</param>\n<param name=\"Extra\">Extra data defined by the developer.</param>\n<param name=\"InLaunchOtherAppByPresenceDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "LaunchOtherAppByPresence", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventLaunchOtherAppByPresence_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventLogDeeplinkResult_Parms
+		{
+			UObject* WorldContextObject;
+			FString TrackingID;
+			ELaunchResult LaunchResult;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TrackingID_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_TrackingID;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_LaunchResult_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_LaunchResult;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLogDeeplinkResult_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_TrackingID_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_TrackingID = { "TrackingID", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLogDeeplinkResult_Parms, TrackingID), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_TrackingID_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_TrackingID_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_LaunchResult_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_LaunchResult = { "LaunchResult", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventLogDeeplinkResult_Parms, LaunchResult), Z_Construct_UEnum_OnlineSubsystemPico_ELaunchResult, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventLogDeeplinkResult_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventLogDeeplinkResult_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_TrackingID,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_LaunchResult_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_LaunchResult,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|ApplicationLifecycle" },
+		{ "Comment", "/// <summary>Logs if the user has been successfully directed to the desired destination via a deep link.</summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name=\"TrackingID\">The tracking ID of the app launch event.</param>\n/// <param name=\"LaunchResult\">Enumerations of the launch result:\n/// * `Unknown`\n/// * `Success`\n/// * `FailedRoomFull`\n/// * `FailedGameAlreadyStarted`\n/// * `FailedRoomNotFound`\n/// * `FailedUserDeclined`\n/// * `FailedOtherReason`\n/// </param>\n/// <returns>Bool:\n/// * `true`: the result has been logged.\n/// * `false`: failed to log the result.\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Logs if the user has been successfully directed to the desired destination via a deep link.</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"TrackingID\">The tracking ID of the app launch event.</param>\n<param name=\"LaunchResult\">Enumerations of the launch result:\n* `Unknown`\n* `Success`\n* `FailedRoomFull`\n* `FailedGameAlreadyStarted`\n* `FailedRoomNotFound`\n* `FailedUserDeclined`\n* `FailedOtherReason`\n</param>\n<returns>Bool:\n* `true`: the result has been logged.\n* `false`: failed to log the result.\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "LogDeeplinkResult", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventLogDeeplinkResult_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1551,7 +2438,7 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 			int32 LocalUserNum;
 			FString FriendId;
 			FString ListName;
-			FPicoFriend ReturnValue;
+			FPicoUserInfo ReturnValue;
 		};
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_LocalUserNum;
@@ -1584,7 +2471,7 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriend_Statics::NewProp_ListName = { "ListName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPicoGetFriend_Parms, ListName), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriend_Statics::NewProp_ListName_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriend_Statics::NewProp_ListName_MetaData)) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriend_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPicoGetFriend_Parms, ReturnValue), Z_Construct_UScriptStruct_FPicoFriend, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriend_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPicoGetFriend_Parms, ReturnValue), Z_Construct_UScriptStruct_FPicoUserInfo, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriend_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriend_Statics::NewProp_WorldContextObject,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriend_Statics::NewProp_LocalUserNum,
@@ -1595,9 +2482,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriend_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Friend" },
-		{ "Comment", "/// @brief Gets a user's friends by friend list name and friend ID.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param LocalUserNum User's account number.\n/// @param FriendId Friend ID.\n/// @param ListName The name of the list. Valid value is `Default` or `OnlinePlayers`.\n/// @return FPicoFriend Pico friend struct.  \n" },
+		{ "Comment", "/// <summary>Gets a user's friends by friend list name and friend ID.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"LocalUserNum\">User's account number.</param>\n/// <param name =\"FriendId\">Friend ID.</param>\n/// <param name =\"ListName\">The name of the list. Valid value is `Default` or `OnlinePlayers`.</param>\n/// <returns>FPicoFriend Pico friend struct.</returns>  \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Gets a user's friends by friend list name and friend ID.\n@param WorldContextObject Used to get the information about the current world.\n@param LocalUserNum User's account number.\n@param FriendId Friend ID.\n@param ListName The name of the list. Valid value is `Default` or `OnlinePlayers`.\n@return FPicoFriend Pico friend struct." },
+		{ "ToolTip", "<summary>Gets a user's friends by friend list name and friend ID.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"LocalUserNum\">User's account number.</param>\n<param name =\"FriendId\">Friend ID.</param>\n<param name =\"ListName\">The name of the list. Valid value is `Default` or `OnlinePlayers`.</param>\n<returns>FPicoFriend Pico friend struct.</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1618,7 +2505,7 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 			UObject* WorldContextObject;
 			int32 LocalUserNum;
 			FString ListName;
-			TArray<FPicoFriend> OutFriends;
+			TArray<FPicoUserInfo> OutFriends;
 		};
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_LocalUserNum;
@@ -1642,7 +2529,7 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriendList_Statics::NewProp_ListName = { "ListName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPicoGetFriendList_Parms, ListName), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriendList_Statics::NewProp_ListName_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriendList_Statics::NewProp_ListName_MetaData)) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriendList_Statics::NewProp_OutFriends_Inner = { "OutFriends", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FPicoFriend, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriendList_Statics::NewProp_OutFriends_Inner = { "OutFriends", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FPicoUserInfo, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriendList_Statics::NewProp_OutFriends = { "OutFriends", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPicoGetFriendList_Parms, OutFriends), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriendList_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriendList_Statics::NewProp_WorldContextObject,
@@ -1654,9 +2541,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriendList_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Friend" },
-		{ "Comment", "/// @brief Gets an arrary of friends for a specified user by friend list name.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param LocalUserNum User's account number.\n/// @param ListName The name of the list. Valid value is `Default` or `OnlinePlayers`.\n/// @param OutFriends Returns an array of friends.   \n" },
+		{ "Comment", "/// <summary>Gets an arrary of friends for a specified user by friend list name.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"LocalUserNum\">User's account number.</param>\n/// <param name =\"ListName\">The name of the list. Valid value is `Default` or `OnlinePlayers`.</param>\n/// <param name =\"OutFriends\">Returns an array of friends.</param>   \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Gets an arrary of friends for a specified user by friend list name.\n@param WorldContextObject Used to get the information about the current world.\n@param LocalUserNum User's account number.\n@param ListName The name of the list. Valid value is `Default` or `OnlinePlayers`.\n@param OutFriends Returns an array of friends." },
+		{ "ToolTip", "<summary>Gets an arrary of friends for a specified user by friend list name.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"LocalUserNum\">User's account number.</param>\n<param name =\"ListName\">The name of the list. Valid value is `Default` or `OnlinePlayers`.</param>\n<param name =\"OutFriends\">Returns an array of friends.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1698,9 +2585,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetNickName_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Identity" },
-		{ "Comment", "/// @brief Gets a user's nickname.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param LocalUserNum The controller number of the user to get nickname for.   \n" },
+		{ "Comment", "/// <summary>Gets a user's nickname.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"LocalUserNum\">The controller number of the user to get nickname for.</param>   \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Gets a user's nickname.\n@param WorldContextObject Used to get the information about the current world.\n@param LocalUserNum The controller number of the user to get nickname for." },
+		{ "ToolTip", "<summary>Gets a user's nickname.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"LocalUserNum\">The controller number of the user to get nickname for.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1741,9 +2628,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetRtcEngineInit_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Initializes the RTC engine.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @return Voice The initialization result.\n" },
+		{ "Comment", "/// <summary>Initializes the RTC engine.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <returns>Voice the initialization result.</returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Initializes the RTC engine.\n@param WorldContextObject Used to get the information about the current world.\n@return Voice The initialization result." },
+		{ "ToolTip", "<summary>Initializes the RTC engine.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<returns>Voice the initialization result.</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1821,9 +2708,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoLogin_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Identity" },
-		{ "Comment", "/// @brief Gets the account login information for the current device.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param LocalUserNum The controller number of the user to get login information for.   \n/// @param UserId User ID.\n/// @param InToken User token.\n/// @param InType User type.\n/// @param InLoginComleteDelegate Callback function proxy.\n" },
+		{ "Comment", "/// <summary>Gets the account login information for the current device.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"LocalUserNum\">The controller number of the user to get login information for.</param>   \n/// <param name =\"UserId\">User ID.</param>\n/// <param name =\"InToken\">User token.</param>\n/// <param name =\"InType\">User type.</param>\n/// <param name =\"InLoginComleteDelegate\">Callback function proxy.</param>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Gets the account login information for the current device.\n@param WorldContextObject Used to get the information about the current world.\n@param LocalUserNum The controller number of the user to get login information for.\n@param UserId User ID.\n@param InToken User token.\n@param InType User type.\n@param InLoginComleteDelegate Callback function proxy." },
+		{ "ToolTip", "<summary>Gets the account login information for the current device.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"LocalUserNum\">The controller number of the user to get login information for.</param>\n<param name =\"UserId\">User ID.</param>\n<param name =\"InToken\">User token.</param>\n<param name =\"InType\">User type.</param>\n<param name =\"InLoginComleteDelegate\">Callback function proxy.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1877,9 +2764,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoReadFriendList_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Friend" },
-		{ "Comment", "/// @brief Read user's friend list by account number.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param LocalUserNum User's account number.\n/// @param ListName The name of the list. Valid value is `Default` or `OnlinePlayers`.\n/// @param InReadFriendListDelegate Callback function proxy. \n" },
+		{ "Comment", "/// <summary>Reads user's friend list by account number.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"LocalUserNum\">User's account number.</param>\n/// <param name =\"ListName\">The name of the list. Valid value is `Default` or `OnlinePlayers`.</param>\n/// <param name =\"InReadFriendListDelegate\">Callback function proxy.</param> \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Read user's friend list by account number.\n@param WorldContextObject Used to get the information about the current world.\n@param LocalUserNum User's account number.\n@param ListName The name of the list. Valid value is `Default` or `OnlinePlayers`.\n@param InReadFriendListDelegate Callback function proxy." },
+		{ "ToolTip", "<summary>Reads user's friend list by account number.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"LocalUserNum\">User's account number.</param>\n<param name =\"ListName\">The name of the list. Valid value is `Default` or `OnlinePlayers`.</param>\n<param name =\"InReadFriendListDelegate\">Callback function proxy.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -1949,9 +2836,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoRtcGetToken_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Gets the rtc token.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param UserId User ID.\n/// @param RoomId Room ID.\n/// @param Ttl The effective duration of the room (in seconds).\n/// @param InValue Channel effective time (in seconds).\n/// @param InRtcGetTokenDelegate Callback function proxy.    \n" },
+		{ "Comment", "/// <summary>Gets the RTC token.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"UserId\">User ID.</param>\n/// <param name =\"RoomId\">Room ID.</param>\n/// <param name =\"Ttl\">The effective duration of the room (in seconds).</param>\n/// <param name =\"InValue\">Channel effective time (in seconds).</param>\n/// <param name =\"InRtcGetTokenDelegate\">Callback function proxy.</param>  \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Gets the rtc token.\n@param WorldContextObject Used to get the information about the current world.\n@param UserId User ID.\n@param RoomId Room ID.\n@param Ttl The effective duration of the room (in seconds).\n@param InValue Channel effective time (in seconds).\n@param InRtcGetTokenDelegate Callback function proxy." },
+		{ "ToolTip", "<summary>Gets the RTC token.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"UserId\">User ID.</param>\n<param name =\"RoomId\">Room ID.</param>\n<param name =\"Ttl\">The effective duration of the room (in seconds).</param>\n<param name =\"InValue\">Channel effective time (in seconds).</param>\n<param name =\"InRtcGetTokenDelegate\">Callback function proxy.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2053,9 +2940,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoRtcJoinRoom_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Joins a user to a rtc room.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param RoomId Room ID.\n/// @param UserId User ID.\n/// @param Token Room token.\n/// @param UserExtra Extra information added by the user.\n/// @param InRoomProfileType Room type: `0`-communication room; `1`-live broadcasting room; `2`-game room; `3`-cloud game room; `4`-low-latency room.\n/// @param bIsAutoSubscribeAudio Whether to automatically subscribe to the audio of the room: `true`-yes; `false`-no.\n/// @return Int: `0` indicates success, and other values indicate failure.\n" },
+		{ "Comment", "/// <summary>Joins a user to a RTC room.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"RoomId\">Room ID.</param>\n/// <param name =\"UserId\">User ID.</param>\n/// <param name =\"Token\">Room token.</param>\n/// <param name =\"UserExtra\">Extra information added by the user.</param>\n/// <param name =\"InRoomProfileType\">Room type: \n/// <ul>\n/// <li>`0`: communication room</li>\n/// <li>`1`: live broadcasting room</li> \n/// <li>`2`: game room</li> \n/// <li>`3`: cloud game room</li>\n/// <li>`4`: low-latency room</li>\n/// </ul>\n/// </param>\n/// <param name =\"bIsAutoSubscribeAudio\">Whether to automatically subscribe to the audio of the room: \n/// <ul>\n/// <li>`true`: yes</li>\n/// <li>`false`: no</li>\n/// </ul>\n/// </param>\n/// <returns>Int:\n/// <ul>\n/// <li>`0`: success</li>\n/// <li>Other values: failure</li>\n/// </ul>\n/// </returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Joins a user to a rtc room.\n@param WorldContextObject Used to get the information about the current world.\n@param RoomId Room ID.\n@param UserId User ID.\n@param Token Room token.\n@param UserExtra Extra information added by the user.\n@param InRoomProfileType Room type: `0`-communication room; `1`-live broadcasting room; `2`-game room; `3`-cloud game room; `4`-low-latency room.\n@param bIsAutoSubscribeAudio Whether to automatically subscribe to the audio of the room: `true`-yes; `false`-no.\n@return Int: `0` indicates success, and other values indicate failure." },
+		{ "ToolTip", "<summary>Joins a user to a RTC room.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"RoomId\">Room ID.</param>\n<param name =\"UserId\">User ID.</param>\n<param name =\"Token\">Room token.</param>\n<param name =\"UserExtra\">Extra information added by the user.</param>\n<param name =\"InRoomProfileType\">Room type:\n<ul>\n<li>`0`: communication room</li>\n<li>`1`: live broadcasting room</li>\n<li>`2`: game room</li>\n<li>`3`: cloud game room</li>\n<li>`4`: low-latency room</li>\n</ul>\n</param>\n<param name =\"bIsAutoSubscribeAudio\">Whether to automatically subscribe to the audio of the room:\n<ul>\n<li>`true`: yes</li>\n<li>`false`: no</li>\n</ul>\n</param>\n<returns>Int:\n<ul>\n<li>`0`: success</li>\n<li>Other values: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2066,6 +2953,841 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoRtcJoinRoom_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventPresenceClear_Parms
+		{
+			UObject* WorldContextObject;
+			FScriptDelegate InPresenceClearDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InPresenceClearDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceClear_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::NewProp_InPresenceClearDelegate = { "InPresenceClearDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceClear_Parms, InPresenceClearDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceClearDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventPresenceClear_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventPresenceClear_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::NewProp_InPresenceClearDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Clears a user's presence data in the current app.</summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"InPresenceClearDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Clears a user's presence data in the current app.</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"InPresenceClearDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "PresenceClear", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventPresenceClear_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventPresenceGetDestinations_Parms
+		{
+			UObject* WorldContextObject;
+			FScriptDelegate InPresenceGetDestinationsDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InPresenceGetDestinationsDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceGetDestinations_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::NewProp_InPresenceGetDestinationsDelegate = { "InPresenceGetDestinationsDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceGetDestinations_Parms, InPresenceGetDestinationsDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceGetDestinationsDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventPresenceGetDestinations_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventPresenceGetDestinations_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::NewProp_InPresenceGetDestinationsDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Gets all the destinations that can be set for a user.\n/// @note Call `PresenceGetDescriptionList` after the Delegate has been executed.\n/// </summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name=\"InPresenceGetDestinationsDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Gets all the destinations that can be set for a user.\n@note Call `PresenceGetDescriptionList` after the Delegate has been executed.\n</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"InPresenceGetDestinationsDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "PresenceGetDestinations", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventPresenceGetDestinations_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventPresenceGetDestinationsList_Parms
+		{
+			UObject* WorldContextObject;
+			TArray<FPicoDestination> OutList;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_OutList_Inner;
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_OutList;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceGetDestinationsList_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::NewProp_OutList_Inner = { "OutList", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FPicoDestination, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::NewProp_OutList = { "OutList", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceGetDestinationsList_Parms, OutList), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventPresenceGetDestinationsList_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventPresenceGetDestinationsList_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::NewProp_OutList_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::NewProp_OutList,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Gets a list of destinations when `PresenceGetDestinations` is complete.</summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name=\"OutList\">The [out] array that receives the copied data.</param>\n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Gets a list of destinations when `PresenceGetDestinations` is complete.</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"OutList\">The [out] array that receives the copied data.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "PresenceGetDestinationsList", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventPresenceGetDestinationsList_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventPresenceReadSendInvites_Parms
+		{
+			UObject* WorldContextObject;
+			FScriptDelegate InPresenceReadSendInvitesDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InPresenceReadSendInvitesDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceReadSendInvites_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::NewProp_InPresenceReadSendInvitesDelegate = { "InPresenceReadSendInvitesDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceReadSendInvites_Parms, InPresenceReadSendInvitesDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceReadSentInvitesDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventPresenceReadSendInvites_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventPresenceReadSendInvites_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::NewProp_InPresenceReadSendInvitesDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Reads a list of sent invitations. \n/// @note Call `GetSendInvitesList` after the Delegate has been executed.\n/// </summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"InPresenceReadSendInvitesDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// <returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Reads a list of sent invitations.\n@note Call `GetSendInvitesList` after the Delegate has been executed.\n</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"InPresenceReadSendInvitesDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n<returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "PresenceReadSendInvites", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventPresenceReadSendInvites_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventPresenceSendInvites_Parms
+		{
+			UObject* WorldContextObject;
+			TArray<FString> UserIdArray;
+			FScriptDelegate InPresenceSentInvitesDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UserIdArray_Inner;
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_UserIdArray;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InPresenceSentInvitesDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSendInvites_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::NewProp_UserIdArray_Inner = { "UserIdArray", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::NewProp_UserIdArray = { "UserIdArray", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSendInvites_Parms, UserIdArray), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::NewProp_InPresenceSentInvitesDelegate = { "InPresenceSentInvitesDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSendInvites_Parms, InPresenceSentInvitesDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSentInvitesDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventPresenceSendInvites_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventPresenceSendInvites_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::NewProp_UserIdArray_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::NewProp_UserIdArray,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::NewProp_InPresenceSentInvitesDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Sends invitations to users.\n/// @note Call `GetSendInvitesList` after the Delegate has been executed.\n/// </summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name=\"UserIdArray\">The ID array of the users to invite.</param>\n/// <param name=\"InPresenceSentInvitesDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Sends invitations to users.\n@note Call `GetSendInvitesList` after the Delegate has been executed.\n</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"UserIdArray\">The ID array of the users to invite.</param>\n<param name=\"InPresenceSentInvitesDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "PresenceSendInvites", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventPresenceSendInvites_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventPresenceSet_Parms
+		{
+			UObject* WorldContextObject;
+			FString ApiName;
+			FString LobbySessionId;
+			FString MatchSessionId;
+			bool bIsJoinable;
+			FString Extra;
+			FScriptDelegate InPresenceSetDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ApiName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ApiName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LobbySessionId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_LobbySessionId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MatchSessionId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_MatchSessionId;
+		static void NewProp_bIsJoinable_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsJoinable;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Extra_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Extra;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InPresenceSetDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSet_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_ApiName_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_ApiName = { "ApiName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSet_Parms, ApiName), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_ApiName_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_ApiName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_LobbySessionId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_LobbySessionId = { "LobbySessionId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSet_Parms, LobbySessionId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_LobbySessionId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_LobbySessionId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_MatchSessionId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_MatchSessionId = { "MatchSessionId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSet_Parms, MatchSessionId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_MatchSessionId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_MatchSessionId_MetaData)) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_bIsJoinable_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventPresenceSet_Parms*)Obj)->bIsJoinable = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_bIsJoinable = { "bIsJoinable", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventPresenceSet_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_bIsJoinable_SetBit, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_Extra_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_Extra = { "Extra", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSet_Parms, Extra), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_Extra_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_Extra_MetaData)) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_InPresenceSetDelegate = { "InPresenceSetDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSet_Parms, InPresenceSetDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventPresenceSet_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventPresenceSet_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_ApiName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_LobbySessionId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_MatchSessionId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_bIsJoinable,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_Extra,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_InPresenceSetDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Sets presence data for a user in the current app.</summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param>    \n/// <param name=\"ApiName\">The API name of the destination.</param> \n/// <param name=\"LobbySessionId\">Lobby session ID is used to identify a user group or team. Users with the same lobby session ID can play together or form a team in a game.</param> \n/// <param name=\"MatchSessionId\">Match session ID is used to identify all users within a same destination, such as maps and levels. Users with different lobby session IDs will have the same match session ID when playing the same match.</param> \n/// <param name=\"bIsJoinable\">Defines whether the user is joinable:\n/// * `true`: joinable\n/// * `false`: not joinable\n/// </param> \n/// <param name=\"Extra\">Extra presence data defined by the developer.</param> \n/// <param name=\"InPresenceSetDelegate\">Will be executed when the request has been completed.</param> \n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Sets presence data for a user in the current app.</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"ApiName\">The API name of the destination.</param>\n<param name=\"LobbySessionId\">Lobby session ID is used to identify a user group or team. Users with the same lobby session ID can play together or form a team in a game.</param>\n<param name=\"MatchSessionId\">Match session ID is used to identify all users within a same destination, such as maps and levels. Users with different lobby session IDs will have the same match session ID when playing the same match.</param>\n<param name=\"bIsJoinable\">Defines whether the user is joinable:\n* `true`: joinable\n* `false`: not joinable\n</param>\n<param name=\"Extra\">Extra presence data defined by the developer.</param>\n<param name=\"InPresenceSetDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "PresenceSet", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventPresenceSet_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventPresenceSetDestination_Parms
+		{
+			UObject* WorldContextObject;
+			FString ApiName;
+			FScriptDelegate InPresenceSetDestinationDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ApiName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ApiName;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InPresenceSetDestinationDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetDestination_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::NewProp_ApiName_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::NewProp_ApiName = { "ApiName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetDestination_Parms, ApiName), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::NewProp_ApiName_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::NewProp_ApiName_MetaData)) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::NewProp_InPresenceSetDestinationDelegate = { "InPresenceSetDestinationDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetDestination_Parms, InPresenceSetDestinationDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetDestinationDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventPresenceSetDestination_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventPresenceSetDestination_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::NewProp_ApiName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::NewProp_InPresenceSetDestinationDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Replaces a user's current destination with the provided one.\n/// @note Other presence parameter settings will remain the same.\n/// </summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param>   \n/// <param name=\"ApiName\">The API name of the new destination.</param>\n/// <param name=\"InPresenceSetDestinationDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Replaces a user's current destination with the provided one.\n@note Other presence parameter settings will remain the same.\n</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"ApiName\">The API name of the new destination.</param>\n<param name=\"InPresenceSetDestinationDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "PresenceSetDestination", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventPresenceSetDestination_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventPresenceSetExtra_Parms
+		{
+			UObject* WorldContextObject;
+			FString Extra;
+			FScriptDelegate InPresenceSetExtraDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Extra_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Extra;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InPresenceSetExtraDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetExtra_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::NewProp_Extra_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::NewProp_Extra = { "Extra", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetExtra_Parms, Extra), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::NewProp_Extra_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::NewProp_Extra_MetaData)) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::NewProp_InPresenceSetExtraDelegate = { "InPresenceSetExtraDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetExtra_Parms, InPresenceSetExtraDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetExtraDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventPresenceSetExtra_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventPresenceSetExtra_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::NewProp_Extra,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::NewProp_InPresenceSetExtraDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Sets extra presence data for a user.</summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name=\"Extra\">The extra presence data defined by the developer.</param> \n/// <param name=\"InPresenceSetExtraDelegate\">Will be executed when the request has been completed.</param> \n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Sets extra presence data for a user.</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"Extra\">The extra presence data defined by the developer.</param>\n<param name=\"InPresenceSetExtraDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "PresenceSetExtra", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventPresenceSetExtra_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventPresenceSetIsJoinable_Parms
+		{
+			UObject* WorldContextObject;
+			bool bIsJoinable;
+			FScriptDelegate InPresenceSetIsJoinableDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static void NewProp_bIsJoinable_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsJoinable;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InPresenceSetIsJoinableDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetIsJoinable_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::NewProp_bIsJoinable_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventPresenceSetIsJoinable_Parms*)Obj)->bIsJoinable = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::NewProp_bIsJoinable = { "bIsJoinable", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventPresenceSetIsJoinable_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::NewProp_bIsJoinable_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::NewProp_InPresenceSetIsJoinableDelegate = { "InPresenceSetIsJoinableDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetIsJoinable_Parms, InPresenceSetIsJoinableDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetIsJoinableDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventPresenceSetIsJoinable_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventPresenceSetIsJoinable_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::NewProp_bIsJoinable,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::NewProp_InPresenceSetIsJoinableDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Sets whether a user is joinable.\n/// @note Other presence parameter settings will remain the same. If the destination or session\n/// ID has not been set up for the user, the user cannot be set to \"joinable\".\n/// </summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param>  \n/// <param name=\"bIsJoinable\">Defines whether the user is joinable:\n/// * `true`: joinable\n/// * `false`: not joinable\n/// </param>\n/// <param name=\"InPresenceSetIsJoinableDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Sets whether a user is joinable.\n@note Other presence parameter settings will remain the same. If the destination or session\nID has not been set up for the user, the user cannot be set to \"joinable\".\n</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"bIsJoinable\">Defines whether the user is joinable:\n* `true`: joinable\n* `false`: not joinable\n</param>\n<param name=\"InPresenceSetIsJoinableDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "PresenceSetIsJoinable", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventPresenceSetIsJoinable_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventPresenceSetLobbySession_Parms
+		{
+			UObject* WorldContextObject;
+			FString LobbySession;
+			FScriptDelegate InPresenceSetLobbySessionDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LobbySession_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_LobbySession;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InPresenceSetLobbySessionDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetLobbySession_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::NewProp_LobbySession_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::NewProp_LobbySession = { "LobbySession", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetLobbySession_Parms, LobbySession), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::NewProp_LobbySession_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::NewProp_LobbySession_MetaData)) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::NewProp_InPresenceSetLobbySessionDelegate = { "InPresenceSetLobbySessionDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetLobbySession_Parms, InPresenceSetLobbySessionDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetLobbySessionDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventPresenceSetLobbySession_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventPresenceSetLobbySession_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::NewProp_LobbySession,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::NewProp_InPresenceSetLobbySessionDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Replaces a user's current lobby session ID with the provided one.\n/// @note Other presence parameter settings will remain the same.\n/// </summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param>  \n/// <param name=\"LobbySession\">The new lobby session ID.</param>\n/// <param name=\"InPresenceSetLobbySessionDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Replaces a user's current lobby session ID with the provided one.\n@note Other presence parameter settings will remain the same.\n</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"LobbySession\">The new lobby session ID.</param>\n<param name=\"InPresenceSetLobbySessionDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "PresenceSetLobbySession", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventPresenceSetLobbySession_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventPresenceSetMatchSession_Parms
+		{
+			UObject* WorldContextObject;
+			FString MatchSession;
+			FScriptDelegate InPresenceSetMatchSessionDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MatchSession_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_MatchSession;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InPresenceSetMatchSessionDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetMatchSession_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::NewProp_MatchSession_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::NewProp_MatchSession = { "MatchSession", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetMatchSession_Parms, MatchSession), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::NewProp_MatchSession_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::NewProp_MatchSession_MetaData)) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::NewProp_InPresenceSetMatchSessionDelegate = { "InPresenceSetMatchSessionDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventPresenceSetMatchSession_Parms, InPresenceSetMatchSessionDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceSetMatchSessionDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventPresenceSetMatchSession_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventPresenceSetMatchSession_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::NewProp_MatchSession,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::NewProp_InPresenceSetMatchSessionDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Replaces a user's current match session ID with the provided one.\n/// @note Other presence-realated parameters will remain the same.\n/// </summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name=\"MatchSession\">The new match session ID.</param>\n/// <param name=\"InPresenceSetMatchSessionDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Replaces a user's current match session ID with the provided one.\n@note Other presence-realated parameters will remain the same.\n</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"MatchSession\">The new match session ID.</param>\n<param name=\"InPresenceSetMatchSessionDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "PresenceSetMatchSession", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventPresenceSetMatchSession_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventReadInvitableUser_Parms
+		{
+			UObject* WorldContextObject;
+			TArray<FString> SuggestedUserList;
+			FScriptDelegate InReadInvitableUserDelegate;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_SuggestedUserList_Inner;
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_SuggestedUserList;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_InReadInvitableUserDelegate;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventReadInvitableUser_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::NewProp_SuggestedUserList_Inner = { "SuggestedUserList", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::NewProp_SuggestedUserList = { "SuggestedUserList", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventReadInvitableUser_Parms, SuggestedUserList), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::NewProp_InReadInvitableUserDelegate = { "InReadInvitableUserDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventReadInvitableUser_Parms, InReadInvitableUserDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_OnlineManagerPresenceReadInvitableUserDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::NewProp_SuggestedUserList_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::NewProp_SuggestedUserList,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::NewProp_InReadInvitableUserDelegate,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Presence" },
+		{ "Comment", "/// <summary>Reads a list of invitable users for a user. \n/// @note Call `GetInvitableFriendList` after the Delegate has been executed.\n/// </summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"SuggestedUserList\">The ID list of the users suggested being invited.</param>\n/// <param name=\"InReadInvitableUserDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool:\n/// * `true`: success\n/// * `false`: failure\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Reads a list of invitable users for a user.\n@note Call `GetInvitableFriendList` after the Delegate has been executed.\n</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"SuggestedUserList\">The ID list of the users suggested being invited.</param>\n<param name=\"InReadInvitableUserDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n* `true`: success\n* `false`: failure\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "ReadInvitableUser", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventReadInvitableUser_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventReadLeaderboards_Parms
+		{
+			UObject* WorldContextObject;
+			TArray<FString> Players;
+			FPicoOnlineLeaderboardRead PicoReadObject;
+			FScriptDelegate OnReadLeaderboardsCompleteDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Players_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Players_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Players;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PicoReadObject;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_OnReadLeaderboardsCompleteDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventReadLeaderboards_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_Players_Inner = { "Players", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_Players_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_Players = { "Players", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventReadLeaderboards_Parms, Players), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_Players_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_Players_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_PicoReadObject = { "PicoReadObject", nullptr, (EPropertyFlags)0x0010000008000180, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventReadLeaderboards_Parms, PicoReadObject), Z_Construct_UScriptStruct_FPicoOnlineLeaderboardRead, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_OnReadLeaderboardsCompleteDelegate = { "OnReadLeaderboardsCompleteDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventReadLeaderboards_Parms, OnReadLeaderboardsCompleteDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnReadLeaderboardsCompleteDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventReadLeaderboards_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventReadLeaderboards_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_Players_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_Players,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_PicoReadObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_OnReadLeaderboardsCompleteDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Leaderboard" },
+		{ "Comment", "/// <summary>Get entries of a leaderboard.\n/// </summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"Players\">If the num of players is bigger than zero, and the only player in it is the logged-in player, then the value of StartAt will be 'ppfLeaderboard_StartAtCenteredOnViewer'.</param>\n/// <param name =\"PicoReadObject\">Set leaderboard name in it.</param>\n/// <param name =\"OnReadLeaderboardsCompleteDelegate\">Executes this parameter after the request has been completed.</param> \n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Get entries of a leaderboard.\n</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"Players\">If the num of players is bigger than zero, and the only player in it is the logged-in player, then the value of StartAt will be 'ppfLeaderboard_StartAtCenteredOnViewer'.</param>\n<param name =\"PicoReadObject\">Set leaderboard name in it.</param>\n<param name =\"OnReadLeaderboardsCompleteDelegate\">Executes this parameter after the request has been completed.</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "ReadLeaderboards", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventReadLeaderboards_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventReadLeaderboardsForFriends_Parms
+		{
+			UObject* WorldContextObject;
+			int32 LocalUserNum;
+			FPicoOnlineLeaderboardRead PicoReadObject;
+			FScriptDelegate OnReadLeaderboardsCompleteDelegate;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_LocalUserNum;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PicoReadObject;
+		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_OnReadLeaderboardsCompleteDelegate;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventReadLeaderboardsForFriends_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::NewProp_LocalUserNum = { "LocalUserNum", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventReadLeaderboardsForFriends_Parms, LocalUserNum), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::NewProp_PicoReadObject = { "PicoReadObject", nullptr, (EPropertyFlags)0x0010000008000180, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventReadLeaderboardsForFriends_Parms, PicoReadObject), Z_Construct_UScriptStruct_FPicoOnlineLeaderboardRead, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::NewProp_OnReadLeaderboardsCompleteDelegate = { "OnReadLeaderboardsCompleteDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventReadLeaderboardsForFriends_Parms, OnReadLeaderboardsCompleteDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnReadLeaderboardsCompleteDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventReadLeaderboardsForFriends_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventReadLeaderboardsForFriends_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::NewProp_LocalUserNum,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::NewProp_PicoReadObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::NewProp_OnReadLeaderboardsCompleteDelegate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Leaderboard" },
+		{ "Comment", "/// <summary>Get entries of a leaderboard.\n/// </summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"LocalUserNum\">Not used.</param>\n/// <param name=\"PicoReadObject\">Set leaderboard name in it.</param>\n/// <param name =\"OnReadLeaderboardsCompleteDelegate\">Executes this parameter after the request has been completed.</param> \n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Get entries of a leaderboard.\n</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"LocalUserNum\">Not used.</param>\n<param name=\"PicoReadObject\">Set leaderboard name in it.</param>\n<param name =\"OnReadLeaderboardsCompleteDelegate\">Executes this parameter after the request has been completed.</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "ReadLeaderboardsForFriends", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventReadLeaderboardsForFriends_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2105,9 +3827,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcDestroyRoom_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Destroys a room.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param RoomId Room ID.\n/// @return Int: `0` indicates success, and other values indicate failure.     \n" },
+		{ "Comment", "/// <summary>Destroys a room.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"RoomId\">The ID of the room to destroy.</param>\n/// <returns>Int: \n/// <ul>\n/// <li>`0`: success</li>\n/// <li>Other values: failure</li>\n/// </ul>\n/// </returns>    \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Destroys a room.\n@param WorldContextObject Used to get the information about the current world.\n@param RoomId Room ID.\n@return Int: `0` indicates success, and other values indicate failure." },
+		{ "ToolTip", "<summary>Destroys a room.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"RoomId\">The ID of the room to destroy.</param>\n<returns>Int:\n<ul>\n<li>`0`: success</li>\n<li>Other values: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2145,9 +3867,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcEnableAudioPropertiesReport_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Enables audio properties report. When this switch is turned on, you will regularly receive a statistical report of audio data.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param Interval The interval (in milliseconds) between one report and the next. You can set this parameter to `0` or any negative integer to stop receiving audio properties report. For any integer between (0, 100), the SDK will regard it as invalid and automatically set this parameter to `100`; any integer equal to or greater than `100` is valid.    \n" },
+		{ "Comment", "/// <summary>Enables audio properties report. When this switch is turned on, you will regularly receive a statistical report of audio data.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"Interval\">The interval (in milliseconds) between one report and the next. \n/// You can set this parameter to `0` or any negative integer to stop receiving audio properties report. \n/// For any integer between (0, 100), the SDK will regard it as invalid and automatically set this parameter to `100`; \n/// Any integer equals to or greater than `100` is valid. \n/// </param>   \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Enables audio properties report. When this switch is turned on, you will regularly receive a statistical report of audio data.\n@param WorldContextObject Used to get the information about the current world.\n@param Interval The interval (in milliseconds) between one report and the next. You can set this parameter to `0` or any negative integer to stop receiving audio properties report. For any integer between (0, 100), the SDK will regard it as invalid and automatically set this parameter to `100`; any integer equal to or greater than `100` is valid." },
+		{ "ToolTip", "<summary>Enables audio properties report. When this switch is turned on, you will regularly receive a statistical report of audio data.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"Interval\">The interval (in milliseconds) between one report and the next.\nYou can set this parameter to `0` or any negative integer to stop receiving audio properties report.\nFor any integer between (0, 100), the SDK will regard it as invalid and automatically set this parameter to `100`;\nAny integer equals to or greater than `100` is valid.\n</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2197,9 +3919,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcLeaveRoom_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Leaves a rtc room.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param RoomId Room ID.\n/// @return Int: `0` indicates success, and other values indicate failure.\n" },
+		{ "Comment", "/// <summary>Leaves a RTC room.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"RoomId\">Room ID.</param>\n/// <returns>\n/// <ul>\n/// <li>`0`: success</li>\n/// <li>Other values: failure</li>\n/// </ul>\n/// </returns> \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Leaves a rtc room.\n@param WorldContextObject Used to get the information about the current world.\n@param RoomId Room ID.\n@return Int: `0` indicates success, and other values indicate failure." },
+		{ "ToolTip", "<summary>Leaves a RTC room.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"RoomId\">Room ID.</param>\n<returns>\n<ul>\n<li>`0`: success</li>\n<li>Other values: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2240,9 +3962,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcMuteLocalAudio_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Mutes local audio to make one's voice unable to be heard be others in the same room.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param InRtcMuteState The state of local audio: `0`-off; `1`-on.\n" },
+		{ "Comment", "/// <summary>Mutes local audio to make a user's voice cannot be heard by other users in the same room.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"InRtcMuteState\">The state of local audio:\n/// <ul>\n/// <li>`0`: off</li>\n/// <li>`1`: on</li>\n/// </ul>\n/// </param>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Mutes local audio to make one's voice unable to be heard be others in the same room.\n@param WorldContextObject Used to get the information about the current world.\n@param InRtcMuteState The state of local audio: `0`-off; `1`-on." },
+		{ "ToolTip", "<summary>Mutes local audio to make a user's voice cannot be heard by other users in the same room.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"InRtcMuteState\">The state of local audio:\n<ul>\n<li>`0`: off</li>\n<li>`1`: on</li>\n</ul>\n</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2288,9 +4010,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcPublishRoom_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Publishes local audio stream to a room, thereby making the voice heard be others in the same room.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param RoomId Room ID.     \n" },
+		{ "Comment", "/// <summary>Publishes local audio stream to a room so that the voice can be heard by other users in the same room.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"RoomId\">Room ID.</param>     \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Publishes local audio stream to a room, thereby making the voice heard be others in the same room.\n@param WorldContextObject Used to get the information about the current world.\n@param RoomId Room ID." },
+		{ "ToolTip", "<summary>Publishes local audio stream to a room so that the voice can be heard by other users in the same room.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"RoomId\">Room ID.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2343,9 +4065,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPauseAllSubscribedStream_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Pauses all subscribed streams of a room. Once paused, the voice of users in the room is blocked so nothing can be heard from this room.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param RoomId Room ID.\n/// @param InPauseResumeMediaType Media type. \n" },
+		{ "Comment", "/// <summary>Pauses all subscribed streams of a room. Once paused, the voice of users in the room is blocked so nothing can be heard from this room.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name =\"RoomId\">Room ID.</param> \n/// <param name =\"InPauseResumeMediaType\">Media type.</param>  \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Pauses all subscribed streams of a room. Once paused, the voice of users in the room is blocked so nothing can be heard from this room.\n@param WorldContextObject Used to get the information about the current world.\n@param RoomId Room ID.\n@param InPauseResumeMediaType Media type." },
+		{ "ToolTip", "<summary>Pauses all subscribed streams of a room. Once paused, the voice of users in the room is blocked so nothing can be heard from this room.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"RoomId\">Room ID.</param>\n<param name =\"InPauseResumeMediaType\">Media type.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2356,6 +4078,61 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPauseAllSubscribedStream_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventRtcRoomPublishStream_Parms
+		{
+			UObject* WorldContextObject;
+			FString RoomId;
+			ERtcMediaStreamType InRtcMediaStreamType;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RoomId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_RoomId;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_InRtcMediaStreamType_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_InRtcMediaStreamType;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomPublishStream_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::NewProp_RoomId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::NewProp_RoomId = { "RoomId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomPublishStream_Parms, RoomId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::NewProp_RoomId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::NewProp_RoomId_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::NewProp_InRtcMediaStreamType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::NewProp_InRtcMediaStreamType = { "InRtcMediaStreamType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomPublishStream_Parms, InRtcMediaStreamType), Z_Construct_UEnum_OnlineSubsystemPico_ERtcMediaStreamType, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::NewProp_RoomId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::NewProp_InRtcMediaStreamType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::NewProp_InRtcMediaStreamType,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Rtc" },
+		{ "Comment", "/// <summary>\n/// Publishes the local audio stream to a room so that the local user's voice can be heard by other users in the same room.\n/// @note\n/// * A user can only publish the local audio stream to one room at the same time.\n/// * If a user wants to publish the local audio stream to another room, \n/// `UnPublishRoom(oldRoomId)` should be called first to stop publishing the local audio stream to the current room and then `Publish(newRoomId)` should be called.\n/// </summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"RoomId\">The ID of the room that the local audio stream is published to.</param>\n/// <param name=\"InRtcMediaStreamType\">The media stream type:\n/// * `0`: Audio\n/// * `1`: Video\n/// * `2`: Both\n/// * `3`: None\n/// </param>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>\nPublishes the local audio stream to a room so that the local user's voice can be heard by other users in the same room.\n@note\n* A user can only publish the local audio stream to one room at the same time.\n* If a user wants to publish the local audio stream to another room,\n`UnPublishRoom(oldRoomId)` should be called first to stop publishing the local audio stream to the current room and then `Publish(newRoomId)` should be called.\n</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"RoomId\">The ID of the room that the local audio stream is published to.</param>\n<param name=\"InRtcMediaStreamType\">The media stream type:\n* `0`: Audio\n* `1`: Video\n* `2`: Both\n* `3`: None\n</param>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "RtcRoomPublishStream", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventRtcRoomPublishStream_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2398,9 +4175,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomResumeAllSubscribedStream_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Resumes all subscribed streams of a room. Once resumed, the voice of users in the room can be heard again.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param RoomId The ID of the room to resume subscribed streams for.\n/// @param InPauseResumeMediaType Media type.     \n" },
+		{ "Comment", "/// <summary>Resumes all subscribed streams of a room. Once resumed, the voice of users in the room can be heard again.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"RoomId\">The ID of the room to resume subscribed streams for.</param>\n/// <param name =\"InPauseResumeMediaType\">Media type.</param>     \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Resumes all subscribed streams of a room. Once resumed, the voice of users in the room can be heard again.\n@param WorldContextObject Used to get the information about the current world.\n@param RoomId The ID of the room to resume subscribed streams for.\n@param InPauseResumeMediaType Media type." },
+		{ "ToolTip", "<summary>Resumes all subscribed streams of a room. Once resumed, the voice of users in the room can be heard again.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"RoomId\">The ID of the room to resume subscribed streams for.</param>\n<param name =\"InPauseResumeMediaType\">Media type.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2411,6 +4188,601 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomResumeAllSubscribedStream_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventRtcRoomSetRemoteAudioPlaybackVolume_Parms
+		{
+			UObject* WorldContextObject;
+			FString RoomId;
+			FString UserId;
+			int32 Volume;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RoomId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_RoomId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UserId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UserId;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Volume;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomSetRemoteAudioPlaybackVolume_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_RoomId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_RoomId = { "RoomId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomSetRemoteAudioPlaybackVolume_Parms, RoomId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_RoomId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_RoomId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_UserId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_UserId = { "UserId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomSetRemoteAudioPlaybackVolume_Parms, UserId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_UserId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_UserId_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_Volume = { "Volume", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomSetRemoteAudioPlaybackVolume_Parms, Volume), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_RoomId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_UserId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::NewProp_Volume,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Rtc" },
+		{ "Comment", "/// <summary>\n/// Sets the volume for a remote user in a room.\n/// </summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"RoomId\">Room ID.</param>\n/// <param name=\"UserId\">The ID of the remote user.</param>\n/// <param name=\"Volume\">The volume to set for the remote user, which ranges from `0` to `400`. `100` indicates the default volume.</param>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>\nSets the volume for a remote user in a room.\n</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"RoomId\">Room ID.</param>\n<param name=\"UserId\">The ID of the remote user.</param>\n<param name=\"Volume\">The volume to set for the remote user, which ranges from `0` to `400`. `100` indicates the default volume.</param>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "RtcRoomSetRemoteAudioPlaybackVolume", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventRtcRoomSetRemoteAudioPlaybackVolume_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventRtcRoomSubscribeStream_Parms
+		{
+			UObject* WorldContextObject;
+			FString RoomId;
+			FString UserId;
+			ERtcMediaStreamType InRtcMediaStreamType;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RoomId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_RoomId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UserId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UserId;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_InRtcMediaStreamType_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_InRtcMediaStreamType;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomSubscribeStream_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_RoomId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_RoomId = { "RoomId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomSubscribeStream_Parms, RoomId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_RoomId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_RoomId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_UserId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_UserId = { "UserId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomSubscribeStream_Parms, UserId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_UserId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_UserId_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_InRtcMediaStreamType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_InRtcMediaStreamType = { "InRtcMediaStreamType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomSubscribeStream_Parms, InRtcMediaStreamType), Z_Construct_UEnum_OnlineSubsystemPico_ERtcMediaStreamType, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_RoomId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_UserId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_InRtcMediaStreamType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::NewProp_InRtcMediaStreamType,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Rtc" },
+		{ "Comment", "/// <summary>\n/// Subscribes to the audio stream of a specific user in a room.\n/// </summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"RoomId\">Room ID.</param>\n/// <param name=\"UserId\">The ID of the user in the room.</param>\n/// <param name=\"InRtcMediaStreamType\">The media stream type:\n/// * `0`: Audio\n/// * `1`: Video\n/// * `2`: Both\n/// * `3`: None\n/// </param>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>\nSubscribes to the audio stream of a specific user in a room.\n</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"RoomId\">Room ID.</param>\n<param name=\"UserId\">The ID of the user in the room.</param>\n<param name=\"InRtcMediaStreamType\">The media stream type:\n* `0`: Audio\n* `1`: Video\n* `2`: Both\n* `3`: None\n</param>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "RtcRoomSubscribeStream", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventRtcRoomSubscribeStream_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventRtcRoomUnPublishStream_Parms
+		{
+			UObject* WorldContextObject;
+			FString RoomId;
+			ERtcMediaStreamType InRtcMediaStreamType;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RoomId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_RoomId;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_InRtcMediaStreamType_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_InRtcMediaStreamType;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomUnPublishStream_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::NewProp_RoomId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::NewProp_RoomId = { "RoomId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomUnPublishStream_Parms, RoomId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::NewProp_RoomId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::NewProp_RoomId_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::NewProp_InRtcMediaStreamType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::NewProp_InRtcMediaStreamType = { "InRtcMediaStreamType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomUnPublishStream_Parms, InRtcMediaStreamType), Z_Construct_UEnum_OnlineSubsystemPico_ERtcMediaStreamType, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::NewProp_RoomId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::NewProp_InRtcMediaStreamType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::NewProp_InRtcMediaStreamType,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Rtc" },
+		{ "Comment", "/// <summary>\n/// Stops publishing the local audio stream to a room, so that the other in-room users cannot hear the local user's voice.\n/// </summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"RoomId\">The ID of the room to stop publishing the local audio stream to.</param>\n/// <param name=\"InRtcMediaStreamType\">The media stream type:\n/// * `0`: Audio\n/// * `1`: Video\n/// * `2`: Both\n/// * `3`: None\n/// </param>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>\nStops publishing the local audio stream to a room, so that the other in-room users cannot hear the local user's voice.\n</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"RoomId\">The ID of the room to stop publishing the local audio stream to.</param>\n<param name=\"InRtcMediaStreamType\">The media stream type:\n* `0`: Audio\n* `1`: Video\n* `2`: Both\n* `3`: None\n</param>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "RtcRoomUnPublishStream", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventRtcRoomUnPublishStream_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventRtcRoomUnsubscribeStream_Parms
+		{
+			UObject* WorldContextObject;
+			FString RoomId;
+			FString UserId;
+			ERtcMediaStreamType InRtcMediaStreamType;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RoomId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_RoomId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UserId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UserId;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_InRtcMediaStreamType_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_InRtcMediaStreamType;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomUnsubscribeStream_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_RoomId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_RoomId = { "RoomId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomUnsubscribeStream_Parms, RoomId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_RoomId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_RoomId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_UserId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_UserId = { "UserId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomUnsubscribeStream_Parms, UserId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_UserId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_UserId_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_InRtcMediaStreamType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_InRtcMediaStreamType = { "InRtcMediaStreamType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcRoomUnsubscribeStream_Parms, InRtcMediaStreamType), Z_Construct_UEnum_OnlineSubsystemPico_ERtcMediaStreamType, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_RoomId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_UserId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_InRtcMediaStreamType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::NewProp_InRtcMediaStreamType,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Rtc" },
+		{ "Comment", "/// <summary>\n/// Unsubscribes from the audio stream of a specific user in a room.\n/// </summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"RoomId\">Room ID.</param>\n/// <param name=\"UserId\">The ID of the user in the room.</param>\n/// <param name=\"InRtcMediaStreamType\">The media stream type:\n/// * `0`: Audio\n/// * `1`: Video\n/// * `2`: Both\n/// * `3`: None\n/// </param>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>\nUnsubscribes from the audio stream of a specific user in a room.\n</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"RoomId\">Room ID.</param>\n<param name=\"UserId\">The ID of the user in the room.</param>\n<param name=\"InRtcMediaStreamType\">The media stream type:\n* `0`: Audio\n* `1`: Video\n* `2`: Both\n* `3`: None\n</param>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "RtcRoomUnsubscribeStream", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventRtcRoomUnsubscribeStream_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventRtcSendRoomBinaryMessage_Parms
+		{
+			UObject* WorldContextObject;
+			FString RoomId;
+			FString MessageInfo;
+			int64 ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RoomId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_RoomId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MessageInfo_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_MessageInfo;
+		static const UE4CodeGen_Private::FInt64PropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendRoomBinaryMessage_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_RoomId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_RoomId = { "RoomId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendRoomBinaryMessage_Parms, RoomId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_RoomId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_RoomId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_MessageInfo_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_MessageInfo = { "MessageInfo", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendRoomBinaryMessage_Parms, MessageInfo), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_MessageInfo_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_MessageInfo_MetaData)) };
+	const UE4CodeGen_Private::FInt64PropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int64, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendRoomBinaryMessage_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_RoomId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_MessageInfo,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Rtc" },
+		{ "Comment", "/// <summary>\n/// Sends a binary message to a room. All in-room users will receive this message.\n/// </summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"RoomId\">The ID of the room to which the binary message is to be sent.</param>\n/// <param name=\"MessageInfo\">The binary message to be sent.</param>\n/// <returns>A room message ID of type int64, which is automatically generated and incremented.</returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>\nSends a binary message to a room. All in-room users will receive this message.\n</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"RoomId\">The ID of the room to which the binary message is to be sent.</param>\n<param name=\"MessageInfo\">The binary message to be sent.</param>\n<returns>A room message ID of type int64, which is automatically generated and incremented.</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "RtcSendRoomBinaryMessage", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventRtcSendRoomBinaryMessage_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventRtcSendRoomMessage_Parms
+		{
+			UObject* WorldContextObject;
+			FString RoomId;
+			FString Message;
+			int64 ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RoomId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_RoomId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Message_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Message;
+		static const UE4CodeGen_Private::FInt64PropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendRoomMessage_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_RoomId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_RoomId = { "RoomId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendRoomMessage_Parms, RoomId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_RoomId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_RoomId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_Message_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_Message = { "Message", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendRoomMessage_Parms, Message), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_Message_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_Message_MetaData)) };
+	const UE4CodeGen_Private::FInt64PropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int64, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendRoomMessage_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_RoomId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_Message,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Rtc" },
+		{ "Comment", "/// <summary>\n/// Sends a text message to a room. All in-room users will receive this message.\n/// </summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"RoomId\">The ID of the room to which the text message is to be sent.</param>\n/// <param name=\"Message\">The message to be sent.</param>\n/// <returns>A room message ID of type int64, which is automatically generated and incremented.</returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>\nSends a text message to a room. All in-room users will receive this message.\n</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"RoomId\">The ID of the room to which the text message is to be sent.</param>\n<param name=\"Message\">The message to be sent.</param>\n<returns>A room message ID of type int64, which is automatically generated and incremented.</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "RtcSendRoomMessage", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventRtcSendRoomMessage_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventRtcSendStreamSyncInfo_Parms
+		{
+			UObject* WorldContextObject;
+			int32 Info;
+			ERtcStreamIndex InStreamIndex;
+			int32 RepeatCount;
+			ERtcSyncInfoStreamType InSyncInfoStreamType;
+			int32 ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Info;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_InStreamIndex_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_InStreamIndex;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_RepeatCount;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_InSyncInfoStreamType_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_InSyncInfoStreamType;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendStreamSyncInfo_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_Info = { "Info", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendStreamSyncInfo_Parms, Info), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_InStreamIndex_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_InStreamIndex = { "InStreamIndex", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendStreamSyncInfo_Parms, InStreamIndex), Z_Construct_UEnum_OnlineSubsystemPico_ERtcStreamIndex, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_RepeatCount = { "RepeatCount", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendStreamSyncInfo_Parms, RepeatCount), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_InSyncInfoStreamType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_InSyncInfoStreamType = { "InSyncInfoStreamType", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendStreamSyncInfo_Parms, InSyncInfoStreamType), Z_Construct_UEnum_OnlineSubsystemPico_ERtcSyncInfoStreamType, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendStreamSyncInfo_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_Info,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_InStreamIndex_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_InStreamIndex,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_RepeatCount,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_InSyncInfoStreamType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_InSyncInfoStreamType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Rtc" },
+		{ "Comment", "/// <summary>\n/// Sends stream sync info. The sync info data will be sent in the same packet with the audio data. Users who subscribe to this audio stream will receive the stream sync info message.\n/// </summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"Info\">The stream sync info.</param>\n/// <param name=\"InStreamIndex\">The Stream index:\n/// * `0`: Main\n/// * `1`: Screen\n/// * `2`: None\n/// </param>\n/// <param name=\"RepeatCount\">The stream sync info will be sent repeatedly for the times set in `repeatCount`.\n/// It's designed to avoid losing package and to ensure that the sync info can be sent successfully.\n/// However, if `repeatCount` is too large, it will cause the sync info to pile up in the queue.\n/// It is recommended to set this parameter to `1`.\n/// </param>\n/// <param name=\"InSyncInfoStreamType\">The sync info stream type:\n/// * `0`: Audio\n/// * `1`: None\n/// </param>\n/// <returns>Any code which equals to or below `0` indicates success, and other codes indicate failure. \n/// | Code | Description|\n/// |---|---|\n/// |>=0|Send successfully. Indicates the times sent successfully.|\n/// |-1|Send Failed. Message length exceeded 255B.|\n/// |-2|Send Failed. The data is empty.|\n/// |-3|Send Failed. Send sync info with a un-publish screen stream.|\n/// |-4|Send Failed. Send sync info with a un-publish audio stream.|\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>\nSends stream sync info. The sync info data will be sent in the same packet with the audio data. Users who subscribe to this audio stream will receive the stream sync info message.\n</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"Info\">The stream sync info.</param>\n<param name=\"InStreamIndex\">The Stream index:\n* `0`: Main\n* `1`: Screen\n* `2`: None\n</param>\n<param name=\"RepeatCount\">The stream sync info will be sent repeatedly for the times set in `repeatCount`.\nIt's designed to avoid losing package and to ensure that the sync info can be sent successfully.\nHowever, if `repeatCount` is too large, it will cause the sync info to pile up in the queue.\nIt is recommended to set this parameter to `1`.\n</param>\n<param name=\"InSyncInfoStreamType\">The sync info stream type:\n* `0`: Audio\n* `1`: None\n</param>\n<returns>Any code which equals to or below `0` indicates success, and other codes indicate failure.\n| Code | Description|\n|---|---|\n|>=0|Send successfully. Indicates the times sent successfully.|\n|-1|Send Failed. Message length exceeded 255B.|\n|-2|Send Failed. The data is empty.|\n|-3|Send Failed. Send sync info with a un-publish screen stream.|\n|-4|Send Failed. Send sync info with a un-publish audio stream.|\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "RtcSendStreamSyncInfo", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventRtcSendStreamSyncInfo_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventRtcSendUserBinaryMessage_Parms
+		{
+			UObject* WorldContextObject;
+			FString RoomId;
+			FString UserId;
+			FString MessageInfo;
+			int64 ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RoomId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_RoomId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UserId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UserId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MessageInfo_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_MessageInfo;
+		static const UE4CodeGen_Private::FInt64PropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendUserBinaryMessage_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_RoomId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_RoomId = { "RoomId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendUserBinaryMessage_Parms, RoomId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_RoomId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_RoomId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_UserId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_UserId = { "UserId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendUserBinaryMessage_Parms, UserId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_UserId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_UserId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_MessageInfo_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_MessageInfo = { "MessageInfo", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendUserBinaryMessage_Parms, MessageInfo), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_MessageInfo_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_MessageInfo_MetaData)) };
+	const UE4CodeGen_Private::FInt64PropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int64, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendUserBinaryMessage_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_RoomId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_UserId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_MessageInfo,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Rtc" },
+		{ "Comment", "/// <summary>\n/// Sends a binary message to a user. Only the user can receive this message.\n/// </summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"RoomId\">The ID of the room the user is in.</param>\n/// <param name=\"UserId\">The ID of the user the message is sent to.</param>\n/// <param name=\"MessageInfo\">The message to be sent.</param>\n/// <returns>A room message ID of type int64, which is automatically generated and incremented.</returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>\nSends a binary message to a user. Only the user can receive this message.\n</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"RoomId\">The ID of the room the user is in.</param>\n<param name=\"UserId\">The ID of the user the message is sent to.</param>\n<param name=\"MessageInfo\">The message to be sent.</param>\n<returns>A room message ID of type int64, which is automatically generated and incremented.</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "RtcSendUserBinaryMessage", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventRtcSendUserBinaryMessage_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventRtcSendUserMessage_Parms
+		{
+			UObject* WorldContextObject;
+			FString RoomId;
+			FString UserId;
+			FString Message;
+			int64 ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RoomId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_RoomId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UserId_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_UserId;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Message_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Message;
+		static const UE4CodeGen_Private::FInt64PropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendUserMessage_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_RoomId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_RoomId = { "RoomId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendUserMessage_Parms, RoomId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_RoomId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_RoomId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_UserId_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_UserId = { "UserId", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendUserMessage_Parms, UserId), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_UserId_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_UserId_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_Message_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_Message = { "Message", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendUserMessage_Parms, Message), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_Message_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_Message_MetaData)) };
+	const UE4CodeGen_Private::FInt64PropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int64, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventRtcSendUserMessage_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_RoomId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_UserId,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_Message,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Rtc" },
+		{ "Comment", "/// <summary>\n/// Sends a text message to a user. Only the user can receive this message.\n/// </summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"RoomId\">The ID of the room the user is in.</param>\n/// <param name=\"UserId\">The ID of the user the message is sent to.</param>\n/// <param name=\"Message\">The message to be sent.</param>\n/// <returns>A room message ID of type int64, which is automatically generated and incremented.</returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>\nSends a text message to a user. Only the user can receive this message.\n</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"RoomId\">The ID of the room the user is in.</param>\n<param name=\"UserId\">The ID of the user the message is sent to.</param>\n<param name=\"Message\">The message to be sent.</param>\n<returns>A room message ID of type int64, which is automatically generated and incremented.</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "RtcSendUserMessage", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventRtcSendUserMessage_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2441,9 +4813,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetAudioPlaybackDevice_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Sets the type of audio playback device.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param InRtcAudioPlaybackDevice Device type.       \n" },
+		{ "Comment", "/// <summary>Sets the type of audio playback device.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"InRtcAudioPlaybackDevice\">Device type.</param>      \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Sets the type of audio playback device.\n@param WorldContextObject Used to get the information about the current world.\n@param InRtcAudioPlaybackDevice Device type." },
+		{ "ToolTip", "<summary>Sets the type of audio playback device.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"InRtcAudioPlaybackDevice\">Device type.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2484,9 +4856,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetAudioScenario_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Sets audio scenario type.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param InRtcAudioScenarioType Audio scenario type: `0`-Music; `1`-HighQualityCommunication; `2`-Communication; `3`-Media; `4`-GameStreaming.       \n" },
+		{ "Comment", "/// <summary>Sets audio scenario type.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"InRtcAudioScenarioType\">Audio scenario type: \n/// <ul>\n/// <li>`0`: Music</li> \n/// <li>`1`: HighQualityCommunication</li>  \n/// <li>`2`: Communication</li>  \n/// <li>`3`: Media</li> \n/// <li>`4`: GameStreaming</li>  \n/// </ul>\n/// </param>     \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Sets audio scenario type.\n@param WorldContextObject Used to get the information about the current world.\n@param InRtcAudioScenarioType Audio scenario type: `0`-Music; `1`-HighQualityCommunication; `2`-Communication; `3`-Media; `4`-GameStreaming." },
+		{ "ToolTip", "<summary>Sets audio scenario type.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"InRtcAudioScenarioType\">Audio scenario type:\n<ul>\n<li>`0`: Music</li>\n<li>`1`: HighQualityCommunication</li>\n<li>`2`: Communication</li>\n<li>`3`: Media</li>\n<li>`4`: GameStreaming</li>\n</ul>\n</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2531,9 +4903,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetCaptureVolume_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Sets volume for audio capture.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param InRtcStreamIndex Stream index main/screen.\n/// @param InVolume The volume. The valid value ranges from `0` to `400`. `100` indicates keeping the original volume.       \n" },
+		{ "Comment", "/// <summary>Sets volume for audio capturing.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"InRtcStreamIndex\">Stream index main/screen.</param>\n/// <param name =\"InVolume\">The volume. \n/// The valid value ranges from `0` to `400`. \n/// `100` indicates keeping the original volume.\n/// </param>       \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Sets volume for audio capture.\n@param WorldContextObject Used to get the information about the current world.\n@param InRtcStreamIndex Stream index main/screen.\n@param InVolume The volume. The valid value ranges from `0` to `400`. `100` indicates keeping the original volume." },
+		{ "ToolTip", "<summary>Sets volume for audio capturing.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"InRtcStreamIndex\">Stream index main/screen.</param>\n<param name =\"InVolume\">The volume.\nThe valid value ranges from `0` to `400`.\n`100` indicates keeping the original volume.\n</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2574,9 +4946,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetEarMonitorMode_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Sets the in-ear monitoring mode.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param InRtcEarMonitorMode The state of in-ear monitoring mode: `0`-off; `1`-on.      \n" },
+		{ "Comment", "/// <summary>Sets the in-ear monitoring mode.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"InRtcEarMonitorMode\">The state of in-ear monitoring mode: \n/// <ul>\n/// <li>`0`: off</li>\n/// <li>`1`: on</li>\n/// </ul>\n/// </param>      \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Sets the in-ear monitoring mode.\n@param WorldContextObject Used to get the information about the current world.\n@param InRtcEarMonitorMode The state of in-ear monitoring mode: `0`-off; `1`-on." },
+		{ "ToolTip", "<summary>Sets the in-ear monitoring mode.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"InRtcEarMonitorMode\">The state of in-ear monitoring mode:\n<ul>\n<li>`0`: off</li>\n<li>`1`: on</li>\n</ul>\n</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2614,9 +4986,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetEarMonitorVolume_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Sets the volume for in-ear monitoring.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param InVolume The volume. The valid value ranges from `0` to `400`. `100` indicates keeping the original volume.      \n" },
+		{ "Comment", "/// <summary>Sets the volume for in-ear monitoring.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"InVolume\">The volume. \n/// The valid value ranges from `0` to `400`. \n/// `100` indicates keeping the original volume.\n/// </param>       \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Sets the volume for in-ear monitoring.\n@param WorldContextObject Used to get the information about the current world.\n@param InVolume The volume. The valid value ranges from `0` to `400`. `100` indicates keeping the original volume." },
+		{ "ToolTip", "<summary>Sets the volume for in-ear monitoring.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"InVolume\">The volume.\nThe valid value ranges from `0` to `400`.\n`100` indicates keeping the original volume.\n</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2654,9 +5026,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetPlaybackVolume_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Sets the playback volume.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param InVolume The volume. The valid value ranges from `0` to `400`. `100` indicates keeping the original volume.    \n" },
+		{ "Comment", "/// <summary>Sets the playback volume.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"InVolume\">The volume. \n/// The valid value ranges from `0` to `400`. \n/// `100` indicates keeping the original volume.\n/// </param>    \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Sets the playback volume.\n@param WorldContextObject Used to get the information about the current world.\n@param InVolume The volume. The valid value ranges from `0` to `400`. `100` indicates keeping the original volume." },
+		{ "ToolTip", "<summary>Sets the playback volume.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"InVolume\">The volume.\nThe valid value ranges from `0` to `400`.\n`100` indicates keeping the original volume.\n</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2690,9 +5062,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcStartAudioCapture_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Starts audio capture.\n/// @param WorldContextObject Used to get the information about the current world.    \n" },
+		{ "Comment", "/// <summary>Starts audio capturing.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>    \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Starts audio capture.\n@param WorldContextObject Used to get the information about the current world." },
+		{ "ToolTip", "<summary>Starts audio capturing.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2726,9 +5098,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcStopAudioCapture_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Stops audio capture.\n/// @param WorldContextObject Used to get the information about the current world.      \n" },
+		{ "Comment", "/// <summary>Stops audio capturing.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>        \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Stops audio capture.\n@param WorldContextObject Used to get the information about the current world." },
+		{ "ToolTip", "<summary>Stops audio capturing.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2774,9 +5146,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcUnPublishRoom_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Stops publishing local audio stream to a room, so others in the same room cannot hear the voice.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param RoomId Room ID.        \n" },
+		{ "Comment", "/// <summary>Stops publishing local audio stream to a room so that other users in the same room cannot hear the voice.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"RoomId\">Room ID.</param>        \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Stops publishing local audio stream to a room, so others in the same room cannot hear the voice.\n@param WorldContextObject Used to get the information about the current world.\n@param RoomId Room ID." },
+		{ "ToolTip", "<summary>Stops publishing local audio stream to a room so that other users in the same room cannot hear the voice.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"RoomId\">Room ID.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2834,9 +5206,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcUpdateToken_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Rtc" },
-		{ "Comment", "/// @brief Updates room token.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param RoomId Room ID.\n/// @param Token The new token.      \n" },
+		{ "Comment", "/// <summary>Updates room token.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"RoomId\">Room ID.</param>\n/// <param name =\"Token\">The new token.</param>    \n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Updates room token.\n@param WorldContextObject Used to get the information about the current world.\n@param RoomId Room ID.\n@param Token The new token." },
+		{ "ToolTip", "<summary>Updates room token.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"RoomId\">Room ID.</param>\n<param name =\"Token\">The new token.</param>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2847,6 +5219,71 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcUpdateToken_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventSendSessionInviteToFriend_Parms
+		{
+			UObject* WorldContextObject;
+			int32 LocalUserNum;
+			FName SessionName;
+			FString Friend;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_LocalUserNum;
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_SessionName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Friend_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Friend;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventSendSessionInviteToFriend_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_LocalUserNum = { "LocalUserNum", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventSendSessionInviteToFriend_Parms, LocalUserNum), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_SessionName = { "SessionName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventSendSessionInviteToFriend_Parms, SessionName), METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_Friend_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_Friend = { "Friend", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventSendSessionInviteToFriend_Parms, Friend), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_Friend_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_Friend_MetaData)) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventSendSessionInviteToFriend_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventSendSessionInviteToFriend_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_LocalUserNum,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_SessionName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_Friend,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Game" },
+		{ "Comment", "/// <summary>Invites a friend to the session.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"LocalUserNum\">The controller number of the friend to invite.</param>\n/// <param name =\"SessionName\">The session name.</param>\n/// <param name =\"Friend\">The name of the friend to invite.</param>\n/// <returns>The settings of the session.</returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Invites a friend to the session.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"LocalUserNum\">The controller number of the friend to invite.</param>\n<param name =\"SessionName\">The session name.</param>\n<param name =\"Friend\">The name of the friend to invite.</param>\n<returns>The settings of the session.</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "SendSessionInviteToFriend", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventSendSessionInviteToFriend_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2873,9 +5310,6 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NewSessionSettings_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_NewSessionSettings;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NewSessionSearch_MetaData[];
-#endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_NewSessionSearch;
 		static const UE4CodeGen_Private::FDelegatePropertyParams NewProp_OnMatchmakingCompleteDelegate;
 		static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -2901,12 +5335,7 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartMatchmaking_Statics::NewProp_NewSessionSettings = { "NewSessionSettings", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventStartMatchmaking_Parms, NewSessionSettings), Z_Construct_UScriptStruct_FPicoOnlineSessionSettings, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartMatchmaking_Statics::NewProp_NewSessionSettings_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartMatchmaking_Statics::NewProp_NewSessionSettings_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartMatchmaking_Statics::NewProp_NewSessionSearch_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartMatchmaking_Statics::NewProp_NewSessionSearch = { "NewSessionSearch", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventStartMatchmaking_Parms, NewSessionSearch), Z_Construct_UScriptStruct_FPicoOnlineSessionSearch, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartMatchmaking_Statics::NewProp_NewSessionSearch_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartMatchmaking_Statics::NewProp_NewSessionSearch_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartMatchmaking_Statics::NewProp_NewSessionSearch = { "NewSessionSearch", nullptr, (EPropertyFlags)0x0010000008000180, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventStartMatchmaking_Parms, NewSessionSearch), Z_Construct_UScriptStruct_FPicoOnlineSessionSearch, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartMatchmaking_Statics::NewProp_OnMatchmakingCompleteDelegate = { "OnMatchmakingCompleteDelegate", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventStartMatchmaking_Parms, OnMatchmakingCompleteDelegate), Z_Construct_UDelegateFunction_OnlineSubsystemPico_PicoManagerOnMatchmakingCompleteDelegate__DelegateSignature, METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartMatchmaking_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 	{
@@ -2926,9 +5355,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartMatchmaking_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Starts matchmaking for a session.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param LocalPlayers The logged-in users in the session.\n/// @param SessionName The session name.\n/// @param NewSessionSettings Set `NumPrivateConnections` to `0`.\n/// @param NewSessionSearch Used to modify the search state.\n/// @param OnMatchmakingCompleteDelegate Executes this parameter after the matchmaking has been completed.\n/// @return Bool: `true`-success; `false`-falure.\n" },
+		{ "Comment", "/// <summary>Starts matchmaking for a session.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name =\"LocalPlayers\">The logged-in users in the session.</param>\n/// <param name =\"SessionName\">The session name.</param>\n/// <param name =\"NewSessionSettings\">Set `NumPrivateConnections` to `0`.</param>\n/// <param name =\"NewSessionSearch\">Used to modify the search state.</param>\n/// <param name =\"OnMatchmakingCompleteDelegate\">Will be executed when the request has been completed.</param>\n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Starts matchmaking for a session.\n@param WorldContextObject Used to get the information about the current world.\n@param LocalPlayers The logged-in users in the session.\n@param SessionName The session name.\n@param NewSessionSettings Set `NumPrivateConnections` to `0`.\n@param NewSessionSearch Used to modify the search state.\n@param OnMatchmakingCompleteDelegate Executes this parameter after the matchmaking has been completed.\n@return Bool: `true`-success; `false`-falure." },
+		{ "ToolTip", "<summary>Starts matchmaking for a session.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"LocalPlayers\">The logged-in users in the session.</param>\n<param name =\"SessionName\">The session name.</param>\n<param name =\"NewSessionSettings\">Set `NumPrivateConnections` to `0`.</param>\n<param name =\"NewSessionSearch\">Used to modify the search state.</param>\n<param name =\"OnMatchmakingCompleteDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -2979,9 +5408,9 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartSession_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Changes the session state to `InProgress`.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param SessionName The session name.\n/// @param OnStartSessionCompleteDelegate Executes this parameter after the session has been started.\n/// @return Bool: `true`-success; `false`-falure.\n" },
+		{ "Comment", "/// <summary>Changes the session state to `InProgress`.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name =\"SessionName\">The session name.</param> \n/// <param name =\"OnStartSessionCompleteDelegate\">Will be executed when the request has been completed.</param> \n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Changes the session state to `InProgress`.\n@param WorldContextObject Used to get the information about the current world.\n@param SessionName The session name.\n@param OnStartSessionCompleteDelegate Executes this parameter after the session has been started.\n@return Bool: `true`-success; `false`-falure." },
+		{ "ToolTip", "<summary>Changes the session state to `InProgress`.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"SessionName\">The session name.</param>\n<param name =\"OnStartSessionCompleteDelegate\">Will be executed when the request has been completed.</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -3053,10 +5482,10 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_UpdateSession_Statics::Function_MetaDataParams[] = {
 		{ "Category", "OnlinePico|Game" },
-		{ "Comment", "/// @brief Updates the datastore of a session.\n/// @param WorldContextObject Used to get the information about the current world.\n/// @param SessionName The session name.\n/// @param UpdatedSessionSettings The settings with new datastore.\n/// @param bShouldRefreshOnlineData (not used)\n/// @param OnUpdateSessionCompleteDelegate Executes this parameter after the session has been updated.\n/// @return Bool: `true`-success; `false`-falure.\n" },
+		{ "Comment", "/// <summary>Updates the datastore of a session.</summary>\n/// <param name =\"WorldContextObject\">Used to get the information about the current world.</param> \n/// <param name =\"SessionName\">The session name.</param> \n/// <param name =\"UpdatedSessionSettings\">The settings with new datastore.</param> \n/// <param name =\"OnUpdateSessionCompleteDelegate\">Will be executed when the request has been completed.</param> \n/// <param name =\"bShouldRefreshOnlineData\">(not used)</param> \n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
 		{ "CPP_Default_bShouldRefreshOnlineData", "true" },
 		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
-		{ "ToolTip", "@brief Updates the datastore of a session.\n@param WorldContextObject Used to get the information about the current world.\n@param SessionName The session name.\n@param UpdatedSessionSettings The settings with new datastore.\n@param bShouldRefreshOnlineData (not used)\n@param OnUpdateSessionCompleteDelegate Executes this parameter after the session has been updated.\n@return Bool: `true`-success; `false`-falure." },
+		{ "ToolTip", "<summary>Updates the datastore of a session.</summary>\n<param name =\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name =\"SessionName\">The session name.</param>\n<param name =\"UpdatedSessionSettings\">The settings with new datastore.</param>\n<param name =\"OnUpdateSessionCompleteDelegate\">Will be executed when the request has been completed.</param>\n<param name =\"bShouldRefreshOnlineData\">(not used)</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
 		{ "WorldContext", "WorldContextObject" },
 	};
 #endif
@@ -3067,6 +5496,79 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_UpdateSession_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics
+	{
+		struct OnlinePicoFunctionLibrary_eventWriteLeaderboards_Parms
+		{
+			UObject* WorldContextObject;
+			FString SessionName;
+			FString Player;
+			FPicoOnlineLeaderboardWrite PicoWriteObject;
+			bool ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WorldContextObject;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SessionName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_SessionName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Player_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_Player;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_PicoWriteObject;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_WorldContextObject = { "WorldContextObject", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventWriteLeaderboards_Parms, WorldContextObject), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_SessionName_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_SessionName = { "SessionName", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventWriteLeaderboards_Parms, SessionName), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_SessionName_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_SessionName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_Player_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_Player = { "Player", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventWriteLeaderboards_Parms, Player), METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_Player_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_Player_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_PicoWriteObject = { "PicoWriteObject", nullptr, (EPropertyFlags)0x0010000008000180, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OnlinePicoFunctionLibrary_eventWriteLeaderboards_Parms, PicoWriteObject), Z_Construct_UScriptStruct_FPicoOnlineLeaderboardWrite, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((OnlinePicoFunctionLibrary_eventWriteLeaderboards_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(OnlinePicoFunctionLibrary_eventWriteLeaderboards_Parms), &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_WorldContextObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_SessionName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_Player,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_PicoWriteObject,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::Function_MetaDataParams[] = {
+		{ "Category", "OnlinePico|Leaderboard" },
+		{ "Comment", "/// <summary>Writes a entry of a leaderboard.\n/// </summary>\n/// <param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n/// <param name=\"SessionName\">Not used.</param>\n/// <param name=\"Player\">Need to be the logged-in player.</param>\n/// <param name=\"PicoWriteObject\">Set leaderboard name and the score in it.</param>\n/// <returns>Bool: \n/// <ul>\n/// <li>`true`: success</li>\n/// <li>`false`: failure</li>\n/// </ul>\n/// </returns>\n" },
+		{ "ModuleRelativePath", "Public/OnlinePicoFunctionLibrary.h" },
+		{ "ToolTip", "<summary>Writes a entry of a leaderboard.\n</summary>\n<param name=\"WorldContextObject\">Used to get the information about the current world.</param>\n<param name=\"SessionName\">Not used.</param>\n<param name=\"Player\">Need to be the logged-in player.</param>\n<param name=\"PicoWriteObject\">Set leaderboard name and the score in it.</param>\n<returns>Bool:\n<ul>\n<li>`true`: success</li>\n<li>`false`: failure</li>\n</ul>\n</returns>" },
+		{ "WorldContext", "WorldContextObject" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UOnlinePicoFunctionLibrary, nullptr, "WriteLeaderboards", nullptr, nullptr, sizeof(OnlinePicoFunctionLibrary_eventWriteLeaderboards_Parms), Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -3089,53 +5591,86 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_OnlineSubsystemPico,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UOnlinePicoFunctionLibrary_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_AddNamedSession, "AddNamedSession" }, // 2782580846
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_AddNamedSessionBySettings, "AddNamedSessionBySettings" }, // 3198587061
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_CancelMatchmaking, "CancelMatchmaking" }, // 1785566369
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_CreateSession, "CreateSession" }, // 1297753847
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_DestroySession, "DestroySession" }, // 4195488047
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_DumpSessionState, "DumpSessionState" }, // 9855722
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_EndSession, "EndSession" }, // 33027968
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessionById, "FindSessionById" }, // 1151461783
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessions, "FindSessions" }, // 3377209649
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetNamedSession, "GetNamedSession" }, // 1347790120
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOnlineSubsystemPicoManager, "GetOnlineSubsystemPicoManager" }, // 2659945962
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOpenId, "GetOpenId" }, // 1458270729
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSessionSettings, "GetSessionSettings" }, // 3750929119
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSessionState, "GetSessionState" }, // 2671403676
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_IsPlayerInSession, "IsPlayerInSession" }, // 2868043078
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_JoinSession, "JoinSession" }, // 52308456
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_AddNamedSession, "AddNamedSession" }, // 2932224594
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_AddNamedSessionBySettings, "AddNamedSessionBySettings" }, // 390950086
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_CancelMatchmaking, "CancelMatchmaking" }, // 3584661360
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_CreateSession, "CreateSession" }, // 1725629020
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_DestroySession, "DestroySession" }, // 902563092
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_DumpSessionState, "DumpSessionState" }, // 2566858808
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_EndSession, "EndSession" }, // 2671665797
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessionById, "FindSessionById" }, // 2325324090
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_FindSessions, "FindSessions" }, // 2346269691
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetInvitableFriendList, "GetInvitableFriendList" }, // 1874513538
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLaunchDetails, "GetLaunchDetails" }, // 415338319
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetLoginPicoUser, "GetLoginPicoUser" }, // 994659258
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetNamedSession, "GetNamedSession" }, // 2619218795
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetOnlineSubsystemPicoManager, "GetOnlineSubsystemPicoManager" }, // 3023903151
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSendInvitesList, "GetSendInvitesList" }, // 689083501
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSessionSettings, "GetSessionSettings" }, // 3638797187
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetSessionState, "GetSessionState" }, // 574014230
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_GetVersion, "GetVersion" }, // 513080542
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_IsPlayerInSession, "IsPlayerInSession" }, // 1258895314
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_JoinSession, "JoinSession" }, // 1892360716
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherApp, "LaunchOtherApp" }, // 3061967055
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LaunchOtherAppByPresence, "LaunchOtherAppByPresence" }, // 1139830140
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_LogDeeplinkResult, "LogDeeplinkResult" }, // 1838580835
 		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoEntitlementVerifyAppDelegate, "PicoEntitlementVerifyAppDelegate" }, // 1014275687
 		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoEntitlementVerifyCheck, "PicoEntitlementVerifyCheck" }, // 1979909984
 		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetDeviceSN, "PicoGetDeviceSN" }, // 1516979155
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriend, "PicoGetFriend" }, // 1623559646
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriendList, "PicoGetFriendList" }, // 1221697190
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetNickName, "PicoGetNickName" }, // 3166513319
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetRtcEngineInit, "PicoGetRtcEngineInit" }, // 2104957404
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoLogin, "PicoLogin" }, // 1679064591
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoReadFriendList, "PicoReadFriendList" }, // 1086854701
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoRtcGetToken, "PicoRtcGetToken" }, // 924881888
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoRtcJoinRoom, "PicoRtcJoinRoom" }, // 3267622961
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcDestroyRoom, "RtcDestroyRoom" }, // 365570895
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcEnableAudioPropertiesReport, "RtcEnableAudioPropertiesReport" }, // 3368103422
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcLeaveRoom, "RtcLeaveRoom" }, // 517952195
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcMuteLocalAudio, "RtcMuteLocalAudio" }, // 2202730160
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcPublishRoom, "RtcPublishRoom" }, // 3076902361
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPauseAllSubscribedStream, "RtcRoomPauseAllSubscribedStream" }, // 1171768353
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomResumeAllSubscribedStream, "RtcRoomResumeAllSubscribedStream" }, // 942437659
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetAudioPlaybackDevice, "RtcSetAudioPlaybackDevice" }, // 40669353
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetAudioScenario, "RtcSetAudioScenario" }, // 2397063146
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetCaptureVolume, "RtcSetCaptureVolume" }, // 3445144034
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetEarMonitorMode, "RtcSetEarMonitorMode" }, // 214690281
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetEarMonitorVolume, "RtcSetEarMonitorVolume" }, // 1220230507
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetPlaybackVolume, "RtcSetPlaybackVolume" }, // 996454781
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcStartAudioCapture, "RtcStartAudioCapture" }, // 469264307
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcStopAudioCapture, "RtcStopAudioCapture" }, // 1813422402
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcUnPublishRoom, "RtcUnPublishRoom" }, // 1668028641
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcUpdateToken, "RtcUpdateToken" }, // 3326978065
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartMatchmaking, "StartMatchmaking" }, // 2178502293
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartSession, "StartSession" }, // 1395745422
-		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_UpdateSession, "UpdateSession" }, // 3590451895
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriend, "PicoGetFriend" }, // 1790785111
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetFriendList, "PicoGetFriendList" }, // 3882073853
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetNickName, "PicoGetNickName" }, // 3155461961
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoGetRtcEngineInit, "PicoGetRtcEngineInit" }, // 2048700453
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoLogin, "PicoLogin" }, // 1483224326
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoReadFriendList, "PicoReadFriendList" }, // 793880143
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoRtcGetToken, "PicoRtcGetToken" }, // 3077029327
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PicoRtcJoinRoom, "PicoRtcJoinRoom" }, // 1162647162
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceClear, "PresenceClear" }, // 397889852
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinations, "PresenceGetDestinations" }, // 772746977
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceGetDestinationsList, "PresenceGetDestinationsList" }, // 2091510813
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceReadSendInvites, "PresenceReadSendInvites" }, // 1483466527
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSendInvites, "PresenceSendInvites" }, // 1039915288
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSet, "PresenceSet" }, // 2448213542
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetDestination, "PresenceSetDestination" }, // 993980908
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetExtra, "PresenceSetExtra" }, // 1287031208
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetIsJoinable, "PresenceSetIsJoinable" }, // 3634409071
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetLobbySession, "PresenceSetLobbySession" }, // 2242416712
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_PresenceSetMatchSession, "PresenceSetMatchSession" }, // 558579551
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadInvitableUser, "ReadInvitableUser" }, // 1906925790
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboards, "ReadLeaderboards" }, // 170073561
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_ReadLeaderboardsForFriends, "ReadLeaderboardsForFriends" }, // 1799527586
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcDestroyRoom, "RtcDestroyRoom" }, // 2402792822
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcEnableAudioPropertiesReport, "RtcEnableAudioPropertiesReport" }, // 3695224299
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcLeaveRoom, "RtcLeaveRoom" }, // 4213023799
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcMuteLocalAudio, "RtcMuteLocalAudio" }, // 1389111559
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcPublishRoom, "RtcPublishRoom" }, // 3788350653
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPauseAllSubscribedStream, "RtcRoomPauseAllSubscribedStream" }, // 1736375923
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomPublishStream, "RtcRoomPublishStream" }, // 3454108574
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomResumeAllSubscribedStream, "RtcRoomResumeAllSubscribedStream" }, // 1874145285
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSetRemoteAudioPlaybackVolume, "RtcRoomSetRemoteAudioPlaybackVolume" }, // 1759114468
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomSubscribeStream, "RtcRoomSubscribeStream" }, // 866496667
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnPublishStream, "RtcRoomUnPublishStream" }, // 1676723531
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcRoomUnsubscribeStream, "RtcRoomUnsubscribeStream" }, // 344038685
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomBinaryMessage, "RtcSendRoomBinaryMessage" }, // 3988103896
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendRoomMessage, "RtcSendRoomMessage" }, // 977754087
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendStreamSyncInfo, "RtcSendStreamSyncInfo" }, // 3362091014
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserBinaryMessage, "RtcSendUserBinaryMessage" }, // 3980977488
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSendUserMessage, "RtcSendUserMessage" }, // 4057947652
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetAudioPlaybackDevice, "RtcSetAudioPlaybackDevice" }, // 2462719741
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetAudioScenario, "RtcSetAudioScenario" }, // 946257149
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetCaptureVolume, "RtcSetCaptureVolume" }, // 2261927896
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetEarMonitorMode, "RtcSetEarMonitorMode" }, // 1166041348
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetEarMonitorVolume, "RtcSetEarMonitorVolume" }, // 3691611473
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcSetPlaybackVolume, "RtcSetPlaybackVolume" }, // 3650694647
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcStartAudioCapture, "RtcStartAudioCapture" }, // 577437882
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcStopAudioCapture, "RtcStopAudioCapture" }, // 2246781160
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcUnPublishRoom, "RtcUnPublishRoom" }, // 2241750213
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_RtcUpdateToken, "RtcUpdateToken" }, // 157877124
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_SendSessionInviteToFriend, "SendSessionInviteToFriend" }, // 2206737262
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartMatchmaking, "StartMatchmaking" }, // 1132371183
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_StartSession, "StartSession" }, // 2729450430
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_UpdateSession, "UpdateSession" }, // 1461037388
+		{ &Z_Construct_UFunction_UOnlinePicoFunctionLibrary_WriteLeaderboards, "WriteLeaderboards" }, // 1621692800
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOnlinePicoFunctionLibrary_Statics::Class_MetaDataParams[] = {
@@ -3172,7 +5707,7 @@ void EmptyLinkFunctionForGeneratedCodeOnlinePicoFunctionLibrary() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UOnlinePicoFunctionLibrary, 711214661);
+	IMPLEMENT_CLASS(UOnlinePicoFunctionLibrary, 1223201026);
 	template<> ONLINESUBSYSTEMPICO_API UClass* StaticClass<UOnlinePicoFunctionLibrary>()
 	{
 		return UOnlinePicoFunctionLibrary::StaticClass();

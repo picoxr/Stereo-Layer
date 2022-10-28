@@ -18,9 +18,8 @@ public:
 	FVector Acceleration;
 	FVector AngularAcceleration;
 	FVector Velocity;
-	bool bSplashShown;
 	FEngineShowFlags ShowFlags;
-	bool	bIsSwitching;
+	bool    bHasWaited;
 	union
 	{
 		struct
@@ -31,7 +30,7 @@ public:
 	} Flags;
 public:
 	FPXRGameFrame();
-	TSharedPtr<FPXRGameFrame, ESPMode::ThreadSafe> Clone() const;
+	TSharedPtr<FPXRGameFrame, ESPMode::ThreadSafe> CloneMyself() const;
 };
 
 typedef TSharedPtr<FPXRGameFrame, ESPMode::ThreadSafe> FPXRGameFramePtr;

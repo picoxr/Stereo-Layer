@@ -8,10 +8,21 @@
 #include "OnlineSubsystemPicoPrivate.h"
 #include "RTCPicoUserInterface.h"
 #include "OnlineSessionInterfacePico.h"
+#include "PicoPresenceInterface.h"
+#include "PicoApplicationInterface.h"
+#include "ApplicationLifecycleInterface.h"
+#include "Pico_IAP.h"
+#include "Pico_User.h"
+#include "OnlineLeaderboardInterfacePico.h"
+#include "Pico_Sport.h"
+#include "Pico_AssetFile.h"
+#include "Pico_Achievements.h"
+
 
 #if PLATFORM_ANDROID
 #include "Android/AndroidApplication.h"
 #endif
+
 
 namespace FNetworkProtocolTypes
 {
@@ -55,7 +66,7 @@ IOnlineEntitlementsPtr FOnlineSubsystemPico::GetEntitlementsInterface() const
 
 IOnlineLeaderboardsPtr FOnlineSubsystemPico::GetLeaderboardsInterface() const
 {
-	return nullptr;
+	return LeaderboardInterface;
 }
 
 IOnlineVoicePtr FOnlineSubsystemPico::GetVoiceInterface() const
@@ -146,9 +157,50 @@ TSharedPtr<FRTCPicoUserInterface> FOnlineSubsystemPico::GetRtcUserInterface() co
 {
     return RtcPicoUserInterface;
 }
+
+TSharedPtr<FPicoApplicationInterface> FOnlineSubsystemPico::GetApplicationInterface() const
+{
+    return PicoApplicationInterface;
+}
+
+TSharedPtr<FApplicationLifecycleInterface> FOnlineSubsystemPico::GetApplicationLifecycleInterface() const
+{
+    return PicoApplicationLifecycleInterface;
+}
+
+TSharedPtr<FPicoIAPInterface> FOnlineSubsystemPico::GetPicoIAPInterface() const
+{
+    return PicoIAPInterface;
+}
+
+TSharedPtr<FPicoUserInterface> FOnlineSubsystemPico::GetPicoUserInterface() const
+{
+    return PicoUserInterface;
+}
+
+TSharedPtr<FPicoPresenceInterface> FOnlineSubsystemPico::GetPicoPresenceInterface() const
+{
+    return PicoPresenceInterface;
+}
+
+TSharedPtr<FPicoSportInterface> FOnlineSubsystemPico::GetPicoSportInterface() const
+{
+    return PicoSportInterface;
+}
+
+TSharedPtr<FPicoAssetFileInterface> FOnlineSubsystemPico::GetPicoAssetFileInterface() const
+{
+    return PicoAssetFileInterface;
+}
+
 FOnlineSessionPicoPtr FOnlineSubsystemPico::GetGameSessionInterface() const
 {
     return GameSessionInterface;
+}
+
+TSharedPtr<FPicoAchievementsInterface> FOnlineSubsystemPico::GetPicoAchievementsInterface() const
+{
+    return PicoAchievementsInterface;
 }
 
 bool FOnlineSubsystemPico::Init()
@@ -168,16 +220,24 @@ bool FOnlineSubsystemPico::Init()
         // Create the online async task thread
         OnlineAsyncTaskThreadRunnable = new FOnlineAsyncTaskManagerPico(this);
         check(OnlineAsyncTaskThreadRunnable);
-        OnlineAsyncTaskThread = FRunnableThread::Create(OnlineAsyncTaskThreadRunnable, *FString::Printf(TEXT("OnlineAsyncTaskThreadPico %s"), *InstanceName.ToString()), 128 * 1024, TPri_Normal);
-        check(OnlineAsyncTaskThread);
-        UE_LOG_ONLINE(Verbose, TEXT("Created thread (ID:%d)."), OnlineAsyncTaskThread->GetThreadID());
 
 		IdentityInterface = MakeShareable(new FOnlineIdentityPico(*this));
         FriendsInterface = MakeShareable(new FOnlineFriendsPico(*this));
         RtcPicoUserInterface = MakeShareable(new FRTCPicoUserInterface(*this));
+        PicoPresenceInterface = MakeShareable(new FPicoPresenceInterface(*this));
+        PicoApplicationInterface = MakeShareable(new FPicoApplicationInterface(*this));
+        PicoApplicationLifecycleInterface = MakeShareable(new FApplicationLifecycleInterface(*this));
+        PicoIAPInterface = MakeShareable(new FPicoIAPInterface(*this));
+        PicoUserInterface = MakeShareable(new FPicoUserInterface(*this));
+        PicoAssetFileInterface = MakeShareable(new FPicoAssetFileInterface(*this));
+        PicoSportInterface = MakeShareable(new FPicoSportInterface(*this));
+
         GameSessionInterface = MakeShareable(new FOnlineSessionPico(*this));
         GameSessionInterface->Uninitialize();
         GameSessionInterface->Initialize();
+		LeaderboardInterface = MakeShareable(new FOnlineLeaderboardPico(*this));
+        PicoAchievementsInterface = MakeShareable(new FPicoAchievementsInterface(*this));
+
 #if WITH_EDITOR
         StartTicker();
 #endif
@@ -195,23 +255,24 @@ bool FOnlineSubsystemPico::Shutdown()
 
     FOnlineSubsystemImpl::Shutdown();
     RtcPicoUserInterface.Reset();
+    PicoPresenceInterface.Reset();
+    PicoApplicationInterface.Reset();
+    PicoApplicationLifecycleInterface.Reset();
     FriendsInterface.Reset();
     IdentityInterface.Reset();
+    PicoIAPInterface.Reset();
+    PicoUserInterface.Reset();
     GameSessionInterface.Reset();
-
-    if (OnlineAsyncTaskThread)
-    {
-        // Destroy the online async task thread
-        delete OnlineAsyncTaskThread;
-        OnlineAsyncTaskThread = nullptr;
-    }
+	LeaderboardInterface.Reset();
+    PicoAssetFileInterface.Reset();
+    PicoSportInterface.Reset();
+    PicoAchievementsInterface.Reset();
 
     if (OnlineAsyncTaskThreadRunnable)
     {
         delete OnlineAsyncTaskThreadRunnable;
         OnlineAsyncTaskThreadRunnable = nullptr;
     }
-
     bPicoInit = false;
 
     return true;
@@ -219,7 +280,12 @@ bool FOnlineSubsystemPico::Shutdown()
 
 FString FOnlineSubsystemPico::GetAppId() const
 {
-    return GConfig->GetStr(TEXT("OnlineSubsystemPico"), TEXT("PicoAppId"), GEngineIni);
+    FString AppID = GConfig->GetStr(TEXT("OnlineSubsystemPico"), TEXT("PicoAppId"), GEngineIni);
+    if (AppID.IsEmpty())
+    {
+        AppID = GConfig->GetStr(TEXT("/Script/OnlineSubsystemPico.OnlinePicoSettings"), TEXT("AppID"), GEngineIni);
+    }
+    return AppID;
 }
 
 bool FOnlineSubsystemPico::Exec(class UWorld* InWorld, const TCHAR* Cmd, FOutputDevice& Ar)
@@ -240,10 +306,14 @@ bool FOnlineSubsystemPico::Tick(float DeltaTime)
     {
         return false;
     }
+	if (GameSessionInterface.IsValid())
+	{
+		GameSessionInterface->TickPendingInvites(DeltaTime);
+	}
 
     if (OnlineAsyncTaskThreadRunnable)
     {
-        OnlineAsyncTaskThreadRunnable->GameTick();
+        OnlineAsyncTaskThreadRunnable->TickTask();
     }
     return true;
 }
@@ -255,8 +325,8 @@ void FOnlineSubsystemPico::AddAsyncTask(ppfRequest RequestId, FPicoMessageOnComp
     check(OnlineAsyncTaskThreadRunnable);
     FOnlineAsyncTaskPico* NewTask = new FOnlineAsyncTaskPico(this, RequestId, Delegate);
     OnlineAsyncTaskThreadRunnable->CollectedRequestTask(RequestId, NewTask);
-    OnlineAsyncTaskThreadRunnable->AddToInQueue(NewTask);
 }
+
 
 FPicoMulticastMessageOnCompleteDelegate& FOnlineSubsystemPico::GetOrAddNotify(ppfMessageType MessageType) const
 {
@@ -288,7 +358,7 @@ bool FOnlineSubsystemPico::InitWithAndroidPlatform()
 	auto PicoAppId = GetAppId();
     if (PicoAppId.IsEmpty())
     {
-        UE_LOG_ONLINE(Error, TEXT("Missing PicoAppId key in OnlineSubsystemPico of DefaultEngine.ini"));
+        UE_LOG_ONLINE(Error, TEXT("Missing PicoAppId key in [OnlineSubsystemPico] of DefaultEngine.ini"));
         return false;
     }
 

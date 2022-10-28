@@ -10,69 +10,75 @@
 #pragma warning (disable : 4883)
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-void EmptyLinkFunctionForGeneratedCodePicoXRHMD_init() {}
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoXRIPDChangedDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PXRDeviceMainChangedDelegage__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PXRDeviceConnectChangedDelegage__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PXRLongHomeKey__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PXRResume__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PXRIpdChanged__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PXRRefreshRateChanged__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetDeviceActionDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoAppManagerDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetAutoConnectWifiDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoClearAutoConnectWifiDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetHomeKeyDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetHomeKeyAllDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoDisablePowerKeyDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetScreenOffDelayDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoWriteConfigFileToDataLocalDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoResetAllKeyToDefaultDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetWDJsonDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetWDModelsDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoEnableLargeSpaceDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoSwitchLargeSpaceStatusDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoExportMapsDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoImportMapsDelegate__DelegateSignature();
-	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PicoXRHMD_PicoControlSetAutoConnectWIFIWithErrorCodeDelegate__DelegateSignature();
-	UPackage* Z_Construct_UPackage__Script_PicoXRHMD()
+void EmptyLinkFunctionForGeneratedCodePICOXRHMD_init() {}
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOXRIPDChangedDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PXRDeviceMainChangedDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PXRDeviceConnectChangedDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PXRInputDeviceChangedDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PXRLongHomeKey__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PXRResume__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PXRIpdChanged__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PXRRefreshRateChanged__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetDeviceActionDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOAppManagerDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetAutoConnectWifiDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOClearAutoConnectWifiDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetHomeKeyDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetHomeKeyAllDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICODisablePowerKeyDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetScreenOffDelayDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOWriteConfigFileToDataLocalDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOResetAllKeyToDefaultDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetWDJsonDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetWDModelsDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOEnableLargeSpaceDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOSwitchLargeSpaceStatusDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOExportMapsDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOImportMapsDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOControlSetAutoConnectWIFIWithErrorCodeDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOGetSwitchSystemFunctionStatusDelegate__DelegateSignature();
+	PICOXRHMD_API UFunction* Z_Construct_UDelegateFunction_PICOXRHMD_PICOCastInitDelegate__DelegateSignature();
+	UPackage* Z_Construct_UPackage__Script_PICOXRHMD()
 	{
 		static UPackage* ReturnPackage = nullptr;
 		if (!ReturnPackage)
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoXRIPDChangedDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PXRDeviceMainChangedDelegage__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PXRDeviceConnectChangedDelegage__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PXRLongHomeKey__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PXRResume__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PXRIpdChanged__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PXRRefreshRateChanged__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetDeviceActionDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoAppManagerDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetAutoConnectWifiDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoClearAutoConnectWifiDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetHomeKeyDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetHomeKeyAllDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoDisablePowerKeyDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetScreenOffDelayDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoWriteConfigFileToDataLocalDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoResetAllKeyToDefaultDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetWDJsonDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoSetWDModelsDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoEnableLargeSpaceDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoSwitchLargeSpaceStatusDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoExportMapsDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoImportMapsDelegate__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_PicoXRHMD_PicoControlSetAutoConnectWIFIWithErrorCodeDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOXRIPDChangedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PXRDeviceMainChangedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PXRDeviceConnectChangedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PXRInputDeviceChangedDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PXRLongHomeKey__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PXRResume__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PXRIpdChanged__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PXRRefreshRateChanged__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetDeviceActionDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOAppManagerDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetAutoConnectWifiDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOClearAutoConnectWifiDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetHomeKeyDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetHomeKeyAllDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICODisablePowerKeyDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetScreenOffDelayDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOWriteConfigFileToDataLocalDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOResetAllKeyToDefaultDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetWDJsonDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOSetWDModelsDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOEnableLargeSpaceDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOSwitchLargeSpaceStatusDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOExportMapsDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOImportMapsDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOControlSetAutoConnectWIFIWithErrorCodeDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOGetSwitchSystemFunctionStatusDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_PICOXRHMD_PICOCastInitDelegate__DelegateSignature,
 			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
-				"/Script/PicoXRHMD",
+				"/Script/PICOXRHMD",
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x755F4C34,
-				0x80207038,
+				0xADDE6BE0,
+				0xFF6C5441,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

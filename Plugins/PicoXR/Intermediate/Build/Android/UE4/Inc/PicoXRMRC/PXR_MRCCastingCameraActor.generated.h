@@ -13,87 +13,87 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PICOXRMRC_PXR_MRCCastingCameraActor_generated_h
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_SPARSE_DATA
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_RPC_WRAPPERS
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_RPC_WRAPPERS_NO_PURE_DECLS
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_INCLASS_NO_PURE_DECLS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_SPARSE_DATA
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_RPC_WRAPPERS
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_RPC_WRAPPERS_NO_PURE_DECLS
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_INCLASS_NO_PURE_DECLS \
 private: \
-	static void StaticRegisterNativesAPicoXRMRC_CastingCameraActor(); \
-	friend struct Z_Construct_UClass_APicoXRMRC_CastingCameraActor_Statics; \
+	static void StaticRegisterNativesAPICOXRMRC_CastingCameraActor(); \
+	friend struct Z_Construct_UClass_APICOXRMRC_CastingCameraActor_Statics; \
 public: \
-	DECLARE_CLASS(APicoXRMRC_CastingCameraActor, ASceneCapture2D, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/PicoXRMRC"), NO_API) \
-	DECLARE_SERIALIZER(APicoXRMRC_CastingCameraActor)
+	DECLARE_CLASS(APICOXRMRC_CastingCameraActor, ASceneCapture2D, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/PICOXRMRC"), NO_API) \
+	DECLARE_SERIALIZER(APICOXRMRC_CastingCameraActor)
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_INCLASS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_INCLASS \
 private: \
-	static void StaticRegisterNativesAPicoXRMRC_CastingCameraActor(); \
-	friend struct Z_Construct_UClass_APicoXRMRC_CastingCameraActor_Statics; \
+	static void StaticRegisterNativesAPICOXRMRC_CastingCameraActor(); \
+	friend struct Z_Construct_UClass_APICOXRMRC_CastingCameraActor_Statics; \
 public: \
-	DECLARE_CLASS(APicoXRMRC_CastingCameraActor, ASceneCapture2D, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/PicoXRMRC"), NO_API) \
-	DECLARE_SERIALIZER(APicoXRMRC_CastingCameraActor)
+	DECLARE_CLASS(APICOXRMRC_CastingCameraActor, ASceneCapture2D, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/PICOXRMRC"), NO_API) \
+	DECLARE_SERIALIZER(APICOXRMRC_CastingCameraActor)
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_STANDARD_CONSTRUCTORS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API APicoXRMRC_CastingCameraActor(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APicoXRMRC_CastingCameraActor) \
-	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, APicoXRMRC_CastingCameraActor); \
-	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APicoXRMRC_CastingCameraActor); \
+	NO_API APICOXRMRC_CastingCameraActor(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APICOXRMRC_CastingCameraActor) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, APICOXRMRC_CastingCameraActor); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APICOXRMRC_CastingCameraActor); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API APicoXRMRC_CastingCameraActor(APicoXRMRC_CastingCameraActor&&); \
-	NO_API APicoXRMRC_CastingCameraActor(const APicoXRMRC_CastingCameraActor&); \
+	NO_API APICOXRMRC_CastingCameraActor(APICOXRMRC_CastingCameraActor&&); \
+	NO_API APICOXRMRC_CastingCameraActor(const APICOXRMRC_CastingCameraActor&); \
 public:
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_ENHANCED_CONSTRUCTORS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API APicoXRMRC_CastingCameraActor(APicoXRMRC_CastingCameraActor&&); \
-	NO_API APicoXRMRC_CastingCameraActor(const APicoXRMRC_CastingCameraActor&); \
+	NO_API APICOXRMRC_CastingCameraActor(APICOXRMRC_CastingCameraActor&&); \
+	NO_API APICOXRMRC_CastingCameraActor(const APICOXRMRC_CastingCameraActor&); \
 public: \
-	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, APicoXRMRC_CastingCameraActor); \
-	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APicoXRMRC_CastingCameraActor); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APicoXRMRC_CastingCameraActor)
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, APICOXRMRC_CastingCameraActor); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APICOXRMRC_CastingCameraActor); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APICOXRMRC_CastingCameraActor)
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__MRState() { return STRUCT_OFFSET(APicoXRMRC_CastingCameraActor, MRState); } \
-	FORCEINLINE static uint32 __PPO__M_MRC() { return STRUCT_OFFSET(APicoXRMRC_CastingCameraActor, M_MRC); } \
-	FORCEINLINE static uint32 __PPO__MI_Background() { return STRUCT_OFFSET(APicoXRMRC_CastingCameraActor, MI_Background); } \
-	FORCEINLINE static uint32 __PPO__MI_Foreground() { return STRUCT_OFFSET(APicoXRMRC_CastingCameraActor, MI_Foreground); }
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__MRState() { return STRUCT_OFFSET(APICOXRMRC_CastingCameraActor, MRState); } \
+	FORCEINLINE static uint32 __PPO__M_MRC() { return STRUCT_OFFSET(APICOXRMRC_CastingCameraActor, M_MRC); } \
+	FORCEINLINE static uint32 __PPO__MI_Background() { return STRUCT_OFFSET(APICOXRMRC_CastingCameraActor, MI_Background); } \
+	FORCEINLINE static uint32 __PPO__MI_Foreground() { return STRUCT_OFFSET(APICOXRMRC_CastingCameraActor, MI_Foreground); }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_16_PROLOG
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_GENERATED_BODY_LEGACY \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_16_PROLOG
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_PRIVATE_PROPERTY_OFFSET \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_SPARSE_DATA \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_RPC_WRAPPERS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_INCLASS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_STANDARD_CONSTRUCTORS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_PRIVATE_PROPERTY_OFFSET \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_SPARSE_DATA \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_RPC_WRAPPERS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_INCLASS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_GENERATED_BODY \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_PRIVATE_PROPERTY_OFFSET \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_SPARSE_DATA \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_INCLASS_NO_PURE_DECLS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h_19_ENHANCED_CONSTRUCTORS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_PRIVATE_PROPERTY_OFFSET \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_SPARSE_DATA \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_INCLASS_NO_PURE_DECLS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-template<> PICOXRMRC_API UClass* StaticClass<class APicoXRMRC_CastingCameraActor>();
+template<> PICOXRMRC_API UClass* StaticClass<class APICOXRMRC_CastingCameraActor>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRMRC_Private_PXR_MRCCastingCameraActor_h
+#define CURRENT_FILE_ID Stereo_Layer_Plugins_PICOXR_Source_PICOXRMRC_Private_PXR_MRCCastingCameraActor_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "PicoXRMRC/Private/PXR_MRCState.h"
+#include "PICOXRMRC/Private/PXR_MRCState.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -16,7 +16,7 @@ void EmptyLinkFunctionForGeneratedCodePXR_MRCState() {}
 	PICOXRMRC_API UClass* Z_Construct_UClass_UPXRInGameThirdCamState_NoRegister();
 	PICOXRMRC_API UClass* Z_Construct_UClass_UPXRInGameThirdCamState();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
-	UPackage* Z_Construct_UPackage__Script_PicoXRMRC();
+	UPackage* Z_Construct_UPackage__Script_PICOXRMRC();
 // End Cross Module References
 	void UPXRInGameThirdCamState::StaticRegisterNativesUPXRInGameThirdCamState()
 	{
@@ -36,7 +36,7 @@ void EmptyLinkFunctionForGeneratedCodePXR_MRCState() {}
 	};
 	UObject* (*const Z_Construct_UClass_UPXRInGameThirdCamState_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UObject,
-		(UObject* (*)())Z_Construct_UPackage__Script_PicoXRMRC,
+		(UObject* (*)())Z_Construct_UPackage__Script_PICOXRMRC,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UPXRInGameThirdCamState_Statics::Class_MetaDataParams[] = {
@@ -72,12 +72,12 @@ void EmptyLinkFunctionForGeneratedCodePXR_MRCState() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UPXRInGameThirdCamState, 5799737);
+	IMPLEMENT_CLASS(UPXRInGameThirdCamState, 3518383589);
 	template<> PICOXRMRC_API UClass* StaticClass<UPXRInGameThirdCamState>()
 	{
 		return UPXRInGameThirdCamState::StaticClass();
 	}
-	static FCompiledInDefer Z_CompiledInDefer_UClass_UPXRInGameThirdCamState(Z_Construct_UClass_UPXRInGameThirdCamState, &UPXRInGameThirdCamState::StaticClass, TEXT("/Script/PicoXRMRC"), TEXT("UPXRInGameThirdCamState"), false, nullptr, nullptr, nullptr);
+	static FCompiledInDefer Z_CompiledInDefer_UClass_UPXRInGameThirdCamState(Z_Construct_UClass_UPXRInGameThirdCamState, &UPXRInGameThirdCamState::StaticClass, TEXT("/Script/PICOXRMRC"), TEXT("UPXRInGameThirdCamState"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UPXRInGameThirdCamState);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #ifdef _MSC_VER

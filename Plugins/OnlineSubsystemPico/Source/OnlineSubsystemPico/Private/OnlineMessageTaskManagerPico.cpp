@@ -36,38 +36,26 @@ FString FOnlineAsyncEventPico::ToString() const
 void FOnlineAsyncTaskPico::Tick()
 {
 #if PLATFORM_ANDROID
-
-    if (GetElapsedTime() >= 10.f)
+    if (RequestId != ppfMessageType_User_GetAccessToken)
     {
-        bIsComplete = true;
-        bWasSuccessful = false;
+        if (GetElapsedTime() >= 10.f)
+        {
+            bIsComplete = true;
+            bWasSuccessful = false;
+        }
     }
+
 
 #endif
 }
 
 void FOnlineAsyncTaskPico::Finalize()
 {
-
+    UE_LOG_ONLINE(Log, TEXT("%s Task Finalize in %f seconds "), *ToString(), GetElapsedTime());
 }
 
 void FOnlineAsyncTaskPico::TriggerDelegates()
 {
-#if PLATFORM_ANDROID
-    if (bWasSuccessful)
-    {
-        Delegate.ExecuteIfBound(MessageHandle, bIsError);
-        Delegate.Unbind();
-        ppf_FreeMessage(MessageHandle);
-    }
-    else
-    {
-        // 
-        UE_LOG_ONLINE(Log, TEXT("%s Request time out!"), *ToString());
-        Delegate.ExecuteIfBound(nullptr, true);
-        Delegate.Unbind();
-    }
-#endif
 }
 
 
@@ -84,13 +72,26 @@ void FOnlineAsyncTaskPico::TaskReceiveMessage(ppfMessageHandle InMessageHandle, 
     {
         bIsComplete = true;
         bWasSuccessful = false;
+        UE_LOG_ONLINE(Log, TEXT("Wrong Message Handle return!"));
     }
+#if PLATFORM_ANDROID
+    if (bWasSuccessful)
+    {
+        Delegate.ExecuteIfBound(MessageHandle, bIsError);
+        Delegate.Unbind();
+        ppf_FreeMessage(MessageHandle);
+        MessageHandle = nullptr;
+    }
+#endif
 }
 
 void FOnlineAsyncTaskManagerPico::OnlineTick()
 {
-#if PLATFORM_ANDROID
+}
 
+void FOnlineAsyncTaskManagerPico::TickTask()
+{
+#if PLATFORM_ANDROID
     for (;;)
     {
         ppfMessageHandle MessageHandle = ppf_PopMessage();
@@ -101,10 +102,14 @@ void FOnlineAsyncTaskManagerPico::OnlineTick()
         UE_LOG_ONLINE(Log, TEXT("OnlineTick Receive Message !"));
         bool bIsError = ppf_Message_IsError(MessageHandle);
         ppfRequest RequestId = ppf_Message_GetRequestID(MessageHandle);
+        UE_LOG_ONLINE(Log, TEXT("Receive request id: %llu!"), RequestId);
 
         if (RequestTaskMap.Contains(RequestId))
         {
-            RequestTaskMap[RequestId]->TaskReceiveMessage(MessageHandle, bIsError);
+            auto Item = RequestTaskMap[RequestId];
+            Item->TaskReceiveMessage(MessageHandle, bIsError);
+            delete Item;
+            Item = nullptr;
             RequestTaskMap.Remove(RequestId);
             break;
         }
@@ -114,7 +119,9 @@ void FOnlineAsyncTaskManagerPico::OnlineTick()
         {
             UE_LOG_ONLINE(Log, TEXT("Receive MessageTypeID: %i"), static_cast<int32>(MessageType));
             FOnlineAsyncEventPico* NewEvent = new FOnlineAsyncEventPico(PicoSubsystem, MessageHandle, bIsError, NotificationMap[MessageType]);
-            AddToOutQueue(NewEvent);
+            NewEvent->TriggerDelegates();
+            delete NewEvent;
+            NewEvent = nullptr;
             break;
         }
         ppf_FreeMessage(MessageHandle);
@@ -124,6 +131,7 @@ void FOnlineAsyncTaskManagerPico::OnlineTick()
 
 void FOnlineAsyncTaskManagerPico::CollectedRequestTask(ppfRequest Request, FOnlineAsyncTaskPico* InTask)
 {
+    UE_LOG_ONLINE(Log, TEXT("Send request id: %i"), static_cast<int32>(Request));
     RequestTaskMap.Add(Request, InTask);
 }
 

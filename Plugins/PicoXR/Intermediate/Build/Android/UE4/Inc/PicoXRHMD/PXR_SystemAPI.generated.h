@@ -8,13 +8,22 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+enum class ECastInitResult : uint8;
 struct FWifiDisplayModel;
-enum class EUSBConfigModeEnum : uint8;
+enum class EPICOCastOptionOrStatusEnum : uint8;
+enum class EPICOCastOptionValueEnum : uint8;
+enum class ECastReturnCode : uint8;
+enum class EPICOCastUrlTypeEnum : uint8;
+enum class EPICOCastAuthorization : uint8;
 enum class ESystemFunctionSwitchEnum : uint8;
-enum class ESwitchEnum : uint8;
+enum class EHomeEventEnum : uint8;
+enum class EKeyState : uint8;
 enum class ESleepDelayTimeEnum : uint8;
 enum class EScreenOffDelayTimeEnum : uint8;
-enum class EHomeEventEnum : uint8;
+enum class ESwitchEnum : uint8;
+enum class EControllerKeyEnum : uint8;
+enum class EInstallOTAReturnCode : uint8;
+enum class EUSBConfigModeEnum : uint8;
 enum class EHomeFunctionEnum : uint8;
 enum class EPackageControlEnum : uint8;
 enum class EDeviceControlEnum : uint8;
@@ -24,244 +33,298 @@ enum class ESystemInfoEnum : uint8;
 #endif
 #define PICOXRHMD_PXR_SystemAPI_generated_h
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_167_GENERATED_BODY \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_285_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAppManagerStruct_Statics; \
 	PICOXRHMD_API static class UScriptStruct* StaticStruct();
 
 
 template<> PICOXRHMD_API UScriptStruct* StaticStruct<struct FAppManagerStruct>();
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_125_GENERATED_BODY \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_243_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FWifiDisplayModel_Statics; \
 	PICOXRHMD_API static class UScriptStruct* StaticStruct();
 
 
 template<> PICOXRHMD_API UScriptStruct* StaticStruct<struct FWifiDisplayModel>();
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_197_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoControlSetAutoConnectWIFIWithErrorCodeDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_318_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOCastInitDelegate_Parms \
+{ \
+	ECastInitResult Result; \
+}; \
+static inline void FPICOCastInitDelegate_DelegateWrapper(const FScriptDelegate& PICOCastInitDelegate, ECastInitResult Result) \
+{ \
+	_Script_PICOXRHMD_eventPICOCastInitDelegate_Parms Parms; \
+	Parms.Result=Result; \
+	PICOCastInitDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_317_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOGetSwitchSystemFunctionStatusDelegate_Parms \
 { \
 	int32 Result; \
 }; \
-static inline void FPicoControlSetAutoConnectWIFIWithErrorCodeDelegate_DelegateWrapper(const FScriptDelegate& PicoControlSetAutoConnectWIFIWithErrorCodeDelegate, int32 Result) \
+static inline void FPICOGetSwitchSystemFunctionStatusDelegate_DelegateWrapper(const FScriptDelegate& PICOGetSwitchSystemFunctionStatusDelegate, int32 Result) \
 { \
-	_Script_PicoXRHMD_eventPicoControlSetAutoConnectWIFIWithErrorCodeDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOGetSwitchSystemFunctionStatusDelegate_Parms Parms; \
 	Parms.Result=Result; \
-	PicoControlSetAutoConnectWIFIWithErrorCodeDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOGetSwitchSystemFunctionStatusDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_196_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoImportMapsDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_316_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOControlSetAutoConnectWIFIWithErrorCodeDelegate_Parms \
+{ \
+	int32 Result; \
+}; \
+static inline void FPICOControlSetAutoConnectWIFIWithErrorCodeDelegate_DelegateWrapper(const FScriptDelegate& PICOControlSetAutoConnectWIFIWithErrorCodeDelegate, int32 Result) \
+{ \
+	_Script_PICOXRHMD_eventPICOControlSetAutoConnectWIFIWithErrorCodeDelegate_Parms Parms; \
+	Parms.Result=Result; \
+	PICOControlSetAutoConnectWIFIWithErrorCodeDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_315_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOImportMapsDelegate_Parms \
 { \
 	bool Result; \
 }; \
-static inline void FPicoImportMapsDelegate_DelegateWrapper(const FScriptDelegate& PicoImportMapsDelegate, bool Result) \
+static inline void FPICOImportMapsDelegate_DelegateWrapper(const FScriptDelegate& PICOImportMapsDelegate, bool Result) \
 { \
-	_Script_PicoXRHMD_eventPicoImportMapsDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOImportMapsDelegate_Parms Parms; \
 	Parms.Result=Result ? true : false; \
-	PicoImportMapsDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOImportMapsDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_195_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoExportMapsDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_314_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOExportMapsDelegate_Parms \
 { \
 	bool Result; \
 }; \
-static inline void FPicoExportMapsDelegate_DelegateWrapper(const FScriptDelegate& PicoExportMapsDelegate, bool Result) \
+static inline void FPICOExportMapsDelegate_DelegateWrapper(const FScriptDelegate& PICOExportMapsDelegate, bool Result) \
 { \
-	_Script_PicoXRHMD_eventPicoExportMapsDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOExportMapsDelegate_Parms Parms; \
 	Parms.Result=Result ? true : false; \
-	PicoExportMapsDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOExportMapsDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_194_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoSwitchLargeSpaceStatusDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_313_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOSwitchLargeSpaceStatusDelegate_Parms \
 { \
 	FString Result; \
 }; \
-static inline void FPicoSwitchLargeSpaceStatusDelegate_DelegateWrapper(const FScriptDelegate& PicoSwitchLargeSpaceStatusDelegate, const FString& Result) \
+static inline void FPICOSwitchLargeSpaceStatusDelegate_DelegateWrapper(const FScriptDelegate& PICOSwitchLargeSpaceStatusDelegate, const FString& Result) \
 { \
-	_Script_PicoXRHMD_eventPicoSwitchLargeSpaceStatusDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOSwitchLargeSpaceStatusDelegate_Parms Parms; \
 	Parms.Result=Result; \
-	PicoSwitchLargeSpaceStatusDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOSwitchLargeSpaceStatusDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_193_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoEnableLargeSpaceDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_312_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOEnableLargeSpaceDelegate_Parms \
 { \
 	bool Result; \
 }; \
-static inline void FPicoEnableLargeSpaceDelegate_DelegateWrapper(const FScriptDelegate& PicoEnableLargeSpaceDelegate, bool Result) \
+static inline void FPICOEnableLargeSpaceDelegate_DelegateWrapper(const FScriptDelegate& PICOEnableLargeSpaceDelegate, bool Result) \
 { \
-	_Script_PicoXRHMD_eventPicoEnableLargeSpaceDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOEnableLargeSpaceDelegate_Parms Parms; \
 	Parms.Result=Result ? true : false; \
-	PicoEnableLargeSpaceDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOEnableLargeSpaceDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_192_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoSetWDModelsDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_311_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOSetWDModelsDelegate_Parms \
 { \
 	TArray<FWifiDisplayModel> Models; \
 }; \
-static inline void FPicoSetWDModelsDelegate_DelegateWrapper(const FScriptDelegate& PicoSetWDModelsDelegate, TArray<FWifiDisplayModel> const& Models) \
+static inline void FPICOSetWDModelsDelegate_DelegateWrapper(const FScriptDelegate& PICOSetWDModelsDelegate, TArray<FWifiDisplayModel> const& Models) \
 { \
-	_Script_PicoXRHMD_eventPicoSetWDModelsDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOSetWDModelsDelegate_Parms Parms; \
 	Parms.Models=Models; \
-	PicoSetWDModelsDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOSetWDModelsDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_191_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoSetWDJsonDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_310_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOSetWDJsonDelegate_Parms \
 { \
 	FString Result; \
 }; \
-static inline void FPicoSetWDJsonDelegate_DelegateWrapper(const FScriptDelegate& PicoSetWDJsonDelegate, const FString& Result) \
+static inline void FPICOSetWDJsonDelegate_DelegateWrapper(const FScriptDelegate& PICOSetWDJsonDelegate, const FString& Result) \
 { \
-	_Script_PicoXRHMD_eventPicoSetWDJsonDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOSetWDJsonDelegate_Parms Parms; \
 	Parms.Result=Result; \
-	PicoSetWDJsonDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOSetWDJsonDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_190_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoResetAllKeyToDefaultDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_309_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOResetAllKeyToDefaultDelegate_Parms \
 { \
 	bool Result; \
 }; \
-static inline void FPicoResetAllKeyToDefaultDelegate_DelegateWrapper(const FScriptDelegate& PicoResetAllKeyToDefaultDelegate, bool Result) \
+static inline void FPICOResetAllKeyToDefaultDelegate_DelegateWrapper(const FScriptDelegate& PICOResetAllKeyToDefaultDelegate, bool Result) \
 { \
-	_Script_PicoXRHMD_eventPicoResetAllKeyToDefaultDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOResetAllKeyToDefaultDelegate_Parms Parms; \
 	Parms.Result=Result ? true : false; \
-	PicoResetAllKeyToDefaultDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOResetAllKeyToDefaultDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_189_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoWriteConfigFileToDataLocalDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_308_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOWriteConfigFileToDataLocalDelegate_Parms \
 { \
 	bool Result; \
 }; \
-static inline void FPicoWriteConfigFileToDataLocalDelegate_DelegateWrapper(const FScriptDelegate& PicoWriteConfigFileToDataLocalDelegate, bool Result) \
+static inline void FPICOWriteConfigFileToDataLocalDelegate_DelegateWrapper(const FScriptDelegate& PICOWriteConfigFileToDataLocalDelegate, bool Result) \
 { \
-	_Script_PicoXRHMD_eventPicoWriteConfigFileToDataLocalDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOWriteConfigFileToDataLocalDelegate_Parms Parms; \
 	Parms.Result=Result ? true : false; \
-	PicoWriteConfigFileToDataLocalDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOWriteConfigFileToDataLocalDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_188_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoSetScreenOffDelayDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_307_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOSetScreenOffDelayDelegate_Parms \
 { \
 	int32 Result; \
 }; \
-static inline void FPicoSetScreenOffDelayDelegate_DelegateWrapper(const FScriptDelegate& PicoSetScreenOffDelayDelegate, int32 Result) \
+static inline void FPICOSetScreenOffDelayDelegate_DelegateWrapper(const FScriptDelegate& PICOSetScreenOffDelayDelegate, int32 Result) \
 { \
-	_Script_PicoXRHMD_eventPicoSetScreenOffDelayDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOSetScreenOffDelayDelegate_Parms Parms; \
 	Parms.Result=Result; \
-	PicoSetScreenOffDelayDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOSetScreenOffDelayDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_187_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoDisablePowerKeyDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_306_DELEGATE \
+struct _Script_PICOXRHMD_eventPICODisablePowerKeyDelegate_Parms \
 { \
 	int32 Result; \
 }; \
-static inline void FPicoDisablePowerKeyDelegate_DelegateWrapper(const FScriptDelegate& PicoDisablePowerKeyDelegate, int32 Result) \
+static inline void FPICODisablePowerKeyDelegate_DelegateWrapper(const FScriptDelegate& PICODisablePowerKeyDelegate, int32 Result) \
 { \
-	_Script_PicoXRHMD_eventPicoDisablePowerKeyDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICODisablePowerKeyDelegate_Parms Parms; \
 	Parms.Result=Result; \
-	PicoDisablePowerKeyDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICODisablePowerKeyDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_186_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoSetHomeKeyAllDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_305_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOSetHomeKeyAllDelegate_Parms \
 { \
 	bool Result; \
 }; \
-static inline void FPicoSetHomeKeyAllDelegate_DelegateWrapper(const FScriptDelegate& PicoSetHomeKeyAllDelegate, bool Result) \
+static inline void FPICOSetHomeKeyAllDelegate_DelegateWrapper(const FScriptDelegate& PICOSetHomeKeyAllDelegate, bool Result) \
 { \
-	_Script_PicoXRHMD_eventPicoSetHomeKeyAllDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOSetHomeKeyAllDelegate_Parms Parms; \
 	Parms.Result=Result ? true : false; \
-	PicoSetHomeKeyAllDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOSetHomeKeyAllDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_185_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoSetHomeKeyDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_304_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOSetHomeKeyDelegate_Parms \
 { \
 	bool Result; \
 }; \
-static inline void FPicoSetHomeKeyDelegate_DelegateWrapper(const FScriptDelegate& PicoSetHomeKeyDelegate, bool Result) \
+static inline void FPICOSetHomeKeyDelegate_DelegateWrapper(const FScriptDelegate& PICOSetHomeKeyDelegate, bool Result) \
 { \
-	_Script_PicoXRHMD_eventPicoSetHomeKeyDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOSetHomeKeyDelegate_Parms Parms; \
 	Parms.Result=Result ? true : false; \
-	PicoSetHomeKeyDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOSetHomeKeyDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_184_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoClearAutoConnectWifiDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_303_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOClearAutoConnectWifiDelegate_Parms \
 { \
 	bool Result; \
 }; \
-static inline void FPicoClearAutoConnectWifiDelegate_DelegateWrapper(const FScriptDelegate& PicoClearAutoConnectWifiDelegate, bool Result) \
+static inline void FPICOClearAutoConnectWifiDelegate_DelegateWrapper(const FScriptDelegate& PICOClearAutoConnectWifiDelegate, bool Result) \
 { \
-	_Script_PicoXRHMD_eventPicoClearAutoConnectWifiDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOClearAutoConnectWifiDelegate_Parms Parms; \
 	Parms.Result=Result ? true : false; \
-	PicoClearAutoConnectWifiDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOClearAutoConnectWifiDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_183_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoSetAutoConnectWifiDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_302_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOSetAutoConnectWifiDelegate_Parms \
 { \
 	bool Result; \
 }; \
-static inline void FPicoSetAutoConnectWifiDelegate_DelegateWrapper(const FScriptDelegate& PicoSetAutoConnectWifiDelegate, bool Result) \
+static inline void FPICOSetAutoConnectWifiDelegate_DelegateWrapper(const FScriptDelegate& PICOSetAutoConnectWifiDelegate, bool Result) \
 { \
-	_Script_PicoXRHMD_eventPicoSetAutoConnectWifiDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOSetAutoConnectWifiDelegate_Parms Parms; \
 	Parms.Result=Result ? true : false; \
-	PicoSetAutoConnectWifiDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOSetAutoConnectWifiDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_182_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoAppManagerDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_301_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOAppManagerDelegate_Parms \
 { \
 	int32 Result; \
 }; \
-static inline void FPicoAppManagerDelegate_DelegateWrapper(const FScriptDelegate& PicoAppManagerDelegate, int32 Result) \
+static inline void FPICOAppManagerDelegate_DelegateWrapper(const FScriptDelegate& PICOAppManagerDelegate, int32 Result) \
 { \
-	_Script_PicoXRHMD_eventPicoAppManagerDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOAppManagerDelegate_Parms Parms; \
 	Parms.Result=Result; \
-	PicoAppManagerDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOAppManagerDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_181_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoSetDeviceActionDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_300_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOSetDeviceActionDelegate_Parms \
 { \
 	int32 Result; \
 }; \
-static inline void FPicoSetDeviceActionDelegate_DelegateWrapper(const FScriptDelegate& PicoSetDeviceActionDelegate, int32 Result) \
+static inline void FPICOSetDeviceActionDelegate_DelegateWrapper(const FScriptDelegate& PICOSetDeviceActionDelegate, int32 Result) \
 { \
-	_Script_PicoXRHMD_eventPicoSetDeviceActionDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOSetDeviceActionDelegate_Parms Parms; \
 	Parms.Result=Result; \
-	PicoSetDeviceActionDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOSetDeviceActionDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_SPARSE_DATA
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_RPC_WRAPPERS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_SPARSE_DATA
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execPXR_PICOCastGetOptionOrStatus); \
+	DECLARE_FUNCTION(execPXR_PICOCastSetOption); \
+	DECLARE_FUNCTION(execPXR_PICOCastStopCast); \
+	DECLARE_FUNCTION(execPXR_PICOCastGetUrl); \
+	DECLARE_FUNCTION(execPXR_PICOCastGetShowAuthorization); \
+	DECLARE_FUNCTION(execPXR_PICOCastSetShowAuthorization); \
+	DECLARE_FUNCTION(execPXR_PICOCastInit); \
+	DECLARE_FUNCTION(execPXR_GetSwitchSystemFunctionStatus); \
+	DECLARE_FUNCTION(execPXR_GetCurrentLauncher); \
+	DECLARE_FUNCTION(execPXR_GetUsbConfigurationOption); \
+	DECLARE_FUNCTION(execPXR_GetHomeKeyStatus); \
+	DECLARE_FUNCTION(execPXR_GetBackKeyStatus); \
+	DECLARE_FUNCTION(execPXR_GetVolumeKeyStatus); \
+	DECLARE_FUNCTION(execPXR_GetEnterKeyStatus); \
+	DECLARE_FUNCTION(execPXR_GetPowerKeyStatus); \
+	DECLARE_FUNCTION(execPXR_GetSleepDelay); \
+	DECLARE_FUNCTION(execPXR_GetScreenOffDelay); \
+	DECLARE_FUNCTION(execPXR_GetPowerOffWithUSBCable); \
+	DECLARE_FUNCTION(execPXR_GetControllerKeyState); \
+	DECLARE_FUNCTION(execPXR_GetTimingShutdownStatus); \
+	DECLARE_FUNCTION(execPXR_GetTimingStartupStatus); \
+	DECLARE_FUNCTION(execPXR_GetAutoConnectWiFiConfig); \
+	DECLARE_FUNCTION(execPXR_InstallOTAPackage); \
+	DECLARE_FUNCTION(execPXR_IsVolumeChangeToHomeAndEnter); \
+	DECLARE_FUNCTION(execPXR_SwitchVolumeToHomeAndEnter); \
+	DECLARE_FUNCTION(execPXR_StartVrSettingsItem); \
+	DECLARE_FUNCTION(execPXR_TimingShutdown); \
+	DECLARE_FUNCTION(execPXR_TimingStartup); \
 	DECLARE_FUNCTION(execPXR_AppKeepAlive); \
 	DECLARE_FUNCTION(execPXR_ControlSetAutoConnectWIFIWithErrorCode); \
 	DECLARE_FUNCTION(execPXR_Record); \
@@ -323,8 +386,36 @@ static inline void FPicoSetDeviceActionDelegate_DelegateWrapper(const FScriptDel
 	DECLARE_FUNCTION(execPXR_GetDeviceInfo);
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execPXR_PICOCastGetOptionOrStatus); \
+	DECLARE_FUNCTION(execPXR_PICOCastSetOption); \
+	DECLARE_FUNCTION(execPXR_PICOCastStopCast); \
+	DECLARE_FUNCTION(execPXR_PICOCastGetUrl); \
+	DECLARE_FUNCTION(execPXR_PICOCastGetShowAuthorization); \
+	DECLARE_FUNCTION(execPXR_PICOCastSetShowAuthorization); \
+	DECLARE_FUNCTION(execPXR_PICOCastInit); \
+	DECLARE_FUNCTION(execPXR_GetSwitchSystemFunctionStatus); \
+	DECLARE_FUNCTION(execPXR_GetCurrentLauncher); \
+	DECLARE_FUNCTION(execPXR_GetUsbConfigurationOption); \
+	DECLARE_FUNCTION(execPXR_GetHomeKeyStatus); \
+	DECLARE_FUNCTION(execPXR_GetBackKeyStatus); \
+	DECLARE_FUNCTION(execPXR_GetVolumeKeyStatus); \
+	DECLARE_FUNCTION(execPXR_GetEnterKeyStatus); \
+	DECLARE_FUNCTION(execPXR_GetPowerKeyStatus); \
+	DECLARE_FUNCTION(execPXR_GetSleepDelay); \
+	DECLARE_FUNCTION(execPXR_GetScreenOffDelay); \
+	DECLARE_FUNCTION(execPXR_GetPowerOffWithUSBCable); \
+	DECLARE_FUNCTION(execPXR_GetControllerKeyState); \
+	DECLARE_FUNCTION(execPXR_GetTimingShutdownStatus); \
+	DECLARE_FUNCTION(execPXR_GetTimingStartupStatus); \
+	DECLARE_FUNCTION(execPXR_GetAutoConnectWiFiConfig); \
+	DECLARE_FUNCTION(execPXR_InstallOTAPackage); \
+	DECLARE_FUNCTION(execPXR_IsVolumeChangeToHomeAndEnter); \
+	DECLARE_FUNCTION(execPXR_SwitchVolumeToHomeAndEnter); \
+	DECLARE_FUNCTION(execPXR_StartVrSettingsItem); \
+	DECLARE_FUNCTION(execPXR_TimingShutdown); \
+	DECLARE_FUNCTION(execPXR_TimingStartup); \
 	DECLARE_FUNCTION(execPXR_AppKeepAlive); \
 	DECLARE_FUNCTION(execPXR_ControlSetAutoConnectWIFIWithErrorCode); \
 	DECLARE_FUNCTION(execPXR_Record); \
@@ -386,79 +477,166 @@ static inline void FPicoSetDeviceActionDelegate_DelegateWrapper(const FScriptDel
 	DECLARE_FUNCTION(execPXR_GetDeviceInfo);
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_INCLASS_NO_PURE_DECLS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_INCLASS_NO_PURE_DECLS \
 private: \
-	static void StaticRegisterNativesUPicoXRSystemAPI(); \
-	friend struct Z_Construct_UClass_UPicoXRSystemAPI_Statics; \
+	static void StaticRegisterNativesUPICOXRSystemAPI(); \
+	friend struct Z_Construct_UClass_UPICOXRSystemAPI_Statics; \
 public: \
-	DECLARE_CLASS(UPicoXRSystemAPI, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/PicoXRHMD"), NO_API) \
-	DECLARE_SERIALIZER(UPicoXRSystemAPI)
+	DECLARE_CLASS(UPICOXRSystemAPI, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/PICOXRHMD"), NO_API) \
+	DECLARE_SERIALIZER(UPICOXRSystemAPI)
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_INCLASS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_INCLASS \
 private: \
-	static void StaticRegisterNativesUPicoXRSystemAPI(); \
-	friend struct Z_Construct_UClass_UPicoXRSystemAPI_Statics; \
+	static void StaticRegisterNativesUPICOXRSystemAPI(); \
+	friend struct Z_Construct_UClass_UPICOXRSystemAPI_Statics; \
 public: \
-	DECLARE_CLASS(UPicoXRSystemAPI, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/PicoXRHMD"), NO_API) \
-	DECLARE_SERIALIZER(UPicoXRSystemAPI)
+	DECLARE_CLASS(UPICOXRSystemAPI, UActorComponent, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/PICOXRHMD"), NO_API) \
+	DECLARE_SERIALIZER(UPICOXRSystemAPI)
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_STANDARD_CONSTRUCTORS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UPicoXRSystemAPI(const FObjectInitializer& ObjectInitializer); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UPicoXRSystemAPI) \
-	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPicoXRSystemAPI); \
-	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPicoXRSystemAPI); \
+	NO_API UPICOXRSystemAPI(const FObjectInitializer& ObjectInitializer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UPICOXRSystemAPI) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPICOXRSystemAPI); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPICOXRSystemAPI); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API UPicoXRSystemAPI(UPicoXRSystemAPI&&); \
-	NO_API UPicoXRSystemAPI(const UPicoXRSystemAPI&); \
+	NO_API UPICOXRSystemAPI(UPICOXRSystemAPI&&); \
+	NO_API UPICOXRSystemAPI(const UPICOXRSystemAPI&); \
 public:
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_ENHANCED_CONSTRUCTORS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API UPicoXRSystemAPI(UPicoXRSystemAPI&&); \
-	NO_API UPicoXRSystemAPI(const UPicoXRSystemAPI&); \
+	NO_API UPICOXRSystemAPI(UPICOXRSystemAPI&&); \
+	NO_API UPICOXRSystemAPI(const UPICOXRSystemAPI&); \
 public: \
-	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPicoXRSystemAPI); \
-	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPicoXRSystemAPI); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UPicoXRSystemAPI)
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPICOXRSystemAPI); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPICOXRSystemAPI); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UPICOXRSystemAPI)
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_PRIVATE_PROPERTY_OFFSET
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_199_PROLOG
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_GENERATED_BODY_LEGACY \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_PRIVATE_PROPERTY_OFFSET
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_320_PROLOG
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_PRIVATE_PROPERTY_OFFSET \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_SPARSE_DATA \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_RPC_WRAPPERS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_INCLASS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_STANDARD_CONSTRUCTORS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_PRIVATE_PROPERTY_OFFSET \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_SPARSE_DATA \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_RPC_WRAPPERS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_INCLASS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_GENERATED_BODY \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_PRIVATE_PROPERTY_OFFSET \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_SPARSE_DATA \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_RPC_WRAPPERS_NO_PURE_DECLS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_INCLASS_NO_PURE_DECLS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h_202_ENHANCED_CONSTRUCTORS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_PRIVATE_PROPERTY_OFFSET \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_SPARSE_DATA \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_RPC_WRAPPERS_NO_PURE_DECLS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_INCLASS_NO_PURE_DECLS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h_323_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-template<> PICOXRHMD_API UClass* StaticClass<class UPicoXRSystemAPI>();
+template<> PICOXRHMD_API UClass* StaticClass<class UPICOXRSystemAPI>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Private_PXR_SystemAPI_h
+#define CURRENT_FILE_ID Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Private_PXR_SystemAPI_h
 
+
+#define FOREACH_ENUM_ECONTROLLERKEYENUM(op) \
+	op(EControllerKeyEnum::CONTROLLER_KEY_JOYSTICK) \
+	op(EControllerKeyEnum::CONTROLLER_KEY_MENU) \
+	op(EControllerKeyEnum::CONTROLLER_KEY_TRIGGER) \
+	op(EControllerKeyEnum::CONTROLLER_KEY_RIGHT_A) \
+	op(EControllerKeyEnum::CONTROLLER_KEY_RIGHT_B) \
+	op(EControllerKeyEnum::CONTROLLER_KEY_LEFT_X) \
+	op(EControllerKeyEnum::CONTROLLER_KEY_LEFT_Y) \
+	op(EControllerKeyEnum::CONTROLLER_KEY_LEFT_GRIP) \
+	op(EControllerKeyEnum::CONTROLLER_KEY_RIGHT_GRIP) 
+
+enum class EControllerKeyEnum : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EControllerKeyEnum>();
+
+#define FOREACH_ENUM_EKEYSTATE(op) \
+	op(EKeyState::DISABLE) \
+	op(EKeyState::ENABLE) 
+
+enum class EKeyState : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EKeyState>();
+
+#define FOREACH_ENUM_EPICOCASTURLTYPEENUM(op) \
+	op(EPICOCastUrlTypeEnum::NORMAL_URL) \
+	op(EPICOCastUrlTypeEnum::NO_CONFIRM_URL) \
+	op(EPICOCastUrlTypeEnum::RTMP_URL) 
+
+enum class EPICOCastUrlTypeEnum : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EPICOCastUrlTypeEnum>();
+
+#define FOREACH_ENUM_EPICOCASTOPTIONVALUEENUM(op) \
+	op(EPICOCastOptionValueEnum::OPTION_VALUE_RESOLUTION_HIGH) \
+	op(EPICOCastOptionValueEnum::OPTION_VALUE_RESOLUTION_MIDDLE) \
+	op(EPICOCastOptionValueEnum::OPTION_VALUE_RESOLUTION_AUTO) \
+	op(EPICOCastOptionValueEnum::OPTION_VALUE_RESOLUTION_HIGH_2K) \
+	op(EPICOCastOptionValueEnum::OPTION_VALUE_RESOLUTION_HIGH_4K) \
+	op(EPICOCastOptionValueEnum::OPTION_VALUE_BITRATE_HIGH) \
+	op(EPICOCastOptionValueEnum::OPTION_VALUE_BITRATE_MIDDLE) \
+	op(EPICOCastOptionValueEnum::OPTION_VALUE_BITRATE_LOW) \
+	op(EPICOCastOptionValueEnum::OPTION_VALUE_AUDIO_ON) \
+	op(EPICOCastOptionValueEnum::OPTION_VALUE_AUDIO_OFF) \
+	op(EPICOCastOptionValueEnum::STATUS_VALUE_STATE_STARTED) \
+	op(EPICOCastOptionValueEnum::STATUS_VALUE_STATE_STOPPED) \
+	op(EPICOCastOptionValueEnum::STATUS_VALUE_ERROR) 
+
+enum class EPICOCastOptionValueEnum : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EPICOCastOptionValueEnum>();
+
+#define FOREACH_ENUM_EPICOCASTOPTIONORSTATUSENUM(op) \
+	op(EPICOCastOptionOrStatusEnum::OPTION_RESOLUTION_LEVEL) \
+	op(EPICOCastOptionOrStatusEnum::OPTION_BITRATE_LEVEL) \
+	op(EPICOCastOptionOrStatusEnum::OPTION_AUDIO_ENABLE) \
+	op(EPICOCastOptionOrStatusEnum::PICO_CAST_STATUS) 
+
+enum class EPICOCastOptionOrStatusEnum : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EPICOCastOptionOrStatusEnum>();
+
+#define FOREACH_ENUM_EPICOCASTAUTHORIZATION(op) \
+	op(EPICOCastAuthorization::ASK_EVERY_TIME) \
+	op(EPICOCastAuthorization::ALWAYS_ALLOW) \
+	op(EPICOCastAuthorization::NOT_ACCEPTED) 
+
+enum class EPICOCastAuthorization : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EPICOCastAuthorization>();
+
+#define FOREACH_ENUM_ECASTINITRESULT(op) \
+	op(ECastInitResult::DISCONNECT) \
+	op(ECastInitResult::CONNECT) \
+	op(ECastInitResult::NO_MIC_PERMISSION) 
+
+enum class ECastInitResult : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<ECastInitResult>();
+
+#define FOREACH_ENUM_ECASTRETURNCODE(op) \
+	op(ECastReturnCode::FAIL) \
+	op(ECastReturnCode::SUCCESS) 
+
+enum class ECastReturnCode : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<ECastReturnCode>();
+
+#define FOREACH_ENUM_EINSTALLOTARETURNCODE(op) \
+	op(EInstallOTAReturnCode::SUCCESS) \
+	op(EInstallOTAReturnCode::FAIL) \
+	op(EInstallOTAReturnCode::LOWVERSIONOFOTA) 
+
+enum class EInstallOTAReturnCode : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EInstallOTAReturnCode>();
 
 #define FOREACH_ENUM_EUSBCONFIGMODEENUM(op) \
 	op(EUSBConfigModeEnum::MTP) \
@@ -482,12 +660,24 @@ template<> PICOXRHMD_API UEnum* StaticEnum<EUSBConfigModeEnum>();
 	op(ESystemFunctionSwitchEnum::SFS_GLOBAL_CALIBRATION) \
 	op(ESystemFunctionSwitchEnum::SFS_Auto_Calibration) \
 	op(ESystemFunctionSwitchEnum::SFS_USB_BOOT) \
+	op(ESystemFunctionSwitchEnum::SFS_VOLUME_UI) \
+	op(ESystemFunctionSwitchEnum::SFS_CONTROLLER_UI) \
+	op(ESystemFunctionSwitchEnum::SFS_NAVGATION_SWITCH) \
 	op(ESystemFunctionSwitchEnum::SFS_SHORTCUT_SHOW_RECORD_UI) \
 	op(ESystemFunctionSwitchEnum::SFS_SHORTCUT_SHOW_FIT_UI) \
 	op(ESystemFunctionSwitchEnum::SFS_SHORTCUT_SHOW_CAST_UI) \
 	op(ESystemFunctionSwitchEnum::SFS_SHORTCUT_SHOW_CAPTURE_UI) \
 	op(ESystemFunctionSwitchEnum::SFS_STOP_MEM_INFO_SERVICE) \
-	op(ESystemFunctionSwitchEnum::SFS_USB_FORCE_HOST) 
+	op(ESystemFunctionSwitchEnum::SFS_START_APP_BOOT_COMPLETED) \
+	op(ESystemFunctionSwitchEnum::SFS_USB_FORCE_HOST) \
+	op(ESystemFunctionSwitchEnum::SFS_SET_DEFAULT_SAFETY_ZONE) \
+	op(ESystemFunctionSwitchEnum::SFS_ALLOW_RESET_BOUNDARY) \
+	op(ESystemFunctionSwitchEnum::SFS_BOUNDARY_CONFIRMATION_SCREEN) \
+	op(ESystemFunctionSwitchEnum::SFS_LONG_PRESS_HOME_TO_RECENTER) \
+	op(ESystemFunctionSwitchEnum::SFS_POWER_CTRL_WIFI_ENABLE) \
+	op(ESystemFunctionSwitchEnum::SFS_WIFI_DISABLE) \
+	op(ESystemFunctionSwitchEnum::SFS_SIX_DOF_SWITCH) \
+	op(ESystemFunctionSwitchEnum::SFS_INVERSE_DISPERSION) 
 
 enum class ESystemFunctionSwitchEnum : uint8;
 template<> PICOXRHMD_API UEnum* StaticEnum<ESystemFunctionSwitchEnum>();
@@ -518,16 +708,33 @@ template<> PICOXRHMD_API UEnum* StaticEnum<EScreenOffDelayTimeEnum>();
 
 #define FOREACH_ENUM_EHOMEFUNCTIONENUM(op) \
 	op(EHomeFunctionEnum::VALUE_HOME_GO_TO_SETTING) \
+	op(EHomeFunctionEnum::VALUE_HOME_BACK) \
 	op(EHomeFunctionEnum::VALUE_HOME_RECENTER) \
+	op(EHomeFunctionEnum::VALUE_HOME_OPEN_APP) \
 	op(EHomeFunctionEnum::VALUE_HOME_DISABLE) \
-	op(EHomeFunctionEnum::VALUE_HOME_GO_TO_HOME) 
+	op(EHomeFunctionEnum::VALUE_HOME_GO_TO_HOME) \
+	op(EHomeFunctionEnum::VALUE_HOME_SEND_BROADCAST) \
+	op(EHomeFunctionEnum::VALUE_HOME_CLEAN_MEMORY) \
+	op(EHomeFunctionEnum::VALUE_HOME_QUICK_SETTING) \
+	op(EHomeFunctionEnum::VALUE_HOME_SCREEN_CAP) \
+	op(EHomeFunctionEnum::VALUE_HOME_SCREEN_RECORD) 
 
 enum class EHomeFunctionEnum : uint8;
 template<> PICOXRHMD_API UEnum* StaticEnum<EHomeFunctionEnum>();
 
 #define FOREACH_ENUM_EHOMEEVENTENUM(op) \
 	op(EHomeEventEnum::HOME_SINGLE_CLICK) \
-	op(EHomeEventEnum::HOME_DOUBLE_CLICK) 
+	op(EHomeEventEnum::HOME_DOUBLE_CLICK) \
+	op(EHomeEventEnum::HOME_LONG_PRESS) \
+	op(EHomeEventEnum::HOME_SINGLE_CLICK_RIGHT_CTL) \
+	op(EHomeEventEnum::HOME_DOUBLE_CLICK_RIGHT_CTL) \
+	op(EHomeEventEnum::HOME_LONG_PRESS_RIGHT_CTL) \
+	op(EHomeEventEnum::HOME_SINGLE_CLICK_LEFT_CTL) \
+	op(EHomeEventEnum::HOME_DOUBLE_CLICK_LEFT_CTL) \
+	op(EHomeEventEnum::HOME_LONG_PRESS_LEFT_CTL) \
+	op(EHomeEventEnum::HOME_SINGLE_CLICK_HMD) \
+	op(EHomeEventEnum::HOME_DOUBLE_CLICK_HMD) \
+	op(EHomeEventEnum::HOME_LONG_PRESS_HMD) 
 
 enum class EHomeEventEnum : uint8;
 template<> PICOXRHMD_API UEnum* StaticEnum<EHomeEventEnum>();

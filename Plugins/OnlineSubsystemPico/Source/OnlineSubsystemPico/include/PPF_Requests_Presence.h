@@ -45,41 +45,6 @@ PPF_PUBLIC_FUNCTION(ppfRequest) ppf_Presence_GetNextApplicationInviteArrayPage(c
 /// Extract the payload from the message handle with ::ppf_Message_GetApplicationInviteArray().
 PPF_PUBLIC_FUNCTION(ppfRequest) ppf_Presence_GetSentInvites();
 
-/// @brief Launch the flow to allow the user to invite others to their current
-/// session. This can only be used if the user is in a joinable session.
-///
-/// A message with type ::ppfMessage_Presence_LaunchInvitePanel will be generated in response.
-///
-/// First call ::ppf_Message_IsError() to check if an error occurred.
-///
-/// If no error occurred, the message will contain a payload of type ::ppfInvitePanelResultInfoHandle.
-/// Extract the payload from the message handle with ::ppf_Message_GetInvitePanelResultInfo().
-PPF_PUBLIC_FUNCTION(ppfRequest) ppf_Presence_LaunchInvitePanel(ppfInviteOptionsHandle options);
-
-
-/// @brief Launch the dialog which will allow the user to rejoin a previous
-/// lobby/match. Either the lobby_session_id or the match_session_id, or both,
-/// must be populated.
-///
-/// A message with type ::ppfMessage_Presence_LaunchRejoinDialog will be generated in response.
-///
-/// First call ::ppf_Message_IsError() to check if an error occurred.
-///
-/// If no error occurred, the message will contain a payload of type ::ppfRejoinDialogResultHandle.
-/// Extract the payload from the message handle with ::ppf_Message_GetRejoinDialogResult().
-PPF_PUBLIC_FUNCTION(ppfRequest) ppf_Presence_LaunchRejoinDialog(const char *lobby_session_id, const char *match_session_id, const char *destination_api_name);
-
-/// @brief Launch the panel which displays the current users in the roster. Users with
-/// the same lobby and match session id as part of their presence will show up
-/// here.
-///
-/// A message with type ::ppfMessage_Presence_LaunchRosterPanel will be generated in response.
-///
-/// First call ::ppf_Message_IsError() to check if an error occurred.
-///
-/// This response has no payload. If no error occurred, the request was successful. Yay!
-PPF_PUBLIC_FUNCTION(ppfRequest) ppf_Presence_LaunchRosterPanel(ppfRosterOptionsHandle options);
-
 /// @brief Returns a list of users that can be invited to your current lobby. These
 /// are pulled from your friends and recently met lists.
 ///
@@ -141,7 +106,14 @@ PPF_PUBLIC_FUNCTION(ppfRequest) ppf_Presence_SetLobbySession(const char *id);
 /// This response has no payload. If no error occurred, the request was successful. Yay!
 PPF_PUBLIC_FUNCTION(ppfRequest) ppf_Presence_SetMatchSession(const char *id);
 
-
+/// @brief Replaces the user's custom param.
+///
+/// A message with type ::ppfMessage_Presence_SetExtra will be generated in response.
+///
+/// First call ::ppf_Message_IsError() to check if an error occurred.
+///
+/// This response has no payload. If no error occurred, the request was successful. Yay!
+PPF_PUBLIC_FUNCTION(ppfRequest) ppf_Presence_SetExtra(const char *extra);
 
 /// @brief Gets all the destinations that the presence can be set to
 ///

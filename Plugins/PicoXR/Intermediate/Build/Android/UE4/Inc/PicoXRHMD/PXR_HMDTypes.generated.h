@@ -13,15 +13,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PICOXRHMD_PXR_HMDTypes_generated_h
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDTypes_h_13_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FPicoSplashDesc_Statics; \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDTypes_h_13_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FPXRSplashDesc_Statics; \
 	PICOXRHMD_API static class UScriptStruct* StaticStruct();
 
 
-template<> PICOXRHMD_API UScriptStruct* StaticStruct<struct FPicoSplashDesc>();
+template<> PICOXRHMD_API UScriptStruct* StaticStruct<struct FPXRSplashDesc>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDTypes_h
+#define CURRENT_FILE_ID Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDTypes_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

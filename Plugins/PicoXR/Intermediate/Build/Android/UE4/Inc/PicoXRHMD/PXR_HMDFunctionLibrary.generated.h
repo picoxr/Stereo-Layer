@@ -8,66 +8,64 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+enum class EPICOXRDeviceAbilities : uint8;
 struct FPxrSensorState;
-class UTexture2D;
 struct FVector;
-struct FRotator;
+struct FPICOXREyeTrackingData;
 struct FVector2D;
-struct FPicoXREyeTrackingData;
-enum class EPicoXRFoveationLevel : uint8;
-enum class EPicoXRBoundaryState : uint8;
+enum class EPICOXRFoveationLevel : uint8;
+enum class EPICOXRBoundaryState : uint8;
 struct FIntPoint;
-enum class EPicoXRCameraType : uint8;
-enum class EPicoXRBoundaryType : uint8;
-enum class EPicoXRNodeType : uint8;
+enum class EPICOXRCameraType : uint8;
+class UTexture2D;
+enum class EPICOXRBoundaryType : uint8;
+enum class EPICOXRNodeType : uint8;
 struct FLinearColor;
-class UPicoXREventManager;
+class UPICOXREventManager;
 struct FQuat;
 #ifdef PICOXRHMD_PXR_HMDFunctionLibrary_generated_h
 #error "PXR_HMDFunctionLibrary.generated.h already included, missing '#pragma once' in PXR_HMDFunctionLibrary.h"
 #endif
 #define PICOXRHMD_PXR_HMDFunctionLibrary_generated_h
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_105_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FPicoXREyeTrackingData_Statics; \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_116_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FPICOXREyeTrackingData_Statics; \
 	PICOXRHMD_API static class UScriptStruct* StaticStruct();
 
 
-template<> PICOXRHMD_API UScriptStruct* StaticStruct<struct FPicoXREyeTrackingData>();
+template<> PICOXRHMD_API UScriptStruct* StaticStruct<struct FPICOXREyeTrackingData>();
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_78_GENERATED_BODY \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_89_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPxrSensorState_Statics; \
 	PICOXRHMD_API static class UScriptStruct* StaticStruct();
 
 
 template<> PICOXRHMD_API UScriptStruct* StaticStruct<struct FPxrSensorState>();
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_159_DELEGATE \
-struct _Script_PicoXRHMD_eventPicoXRIPDChangedDelegate_Parms \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_170_DELEGATE \
+struct _Script_PICOXRHMD_eventPICOXRIPDChangedDelegate_Parms \
 { \
 	float Ipd; \
 }; \
-static inline void FPicoXRIPDChangedDelegate_DelegateWrapper(const FScriptDelegate& PicoXRIPDChangedDelegate, float Ipd) \
+static inline void FPICOXRIPDChangedDelegate_DelegateWrapper(const FScriptDelegate& PICOXRIPDChangedDelegate, float Ipd) \
 { \
-	_Script_PicoXRHMD_eventPicoXRIPDChangedDelegate_Parms Parms; \
+	_Script_PICOXRHMD_eventPICOXRIPDChangedDelegate_Parms Parms; \
 	Parms.Ipd=Ipd; \
-	PicoXRIPDChangedDelegate.ProcessDelegate<UObject>(&Parms); \
+	PICOXRIPDChangedDelegate.ProcessDelegate<UObject>(&Parms); \
 }
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_SPARSE_DATA
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_RPC_WRAPPERS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_SPARSE_DATA
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execPXR_SetLargeSpaceEnable); \
+	DECLARE_FUNCTION(execPXR_SetLateLatchingEnable); \
+	DECLARE_FUNCTION(execPXR_QueryDeviceAbilities); \
 	DECLARE_FUNCTION(execPXR_GetPredictedMainSensorState); \
 	DECLARE_FUNCTION(execPXR_SetExtraLatencyMode); \
 	DECLARE_FUNCTION(execPXR_GetDisplayFrequenciesAvailable); \
 	DECLARE_FUNCTION(execPXR_SetSensorLostCMST); \
 	DECLARE_FUNCTION(execPXR_SetSensorLostCustomMode); \
-	DECLARE_FUNCTION(execPXR_EnableAutoShowSplashScreen); \
-	DECLARE_FUNCTION(execPXR_ClearLoadingSplashScreens); \
-	DECLARE_FUNCTION(execPXR_AddSplashScreen); \
-	DECLARE_FUNCTION(execPXR_EnableFaceTracking); \
+	DECLARE_FUNCTION(execPXR_EnableEyeTracking); \
 	DECLARE_FUNCTION(execPXR_GetEyeTrackingPos); \
 	DECLARE_FUNCTION(execPXR_EnableEyeTrackingMarker); \
 	DECLARE_FUNCTION(execPXR_GetEyeTrackingData); \
@@ -113,18 +111,16 @@ static inline void FPicoXRIPDChangedDelegate_DelegateWrapper(const FScriptDelega
 	DECLARE_FUNCTION(execPXR_GetCurrentOrientation);
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execPXR_SetLargeSpaceEnable); \
+	DECLARE_FUNCTION(execPXR_SetLateLatchingEnable); \
+	DECLARE_FUNCTION(execPXR_QueryDeviceAbilities); \
 	DECLARE_FUNCTION(execPXR_GetPredictedMainSensorState); \
 	DECLARE_FUNCTION(execPXR_SetExtraLatencyMode); \
 	DECLARE_FUNCTION(execPXR_GetDisplayFrequenciesAvailable); \
 	DECLARE_FUNCTION(execPXR_SetSensorLostCMST); \
 	DECLARE_FUNCTION(execPXR_SetSensorLostCustomMode); \
-	DECLARE_FUNCTION(execPXR_EnableAutoShowSplashScreen); \
-	DECLARE_FUNCTION(execPXR_ClearLoadingSplashScreens); \
-	DECLARE_FUNCTION(execPXR_AddSplashScreen); \
-	DECLARE_FUNCTION(execPXR_EnableFaceTracking); \
+	DECLARE_FUNCTION(execPXR_EnableEyeTracking); \
 	DECLARE_FUNCTION(execPXR_GetEyeTrackingPos); \
 	DECLARE_FUNCTION(execPXR_EnableEyeTrackingMarker); \
 	DECLARE_FUNCTION(execPXR_GetEyeTrackingData); \
@@ -170,141 +166,152 @@ static inline void FPicoXRIPDChangedDelegate_DelegateWrapper(const FScriptDelega
 	DECLARE_FUNCTION(execPXR_GetCurrentOrientation);
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_INCLASS_NO_PURE_DECLS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_INCLASS_NO_PURE_DECLS \
 private: \
-	static void StaticRegisterNativesUPicoXRHMDFunctionLibrary(); \
-	friend struct Z_Construct_UClass_UPicoXRHMDFunctionLibrary_Statics; \
+	static void StaticRegisterNativesUPICOXRHMDFunctionLibrary(); \
+	friend struct Z_Construct_UClass_UPICOXRHMDFunctionLibrary_Statics; \
 public: \
-	DECLARE_CLASS(UPicoXRHMDFunctionLibrary, UBlueprintFunctionLibrary, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/PicoXRHMD"), NO_API) \
-	DECLARE_SERIALIZER(UPicoXRHMDFunctionLibrary)
+	DECLARE_CLASS(UPICOXRHMDFunctionLibrary, UBlueprintFunctionLibrary, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/PICOXRHMD"), NO_API) \
+	DECLARE_SERIALIZER(UPICOXRHMDFunctionLibrary)
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_INCLASS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_INCLASS \
 private: \
-	static void StaticRegisterNativesUPicoXRHMDFunctionLibrary(); \
-	friend struct Z_Construct_UClass_UPicoXRHMDFunctionLibrary_Statics; \
+	static void StaticRegisterNativesUPICOXRHMDFunctionLibrary(); \
+	friend struct Z_Construct_UClass_UPICOXRHMDFunctionLibrary_Statics; \
 public: \
-	DECLARE_CLASS(UPicoXRHMDFunctionLibrary, UBlueprintFunctionLibrary, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/PicoXRHMD"), NO_API) \
-	DECLARE_SERIALIZER(UPicoXRHMDFunctionLibrary)
+	DECLARE_CLASS(UPICOXRHMDFunctionLibrary, UBlueprintFunctionLibrary, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/PICOXRHMD"), NO_API) \
+	DECLARE_SERIALIZER(UPICOXRHMDFunctionLibrary)
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_STANDARD_CONSTRUCTORS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UPicoXRHMDFunctionLibrary(const FObjectInitializer& ObjectInitializer); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UPicoXRHMDFunctionLibrary) \
-	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPicoXRHMDFunctionLibrary); \
-	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPicoXRHMDFunctionLibrary); \
+	NO_API UPICOXRHMDFunctionLibrary(const FObjectInitializer& ObjectInitializer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UPICOXRHMDFunctionLibrary) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPICOXRHMDFunctionLibrary); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPICOXRHMDFunctionLibrary); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API UPicoXRHMDFunctionLibrary(UPicoXRHMDFunctionLibrary&&); \
-	NO_API UPicoXRHMDFunctionLibrary(const UPicoXRHMDFunctionLibrary&); \
+	NO_API UPICOXRHMDFunctionLibrary(UPICOXRHMDFunctionLibrary&&); \
+	NO_API UPICOXRHMDFunctionLibrary(const UPICOXRHMDFunctionLibrary&); \
 public:
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_ENHANCED_CONSTRUCTORS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API UPicoXRHMDFunctionLibrary(UPicoXRHMDFunctionLibrary&&); \
-	NO_API UPicoXRHMDFunctionLibrary(const UPicoXRHMDFunctionLibrary&); \
+	NO_API UPICOXRHMDFunctionLibrary(UPICOXRHMDFunctionLibrary&&); \
+	NO_API UPICOXRHMDFunctionLibrary(const UPICOXRHMDFunctionLibrary&); \
 public: \
-	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPicoXRHMDFunctionLibrary); \
-	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPicoXRHMDFunctionLibrary); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UPicoXRHMDFunctionLibrary)
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPICOXRHMDFunctionLibrary); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPICOXRHMDFunctionLibrary); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UPICOXRHMDFunctionLibrary)
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_PRIVATE_PROPERTY_OFFSET
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_160_PROLOG
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_GENERATED_BODY_LEGACY \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_PRIVATE_PROPERTY_OFFSET
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_171_PROLOG
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_PRIVATE_PROPERTY_OFFSET \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_SPARSE_DATA \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_RPC_WRAPPERS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_INCLASS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_STANDARD_CONSTRUCTORS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_PRIVATE_PROPERTY_OFFSET \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_SPARSE_DATA \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_RPC_WRAPPERS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_INCLASS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_GENERATED_BODY \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_PRIVATE_PROPERTY_OFFSET \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_SPARSE_DATA \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_RPC_WRAPPERS_NO_PURE_DECLS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_INCLASS_NO_PURE_DECLS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h_163_ENHANCED_CONSTRUCTORS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_PRIVATE_PROPERTY_OFFSET \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_SPARSE_DATA \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_RPC_WRAPPERS_NO_PURE_DECLS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_INCLASS_NO_PURE_DECLS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h_174_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-template<> PICOXRHMD_API UClass* StaticClass<class UPicoXRHMDFunctionLibrary>();
+template<> PICOXRHMD_API UClass* StaticClass<class UPICOXRHMDFunctionLibrary>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRHMD_Public_PXR_HMDFunctionLibrary_h
+#define CURRENT_FILE_ID Stereo_Layer_Plugins_PICOXR_Source_PICOXRHMD_Public_PXR_HMDFunctionLibrary_h
 
+
+#define FOREACH_ENUM_EPICOXRDEVICEABILITIES(op) \
+	op(EPICOXRDeviceAbilities::TRACKING_MODE_ROTATION_BIT) \
+	op(EPICOXRDeviceAbilities::TRACKING_MODE_POSITION_BIT) \
+	op(EPICOXRDeviceAbilities::TRACKING_MODE_EYE_BIT) \
+	op(EPICOXRDeviceAbilities::TRACKING_MODE_FACE_BIT) \
+	op(EPICOXRDeviceAbilities::TRACKING_MODE_VCMOTOR_BIT) \
+	op(EPICOXRDeviceAbilities::TRACKING_MODE_HAND_BIT) 
+
+enum class EPICOXRDeviceAbilities : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EPICOXRDeviceAbilities>();
 
 #define FOREACH_ENUM_EPICOXRFOVEATIONLEVEL(op) \
-	op(EPicoXRFoveationLevel::Low) \
-	op(EPicoXRFoveationLevel::Medium) \
-	op(EPicoXRFoveationLevel::High) \
-	op(EPicoXRFoveationLevel::TopHigh) 
+	op(EPICOXRFoveationLevel::Low) \
+	op(EPICOXRFoveationLevel::Medium) \
+	op(EPICOXRFoveationLevel::High) \
+	op(EPICOXRFoveationLevel::TopHigh) 
 
-enum class EPicoXRFoveationLevel : uint8;
-template<> PICOXRHMD_API UEnum* StaticEnum<EPicoXRFoveationLevel>();
+enum class EPICOXRFoveationLevel : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EPICOXRFoveationLevel>();
 
 #define FOREACH_ENUM_EPICOXRCAMERATYPE(op) \
-	op(EPicoXRCameraType::Left) \
-	op(EPicoXRCameraType::Right) 
+	op(EPICOXRCameraType::Left) \
+	op(EPICOXRCameraType::Right) 
 
-enum class EPicoXRCameraType : uint8;
-template<> PICOXRHMD_API UEnum* StaticEnum<EPicoXRCameraType>();
+enum class EPICOXRCameraType : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EPICOXRCameraType>();
 
 #define FOREACH_ENUM_EPICOXRNODETYPE(op) \
-	op(EPicoXRNodeType::LeftHand) \
-	op(EPicoXRNodeType::RightHand) \
-	op(EPicoXRNodeType::Head) 
+	op(EPICOXRNodeType::LeftHand) \
+	op(EPICOXRNodeType::RightHand) \
+	op(EPICOXRNodeType::Head) 
 
-enum class EPicoXRNodeType : uint8;
-template<> PICOXRHMD_API UEnum* StaticEnum<EPicoXRNodeType>();
+enum class EPICOXRNodeType : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EPICOXRNodeType>();
 
 #define FOREACH_ENUM_EPICOXRTRACKEDDEVICETYPE(op) \
-	op(EPicoXRTrackedDeviceType::None) \
-	op(EPicoXRTrackedDeviceType::HMD) \
-	op(EPicoXRTrackedDeviceType::LTouch) \
-	op(EPicoXRTrackedDeviceType::RTouch) \
-	op(EPicoXRTrackedDeviceType::Touch) \
-	op(EPicoXRTrackedDeviceType::All) 
+	op(EPICOXRTrackedDeviceType::None) \
+	op(EPICOXRTrackedDeviceType::HMD) \
+	op(EPICOXRTrackedDeviceType::LTouch) \
+	op(EPICOXRTrackedDeviceType::RTouch) \
+	op(EPICOXRTrackedDeviceType::Touch) \
+	op(EPICOXRTrackedDeviceType::All) 
 
-enum class EPicoXRTrackedDeviceType : uint8;
-template<> PICOXRHMD_API UEnum* StaticEnum<EPicoXRTrackedDeviceType>();
+enum class EPICOXRTrackedDeviceType : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EPICOXRTrackedDeviceType>();
 
 #define FOREACH_ENUM_EPICOXRBOUNDARYSTATE(op) \
-	op(EPicoXRBoundaryState::GobackDialog) \
-	op(EPicoXRBoundaryState::ToofarDialog) \
-	op(EPicoXRBoundaryState::LostDialog) \
-	op(EPicoXRBoundaryState::LostNoReason) \
-	op(EPicoXRBoundaryState::LostCamera) \
-	op(EPicoXRBoundaryState::LostHighLight) \
-	op(EPicoXRBoundaryState::LostLowLight) \
-	op(EPicoXRBoundaryState::LostLowFeatureCount) \
-	op(EPicoXRBoundaryState::LostReLocation) \
-	op(EPicoXRBoundaryState::LostInitialization) \
-	op(EPicoXRBoundaryState::LostNoCamera) \
-	op(EPicoXRBoundaryState::LostNoIMU) \
-	op(EPicoXRBoundaryState::LostIMUJitter) \
-	op(EPicoXRBoundaryState::LostUnknown) \
-	op(EPicoXRBoundaryState::NothingDialog) \
-	op(EPicoXRBoundaryState::LostNoDialog) 
+	op(EPICOXRBoundaryState::GobackDialog) \
+	op(EPICOXRBoundaryState::ToofarDialog) \
+	op(EPICOXRBoundaryState::LostDialog) \
+	op(EPICOXRBoundaryState::LostNoReason) \
+	op(EPICOXRBoundaryState::LostCamera) \
+	op(EPICOXRBoundaryState::LostHighLight) \
+	op(EPICOXRBoundaryState::LostLowLight) \
+	op(EPICOXRBoundaryState::LostLowFeatureCount) \
+	op(EPICOXRBoundaryState::LostReLocation) \
+	op(EPICOXRBoundaryState::LostInitialization) \
+	op(EPICOXRBoundaryState::LostNoCamera) \
+	op(EPICOXRBoundaryState::LostNoIMU) \
+	op(EPICOXRBoundaryState::LostIMUJitter) \
+	op(EPICOXRBoundaryState::LostUnknown) \
+	op(EPICOXRBoundaryState::NothingDialog) \
+	op(EPICOXRBoundaryState::LostNoDialog) 
 
-enum class EPicoXRBoundaryState : uint8;
-template<> PICOXRHMD_API UEnum* StaticEnum<EPicoXRBoundaryState>();
+enum class EPICOXRBoundaryState : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EPICOXRBoundaryState>();
 
 #define FOREACH_ENUM_EPICOXRBOUNDARYTYPE(op) \
-	op(EPicoXRBoundaryType::Outer) \
-	op(EPicoXRBoundaryType::PlayArea) 
+	op(EPICOXRBoundaryType::Outer) \
+	op(EPICOXRBoundaryType::PlayArea) 
 
-enum class EPicoXRBoundaryType : uint8;
-template<> PICOXRHMD_API UEnum* StaticEnum<EPicoXRBoundaryType>();
+enum class EPICOXRBoundaryType : uint8;
+template<> PICOXRHMD_API UEnum* StaticEnum<EPICOXRBoundaryType>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

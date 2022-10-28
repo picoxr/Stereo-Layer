@@ -10,19 +10,19 @@
 #pragma warning (disable : 4883)
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-void EmptyLinkFunctionForGeneratedCodePicoXRInput_init() {}
-	UPackage* Z_Construct_UPackage__Script_PicoXRInput()
+void EmptyLinkFunctionForGeneratedCodePICOXRInput_init() {}
+	UPackage* Z_Construct_UPackage__Script_PICOXRInput()
 	{
 		static UPackage* ReturnPackage = nullptr;
 		if (!ReturnPackage)
 		{
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
-				"/Script/PicoXRInput",
+				"/Script/PICOXRInput",
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x4E067DFA,
-				0x99644F3F,
+				0x10BA0476,
+				0x506A3C32,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

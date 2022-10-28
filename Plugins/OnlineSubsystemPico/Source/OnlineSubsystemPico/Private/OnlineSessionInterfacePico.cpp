@@ -9,10 +9,18 @@
 #include "OnlineSubsystemPico.h"
 #include "OnlineSessionSettings.h"
 #include "OnlineSubsystemPicoTypes.h"
+#include "Misc/FileHelper.h"
 #include "Misc/MessageDialog.h"
 
 FOnlineSessionInfoPico::FOnlineSessionInfoPico(ppfID RoomId) :
+#if ENGINE_MAJOR_VERSION > 4
 	SessionId(FUniqueNetIdPico::Create(RoomId))
+#elif ENGINE_MINOR_VERSION > 26
+
+	SessionId(FUniqueNetIdPico::Create(RoomId))
+#elif ENGINE_MINOR_VERSION > 24
+	SessionId(FUniqueNetIdPico(RoomId))
+#endif
 {
 }
 
@@ -23,61 +31,62 @@ FOnlineSessionInfoPico::FOnlineSessionInfoPico(ppfID RoomId) :
 FOnlineSessionPico::FOnlineSessionPico(FOnlineSubsystemPico& InSubsystem) :
 	PicoSubsystem(InSubsystem)
 {
+	InviteAcceptedRoomID = 0;
 	OnRoomNotificationUpdateHandle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Notification_Room_RoomUpdate)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Notification_Room_RoomUpdate)
 		.AddRaw(this, &FOnlineSessionPico::OnRoomNotificationUpdate);
 
 	OnRoomNotificationInviteAcceptedHandle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Notification_Room_InviteAccepted)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Notification_Room_InviteAccepted)
 		.AddRaw(this, &FOnlineSessionPico::OnRoomInviteAccepted);
 
 	OnMatchmakingNotificationMatchFoundHandle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Notification_Matchmaking_MatchFound)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Notification_Matchmaking_MatchFound)
 		.AddRaw(this, &FOnlineSessionPico::OnMatchmakingNotificationMatchFound);
 
 
 	OnNetNotificationConnectionHandle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Notification_Game_ConnectionEvent)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Notification_Game_ConnectionEvent)
 		.AddRaw(this, &FOnlineSessionPico::OnNetNotificationConnection);
 
 	OnNetNotificationRequestFailedHandle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Notification_Game_RequestFailed)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Notification_Game_RequestFailed)
 		.AddRaw(this, &FOnlineSessionPico::OnNetNotificationRequestFailed);
 
 	OnNetNotificationGameStateResetHandle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Notification_Game_StateReset)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Notification_Game_StateReset)
 		.AddRaw(this, &FOnlineSessionPico::OnNetNotificationGameStateReset);
 
 	OnMatchmakingNotificationCancel2Handle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Matchmaking_Cancel2)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Matchmaking_Cancel2)
 		.AddRaw(this, &FOnlineSessionPico::OnMatchmakingNotificationCancel2);
 
 	OnRoomNotificationLeaveHandle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Room_Leave)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Room_Leave)
 		.AddRaw(this, &FOnlineSessionPico::OnRoomNotificationLeave);
 
 	OnRoomNotificationJoin2Handle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Room_Join2)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Room_Join2)
 		.AddRaw(this, &FOnlineSessionPico::OnRoomNotificationJoin2);
 
 	OnRoomNotificationSetDescriptionHandle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Room_SetDescription)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Room_SetDescription)
 		.AddRaw(this, &FOnlineSessionPico::OnRoomNotificationSetDescription);
 
 	OnRoomNotificationKickUserHandle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Room_KickUser)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Room_KickUser)
 		.AddRaw(this, &FOnlineSessionPico::OnRoomNotificationKickUser);
 
 	OnRoomNotificationUpdateOwnerHandle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Room_UpdateOwner)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Room_UpdateOwner)
 		.AddRaw(this, &FOnlineSessionPico::OnRoomNotificationUpdateOwner);
 
 	OnRoomNotificationUpdateDataStoreHandle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Room_UpdateDataStore)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Room_UpdateDataStore)
 		.AddRaw(this, &FOnlineSessionPico::OnRoomNotificationUpdateDataStore);
 
 	OnRoomNotificationUpdateMembershipLockStatusHandle =
-		PicoSubsystem.GetOrAddNotify(ppfMessage_Room_UpdateMembershipLockStatus)
+		PicoSubsystem.GetOrAddNotify(ppfMessageType_Room_UpdateMembershipLockStatus)
 		.AddRaw(this, &FOnlineSessionPico::OnRoomNotificationUpdateMembershipLockStatus);
 }
 
@@ -86,91 +95,96 @@ FOnlineSessionPico::~FOnlineSessionPico()
 #if PLATFORM_ANDROID
 	if (OnRoomNotificationUpdateHandle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Notification_Room_RoomUpdate, OnRoomNotificationUpdateHandle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Notification_Room_RoomUpdate, OnRoomNotificationUpdateHandle);
 		OnRoomNotificationUpdateHandle.Reset();
 	}
 
 	if (OnRoomNotificationInviteAcceptedHandle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Notification_Room_InviteAccepted, OnRoomNotificationInviteAcceptedHandle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Notification_Room_InviteAccepted, OnRoomNotificationInviteAcceptedHandle);
 		OnRoomNotificationInviteAcceptedHandle.Reset();
 	}
 
 	if (OnMatchmakingNotificationMatchFoundHandle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Notification_Matchmaking_MatchFound, OnMatchmakingNotificationMatchFoundHandle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Notification_Matchmaking_MatchFound, OnMatchmakingNotificationMatchFoundHandle);
 		OnMatchmakingNotificationMatchFoundHandle.Reset();
 	}
 	
 	if (OnNetNotificationConnectionHandle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Notification_Game_ConnectionEvent, OnNetNotificationConnectionHandle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Notification_Game_ConnectionEvent, OnNetNotificationConnectionHandle);
 		OnNetNotificationConnectionHandle.Reset();
 	}
 	
 	if (OnNetNotificationRequestFailedHandle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Notification_Game_RequestFailed, OnNetNotificationRequestFailedHandle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Notification_Game_RequestFailed, OnNetNotificationRequestFailedHandle);
 		OnNetNotificationRequestFailedHandle.Reset();
 	}
 	
 	if (OnNetNotificationGameStateResetHandle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Notification_Game_StateReset, OnNetNotificationGameStateResetHandle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Notification_Game_StateReset, OnNetNotificationGameStateResetHandle);
 		OnNetNotificationGameStateResetHandle.Reset();
 	}
 	
 	if (OnMatchmakingNotificationCancel2Handle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Matchmaking_Cancel2, OnMatchmakingNotificationCancel2Handle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Matchmaking_Cancel2, OnMatchmakingNotificationCancel2Handle);
 		OnMatchmakingNotificationCancel2Handle.Reset();
 	}
 
 	if (OnRoomNotificationLeaveHandle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Room_Leave, OnRoomNotificationLeaveHandle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Room_Leave, OnRoomNotificationLeaveHandle);
 		OnRoomNotificationLeaveHandle.Reset();
 	}
 
 	if (OnRoomNotificationJoin2Handle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Room_Join2, OnRoomNotificationJoin2Handle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Room_Join2, OnRoomNotificationJoin2Handle);
 		OnRoomNotificationJoin2Handle.Reset();
 	}
 
 	if (OnRoomNotificationSetDescriptionHandle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Room_SetDescription, OnRoomNotificationSetDescriptionHandle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Room_SetDescription, OnRoomNotificationSetDescriptionHandle);
 		OnRoomNotificationSetDescriptionHandle.Reset();
 	}
 
 	if (OnRoomNotificationKickUserHandle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Room_KickUser, OnRoomNotificationKickUserHandle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Room_KickUser, OnRoomNotificationKickUserHandle);
 		OnRoomNotificationKickUserHandle.Reset();
 	}
 
 	if (OnRoomNotificationUpdateOwnerHandle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Room_UpdateOwner, OnRoomNotificationUpdateOwnerHandle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Room_UpdateOwner, OnRoomNotificationUpdateOwnerHandle);
 		OnRoomNotificationUpdateOwnerHandle.Reset();
 	}
 
 	if (OnRoomNotificationUpdateDataStoreHandle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Room_UpdateDataStore, OnRoomNotificationUpdateDataStoreHandle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Room_UpdateDataStore, OnRoomNotificationUpdateDataStoreHandle);
 		OnRoomNotificationUpdateDataStoreHandle.Reset();
 	}
 
 	if (OnRoomNotificationUpdateMembershipLockStatusHandle.IsValid())
 	{
-		PicoSubsystem.RemoveNotifyDelegate(ppfMessage_Room_UpdateMembershipLockStatus, OnRoomNotificationUpdateMembershipLockStatusHandle);
+		//PicoSubsystem.RemoveNotifyDelegate(ppfMessageType_Room_UpdateMembershipLockStatus, OnRoomNotificationUpdateMembershipLockStatusHandle);
 		OnRoomNotificationUpdateMembershipLockStatusHandle.Reset();
 	}
 #endif
 	
 	InviteAcceptedSessions.Empty();
 
+
+	PendingInviteAcceptedSessions.Empty();
+	InviteAcceptedRoomID = 0;
+
+	// Make sure the player leaves all the sessions they were in before destroying this
 	for (auto It = Sessions.CreateConstIterator(); It; ++It)
 	{
 		TSharedPtr<FNamedOnlineSession> Session = It.Value();
@@ -186,13 +200,13 @@ FOnlineSessionPico::~FOnlineSessionPico()
 
 			if (!Session.IsUnique())
 			{
-				UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME ~FOnlineSessionPico Session (room %llu) is not unique"), RoomId);
+				SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME ~FOnlineSessionPico Session (room %llu) is not unique"), RoomId));
 			}
 			Session->SessionState = EOnlineSessionState::Destroying;
 		}
 		else
 		{
-			UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME ~FOnlineSessionPico session is invalid!"));
+			SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME ~FOnlineSessionPico session is invalid!")));
 		}
 	}
 	Sessions.Empty();
@@ -202,35 +216,42 @@ ppfID FOnlineSessionPico::GetRoomIDOfSession(const FNamedOnlineSession& Session)
 {
 	if (!Session.SessionInfo.IsValid() || !Session.SessionInfo.Get()->IsValid())
 	{
-		return 0;// FString("");
+		SaveLog(ELogVerbosity::Type::Log, FString::Printf(TEXT("GetRoomIDOfSession SessionInfoPtr is invalid or SessionInfo is invalid")));
+		return 0;
 	}
 	const FUniqueNetIdPico& PicoId = FUniqueNetIdPico::Cast(Session.SessionInfo->GetSessionId());
-	return PicoId.GetID();// PicoId.GetStringID();
+	// if (!PicoId.IsValid())
+	// {
+	// 	SaveLog(ELogVerbosity::Type::Log, FString::Printf(TEXT("GetRoomIDOfSession PicoId is invalid")));
+	// 	return 0;
+	// }
+	SaveLog(ELogVerbosity::Type::Log, FString::Printf(TEXT("GetRoomIDOfSession PicoId.GetID(): %llu"), PicoId.GetID()));
+	return PicoId.GetID();
 }
 
 bool FOnlineSessionPico::CreateSession(int32 HostingPlayerNum, FName SessionName, const FOnlineSessionSettings& NewSessionSettings)
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME CreateSession %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME CreateSession %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
 	FNamedOnlineSession* Session = GetNamedSession(SessionName);
 	if (Session)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME CreateSession Cannot create session '%s': session already exists."), *SessionName.ToString());
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME CreateSession Cannot create session '%s': session already exists."), *SessionName.ToString()));
 		return false;
 	}
 	IOnlineIdentityPtr Identity = PicoSubsystem.GetIdentityInterface();
 	if (!Identity.IsValid())
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME CreateSession pico identity is invalid"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME CreateSession pico identity is invalid")));
 		return false;
 	}
 	if (NewSessionSettings.NumPrivateConnections > 0)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME CreateSession Pico NumPrivateConnections need be zero"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME CreateSession Pico NumPrivateConnections need be zero")));
 		return false;
 	}
 	Session = AddNamedSession(SessionName, NewSessionSettings);
@@ -241,8 +262,8 @@ bool FOnlineSessionPico::CreateSession(int32 HostingPlayerNum, FName SessionName
 	Session->HostingPlayerNum = HostingPlayerNum;
 	Session->LocalOwnerId = PicoSubsystem.GetIdentityInterface()->GetUniquePlayerId(HostingPlayerNum);
 	Session->SessionSettings.BuildUniqueId = GetBuildUniqueId();
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME CreateSession LocalOwnerId: %s, SessionSettings.BuildUniqueId: %d"),
-		Session->LocalOwnerId != nullptr ? *(Session->LocalOwnerId->ToString()) : TEXT("nullptr"), Session->SessionSettings.BuildUniqueId);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("CreateSession LocalOwnerId: %s, SessionSettings.BuildUniqueId: %d"),
+		Session->LocalOwnerId != nullptr ? *(Session->LocalOwnerId->ToString()) : TEXT("nullptr"), Session->SessionSettings.BuildUniqueId));
 	
 	// only private room can set joinpolicy. matchmaking room joinpolicy is everyone.
 	ppfRoomJoinPolicy JoinPolicy = ppfRoom_JoinPolicyEveryone;
@@ -267,7 +288,7 @@ bool FOnlineSessionPico::CreateSession(int32 HostingPlayerNum, FName SessionName
 			JoinPolicy = ppfRoom_JoinPolicyEveryone;
 		}
 	}
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME CreateSession JoinPolicy: %d"), JoinPolicy);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("CreateSession JoinPolicy: %d"), JoinPolicy));
 	// create private room
 	return CreateRoomSession(*Session, JoinPolicy);
 #else
@@ -279,7 +300,7 @@ bool FOnlineSessionPico::CreateMatchmakingSession(FNamedOnlineSession& Session, 
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME CreateMatchmakingSession %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME CreateMatchmakingSession %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
@@ -295,14 +316,14 @@ bool FOnlineSessionPico::CreateMatchmakingSession(FNamedOnlineSession& Session, 
 	}
 	for (auto& item : Session.SessionSettings.Settings)
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME CreateMatchmakingSession set matchmakingoptions datastore: key: %s, value: %s"), *item.Key.ToString(), *item.Value.Data.ToString());
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("CreateMatchmakingSession set matchmakingoptions datastore: key: %s, value: %s"), *item.Key.ToString(), *item.Value.Data.ToString()));
 		ppf_MatchmakingOptions_SetCreateRoomDataStoreString(MatchmakingOptions,
 			TCHAR_TO_UTF8(*item.Key.ToString()),
 			TCHAR_TO_UTF8(*item.Value.Data.ToString())
 		);
 	};
 	auto BuildUniqueIdString = FString::FromInt(Session.SessionSettings.BuildUniqueId);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME CreateMatchmakingSession set matchmakingoptions datastore SessionSettings.BuildUniqueId: %s"), *BuildUniqueIdString);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("CreateMatchmakingSession set matchmakingoptions datastore SessionSettings.BuildUniqueId: %s"), *BuildUniqueIdString));
 	ppf_MatchmakingOptions_SetCreateRoomDataStoreString(
 		MatchmakingOptions,
 		TCHAR_TO_UTF8(*SETTING_PICO_BUILD_UNIQUE_ID.ToString()),
@@ -324,7 +345,7 @@ bool FOnlineSessionPico::CreateRoomSession(FNamedOnlineSession& Session, ppfRoom
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME CreateRoomSession %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME CreateRoomSession %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
@@ -338,7 +359,7 @@ bool FOnlineSessionPico::CreateRoomSession(FNamedOnlineSession& Session, ppfRoom
 		);
 	};
 	auto BuildUniqueIdString = FString::FromInt(Session.SessionSettings.BuildUniqueId);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME CreateRoomSession set roomoptions datastore SessionSettings.BuildUniqueId: %s"), *BuildUniqueIdString);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("CreateRoomSession set roomoptions datastore SessionSettings.BuildUniqueId: %s"), *BuildUniqueIdString));
 	ppf_RoomOptions_SetDataStoreString(
 		RoomOptions,
 		TCHAR_TO_UTF8(*SETTING_PICO_BUILD_UNIQUE_ID.ToString()),
@@ -359,7 +380,7 @@ void FOnlineSessionPico::OnCreateRoomComplete(ppfMessageHandle Message, bool bIs
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME OnCreateRoomComplete %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME OnCreateRoomComplete %s"), *InitStateErrorMessage));
 		return;
 	}
 #if PLATFORM_ANDROID
@@ -367,22 +388,22 @@ void FOnlineSessionPico::OnCreateRoomComplete(ppfMessageHandle Message, bool bIs
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME OnCreateRoomComplete ErrorMessage: %s"), *FString(ErrorMessage));
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME OnCreateRoomComplete ErrorMessage: %s"), *FString(ErrorMessage)));
 		RemoveNamedSession(SessionName);
 		TriggerOnCreateSessionCompleteDelegates(SessionName, false);
 		return;
 	}
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnCreateRoomComplete SessionName: %s"), *SessionName.ToString());
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnCreateRoomComplete SessionName: %s"), *SessionName.ToString()));
 	FNamedOnlineSession* Session = GetNamedSession(SessionName);
 	if (Session == nullptr)
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME OnCreateRoomComplete cannot find session: %s"), *SessionName.ToString());
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME OnCreateRoomComplete cannot find session: %s"), *SessionName.ToString()));
 		TriggerOnCreateSessionCompleteDelegates(SessionName, false);
 		return;
 	}
 	if (Session->SessionState != EOnlineSessionState::Creating)
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME OnCreateRoomComplete Session %s existed!"), *SessionName.ToString());
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME OnCreateRoomComplete Session %s existed!"), *SessionName.ToString()));
 		TriggerOnCreateSessionCompleteDelegates(SessionName, false);
 		return;
 	}
@@ -390,7 +411,7 @@ void FOnlineSessionPico::OnCreateRoomComplete(ppfMessageHandle Message, bool bIs
 	ppfRoomHandle Room;
 	ppfID RoomId;
 	auto MessageType = ppf_Message_GetType(Message);
-	if (MessageType == ppfMessageType::ppfMessage_Matchmaking_CreateAndEnqueueRoom2)
+	if (MessageType == ppfMessageType::ppfMessageType_Matchmaking_CreateAndEnqueueRoom2)
 	{
 		auto EnqueueResultAndRoom = ppf_Message_GetMatchmakingEnqueueResultAndRoom(Message);
 		Room = ppf_MatchmakingEnqueueResultAndRoom_GetRoom(EnqueueResultAndRoom);
@@ -400,7 +421,7 @@ void FOnlineSessionPico::OnCreateRoomComplete(ppfMessageHandle Message, bool bIs
 		Room = ppf_Message_GetRoom(Message);
 	}
 	RoomId = ppf_Room_GetID(Room);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnCreateRoomComplete RoomId: %llu"), RoomId);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnCreateRoomComplete RoomId: %llu"), RoomId));
 	Session->SessionInfo = MakeShareable(new FOnlineSessionInfoPico(RoomId));
 	UpdateSessionFromRoom(*Session, Room);
 	Session->SessionState = EOnlineSessionState::Pending;
@@ -417,26 +438,26 @@ bool FOnlineSessionPico::StartSession(FName SessionName)
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME StartSession %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME StartSession %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
 	auto Session = GetNamedSession(SessionName);
 	if (Session == nullptr)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME StartSession cannot find session: %s"), *SessionName.ToString());
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME StartSession cannot find session: %s"), *SessionName.ToString()));
 		return false;
 	}
 	if (Session->SessionState != EOnlineSessionState::Pending && Session->SessionState != EOnlineSessionState::Ended)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME StartSession Session: %s State is %s, cannot start!"),
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME StartSession Session: %s State is %s, cannot start!"),
 			*SessionName.ToString(),
-			EOnlineSessionState::ToString(Session->SessionState));
+			EOnlineSessionState::ToString(Session->SessionState)));
 		TriggerOnStartSessionCompleteDelegates(SessionName, false);
 		return false;
 	}
 	Session->SessionState = EOnlineSessionState::InProgress;
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME StartSession set current SessionState: InProgress"));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("StartSession set current SessionState: InProgress")));
 	TriggerOnStartSessionCompleteDelegates(SessionName, true);
 	return true;
 #else
@@ -448,23 +469,23 @@ bool FOnlineSessionPico::UpdateSession(FName SessionName, FOnlineSessionSettings
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME UpdateSession %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME UpdateSession %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
 	auto Session = GetNamedSession(SessionName);
 	if (Session == nullptr)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME UpdateSession cannot find session: %s"), *SessionName.ToString());
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME UpdateSession cannot find session: %s"), *SessionName.ToString()));
 		return false;
 	}
 	auto LoggedInPlayerId = PicoSubsystem.GetIdentityInterface()->GetUniquePlayerId(0);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSession LoggedInPlayerId: %s, Session->OwningUserId: %s"),
-		LoggedInPlayerId.IsValid()? *(LoggedInPlayerId->ToString()) : TEXT("invalid"), *(Session->OwningUserId->ToString()));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSession LoggedInPlayerId: %s, Session->OwningUserId: %s"),
+		LoggedInPlayerId.IsValid()? *(LoggedInPlayerId->ToString()) : TEXT("invalid"), *(Session->OwningUserId->ToString())));
 	if (!LoggedInPlayerId.IsValid() || Session->OwningUserId.ToSharedRef().Get() != *LoggedInPlayerId)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME UpdateSession You are not the owner of the session: %s. Current Owner: %s"),
-			*SessionName.ToString(), *Session->OwningUserName);
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME UpdateSession You are not the owner of the session: %s. Current Owner: %s"),
+			*SessionName.ToString(), *Session->OwningUserName));
 		return false;
 	}
 	if (Session->SessionSettings.Settings.Contains(SETTING_PICO_POOL))
@@ -481,14 +502,14 @@ bool FOnlineSessionPico::UpdateRoomDataStore(FName SessionName, FOnlineSessionSe
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME UpdateRoomDataStore %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME UpdateRoomDataStore %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
 	auto Session = GetNamedSession(SessionName);
 	if (Session == nullptr)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME UpdateRoomDataStore cannot find session: %s"), *SessionName.ToString());
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME UpdateRoomDataStore cannot find session: %s"), *SessionName.ToString()));
 		return false;
 	}
 	int NewDataStoreSize = 0;
@@ -519,16 +540,16 @@ bool FOnlineSessionPico::UpdateRoomDataStore(FName SessionName, FOnlineSessionSe
 					{
 						auto Error = ppf_Message_GetError(Message);
 						auto ErrorMessage = ppf_Error_GetMessage(Error);
-						UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME UpdateRoomDataStore ErrorMessage: %s"), *FString(ErrorMessage));
+						SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME UpdateRoomDataStore ErrorMessage: %s"), *FString(ErrorMessage)));
 						TriggerOnUpdateSessionCompleteDelegates(SessionName, false);
 						return;
 					}
 
-					UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateRoomDataStore no error"));
+					SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateRoomDataStore no error")));
 					auto NewSession = GetNamedSession(SessionName);
 					if (NewSession == nullptr)
 					{
-						UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME UpdateRoomDataStore Session: %s does not exist"), *SessionName.ToString());
+						SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME UpdateRoomDataStore Session: %s does not exist"), *SessionName.ToString()));
 						TriggerOnUpdateSessionCompleteDelegates(SessionName, false);
 						return;
 					}
@@ -552,21 +573,21 @@ bool FOnlineSessionPico::EndSession(FName SessionName)
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME EndSession %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME EndSession %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
 	FNamedOnlineSession* Session = GetNamedSession(SessionName);
 	if (Session == nullptr)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME EndSession cannot find session: %s"), *SessionName.ToString());
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME EndSession cannot find session: %s"), *SessionName.ToString()));
 		return false;
 	}
 	if (Session->SessionState != EOnlineSessionState::InProgress)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME EndSession Session: %s, SessionState: %s"),
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME EndSession Session: %s, SessionState: %s"),
 			*SessionName.ToString(),
-			EOnlineSessionState::ToString(Session->SessionState));
+			EOnlineSessionState::ToString(Session->SessionState)));
 		TriggerOnEndSessionCompleteDelegates(SessionName, false);
 		return false;
 	}
@@ -582,14 +603,14 @@ bool FOnlineSessionPico::DestroySession(FName SessionName, const FOnDestroySessi
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME DestroySession %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME DestroySession %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
 	FNamedOnlineSession* Session = GetNamedSession(SessionName);
 	if (Session == nullptr)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME DestroySession cannot find session: %s"), *SessionName.ToString());
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME DestroySession cannot find session: %s"), *SessionName.ToString()));
 		return false;
 	}
 	auto RoomId = GetRoomIDOfSession(*Session);
@@ -602,13 +623,13 @@ bool FOnlineSessionPico::DestroySession(FName SessionName, const FOnDestroySessi
 				{
 					auto Error = ppf_Message_GetError(Message);
 					auto ErrorMessage = ppf_Error_GetMessage(Error);
-					UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME DestroySession error! ErrorMessage: %s"), *FString(ErrorMessage));
+					SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME DestroySession error! ErrorMessage: %s"), *FString(ErrorMessage)));
 					CompletionDelegate.ExecuteIfBound(SessionName, false);
 					TriggerOnDestroySessionCompleteDelegates(SessionName, false);
 					return;
 				}
 
-				UE_LOG_ONLINE(Display, TEXT("PPF_GAME DestroySession no error"));
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("DestroySession no error")));
 				RemoveNamedSession(SessionName);
 				CompletionDelegate.ExecuteIfBound(SessionName, true);
 				TriggerOnDestroySessionCompleteDelegates(SessionName, true);
@@ -623,50 +644,56 @@ bool FOnlineSessionPico::IsPlayerInSession(FName SessionName, const FUniqueNetId
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME IsPlayerInSession %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME IsPlayerInSession %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
 	auto Session = GetNamedSession(SessionName);
 	if (Session == nullptr)
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME IsPlayerInSession cannot find session: %s"), *SessionName.ToString());
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("IsPlayerInSession cannot find session: %s"), *SessionName.ToString()));
 		return false;
 	}
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME IsPlayerInSession UniqueId.ToString(): %s"), *UniqueId.ToString());
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("IsPlayerInSession UniqueId.ToString(): %s"), *UniqueId.ToString()));
 	for (auto Player : Session->RegisteredPlayers)
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME IsPlayerInSession Player->ToString(): %s"), *Player->ToString());
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("IsPlayerInSession Player->ToString(): %s"), *Player->ToString()));
 		if (*Player == UniqueId)
 		{
-			UE_LOG_ONLINE(Display, TEXT("PPF_GAME IsPlayerInSession: true"));
+			SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("IsPlayerInSession: true")));
 			return true;
 		}
 	}
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME IsPlayerInSession: false"));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("IsPlayerInSession: false")));
 	return false;
 #else
 	return false;
 #endif
 }
 
+#if ENGINE_MAJOR_VERSION > 4
 bool FOnlineSessionPico::StartMatchmaking(const TArray< FUniqueNetIdRef >& LocalPlayers, FName SessionName, const FOnlineSessionSettings& NewSessionSettings, TSharedRef<FOnlineSessionSearch>& SearchSettings)
+#elif ENGINE_MINOR_VERSION > 26
+bool FOnlineSessionPico::StartMatchmaking(const TArray< FUniqueNetIdRef >& LocalPlayers, FName SessionName, const FOnlineSessionSettings& NewSessionSettings, TSharedRef<FOnlineSessionSearch>& SearchSettings)
+#elif ENGINE_MINOR_VERSION > 24
+bool FOnlineSessionPico::StartMatchmaking(const TArray< TSharedRef<const FUniqueNetId> >& LocalPlayers, FName SessionName, const FOnlineSessionSettings& NewSessionSettings, TSharedRef<FOnlineSessionSearch>& SearchSettings)
+#endif
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME StartMatchmaking %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME StartMatchmaking %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
 	if (LocalPlayers.Num() > 1)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME StartMatchmaking LocalPlayers.Num() > 1 cannot start matchmaking"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME StartMatchmaking LocalPlayers.Num() > 1 cannot start matchmaking")));
 		return false;
 	}
 	FString Pool;
 	if (!SearchSettings->QuerySettings.Get(SETTING_PICO_POOL, Pool))
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME StartMatchmaking Please set SETTING_PICO_POOL: %s"), *SETTING_PICO_POOL.ToString());
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME StartMatchmaking Please set SETTING_PICO_POOL: %s"), *SETTING_PICO_POOL.ToString()));
 		if (!SearchSettings->QuerySettings.Get(SETTING_MAPNAME, Pool))
 		{
 			return false;
@@ -674,13 +701,13 @@ bool FOnlineSessionPico::StartMatchmaking(const TArray< FUniqueNetIdRef >& Local
 	}
 	if (NewSessionSettings.NumPrivateConnections > 0)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME StartMatchmaking Pico does not support NumPrivateConnections > 0"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME StartMatchmaking Pico does not support NumPrivateConnections > 0")));
 		return false;
 	}
 	// todo
 	if (IsInMatchmakingProgress())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME StartMatchmaking You are already in matchmaking progress"));
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME StartMatchmaking You are already in matchmaking progress")));
 		return false;
 	}
 	if (InProgressMatchmakingSearch.IsValid())
@@ -690,16 +717,17 @@ bool FOnlineSessionPico::StartMatchmaking(const TArray< FUniqueNetIdRef >& Local
 	SearchSettings->SearchState = EOnlineAsyncTaskState::InProgress;
 	InProgressMatchmakingSearch = SearchSettings;
 	InProgressMatchmakingSearchName = SessionName;
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME StartMatchmaking PoolName: %s"), *Pool);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("StartMatchmaking PoolName: %s"), *Pool));
+	ppfMatchmakingOptionsHandle MatchmakingOptions = ppf_MatchmakingOptions_Create();
 	PicoSubsystem.AddAsyncTask(
-		ppf_Matchmaking_Enqueue2(TCHAR_TO_UTF8(*Pool), nullptr),
+		ppf_Matchmaking_Enqueue2(TCHAR_TO_UTF8(*Pool), MatchmakingOptions),
 		FPicoMessageOnCompleteDelegate::CreateLambda([this, SessionName, SearchSettings](ppfMessageHandle Message, bool bIsError)
 			{
 				if (bIsError)
 				{
 					auto Error = ppf_Message_GetError(Message);
 					auto ErrorMessage = ppf_Error_GetMessage(Error);
-					UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME StartMatchmaking OnComplete ErrorMessage: %s"), *FString(ErrorMessage));
+					SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME StartMatchmaking OnComplete ErrorMessage: %s"), *FString(ErrorMessage)));
 					SearchSettings->SearchState = EOnlineAsyncTaskState::Failed;
 					if (InProgressMatchmakingSearch.IsValid())
 					{
@@ -709,9 +737,10 @@ bool FOnlineSessionPico::StartMatchmaking(const TArray< FUniqueNetIdRef >& Local
 				}
 				else
 				{
-					UE_LOG_ONLINE(Display, TEXT("PPF_GAME StartMatchmaking OnComplete no error"));
+					SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("StartMatchmaking OnComplete no error")));
 				}
 			}));
+	ppf_MatchmakingOptions_Destroy(MatchmakingOptions);
 	return true;
 #else
 	return false;
@@ -722,7 +751,7 @@ bool FOnlineSessionPico::CancelMatchmaking(int32 SearchingPlayerNum, FName Sessi
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME CancelMatchmaking %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME CancelMatchmaking %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
@@ -734,7 +763,7 @@ bool FOnlineSessionPico::CancelMatchmaking(int32 SearchingPlayerNum, FName Sessi
 				{
 					auto Error = ppf_Message_GetError(Message);
 					auto ErrorMessage = ppf_Error_GetMessage(Error);
-					UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME CancelMatchmaking OnComplete ErrorMessage: %s"), *FString(ErrorMessage));
+					SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME CancelMatchmaking OnComplete ErrorMessage: %s"), *FString(ErrorMessage)));
 					TriggerOnCancelMatchmakingCompleteDelegates(SessionName, false);
 					return;
 				}
@@ -760,20 +789,20 @@ bool FOnlineSessionPico::FindSessions(int32 SearchingPlayerNum, const TSharedRef
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME FindSessions %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME FindSessions %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
 	if (SearchSettings->MaxSearchResults <= 0)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME FindSessions MaxSearchResults <= 0"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME FindSessions MaxSearchResults <= 0")));
 		SearchSettings->SearchState = EOnlineAsyncTaskState::Failed;
 		TriggerOnFindSessionsCompleteDelegates(false);
 		return false;
 	}
 	bool bFindOnlyModeratedRooms = false;
 	auto GetValueResult = SearchSettings->QuerySettings.Get(SEARCH_PICO_MODERATED_ROOMS_ONLY, bFindOnlyModeratedRooms);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindSessions GetValueResult: %d, bFindOnlyModeratedRooms: %d"), GetValueResult, bFindOnlyModeratedRooms);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindSessions GetValueResult: %d, bFindOnlyModeratedRooms: %d"), GetValueResult, bFindOnlyModeratedRooms));
 	if (GetValueResult && bFindOnlyModeratedRooms)
 	{
 		return FindModeratedRoomSessions(SearchSettings);
@@ -781,10 +810,10 @@ bool FOnlineSessionPico::FindSessions(int32 SearchingPlayerNum, const TSharedRef
 	FString Pool;
 	if (SearchSettings->QuerySettings.Get(SETTING_PICO_POOL, Pool))
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindSessions FindMatchmakingSessions Pool: %s"), *Pool);
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindSessions FindMatchmakingSessions Pool: %s"), *Pool));
 		return FindMatchmakingSessions(Pool, SearchSettings);
 	}
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindSessions Nothing to find"));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindSessions Nothing to find")));
 	SearchSettings->SearchState = EOnlineAsyncTaskState::Failed;
 	TriggerOnFindSessionsCompleteDelegates(false);
 	return false;
@@ -802,25 +831,25 @@ bool FOnlineSessionPico::FindModeratedRoomSessions(const TSharedRef<FOnlineSessi
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME FindModeratedRoomSessions %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME FindModeratedRoomSessions %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
 	FString PageIndex;
 	if (!SearchSettings->QuerySettings.Get(GET_MODERATEDROOMS_PAGEINDEX, PageIndex))
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME FindModeratedRoomSessions Error: Cannot get GET_MODERATEDROOMS_PAGEINDEX"));
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME FindModeratedRoomSessions Error: Cannot get GET_MODERATEDROOMS_PAGEINDEX")));
 		return false;
 	}
 	FString PageSize;
 	if (!SearchSettings->QuerySettings.Get(GET_MODERATEDROOMS_PAGESIZE, PageSize))
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME FindModeratedRoomSessions Error: Cannot get GET_MODERATEDROOMS_PAGESIZE"));
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME FindModeratedRoomSessions Error: Cannot get GET_MODERATEDROOMS_PAGESIZE")));
 		return false;
 	}
 
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindModeratedRoomSessions PageIndex: %s, PageSize: %s"), *PageIndex, *PageSize);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindModeratedRoomSessions PageIndex: %d, PageSize: %d"), FCString::Atoi(*PageIndex), FCString::Atoi(*PageSize));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindModeratedRoomSessions PageIndex: %s, PageSize: %s"), *PageIndex, *PageSize));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindModeratedRoomSessions PageIndex: %d, PageSize: %d"), FCString::Atoi(*PageIndex), FCString::Atoi(*PageSize)));
 	SearchSettings->SearchState = EOnlineAsyncTaskState::InProgress;
 	PicoSubsystem.AddAsyncTask(
 		ppf_Room_GetModeratedRooms(FCString::Atoi(*PageIndex), FCString::Atoi(*PageSize)),
@@ -830,30 +859,30 @@ bool FOnlineSessionPico::FindModeratedRoomSessions(const TSharedRef<FOnlineSessi
 				{
 					auto Error = ppf_Message_GetError(Message);
 					auto ErrorMessage = ppf_Error_GetMessage(Error);
-					UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME FindModeratedRoomSessions OnComplete ErrorMessage: %s"), *FString(ErrorMessage));
+					SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME FindModeratedRoomSessions OnComplete ErrorMessage: %s"), *FString(ErrorMessage)));
 					SearchSettings->SearchState = EOnlineAsyncTaskState::Failed;
 					TriggerOnFindSessionsCompleteDelegates(false);
 					return;
 				}
 				auto RoomArray = ppf_Message_GetRoomArray(Message);
 				auto SearchResultsSize = ppf_RoomArray_GetSize(RoomArray);
-				UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindModeratedRoomSessions SearchResultsSize: %zu"), SearchResultsSize);
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindModeratedRoomSessions SearchResultsSize: %zu"), SearchResultsSize));
 				if (SearchResultsSize > SearchSettings->MaxSearchResults)
 				{
 					SearchResultsSize = SearchSettings->MaxSearchResults;
 				}
 				SearchSettings->SearchResults.Reset(SearchResultsSize);
 				int32 BuildUniqueId = GetBuildUniqueId();
-				UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindModeratedRoomSessions GetBuildUniqueId(): %d"), BuildUniqueId);
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindModeratedRoomSessions GetBuildUniqueId(): %d"), BuildUniqueId));
 				for (size_t i = 0; i < SearchResultsSize; i++)
 				{
 					auto Room = ppf_RoomArray_GetElement(RoomArray, i);
 					int32 ServerBuildId = GetRoomBuildUniqueId(Room);
-					UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindModeratedRoomSessions ServerBuildId: %d"), ServerBuildId);
+					SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindModeratedRoomSessions ServerBuildId: %d"), ServerBuildId));
 					if (ServerBuildId != 0 && ServerBuildId != BuildUniqueId)
 					{
-						UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME FindModeratedRoomSessions ServerBuildId != 0 && ServerBuildId != BuildUniqueId"));
-						continue;
+						SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME FindModeratedRoomSessions ServerBuildId != 0 && ServerBuildId != BuildUniqueId")));
+						// continue;
 					}
 					auto Session = CreateSessionFromRoom(Room);
 					auto SearchResult = FOnlineSessionSearchResult();
@@ -874,7 +903,7 @@ bool FOnlineSessionPico::FindMatchmakingSessions(const FString Pool, const TShar
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME FindMatchmakingSessions %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME FindMatchmakingSessions %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
@@ -884,42 +913,43 @@ bool FOnlineSessionPico::FindMatchmakingSessions(const FString Pool, const TShar
 	}
 	SearchSettings->SearchState = EOnlineAsyncTaskState::InProgress;
 	InProgressMatchmakingSearch = SearchSettings;
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindMatchmakingSessions begin ppf_Matchmaking_Browse2 Pool: %s"), *Pool);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindMatchmakingSessions begin ppf_Matchmaking_Browse2 Pool: %s"), *Pool));
+	ppfMatchmakingOptionsHandle MatchmakingOptions = ppf_MatchmakingOptions_Create();
 	PicoSubsystem.AddAsyncTask(
-		ppf_Matchmaking_Browse2(TCHAR_TO_UTF8(*Pool), nullptr),
+		ppf_Matchmaking_Browse2(TCHAR_TO_UTF8(*Pool), MatchmakingOptions),
 		FPicoMessageOnCompleteDelegate::CreateLambda([this, SearchSettings](ppfMessageHandle Message, bool bIsError)
 			{
 				if (bIsError)
 				{
 					auto Error = ppf_Message_GetError(Message);
 					auto ErrorMessage = ppf_Error_GetMessage(Error);
-					UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME FindMatchmakingSessions OnComplete ErrorMessage: %s"), *FString(ErrorMessage));
+					SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME FindMatchmakingSessions OnComplete ErrorMessage: %s"), *FString(ErrorMessage)));
 					SearchSettings->SearchState = EOnlineAsyncTaskState::Failed;
 					TriggerOnFindSessionsCompleteDelegates(false);
 					return;
 				}
-				UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindMatchmakingSessions OnComplete no error"));
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindMatchmakingSessions OnComplete no error")));
 				auto BrowseResult = ppf_Message_GetMatchmakingBrowseResult(Message);
 				auto RoomArray = ppf_MatchmakingBrowseResult_GetRooms(BrowseResult);
 				auto SearchResultsSize = ppf_MatchmakingRoomArray_GetSize(RoomArray);
-				UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindMatchmakingSessions SearchResultsSize: %zu, MaxSearchResults: %d"), SearchResultsSize, SearchSettings->MaxSearchResults);
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindMatchmakingSessions SearchResultsSize: %zu, MaxSearchResults: %d"), SearchResultsSize, SearchSettings->MaxSearchResults));
 				if (SearchResultsSize > SearchSettings->MaxSearchResults)
 				{
 					SearchResultsSize = SearchSettings->MaxSearchResults;
 				}
 				SearchSettings->SearchResults.Reset(SearchResultsSize);
 				int32 BuildUniqueId = GetBuildUniqueId();
-				UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindMatchmakingSessions GetBuildUniqueId(): %d"), BuildUniqueId);
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindMatchmakingSessions GetBuildUniqueId(): %d"), BuildUniqueId));
 				for (size_t i = 0; i < SearchResultsSize; i++)
 				{
 					auto MatchmakingRoom = ppf_MatchmakingRoomArray_GetElement(RoomArray, i);
 					auto Room = ppf_MatchmakingRoom_GetRoom(MatchmakingRoom);
 					int32 ServerBuildId = GetRoomBuildUniqueId(Room);
-					UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindMatchmakingSessions ServerBuildId: %d"), ServerBuildId);
+					SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindMatchmakingSessions ServerBuildId: %d"), ServerBuildId));
 					if (ServerBuildId != BuildUniqueId)
 					{
-						UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME FindMatchmakingSessions ServerBuildId != BuildUniqueId"));
-						continue;
+						SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME FindMatchmakingSessions ServerBuildId != BuildUniqueId")));
+						// continue;
 					}
 					auto Session = CreateSessionFromRoom(Room);
 					auto SearchResult = FOnlineSessionSearchResult();
@@ -930,6 +960,7 @@ bool FOnlineSessionPico::FindMatchmakingSessions(const FString Pool, const TShar
 				SearchSettings->SearchState = EOnlineAsyncTaskState::Done;
 				TriggerOnFindSessionsCompleteDelegates(true);
 			}));
+	ppf_MatchmakingOptions_Destroy(MatchmakingOptions);
 	return true;
 #else
 	return false;
@@ -940,30 +971,30 @@ bool FOnlineSessionPico::FindSessionById(const FUniqueNetId& SearchingUserId, co
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME FindSessionById %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME FindSessionById %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
 	auto LoggedInPlayerId = PicoSubsystem.GetIdentityInterface()->GetUniquePlayerId(0);
 	if (LoggedInPlayerId.IsValid())
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindSessionById LoggedInPlayerId: %s"), *LoggedInPlayerId->ToString());
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindSessionById LoggedInPlayerId: %s"), *LoggedInPlayerId->ToString()));
 	}
 	if (!LoggedInPlayerId.IsValid() || SearchingUserId != *LoggedInPlayerId)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME FindSessionById Need login first or SearchingUserId != LoggedInPlayerId"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME FindSessionById Need login first or SearchingUserId != LoggedInPlayerId")));
 		return false;
 	}
 	if (FriendId.IsValid())
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME FindSessionById FriendId is not supported"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME FindSessionById FriendId is not supported")));
 		return false;
 	}
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindSessionById SessionId: %s"), *SessionId.ToString());
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindSessionById SessionId: %s"), *SessionId.ToString()));
 	const FUniqueNetIdPico& RoomId = static_cast<const FUniqueNetIdPico&>(SessionId);
 	ppfID ppfIDRoomID = FCString::Strtoui64(*RoomId.GetStringID(), NULL, 10);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindSessionById ppf_Room_Get RoomId: %s, %llu"), *RoomId.GetStringID(), ppfIDRoomID);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindSessionById begin ppf_Room_Get"));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindSessionById ppf_Room_Get RoomId: %s, %llu"), *RoomId.GetStringID(), ppfIDRoomID));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindSessionById begin ppf_Room_Get")));
 	PicoSubsystem.AddAsyncTask(
 		ppf_Room_Get(ppfIDRoomID),
 		FPicoMessageOnCompleteDelegate::CreateLambda([this, CompletionDelegate](ppfMessageHandle Message, bool bIsError)
@@ -973,7 +1004,7 @@ bool FOnlineSessionPico::FindSessionById(const FUniqueNetId& SearchingUserId, co
 				{
 					auto Error = ppf_Message_GetError(Message);
 					auto ErrorMessage = ppf_Error_GetMessage(Error);
-					UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME FindSessionById ErrorMessage: %s"), *FString(ErrorMessage));
+					SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME FindSessionById ErrorMessage: %s"), *FString(ErrorMessage)));
 					CompletionDelegate.ExecuteIfBound(0, false, SearchResult);
 					return;
 				}
@@ -984,19 +1015,19 @@ bool FOnlineSessionPico::FindSessionById(const FUniqueNetId& SearchingUserId, co
 					return;
 				}
 				int32 BuildUniqueId = GetBuildUniqueId();
-				UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindSessionById GetBuildUniqueId(): %d"), BuildUniqueId);
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindSessionById GetBuildUniqueId(): %d"), BuildUniqueId));
 				int32 ServerBuildId = GetRoomBuildUniqueId(Room);
-				UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindSessionById ServerBuildId: %d"), ServerBuildId);
-				if (ServerBuildId != BuildUniqueId)
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindSessionById ServerBuildId: %d"), ServerBuildId));
+				if (ServerBuildId != 0 && ServerBuildId != BuildUniqueId)
 				{
-					UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME FindSessionById ServerBuildId != BuildUniqueId"));
-					CompletionDelegate.ExecuteIfBound(0, false, SearchResult);
-					return;
+					SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME FindSessionById ServerBuildId != BuildUniqueId")));
+					// CompletionDelegate.ExecuteIfBound(0, false, SearchResult);
+					// return;
 				}
 				auto Session = CreateSessionFromRoom(Room);
 				SearchResult.Session = Session.Get();
 				auto RoomJoinability = ppf_Room_GetJoinability(Room);
-				UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindSessionById RoomJoinability: %s"), *FString(JoinabilityNames[RoomJoinability]));
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindSessionById RoomJoinability: %s"), *FString(JoinabilityNames[RoomJoinability])));
 				CompletionDelegate.ExecuteIfBound(0, RoomJoinability == ppfRoom_JoinabilityCanJoin, SearchResult);
 			}));
 	return true;
@@ -1014,20 +1045,20 @@ bool FOnlineSessionPico::JoinSession(int32 PlayerNum, FName SessionName, const F
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME JoinSession %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME JoinSession %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
 	FNamedOnlineSession* Session = GetNamedSession(SessionName);
 	if (Session)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME JoinSession Already in Session: %s"), *SessionName.ToString());
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME JoinSession Already in Session: %s"), *SessionName.ToString()));
 		TriggerOnJoinSessionCompleteDelegates(SessionName, EOnJoinSessionCompleteResult::AlreadyInSession);
 		return false;
 	}
 	if (!DesiredSession.Session.SessionInfo.IsValid())
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME JoinSession SessionInfo is invalid"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME JoinSession SessionInfo is invalid")));
 		TriggerOnJoinSessionCompleteDelegates(SessionName, EOnJoinSessionCompleteResult::SessionDoesNotExist);
 		return false;
 	}
@@ -1040,20 +1071,21 @@ bool FOnlineSessionPico::JoinSession(int32 PlayerNum, FName SessionName, const F
 	auto RoomId = FUniqueNetIdPico::Cast(SearchSessionInfo->GetSessionId()).GetID();
 	auto RoomOptions = ppf_RoomOptions_Create();
 	ppf_RoomOptions_SetTurnOffUpdates(RoomOptions, true);
+	// SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("JoinSession befor ppf_Room_Join2 RoomId: %s"), SearchSessionInfo->GetSessionId()));
+	SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("JoinSession befor ppf_Room_Join2 RoomId: %llu"), RoomId));
 	PicoSubsystem.AddAsyncTask(
 		ppf_Room_Join2(RoomId, RoomOptions),
 		FPicoMessageOnCompleteDelegate::CreateLambda([this, SessionName, Session](ppfMessageHandle Message, bool bIsError)
 			{
 				auto Room = ppf_Message_GetRoom(Message);
-
 				if (bIsError)
 				{
 					auto Error = ppf_Message_GetError(Message);
 					auto ErrorMessage = ppf_Error_GetMessage(Error);
-					UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME JoinSession OnComplete ErrorMessage: %s"), *FString(ErrorMessage));
+					SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME JoinSession OnComplete ErrorMessage: %s"), *FString(ErrorMessage)));
 					RemoveNamedSession(SessionName);
 					auto RoomJoinability = ppf_Room_GetJoinability(Room);
-					UE_LOG_ONLINE(Display, TEXT("PPF_GAME JoinSession RoomJoinability: %s"), *FString(JoinabilityNames[RoomJoinability]));
+					SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("JoinSession RoomJoinability: %s"), *FString(JoinabilityNames[RoomJoinability])));
 					EOnJoinSessionCompleteResult::Type FailureReason;
 					if (RoomJoinability == ppfRoom_JoinabilityIsFull)
 					{
@@ -1070,7 +1102,7 @@ bool FOnlineSessionPico::JoinSession(int32 PlayerNum, FName SessionName, const F
 					TriggerOnJoinSessionCompleteDelegates(SessionName, FailureReason);
 					return;
 				}
-				UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME JoinSession OnComplete no error"));
+				SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME JoinSession OnComplete no error")));
 				UpdateSessionFromRoom(*Session, Room);
 				TriggerOnJoinSessionCompleteDelegates(SessionName, EOnJoinSessionCompleteResult::Success);
 			}));
@@ -1089,7 +1121,7 @@ bool FOnlineSessionPico::FindFriendSession(int32 LocalUserNum, const FUniqueNetI
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME FindFriendSession %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME FindFriendSession %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
@@ -1115,14 +1147,14 @@ bool FOnlineSessionPico::FindFriendSession(int32 LocalUserNum, const FUniqueNetI
 				int32 ServerBuildId = GetRoomBuildUniqueId(Room);
 				if (ServerBuildId != BuildUniqueId)
 				{
-					UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME FindFriendSession ServerBuildId != BuildUniqueId"));
-					TriggerOnFindFriendSessionCompleteDelegates(LocalUserNum, false, SearchResult);
-					return;
+					SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME FindFriendSession ServerBuildId != BuildUniqueId")));
+					// TriggerOnFindFriendSessionCompleteDelegates(LocalUserNum, false, SearchResult);
+					// return;
 				}
 				auto Session = CreateSessionFromRoom(Room);
 				SearchResult[0].Session = Session.Get();
 				auto RoomJoinability = ppf_Room_GetJoinability(Room);
-				//UE_LOG_ONLINE(Display, TEXT("PPF_GAME FindFriendSession RoomJoinability: %s"), *FString(JoinabilityNames[RoomJoinability]));
+				//SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("FindFriendSession RoomJoinability: %s"), *FString(JoinabilityNames[RoomJoinability])));
 				TriggerOnFindFriendSessionCompleteDelegates(LocalUserNum, RoomJoinability == ppfRoom_JoinabilityCanJoin, SearchResult);
 			}));
 	return true;
@@ -1136,7 +1168,13 @@ bool FOnlineSessionPico::FindFriendSession(const FUniqueNetId& LocalUserId, cons
 	return FindFriendSession(0, Friend);
 }
 
+#if ENGINE_MAJOR_VERSION > 4
 bool FOnlineSessionPico::FindFriendSession(const FUniqueNetId& LocalUserId, const TArray<FUniqueNetIdRef>& FriendList)
+#elif ENGINE_MINOR_VERSION > 26
+bool FOnlineSessionPico::FindFriendSession(const FUniqueNetId& LocalUserId, const TArray<FUniqueNetIdRef>& FriendList)
+#elif ENGINE_MINOR_VERSION > 24
+bool FOnlineSessionPico::FindFriendSession(const FUniqueNetId& LocalUserId, const TArray<TSharedRef<const FUniqueNetId>>& FriendList)
+#endif
 {
 	// todo
 	return false;
@@ -1146,12 +1184,30 @@ bool FOnlineSessionPico::SendSessionInviteToFriend(int32 LocalUserNum, FName Ses
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME SendSessionInviteToFriend %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME SendSessionInviteToFriend %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
-	TArray< FUniqueNetIdRef > Friends;
-	Friends.Add(FUniqueNetIdPico::Create(Friend));
+
+#if ENGINE_MAJOR_VERSION > 4
+    TArray< FUniqueNetIdRef > Friends;
+    const FUniqueNetIdPico& PicoFriend = static_cast<const FUniqueNetIdPico&>(Friend);
+    SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("SendSessionInviteToFriend PicoFriend StrID: %s"), *PicoFriend.GetStringID()));
+    auto NewFriend = FUniqueNetIdPico::Create(PicoFriend.GetStringID());
+#elif ENGINE_MINOR_VERSION > 26
+    TArray< FUniqueNetIdRef > Friends;
+    const FUniqueNetIdPico& PicoFriend = static_cast<const FUniqueNetIdPico&>(Friend);
+    SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("SendSessionInviteToFriend PicoFriend StrID: %s"), *PicoFriend.GetStringID()));
+    auto NewFriend = FUniqueNetIdPico::Create(PicoFriend.GetStringID());
+#elif ENGINE_MINOR_VERSION > 24
+    TArray< TSharedRef<const FUniqueNetId> > Friends;
+    const FUniqueNetIdPico& PicoFriend = static_cast<const FUniqueNetIdPico&>(Friend);
+    SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("SendSessionInviteToFriend PicoFriend StrID: %s"), *PicoFriend.GetStringID()));
+    TSharedRef<const FUniqueNetId> NewFriend = MakeShareable(new FUniqueNetIdPico(PicoFriend.GetStringID()));
+#endif
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("SendSessionInviteToFriend NewFriend StrID: %s"), *NewFriend->ToString()));
+	Friends.Add(NewFriend);
+	
 	return SendSessionInviteToFriends(LocalUserNum, SessionName, Friends);
 #else
 	return false;
@@ -1162,48 +1218,59 @@ bool FOnlineSessionPico::SendSessionInviteToFriend(const FUniqueNetId& LocalUser
 {
 	return SendSessionInviteToFriend(0, SessionName, Friend);
 }
-
+#if ENGINE_MAJOR_VERSION > 4
 bool FOnlineSessionPico::SendSessionInviteToFriends(int32 LocalUserNum, FName SessionName, const TArray< FUniqueNetIdRef >& Friends)
+#elif ENGINE_MINOR_VERSION > 26
+bool FOnlineSessionPico::SendSessionInviteToFriends(int32 LocalUserNum, FName SessionName, const TArray< FUniqueNetIdRef >& Friends)
+#elif ENGINE_MINOR_VERSION > 24
+bool FOnlineSessionPico::SendSessionInviteToFriends(int32 LocalUserNum, FName SessionName, const TArray< TSharedRef<const FUniqueNetId> >& Friends)
+#endif
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME SendSessionInviteToFriends %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME SendSessionInviteToFriends %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
 	FNamedOnlineSession* Session = GetNamedSession(SessionName);
 	if (!Session)
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME SendSessionInviteToFriends Cannot find Session: %s"), *SessionName.ToString());
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME SendSessionInviteToFriends Cannot find Session: %s"), *SessionName.ToString()));
 		return false;
 	}
 	IOnlineFriendsPtr FriendsInterface = PicoSubsystem.GetFriendsInterface();
 	if (!FriendsInterface.IsValid())
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME SendSessionInviteToFriends FriendsInterface is invalid"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME SendSessionInviteToFriends FriendsInterface is invalid")));
 		return false;
 	}
 	auto RoomId = GetRoomIDOfSession(*Session);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME SendSessionInviteToFriends RoomId: %llu"), RoomId);
-	FriendsInterface->ReadFriendsList(
+	TSharedPtr<FOnlineFriendsPico> FriendsInterfacePicoPtr = StaticCastSharedPtr<FOnlineFriendsPico>(FriendsInterface);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("SendSessionInviteToFriends RoomId: %llu"), RoomId));
+	FriendsInterfacePicoPtr->ReadFriendsList(
 		LocalUserNum,
 		FOnlineFriendsPico::FriendsListInviteableUsers,
+		RoomId,
 		FOnReadFriendsListComplete::CreateLambda([RoomId, FriendsInterface, Friends](int32 InLocalUserNum, bool bWasSuccessful, const FString& ListName, const FString& ErrorName) {
 			if (!bWasSuccessful)
 			{
-				UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME SendSessionInviteToFriends ReadFriendsList OnComplete ErrorName: %s"), *ErrorName);
+				SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME SendSessionInviteToFriends ReadFriendsList OnComplete ErrorName: %s"), *ErrorName));
 				return;
 			}
-			UE_LOG_ONLINE(Display, TEXT("PPF_GAME SendSessionInviteToFriends ReadFriendsList OnComplete no error"));
+			SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("SendSessionInviteToFriends ReadFriendsList OnComplete no error")));
 			for (auto FriendId : Friends)
 			{
-				UE_LOG_ONLINE(Display, TEXT("PPF_GAME SendSessionInviteToFriends InLocalUserNum: %d"), InLocalUserNum);
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("SendSessionInviteToFriends InLocalUserNum: %d"), InLocalUserNum));
 				auto Friend = FriendsInterface->GetFriend(InLocalUserNum, FriendId.Get(), ListName);
 				if (Friend.IsValid())
 				{
 					auto PicoFriend = static_cast<const FOnlinePicoFriend&>(*Friend);
-					UE_LOG_ONLINE(Display, TEXT("PPF_GAME SendSessionInviteToFriends ppf_Room_InviteUser InviteToken: %s"), *PicoFriend.GetInviteToken());
+					SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("SendSessionInviteToFriends ppf_Room_InviteUser InviteToken: %s"), *PicoFriend.GetInviteToken()));
 					ppf_Room_InviteUser(RoomId, TCHAR_TO_UTF8(*PicoFriend.GetInviteToken()));
+				}
+				else
+				{
+					SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("SendSessionInviteToFriends Friend is invalid.")));			
 				}
 			}
 			}));
@@ -1213,7 +1280,13 @@ bool FOnlineSessionPico::SendSessionInviteToFriends(int32 LocalUserNum, FName Se
 #endif
 }
 
+#if ENGINE_MAJOR_VERSION > 4
 bool FOnlineSessionPico::SendSessionInviteToFriends(const FUniqueNetId& LocalUserId, FName SessionName, const TArray< FUniqueNetIdRef >& Friends)
+#elif ENGINE_MINOR_VERSION > 26
+bool FOnlineSessionPico::SendSessionInviteToFriends(const FUniqueNetId& LocalUserId, FName SessionName, const TArray< FUniqueNetIdRef >& Friends)
+#elif ENGINE_MINOR_VERSION > 24
+bool FOnlineSessionPico::SendSessionInviteToFriends(const FUniqueNetId& LocalUserId, FName SessionName, const TArray< TSharedRef<const FUniqueNetId> >& Friends)
+#endif
 {
 	return SendSessionInviteToFriends(0, SessionName, Friends);
 }
@@ -1227,7 +1300,7 @@ bool FOnlineSessionPico::GetResolvedConnectString(FName SessionName, FString& Co
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME GetResolvedConnectString %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME GetResolvedConnectString %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
@@ -1248,7 +1321,7 @@ bool FOnlineSessionPico::GetResolvedConnectString(const FOnlineSessionSearchResu
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME GetResolvedConnectString %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME GetResolvedConnectString %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
@@ -1283,12 +1356,20 @@ bool FOnlineSessionPico::RegisterPlayer(FName SessionName, const FUniqueNetId& P
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME RegisterPlayer %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME RegisterPlayer %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
-	TArray< FUniqueNetIdRef > Players;
-	Players.Add(FUniqueNetIdPico::Create(PlayerId));
+#if ENGINE_MAJOR_VERSION > 4
+    TArray< FUniqueNetIdRef > Players;
+    Players.Add(FUniqueNetIdPico::Create(PlayerId));
+#elif ENGINE_MINOR_VERSION > 26
+    TArray< FUniqueNetIdRef > Players;
+    Players.Add(FUniqueNetIdPico::Create(PlayerId));
+#elif ENGINE_MINOR_VERSION > 24
+    TArray< TSharedRef<const FUniqueNetId> > Players;
+    Players.Add(MakeShareable(new FUniqueNetIdPico(PlayerId)));
+#endif
 	TriggerOnRegisterPlayersCompleteDelegates(SessionName, Players, true);
 	return true;
 #else
@@ -1296,11 +1377,11 @@ bool FOnlineSessionPico::RegisterPlayer(FName SessionName, const FUniqueNetId& P
 #endif
 }
 
-bool FOnlineSessionPico::RegisterPlayers(FName SessionName, const TArray< FUniqueNetIdRef >& Players, bool bWasInvited)
+bool FOnlineSessionPico::RegisterPlayers(FName SessionName, const TArray< TSharedRef<const FUniqueNetId> >& Players, bool bWasInvited)
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME RegisterPlayers %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME RegisterPlayers %s"), *InitStateErrorMessage));
 		return false;
 	}
 #if PLATFORM_ANDROID
@@ -1310,13 +1391,20 @@ bool FOnlineSessionPico::RegisterPlayers(FName SessionName, const TArray< FUniqu
 	return false;
 #endif
 }
+
 
 bool FOnlineSessionPico::UnregisterPlayer(FName SessionName, const FUniqueNetId& PlayerId)
 {
 	return false;
 }
 
+#if ENGINE_MAJOR_VERSION > 4
 bool FOnlineSessionPico::UnregisterPlayers(FName SessionName, const TArray< FUniqueNetIdRef >& Players)
+#elif ENGINE_MINOR_VERSION > 26
+bool FOnlineSessionPico::UnregisterPlayers(FName SessionName, const TArray< FUniqueNetIdRef >& Players)
+#elif ENGINE_MINOR_VERSION > 24
+bool FOnlineSessionPico::UnregisterPlayers(FName SessionName, const TArray< TSharedRef<const FUniqueNetId> >& Players)
+#endif
 {
 	return false;
 }
@@ -1344,9 +1432,19 @@ void FOnlineSessionPico::UnregisterLocalPlayer(const FUniqueNetId& PlayerId, FNa
 	Delegate.ExecuteIfBound(PlayerId, false);
 }
 
+#if ENGINE_MAJOR_VERSION > 4
 FUniqueNetIdPtr FOnlineSessionPico::CreateSessionIdFromString(const FString& SessionIdStr)
 {
-	FUniqueNetIdPtr SessionId;
+    FUniqueNetIdPtr SessionId;
+#elif ENGINE_MINOR_VERSION > 26
+FUniqueNetIdPtr FOnlineSessionPico::CreateSessionIdFromString(const FString& SessionIdStr)
+{
+    FUniqueNetIdPtr SessionId;
+#elif ENGINE_MINOR_VERSION > 24
+TSharedPtr<const FUniqueNetId> FOnlineSessionPico::CreateSessionIdFromString(const FString& SessionIdStr)
+{
+    TSharedPtr<const FUniqueNetId> SessionId;
+#endif
 	return SessionId;
 }
 
@@ -1414,13 +1512,13 @@ TSharedRef<FOnlineSession> FOnlineSessionPico::CreateSessionFromRoom(ppfRoomHand
 	auto RoomPolicy = ppf_Room_GetJoinPolicy(Room);
 	auto RoomJoinability = ppf_Room_GetJoinability(Room);
 	auto RoomType = ppf_Room_GetType(Room);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME CreateSessionFromRoom RoomId: %llu, RoomMaxUsers: %d, RoomCurrentUsersSize: %lld, RoomPolicy: %s, RoomType: %s, RoomJoinability: %s")
-		, RoomId, RoomMaxUsers, RoomCurrentUsersSize, *FString(JoinPolicyNames[RoomPolicy]), *FString(RoomTypeNames[RoomType]), *FString(JoinabilityNames[RoomJoinability]));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("CreateSessionFromRoom RoomId: %llu, RoomMaxUsers: %d, RoomCurrentUsersSize: %lld, RoomPolicy: %s, RoomType: %s, RoomJoinability: %s")
+		, RoomId, RoomMaxUsers, RoomCurrentUsersSize, *FString(JoinPolicyNames[RoomPolicy]), *FString(RoomTypeNames[RoomType]), *FString(JoinabilityNames[RoomJoinability])));
 	for (size_t UserIndex = 0; UserIndex < RoomCurrentUsersSize; ++UserIndex)
 	{
 		auto User = ppf_UserArray_GetElement(RoomUsers, UserIndex);
 		FString RoomOwnerIdString = UTF8_TO_TCHAR(ppf_User_GetID(User));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME CreateSessionFromRoom UserIndex: %zu, UserId: %s"), UserIndex, *RoomOwnerIdString);
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("CreateSessionFromRoom UserIndex: %zu, UserId: %s"), UserIndex, *RoomOwnerIdString));
 	}
 #endif
 	auto SessionSettings = FOnlineSessionSettings();
@@ -1431,7 +1529,14 @@ TSharedRef<FOnlineSession> FOnlineSessionPico::CreateSessionFromRoom(ppfRoomHand
 #endif
 	auto Session = new FOnlineSession(SessionSettings);
 #if PLATFORM_ANDROID
+#if ENGINE_MAJOR_VERSION > 4
 	Session->OwningUserId = FUniqueNetIdPico::Create(UTF8_TO_TCHAR(ppf_User_GetID(RoomOwner)));
+#elif ENGINE_MINOR_VERSION > 26
+	Session->OwningUserId = FUniqueNetIdPico::Create(UTF8_TO_TCHAR(ppf_User_GetID(RoomOwner)));
+#elif ENGINE_MINOR_VERSION > 24
+	Session->OwningUserId = MakeShareable(new FUniqueNetIdPico(UTF8_TO_TCHAR(ppf_User_GetID(RoomOwner))));
+#endif
+	// FUniqueNetIdPico::Create(UTF8_TO_TCHAR(ppf_User_GetID(RoomOwner)));
 	Session->OwningUserName = UTF8_TO_TCHAR(ppf_User_GetDisplayName(RoomOwner));
 	auto RemainingConnections = RoomMaxUsers - RoomCurrentUsersSize;
 	Session->NumOpenPublicConnections = (RemainingConnections > 0) ? RemainingConnections : 0;
@@ -1454,8 +1559,8 @@ void FOnlineSessionPico::LogRoomData(ppfRoomHandle Room) const
 	auto RoomPolicy = ppf_Room_GetJoinPolicy(Room);
 	auto RoomJoinability = ppf_Room_GetJoinability(Room);
 	auto RoomType = ppf_Room_GetType(Room);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME LogRoomData RoomId: %llu, RoomMaxUsers: %d, RoomCurrentUsersSize: %lld, RoomPolicy: %s, RoomType: %s, RoomJoinability: %s")
-		, RoomId, RoomMaxUsers, RoomCurrentUsersSize, *FString(JoinPolicyNames[RoomPolicy]), *FString(RoomTypeNames[RoomType]), *FString(JoinabilityNames[RoomJoinability]));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("LogRoomData RoomId: %llu, RoomMaxUsers: %d, RoomCurrentUsersSize: %lld, RoomPolicy: %s, RoomType: %s, RoomJoinability: %s")
+		, RoomId, RoomMaxUsers, RoomCurrentUsersSize, *FString(JoinPolicyNames[RoomPolicy]), *FString(RoomTypeNames[RoomType]), *FString(JoinabilityNames[RoomJoinability])));
 #endif
 }
 
@@ -1463,57 +1568,77 @@ void FOnlineSessionPico::UpdateSessionFromRoom(FNamedOnlineSession& Session, ppf
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME UpdateSessionFromRoom %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME UpdateSessionFromRoom %s"), *InitStateErrorMessage));
 		return;
 	}
 #if PLATFORM_ANDROID
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionFromRoom begin"));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionFromRoom begin")));
 	LogRoomData(Room);
 	auto UserArray = ppf_Room_GetUsers(Room);
 	auto UserArraySize = ppf_UserArray_GetSize(UserArray);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionFromRoom UserArraySize: %zu"), UserArraySize);
+#if ENGINE_MAJOR_VERSION > 4
 	TArray< FUniqueNetIdRef > Players;
+#elif ENGINE_MINOR_VERSION > 26
+	TArray< FUniqueNetIdRef > Players;
+#elif ENGINE_MINOR_VERSION > 24
+	TArray< TSharedRef<const FUniqueNetId> > Players;
+#endif
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionFromRoom UserArraySize: %zu"), UserArraySize));
 	for (size_t UserIndex = 0; UserIndex < UserArraySize; ++UserIndex)
 	{
 		auto User = ppf_UserArray_GetElement(UserArray, UserIndex);
 		FString UserId = UTF8_TO_TCHAR(ppf_User_GetID(User));
+#if ENGINE_MAJOR_VERSION > 4
 		auto PlayerId = FUniqueNetIdPico::Create(UserId);
+#elif ENGINE_MINOR_VERSION > 26
+		auto PlayerId = FUniqueNetIdPico::Create(UserId);
+#elif ENGINE_MINOR_VERSION > 24
+		TSharedRef<const FUniqueNetId>  PlayerId = MakeShareable(new FUniqueNetIdPico(UserId));
+#endif
 		Players.Add(PlayerId);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionFromRoom UserIndex: %zu, UserId: %s, PlayerId: %s"), UserIndex, *UserId, *PlayerId->ToString());
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionFromRoom UserIndex: %zu, UserId: %s, PlayerId: %s, PlayerId->IsValid(): %d"), UserIndex, *UserId, *PlayerId->ToString(), PlayerId->IsValid()));
 	}
 	Session.RegisteredPlayers = Players;
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionFromRoom NumPublicConnections: %d"), Session.SessionSettings.NumPublicConnections);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionFromRoom ppf_Room_GetMaxUsers: %d"), ppf_Room_GetMaxUsers(Room));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionFromRoom NumPublicConnections: %d"), Session.SessionSettings.NumPublicConnections));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionFromRoom ppf_Room_GetMaxUsers: %d"), ppf_Room_GetMaxUsers(Room)));
 	Session.SessionSettings.NumPublicConnections = ppf_Room_GetMaxUsers(Room);
 	auto RemainingConnections = Session.SessionSettings.NumPublicConnections - UserArraySize;
 	Session.NumOpenPublicConnections = (RemainingConnections > 0) ? RemainingConnections : 0;
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionFromRoom set NumOpenPublicConnections: %d"), Session.NumOpenPublicConnections);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionFromRoom set NumOpenPublicConnections: %d"), Session.NumOpenPublicConnections));
 	Session.NumOpenPrivateConnections = 0;
 	auto RoomOwner = ppf_Room_GetOwner(Room);
 	FString RoomOwnerIdString = UTF8_TO_TCHAR(ppf_User_GetID(RoomOwner));
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionFromRoom RoomOwnerIdString: %s"), *RoomOwnerIdString);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionFromRoom RoomOwnerIdString: %s"), *RoomOwnerIdString));
+	//auto RoomOwnerUniqueIdPtr = FUniqueNetIdPico::Create(RoomOwnerIdString);
+
+#if ENGINE_MAJOR_VERSION > 4
 	auto RoomOwnerUniqueIdPtr = FUniqueNetIdPico::Create(RoomOwnerIdString);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionFromRoom RoomOwnerUniqueId: %s"), *RoomOwnerUniqueIdPtr->ToString());
+#elif ENGINE_MINOR_VERSION > 26
+	auto RoomOwnerUniqueIdPtr = FUniqueNetIdPico::Create(RoomOwnerIdString);
+#elif ENGINE_MINOR_VERSION > 24
+	TSharedRef<const FUniqueNetId> RoomOwnerUniqueIdPtr = MakeShareable(new FUniqueNetIdPico(RoomOwnerIdString));
+#endif
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionFromRoom RoomOwnerUniqueId: %s"), *RoomOwnerUniqueIdPtr->ToString()));
 
 	if (!Session.OwningUserId.IsValid() || Session.OwningUserId.ToSharedRef().Get() != *RoomOwnerUniqueIdPtr)
 	{
 		Session.OwningUserId = RoomOwnerUniqueIdPtr;
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionFromRoom set OwningUserId: %s"), *(Session.OwningUserId->ToString()));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionFromRoom set OwningUserId: %s"), *(Session.OwningUserId->ToString())));
 		Session.OwningUserName = UTF8_TO_TCHAR(ppf_User_GetDisplayName(RoomOwner));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionFromRoom set OwningUserName : %s"), *Session.OwningUserName);
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionFromRoom set OwningUserName : %s"), *Session.OwningUserName));
 		if (Session.LocalOwnerId.IsValid())
 		{
 			Session.bHosting = Session.OwningUserId.ToSharedRef().Get() == *Session.LocalOwnerId;
 		}
 		else
 		{
-			UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionFromRoom Session.LocalOwnerId is invalid")); 
+			SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionFromRoom Session.LocalOwnerId is invalid"))); 
 			Session.bHosting = false;
 		}
 	}
 	TestDumpNamedSession(&Session);
 	auto RoomDataStore = ppf_Room_GetDataStore(Room);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionFromRoom end ppf_Room_GetDataStore"));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionFromRoom end ppf_Room_GetDataStore")));
 	UpdateSessionSettingsFromDataStore(Session.SessionSettings, RoomDataStore);
 #endif
 }
@@ -1522,17 +1647,17 @@ void FOnlineSessionPico::UpdateSessionSettingsFromDataStore(FOnlineSessionSettin
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME UpdateSessionSettingsFromDataStore %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME UpdateSessionSettingsFromDataStore %s"), *InitStateErrorMessage));
 		return;
 	}
 #if PLATFORM_ANDROID
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionSettingsFromDataStore begin"));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionSettingsFromDataStore begin")));
 	if (DataStore == nullptr)
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionSettingsFromDataStore DataStore is nullptr"));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionSettingsFromDataStore DataStore is nullptr")));
 	}
 	auto DataStoreSize = ppf_DataStore_GetNumKeys(DataStore);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionSettingsFromDataStore DataStoreSize: %zu"), DataStoreSize);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionSettingsFromDataStore DataStoreSize: %zu"), DataStoreSize));
 	SessionSettings.Settings.Empty(DataStoreSize);
 	for (size_t DataStoreIndex = 0; DataStoreIndex < DataStoreSize; DataStoreIndex++)
 	{
@@ -1552,12 +1677,12 @@ void FOnlineSessionPico::UpdateSessionSettingsFromDataStore(FOnlineSessionSettin
 				IntDataStoreValue,
 				EOnlineDataAdvertisementType::ViaOnlineService
 			);
-			UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionSettingsFromDataStore Key: %s, Value: %d"), *DataStoreKey.ToString(), IntDataStoreValue);
+			SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionSettingsFromDataStore Key: %s, Value: %d"), *DataStoreKey.ToString(), IntDataStoreValue));
 		}
 		else if (DataStoreKey == SETTING_PICO_BUILD_UNIQUE_ID)
 		{
 			SessionSettings.BuildUniqueId = FCString::Atoi(UTF8_TO_TCHAR(DataStoreValue));
-			UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionSettingsFromDataStore set SessionSettings.BuildUniqueId DataStoreValue: %d"), SessionSettings.BuildUniqueId);
+			SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionSettingsFromDataStore set SessionSettings.BuildUniqueId DataStoreValue: %d"), SessionSettings.BuildUniqueId));
 		}
 		else
 		{
@@ -1566,7 +1691,7 @@ void FOnlineSessionPico::UpdateSessionSettingsFromDataStore(FOnlineSessionSettin
 				SetValue,
 				EOnlineDataAdvertisementType::ViaOnlineService
 			);
-			UE_LOG_ONLINE(Display, TEXT("PPF_GAME UpdateSessionSettingsFromDataStore Key: %s, Value: %s"), *DataStoreKey.ToString(), *SetValue);
+			SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("UpdateSessionSettingsFromDataStore Key: %s, Value: %s"), *DataStoreKey.ToString(), *SetValue));
 		}
 	}
 #endif
@@ -1585,6 +1710,12 @@ void FOnlineSessionPico::TickPendingInvites(float DeltaTime)
 		}
 		InviteAcceptedSessions.Empty();
 	}
+	if (InviteAcceptedRoomID != 0 && IsInitSuccess())
+	{
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME TickPendingInvites InviteAcceptedRoomID: %llu"), InviteAcceptedRoomID));
+		OnRoomInviteAccepted(InviteAcceptedRoomID);
+		InviteAcceptedRoomID = 0;
+	}
 #endif
 }
 
@@ -1592,7 +1723,7 @@ int32 FOnlineSessionPico::GetRoomBuildUniqueId(const ppfRoomHandle Room)
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME GetRoomBuildUniqueId %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME GetRoomBuildUniqueId %s"), *InitStateErrorMessage));
 		return 0;
 	}
 #if PLATFORM_ANDROID
@@ -1615,9 +1746,9 @@ bool FOnlineSessionPico::Uninitialize()
 {
 #if PLATFORM_ANDROID
 	SetInitState(false);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME Uninitialize"));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("Uninitialize")));
 	auto Result = ppf_Game_UnInitialize();
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME Uninitialize Result: %d"), Result);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("Uninitialize Result: %d"), Result));
 	return Result;
 #endif
 	return false;
@@ -1625,31 +1756,33 @@ bool FOnlineSessionPico::Uninitialize()
 void FOnlineSessionPico::Initialize()
 {
 #if PLATFORM_ANDROID
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME Initialize"));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("Initialize")));
 	SetInitState(false);
-	PicoSubsystem.AddAsyncTask(
-		ppf_User_GetAccessToken(),
-		FPicoMessageOnCompleteDelegate::CreateRaw(this, &FOnlineSessionPico::OnGetAccessTokenComplete));
+	 PicoSubsystem.AddAsyncTask(
+	 	ppf_User_GetAccessToken(),
+	 	FPicoMessageOnCompleteDelegate::CreateRaw(this, &FOnlineSessionPico::OnGetAccessTokenComplete));
+	//PicoSubsystem.AddAsyncTask(
+	//	ppf_Game_InitializeAuto(),
+	//	FPicoMessageOnCompleteDelegate::CreateRaw(this, &FOnlineSessionPico::OnGameInitializeComplete));
 #endif
 }
 void FOnlineSessionPico::OnGetAccessTokenComplete(ppfMessageHandle Message, bool bIsError)
 {
 #if PLATFORM_ANDROID
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnGetAccessTokenComplete"));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnGetAccessTokenComplete")));
 	if (bIsError)
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
 		FString ErrorMessageStr = UTF8_TO_TCHAR(ppf_Error_GetMessage(Error));
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME OnGetAccessTokenComplete ErrorMessage: %s"), *ErrorMessageStr);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME OnGetAccessTokenComplete ErrorMessage: %s"), *ErrorMessageStr));
 		//Initialize();
 		return;
 	}
 
 	auto MessageType = ppf_Message_GetType(Message);
 	auto token = ppf_Message_GetString(Message);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnGetAccessTokenComplete token: %s"), *FString(token));
-
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnGetAccessTokenComplete token: %s"), *FString(token)));
 	PicoSubsystem.AddAsyncTask(
 		ppf_Game_InitializeWithToken(token),
 		FPicoMessageOnCompleteDelegate::CreateRaw(this, &FOnlineSessionPico::OnGameInitializeComplete));
@@ -1659,32 +1792,32 @@ void FOnlineSessionPico::OnGetAccessTokenComplete(ppfMessageHandle Message, bool
 void FOnlineSessionPico::OnGameInitializeComplete(ppfMessageHandle Message, bool bIsError)
 {
 #if PLATFORM_ANDROID
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnGameInitializeComplete"));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnGameInitializeComplete")));
 	if (bIsError)
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME OnGameInitializeComplete ErrorMessage: %s"), *FString(ErrorMessage));
-		Uninitialize();
-		Initialize();
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME OnGameInitializeComplete ErrorMessage: %s"), *FString(ErrorMessage)));
+		//Uninitialize();
+		//Initialize();
 		return;
 	}
 
 	auto MessageType = ppf_Message_GetType(Message);
-	if (MessageType == ppfMessageType::ppfMessage_PlatformGameInitializeAsynchronous)
+	if (MessageType == ppfMessageType::ppfMessageType_PlatformGameInitializeAsynchronous)
 	{
 		auto objHandle = ppf_Message_GetPlatformGameInitialize(Message);
 		auto obj = ppf_PlatformGameInitialize_GetResult(objHandle);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnGameInitializeComplete Result: %d"), obj);
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnGameInitializeComplete Result: %d"), obj));
 		if (obj == ppfPlatformGameInitialize_Success)
 		{
 			SetInitState(true);
 		}
-		else
-		{
-			Uninitialize();
-			Initialize();
-		}
+		//else
+		//{
+		//	Uninitialize();
+		//	Initialize();
+		//}
 	}
 #endif
 }
@@ -1708,11 +1841,11 @@ void FOnlineSessionPico::OnForcedCancelMatchmaking()
 void FOnlineSessionPico::OnForcedLeaveRoom(ppfID RoomID)
 {
 #if PLATFORM_ANDROID
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnForcedLeaveRoom Server leave RoomID: %d"), RoomID);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnForcedLeaveRoom Server leave RoomID: %d"), RoomID));
 	for (auto It = Sessions.CreateConstIterator(); It; ++It)
 	{
 		TSharedPtr<FNamedOnlineSession> Session = It.Value();
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnForcedLeaveRoom GetRoomIDOfSession(Session): %d"), GetRoomIDOfSession(*Session));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnForcedLeaveRoom GetRoomIDOfSession(Session): %d"), GetRoomIDOfSession(*Session)));
 		if (Session.IsValid() && (RoomID == 0 || GetRoomIDOfSession(*Session) == RoomID))
 		{
 			Session->SessionState = EOnlineSessionState::Destroying;
@@ -1722,7 +1855,7 @@ void FOnlineSessionPico::OnForcedLeaveRoom(ppfID RoomID)
 		}
 		else
 		{
-			UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME OnForcedLeaveRoom Invalid session during shutdown!"));
+			SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME OnForcedLeaveRoom Invalid session during shutdown!")));
 		}
 	}
 	Sessions.Empty();
@@ -1730,19 +1863,32 @@ void FOnlineSessionPico::OnForcedLeaveRoom(ppfID RoomID)
 }
 bool FOnlineSessionPico::OnUpdateRoomData(ppfRoomHandle Room, ppfID RoomId)
 {
+	SaveLog(ELogVerbosity::Type::Log, FString::Printf(TEXT("OnUpdateRoomData begin RoomId: %llu"), RoomId));
+	SaveLog(ELogVerbosity::Type::Log, FString::Printf(TEXT("OnUpdateRoomData begin")));
 	for (auto SessionKV : Sessions)
 	{
+		SaveLog(ELogVerbosity::Type::Log, FString::Printf(TEXT("OnUpdateRoomData each item begin")));
+		SaveLog(ELogVerbosity::Type::Log, FString::Printf(TEXT("OnUpdateRoomData SessionKV.Key: %s"), *SessionKV.Key.ToString()));
 		if (SessionKV.Value.IsValid())
 		{
 			auto Session = SessionKV.Value.Get();
-			auto SessionRoomId = GetRoomIDOfSession(*Session);
-			if (RoomId == SessionRoomId)
+			if (Session)
 			{
-				UpdateSessionFromRoom(*Session, Room);
-				return true;
+				auto SessionRoomId = GetRoomIDOfSession(*Session);
+				SaveLog(ELogVerbosity::Type::Log, FString::Printf(TEXT("OnUpdateRoomData SessionRoomId: %llu"), SessionRoomId));
+				if (RoomId == SessionRoomId)
+				{
+					UpdateSessionFromRoom(*Session, Room);
+					return true;
+				}
+			}
+			else
+			{
+				SaveLog(ELogVerbosity::Type::Log, FString::Printf(TEXT("OnUpdateRoomData session is null")));
 			}
 		}
 	}
+	SaveLog(ELogVerbosity::Type::Log, FString::Printf(TEXT("OnUpdateRoomData return false")));
 	return false;
 }
 bool FOnlineSessionPico::IsInMatchmakingProgress()
@@ -1755,7 +1901,7 @@ void FOnlineSessionPico::OnRoomNotificationUpdate(ppfMessageHandle Message, bool
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME OnRoomNotificationUpdate %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME OnRoomNotificationUpdate %s"), *InitStateErrorMessage));
 		RoomUpdateCallback.Broadcast(FString("IsInitSuccess is false"), false);
 		return;
 	}
@@ -1764,7 +1910,7 @@ void FOnlineSessionPico::OnRoomNotificationUpdate(ppfMessageHandle Message, bool
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME OnRoomNotificationUpdate Error on getting a room notification update"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME OnRoomNotificationUpdate Error on getting a room notification update")));
 		RoomUpdateCallback.Broadcast(FString(ErrorMessage), false);
 		return;
 	}
@@ -1773,37 +1919,106 @@ void FOnlineSessionPico::OnRoomNotificationUpdate(ppfMessageHandle Message, bool
 	bool Update = OnUpdateRoomData(Room, RoomId);
 	if (Update)
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationUpdate Update room success"));
+		SaveLog(ELogVerbosity::Type::Log, FString::Printf(TEXT("OnRoomNotificationUpdate Update room success")));
 		RoomUpdateCallback.Broadcast(FString::Printf(TEXT("%llu"), RoomId), true);
 	}
 	else
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME OnRoomNotificationUpdate Session was gone before the notif update came back"));
+		SaveLog(ELogVerbosity::Type::Log, FString::Printf(TEXT("OnRoomNotificationUpdate Update false")));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("OnRoomNotificationUpdate Session was gone before the notif update came back")));
 		RoomUpdateCallback.Broadcast(FString("cannot find session"), false);
 	}
 #endif
 }
 void FOnlineSessionPico::OnRoomInviteAccepted(ppfMessageHandle Message, bool bIsError)
 {
-	// 4.8.0
+#if PLATFORM_ANDROID
+	FOnlineSessionSearchResult SearchResult;
+	IOnlineIdentityPtr Identity = PicoSubsystem.GetIdentityInterface();
+	auto PlayerId = Identity->GetUniquePlayerId(0);
+	if (bIsError)
+	{
+		auto Error = ppf_Message_GetError(Message);
+		auto ErrorMessage = ppf_Error_GetMessage(Error);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME OnRoomInviteAccepted ErrorMessage: %s"), *FString(ErrorMessage)));
+		TriggerOnSessionUserInviteAcceptedDelegates(false, 0, PlayerId, SearchResult);
+		return;
+	}
+	
+	FString RoomIdString = UTF8_TO_TCHAR(ppf_Message_GetString(Message));
+	ppfID RoomId = FCString::Strtoui64(*RoomIdString, NULL, 10);
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomInviteAccepted RoomId: %llu"), RoomId));
+
+	if (!IsInitSuccess())
+	{
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME OnRoomInviteAccepted %s"), *InitStateErrorMessage));
+		InviteAcceptedRoomID = RoomId;
+		TriggerOnSessionUserInviteAcceptedDelegates(false, 0, PlayerId, SearchResult);
+		return;
+	}
+	OnRoomInviteAccepted(RoomId);
+#endif
+}
+void FOnlineSessionPico::OnRoomInviteAccepted(ppfID RoomId)
+{
+#if PLATFORM_ANDROID
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomInviteAccepted RoomId: %llu"), RoomId));
+	IOnlineIdentityPtr Identity = PicoSubsystem.GetIdentityInterface();
+	if (!Identity.IsValid())
+	{
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME OnRoomInviteAccepted pico identity is invalid")));
+		return;
+	}
+	auto PlayerId = Identity->GetUniquePlayerId(0);
+	PicoSubsystem.AddAsyncTask(
+		ppf_Room_Get(RoomId),
+		FPicoMessageOnCompleteDelegate::CreateLambda([this, PlayerId](ppfMessageHandle InMessage, bool bInIsError)
+			{
+				FOnlineSessionSearchResult LocalSearchResult;
+
+				if (bInIsError)
+				{
+					SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME Could not get room details")));
+					TriggerOnSessionUserInviteAcceptedDelegates(false, 0, PlayerId, LocalSearchResult);
+					return;
+				}
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomInviteAccepted no error")));
+
+				auto Room = ppf_Message_GetRoom(InMessage);
+				auto Session = CreateSessionFromRoom(Room);
+
+				// check if there's a delegate bound, if not save this session for later.
+				if (!OnSessionUserInviteAcceptedDelegates.IsBound())
+				{
+					// No delegates are bound, just save this for later
+					TSharedRef<FOnlineSessionSearchResult> SearchResultPtr = MakeShareable(new FOnlineSessionSearchResult());
+					SearchResultPtr->Session = Session.Get();
+					PendingInviteAcceptedSessions.Add(SearchResultPtr);
+					return;
+				}
+
+				LocalSearchResult.Session = Session.Get();
+				TriggerOnSessionUserInviteAcceptedDelegates(true, 0, PlayerId, LocalSearchResult);
+			}));
+#endif
 }
 void FOnlineSessionPico::OnMatchmakingNotificationMatchFound(ppfMessageHandle Message, bool bIsError)
 {
 	if (!IsInitSuccess())
 	{
-		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME OnMatchmakingNotificationMatchFound %s"), *InitStateErrorMessage);
+		SaveLog(ELogVerbosity::Type::Error, FString::Printf(TEXT("PPF_GAME OnMatchmakingNotificationMatchFound %s"), *InitStateErrorMessage));
 		return;
 	}
 #if PLATFORM_ANDROID
 	if (!InProgressMatchmakingSearch.IsValid())
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME OnMatchmakingNotificationMatchFound No matchmaking searches in progress"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME OnMatchmakingNotificationMatchFound No matchmaking searches in progress")));
 		return;
 	}
 
 	if (bIsError)
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnMatchmakingNotificationMatchFound error"));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnMatchmakingNotificationMatchFound error")));
 		InProgressMatchmakingSearch->SearchState = EOnlineAsyncTaskState::Failed;
 		InProgressMatchmakingSearch = nullptr;
 		TriggerOnMatchmakingCompleteDelegates(InProgressMatchmakingSearchName, false);
@@ -1811,7 +2026,7 @@ void FOnlineSessionPico::OnMatchmakingNotificationMatchFound(ppfMessageHandle Me
 	}
 	else
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnMatchmakingNotificationMatchFound no error"));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnMatchmakingNotificationMatchFound no error")));
 	}
 
 	auto Room = ppf_Message_GetRoom(Message);
@@ -1834,12 +2049,12 @@ void FOnlineSessionPico::OnNetNotificationConnection(ppfMessageHandle Message, b
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnNetNotificationConnection error ErrorMessage: %s"), *FString(ErrorMessage));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnNetNotificationConnection error ErrorMessage: %s"), *FString(ErrorMessage)));
 		GameConnectionCallback.Broadcast(-1, false);
 		return;
 	}
 	auto ConnectionResult = ppf_Message_GetGameConnectionEvent(Message);
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnNetNotificationConnection ConnectionResult: %s"), *FString(ConnectionResultNames[ConnectionResult]));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnNetNotificationConnection ConnectionResult: %s"), *FString(ConnectionResultNames[ConnectionResult])));
 	if (ConnectionResult == ppfPlatformGameConnectionEvent_Resumed)
 	{
 		SetInitState(true);
@@ -1878,12 +2093,12 @@ void FOnlineSessionPico::OnNetNotificationConnection(ppfMessageHandle Message, b
 			EAppReturnType::Type ReturnType = FMessageDialog::Open(EAppMsgType::OkCancel, FText::FromString(TEXT("You are kicked off the game. Click OK to reinitialize. Or you can set the GameConnectionCallback to customize the handling of this message. ")));
 			if (ReturnType == EAppReturnType::Type::Ok)
 			{
-				UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnNetNotificationConnection click ok button."));
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnNetNotificationConnection click ok button.")));
 				Initialize();
 			}
 			else
 			{
-				UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnNetNotificationConnection click cancel button."));
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnNetNotificationConnection click cancel button.")));
 			}
 		}
 	}
@@ -1911,14 +2126,14 @@ void FOnlineSessionPico::OnNetNotificationRequestFailed(ppfMessageHandle Message
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnNetNotificationRequestFailed error ErrorMessage: %s"), *FString(ErrorMessage));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnNetNotificationRequestFailed error ErrorMessage: %s"), *FString(ErrorMessage)));
 		GameRequestFailedCallback.Broadcast(-1, false);
 		return;
 	}
 	else
 	{
 		auto FailedReason = ppf_Message_GetGameRequestFailedReason(Message);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnNetNotificationRequestFailed FailedReason: %d"), FailedReason);
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnNetNotificationRequestFailed FailedReason: %d"), FailedReason));
 		GameRequestFailedCallback.Broadcast((int)FailedReason, true);
 	}
 #endif
@@ -1930,11 +2145,11 @@ void FOnlineSessionPico::OnNetNotificationGameStateReset(ppfMessageHandle Messag
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnNetNotificationGameStateReset error ErrorMessage: %s"), *FString(ErrorMessage));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnNetNotificationGameStateReset error ErrorMessage: %s"), *FString(ErrorMessage)));
 		GameStateResetCallback.Broadcast(false);
 		return;
 	}
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnNetNotificationGameStateReset no error"));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnNetNotificationGameStateReset no error")));
 	if (InProgressMatchmakingSearch.IsValid() && InProgressMatchmakingSearch->SearchState == EOnlineAsyncTaskState::InProgress)
 	{ // in matchmaking
 		OnForcedCancelMatchmaking();
@@ -1953,13 +2168,13 @@ void FOnlineSessionPico::OnMatchmakingNotificationCancel2(ppfMessageHandle Messa
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnMatchmakingNotificationCancel2 error ErrorMessage: %s"), *FString(ErrorMessage));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnMatchmakingNotificationCancel2 error ErrorMessage: %s"), *FString(ErrorMessage)));
 		MatchmakingCancel2Callback.Broadcast(false);
 		return;
 	}
 	else
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnMatchmakingNotificationCancel2 no error"));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnMatchmakingNotificationCancel2 no error")));
 		if (InProgressMatchmakingSearch.IsValid() && InProgressMatchmakingSearch->SearchState == EOnlineAsyncTaskState::InProgress)
 		{ // in matchmaking
 			OnForcedCancelMatchmaking();
@@ -1975,11 +2190,11 @@ void FOnlineSessionPico::OnRoomNotificationLeave(ppfMessageHandle Message, bool 
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationLeave error ErrorMessage: %s"), *FString(ErrorMessage));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationLeave error ErrorMessage: %s"), *FString(ErrorMessage)));
 		RoomLeaveCallback.Broadcast(FString(ErrorMessage), false);
 		return;
 	}
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationLeave no error."));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationLeave no error.")));
 	auto RoomHandle = ppf_Message_GetRoom(Message);
 	auto RoomId = ppf_Room_GetID(RoomHandle);
 	LogRoomData(RoomHandle);
@@ -1994,7 +2209,7 @@ void FOnlineSessionPico::OnRoomNotificationJoin2(ppfMessageHandle Message, bool 
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationJoin2 error. ErrorMessage: %s"), *FString(ErrorMessage));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationJoin2 error. ErrorMessage: %s"), *FString(ErrorMessage)));
 		RoomJoin2Callback.Broadcast(FString(ErrorMessage), false);
 		return;
 	}
@@ -2003,12 +2218,12 @@ void FOnlineSessionPico::OnRoomNotificationJoin2(ppfMessageHandle Message, bool 
 	bool Update = OnUpdateRoomData(Room, RoomId);
 	if (Update)
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationJoin2 Update room success"));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationJoin2 Update room success")));
 		RoomJoin2Callback.Broadcast(FString::Printf(TEXT("%llu"), RoomId), true);
 	}
 	else
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME OnRoomNotificationJoin2 Session was gone before the notif update came back"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME OnRoomNotificationJoin2 Session was gone before the notif update came back")));
 		RoomJoin2Callback.Broadcast(FString("cannot find session"), false);
 	}
 #endif
@@ -2020,7 +2235,7 @@ void FOnlineSessionPico::OnRoomNotificationSetDescription(ppfMessageHandle Messa
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationSetDescription error. ErrorMessage: %s"), *FString(ErrorMessage));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationSetDescription error. ErrorMessage: %s"), *FString(ErrorMessage)));
 		RoomSetDescriptionCallback.Broadcast(FString(ErrorMessage), false);
 		return;
 	}
@@ -2029,12 +2244,12 @@ void FOnlineSessionPico::OnRoomNotificationSetDescription(ppfMessageHandle Messa
 	bool Update = OnUpdateRoomData(Room, RoomId);
 	if (Update)
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationSetDescription Update room success"));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationSetDescription Update room success")));
 		RoomSetDescriptionCallback.Broadcast(FString::Printf(TEXT("%llu"), RoomId), true);
 	}
 	else
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME OnRoomNotificationSetDescription Session was gone before the notif update came back"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME OnRoomNotificationSetDescription Session was gone before the notif update came back")));
 		RoomSetDescriptionCallback.Broadcast(FString("cannot find session"), false);
 	}
 #endif
@@ -2046,12 +2261,12 @@ void FOnlineSessionPico::OnRoomNotificationKickUser(ppfMessageHandle Message, bo
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationKickUser error. ErrorMessage: %s"), *FString(ErrorMessage));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationKickUser error. ErrorMessage: %s"), *FString(ErrorMessage)));
 		RoomKickUserCallback.Broadcast(FString(ErrorMessage), false);
 		return;
 	}
 	// todo check
-	UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationKickUser no error."));
+	SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationKickUser no error.")));
 	auto RoomHandle = ppf_Message_GetRoom(Message);
 	auto RoomId = ppf_Room_GetID(RoomHandle);
 	LogRoomData(RoomHandle);
@@ -2066,14 +2281,14 @@ void FOnlineSessionPico::OnRoomNotificationUpdateOwner(ppfMessageHandle Message,
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationUpdateOwner error. ErrorMessage: %s"), *FString(ErrorMessage));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationUpdateOwner error. ErrorMessage: %s"), *FString(ErrorMessage)));
 		RoomUpdateOwnerCallback.Broadcast(false);
 		return;
 	}
 	else
 	{
 		// todo
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationUpdateOwner no error"));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationUpdateOwner no error")));
 		RoomUpdateOwnerCallback.Broadcast(true);
 	}
 #endif
@@ -2085,7 +2300,7 @@ void FOnlineSessionPico::OnRoomNotificationUpdateDataStore(ppfMessageHandle Mess
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationUpdateDataStore error. ErrorMessage: %s"), *FString(ErrorMessage));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationUpdateDataStore error. ErrorMessage: %s"), *FString(ErrorMessage)));
 		RoomUpdateDataStoreCallback.Broadcast(FString(ErrorMessage), false);
 		return;
 	}
@@ -2094,12 +2309,12 @@ void FOnlineSessionPico::OnRoomNotificationUpdateDataStore(ppfMessageHandle Mess
 	bool Update = OnUpdateRoomData(Room, RoomId);
 	if (Update)
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationUpdateDataStore Update room success"));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationUpdateDataStore Update room success")));
 		RoomUpdateDataStoreCallback.Broadcast(FString::Printf(TEXT("%llu"), RoomId), true);
 	}
 	else
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME OnRoomNotificationUpdateDataStore Session was gone before the notif update came back"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME OnRoomNotificationUpdateDataStore Session was gone before the notif update came back")));
 		RoomUpdateDataStoreCallback.Broadcast(FString("cannot find session"), false);
 	}
 #endif	
@@ -2111,7 +2326,7 @@ void FOnlineSessionPico::OnRoomNotificationUpdateMembershipLockStatus(ppfMessage
 	{
 		auto Error = ppf_Message_GetError(Message);
 		auto ErrorMessage = ppf_Error_GetMessage(Error);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationUpdateMembershipLockStatus error. ErrorMessage: %s"), *FString(ErrorMessage));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationUpdateMembershipLockStatus error. ErrorMessage: %s"), *FString(ErrorMessage)));
 		RoomUpdateMembershipLockStatusCallback.Broadcast(FString(ErrorMessage), false);
 		return;
 	}
@@ -2120,12 +2335,12 @@ void FOnlineSessionPico::OnRoomNotificationUpdateMembershipLockStatus(ppfMessage
 	bool Update = OnUpdateRoomData(Room, RoomId);
 	if (Update)
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME OnRoomNotificationUpdateMembershipLockStatus Update room success"));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("OnRoomNotificationUpdateMembershipLockStatus Update room success")));
 		RoomUpdateMembershipLockStatusCallback.Broadcast(FString::Printf(TEXT("%llu"), RoomId), true);
 	}
 	else
 	{
-		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME OnRoomNotificationUpdateMembershipLockStatus Session was gone before the notif update came back"));
+		SaveLog(ELogVerbosity::Type::Warning, FString::Printf(TEXT("PPF_GAME OnRoomNotificationUpdateMembershipLockStatus Session was gone before the notif update came back")));
 		RoomUpdateMembershipLockStatusCallback.Broadcast(FString("cannot find session"), false);
 	}
 #endif	
@@ -2136,21 +2351,21 @@ void FOnlineSessionPico::TestDumpNamedSession(const FNamedOnlineSession* NamedSe
 	if (NamedSession != NULL)
 	{
 		//LOG_SCOPE_VERBOSITY_OVERRIDE(LogOnlineSession, ELogVerbosity::VeryVerbose);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME dumping NamedSession: "));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME 	SessionName: %s"), *NamedSession->SessionName.ToString());
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME 	HostingPlayerNum: %d"), NamedSession->HostingPlayerNum);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME 	SessionState: %s"), EOnlineSessionState::ToString(NamedSession->SessionState));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME 	RegisteredPlayers: "));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("dumping NamedSession: ")));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("	SessionName: %s"), *NamedSession->SessionName.ToString()));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("	HostingPlayerNum: %d"), NamedSession->HostingPlayerNum));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("	SessionState: %s"), EOnlineSessionState::ToString(NamedSession->SessionState)));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("	RegisteredPlayers: ")));
 		if (NamedSession->RegisteredPlayers.Num())
 		{
 			for (int32 UserIdx = 0; UserIdx < NamedSession->RegisteredPlayers.Num(); UserIdx++)
 			{
-				UE_LOG_ONLINE(Display, TEXT("PPF_GAME 	    %d: %s"), UserIdx, *NamedSession->RegisteredPlayers[UserIdx]->ToString());
+				SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("	    %d: %s"), UserIdx, *NamedSession->RegisteredPlayers[UserIdx]->ToString()));
 			}
 		}
 		else
 		{
-			UE_LOG_ONLINE(Display, TEXT("PPF_GAME 	    0 registered players"));
+			SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("	    0 registered players")));
 		}
 
 		TestDumpSession(NamedSession);
@@ -2160,44 +2375,62 @@ void FOnlineSessionPico::TestDumpSession(const FOnlineSession* Session) const
 {
 	if (Session != NULL)
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME dumping Session: "));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME 	OwningPlayerName: %s"), *Session->OwningUserName);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME 	OwningPlayerId: %s"), Session->OwningUserId.IsValid() ? *Session->OwningUserId->ToString() : TEXT(""));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME 	NumOpenPrivateConnections: %d"), Session->NumOpenPrivateConnections);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME 	NumOpenPublicConnections: %d"), Session->NumOpenPublicConnections);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME 	SessionInfo: %s"), Session->SessionInfo.IsValid() ? *Session->SessionInfo->ToDebugString() : TEXT("NULL"));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("dumping Session: ")));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("	OwningPlayerName: %s"), *Session->OwningUserName));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("	OwningPlayerId: %s"), Session->OwningUserId.IsValid() ? *Session->OwningUserId->ToString() : TEXT("")));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("	NumOpenPrivateConnections: %d"), Session->NumOpenPrivateConnections));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("	NumOpenPublicConnections: %d"), Session->NumOpenPublicConnections));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("	SessionInfo: %s"), Session->SessionInfo.IsValid() ? *Session->SessionInfo->ToDebugString() : TEXT("NULL")));
 		TestDumpSessionSettings(&Session->SessionSettings);
 	}
 	else
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME dumping Session is null"));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("dumping Session is null")));
 	}
 }
 void FOnlineSessionPico::TestDumpSessionSettings(const FOnlineSessionSettings* SessionSettings) const
 {
 	if (SessionSettings != NULL)
 	{
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME dumping SessionSettings: "));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME \tNumPublicConnections: %d"), SessionSettings->NumPublicConnections);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME \tNumPrivateConnections: %d"), SessionSettings->NumPrivateConnections);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME \tbIsLanMatch: %s"), SessionSettings->bIsLANMatch ? TEXT("true") : TEXT("false"));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME \tbIsDedicated: %s"), SessionSettings->bIsDedicated ? TEXT("true") : TEXT("false"));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME \tbUsesStats: %s"), SessionSettings->bUsesStats ? TEXT("true") : TEXT("false"));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME \tbShouldAdvertise: %s"), SessionSettings->bShouldAdvertise ? TEXT("true") : TEXT("false"));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME \tbAllowJoinInProgress: %s"), SessionSettings->bAllowJoinInProgress ? TEXT("true") : TEXT("false"));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME \tbAllowInvites: %s"), SessionSettings->bAllowInvites ? TEXT("true") : TEXT("false"));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME \tbUsesPresence: %s"), SessionSettings->bUsesPresence ? TEXT("true") : TEXT("false"));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME \tbAllowJoinViaPresence: %s"), SessionSettings->bAllowJoinViaPresence ? TEXT("true") : TEXT("false"));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME \tbAllowJoinViaPresenceFriendsOnly: %s"), SessionSettings->bAllowJoinViaPresenceFriendsOnly ? TEXT("true") : TEXT("false"));
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME \tBuildUniqueId: 0x%08x"), SessionSettings->BuildUniqueId);
-		UE_LOG_ONLINE(Display, TEXT("PPF_GAME \tSettings:"));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("dumping SessionSettings: ")));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("\tNumPublicConnections: %d"), SessionSettings->NumPublicConnections));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("\tNumPrivateConnections: %d"), SessionSettings->NumPrivateConnections));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("\tbIsLanMatch: %s"), SessionSettings->bIsLANMatch ? TEXT("true") : TEXT("false")));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("\tbIsDedicated: %s"), SessionSettings->bIsDedicated ? TEXT("true") : TEXT("false")));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("\tbUsesStats: %s"), SessionSettings->bUsesStats ? TEXT("true") : TEXT("false")));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("\tbShouldAdvertise: %s"), SessionSettings->bShouldAdvertise ? TEXT("true") : TEXT("false")));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("\tbAllowJoinInProgress: %s"), SessionSettings->bAllowJoinInProgress ? TEXT("true") : TEXT("false")));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("\tbAllowInvites: %s"), SessionSettings->bAllowInvites ? TEXT("true") : TEXT("false")));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("\tbUsesPresence: %s"), SessionSettings->bUsesPresence ? TEXT("true") : TEXT("false")));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("\tbAllowJoinViaPresence: %s"), SessionSettings->bAllowJoinViaPresence ? TEXT("true") : TEXT("false")));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("\tbAllowJoinViaPresenceFriendsOnly: %s"), SessionSettings->bAllowJoinViaPresenceFriendsOnly ? TEXT("true") : TEXT("false")));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("\tBuildUniqueId: 0x%08x"), SessionSettings->BuildUniqueId));
+		SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("\tSettings:")));
 		for (FSessionSettings::TConstIterator It(SessionSettings->Settings); It; ++It)
 		{
 			FName Key = It.Key();
 			const FOnlineSessionSetting& Setting = It.Value();
-			UE_LOG_ONLINE(Display, TEXT("PPF_GAME \t\t%s=%s"), *Key.ToString(), *Setting.ToString());
+			SaveLog(ELogVerbosity::Type::Display, FString::Printf(TEXT("PPF_GAME \t\t%s=%s"), *Key.ToString(), *Setting.ToString()));
 		}
 	}
+}
+void FOnlineSessionPico::SaveLog(const ELogVerbosity::Type Verbosity, const FString& Log)
+{
+	switch (Verbosity)
+	{
+	case ELogVerbosity::Type::Error:
+		UE_LOG_ONLINE_SESSION(Error, TEXT("PPF_GAME %s"), *Log);
+		break;
+	case ELogVerbosity::Type::Warning:
+		UE_LOG_ONLINE_SESSION(Warning, TEXT("PPF_GAME %s"), *Log);
+		break;
+	default:
+		UE_LOG_ONLINE_SESSION(Log, TEXT("PPF_GAME %s"), *Log);
+		break;
+	}
+	//FString WriteLog = FString::Printf(TEXT("%s\n"), *Log);
+	//FString TextPath = FPaths::ProjectPersistentDownloadDir() + TEXT("Log-Session.txt");
+	//FFileHelper::SaveStringToFile(*WriteLog, *TextPath, FFileHelper::EEncodingOptions::AutoDetect, &IFileManager::Get(), FILEWRITE_Append);
 }
 
 

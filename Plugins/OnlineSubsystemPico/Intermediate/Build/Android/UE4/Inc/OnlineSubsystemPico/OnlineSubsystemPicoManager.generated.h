@@ -8,9 +8,14 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPico_AssetFileDeleteForSafety;
+class UPico_AssetFileDownloadUpdate;
 enum class EOnJoinSessionCompleteResultPicoType : uint8;
 struct FPicoOnlineSessionSearchResult;
 enum class ERtcStreamIndex : uint8;
+enum class ERtcSyncInfoStreamType : uint8;
+enum class ERtcMediaStreamType : uint8;
+enum class ERtcStreamRemoveReason : uint8;
 enum class ERtcMediaDeviceType : uint8;
 enum class ERtcMediaDeviceState : uint8;
 enum class ERtcMediaDeviceError : uint8;
@@ -23,49 +28,46 @@ enum class ERtcJoinRoomType : uint8;
 #endif
 #define ONLINESUBSYSTEMPICO_OnlineSubsystemPicoManager_generated_h
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_186_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FPicoOnlineSessionSearch_Statics; \
-	ONLINESUBSYSTEMPICO_API static class UScriptStruct* StaticStruct();
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_128_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventAssetFileDeleteForSafetyDelegate_Parms \
+{ \
+	UPico_AssetFileDeleteForSafety* AssetFileDeleteForSafetyObj; \
+}; \
+static inline void FAssetFileDeleteForSafetyDelegate_DelegateWrapper(const FMulticastScriptDelegate& AssetFileDeleteForSafetyDelegate, UPico_AssetFileDeleteForSafety* AssetFileDeleteForSafetyObj) \
+{ \
+	_Script_OnlineSubsystemPico_eventAssetFileDeleteForSafetyDelegate_Parms Parms; \
+	Parms.AssetFileDeleteForSafetyObj=AssetFileDeleteForSafetyObj; \
+	AssetFileDeleteForSafetyDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
 
 
-template<> ONLINESUBSYSTEMPICO_API UScriptStruct* StaticStruct<struct FPicoOnlineSessionSearch>();
-
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_175_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FPicoOnlineSessionSearchResult_Statics; \
-	ONLINESUBSYSTEMPICO_API static class UScriptStruct* StaticStruct();
-
-
-template<> ONLINESUBSYSTEMPICO_API UScriptStruct* StaticStruct<struct FPicoOnlineSessionSearchResult>();
-
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_134_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FPicoNamedOnlineSession_Statics; \
-	ONLINESUBSYSTEMPICO_API static class UScriptStruct* StaticStruct();
-
-
-template<> ONLINESUBSYSTEMPICO_API UScriptStruct* StaticStruct<struct FPicoNamedOnlineSession>();
-
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_111_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FPicoOnlineSession_Statics; \
-	ONLINESUBSYSTEMPICO_API static class UScriptStruct* StaticStruct();
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_127_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventAssetFileDownloadUpdateDelegate_Parms \
+{ \
+	UPico_AssetFileDownloadUpdate* AssetFileDownloadUpdateObj; \
+}; \
+static inline void FAssetFileDownloadUpdateDelegate_DelegateWrapper(const FMulticastScriptDelegate& AssetFileDownloadUpdateDelegate, UPico_AssetFileDownloadUpdate* AssetFileDownloadUpdateObj) \
+{ \
+	_Script_OnlineSubsystemPico_eventAssetFileDownloadUpdateDelegate_Parms Parms; \
+	Parms.AssetFileDownloadUpdateObj=AssetFileDownloadUpdateObj; \
+	AssetFileDownloadUpdateDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
 
 
-template<> ONLINESUBSYSTEMPICO_API UScriptStruct* StaticStruct<struct FPicoOnlineSession>();
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_124_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventPicoManagerOnReadLeaderboardsCompleteDelegate_Parms \
+{ \
+	bool bWasSuccessful; \
+}; \
+static inline void FPicoManagerOnReadLeaderboardsCompleteDelegate_DelegateWrapper(const FScriptDelegate& PicoManagerOnReadLeaderboardsCompleteDelegate, bool bWasSuccessful) \
+{ \
+	_Script_OnlineSubsystemPico_eventPicoManagerOnReadLeaderboardsCompleteDelegate_Parms Parms; \
+	Parms.bWasSuccessful=bWasSuccessful ? true : false; \
+	PicoManagerOnReadLeaderboardsCompleteDelegate.ProcessDelegate<UObject>(&Parms); \
+}
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_75_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FPicoOnlineSessionSettings_Statics; \
-	ONLINESUBSYSTEMPICO_API static class UScriptStruct* StaticStruct();
 
-
-template<> ONLINESUBSYSTEMPICO_API UScriptStruct* StaticStruct<struct FPicoOnlineSessionSettings>();
-
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_60_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FPicoFriend_Statics; \
-	ONLINESUBSYSTEMPICO_API static class UScriptStruct* StaticStruct();
-
-
-template<> ONLINESUBSYSTEMPICO_API UScriptStruct* StaticStruct<struct FPicoFriend>();
-
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_272_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_121_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnRoomInviteAcceptedNotifyDelegate_Parms \
 { \
 	FString RoomID; \
@@ -80,7 +82,7 @@ static inline void FOnRoomInviteAcceptedNotifyDelegate_DelegateWrapper(const FMu
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_271_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_120_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnRoomUpdateNotifyDelegate_Parms \
 { \
 	FString RoomID; \
@@ -95,7 +97,7 @@ static inline void FOnRoomUpdateNotifyDelegate_DelegateWrapper(const FMulticastS
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_270_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_119_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnRoomUpdateMembershipLockStatusNotifyDelegate_Parms \
 { \
 	FString RoomID; \
@@ -110,7 +112,7 @@ static inline void FOnRoomUpdateMembershipLockStatusNotifyDelegate_DelegateWrapp
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_269_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_118_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnRoomUpdateDataStoreNotifyDelegate_Parms \
 { \
 	FString RoomID; \
@@ -125,7 +127,7 @@ static inline void FOnRoomUpdateDataStoreNotifyDelegate_DelegateWrapper(const FM
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_268_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_117_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnRoomUpdateOwnerNotifyDelegate_Parms \
 { \
 	bool bWasSuccessful; \
@@ -138,7 +140,7 @@ static inline void FOnRoomUpdateOwnerNotifyDelegate_DelegateWrapper(const FMulti
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_267_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_116_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnRoomKickUserNotifyDelegate_Parms \
 { \
 	FString RoomID; \
@@ -153,7 +155,7 @@ static inline void FOnRoomKickUserNotifyDelegate_DelegateWrapper(const FMulticas
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_266_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_115_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnRoomSetDescriptionNotifyDelegate_Parms \
 { \
 	FString RoomID; \
@@ -168,7 +170,7 @@ static inline void FOnRoomSetDescriptionNotifyDelegate_DelegateWrapper(const FMu
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_265_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_114_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnRoomJoin2NotifyDelegate_Parms \
 { \
 	FString RoomID; \
@@ -183,7 +185,7 @@ static inline void FOnRoomJoin2NotifyDelegate_DelegateWrapper(const FMulticastSc
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_264_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_113_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnRoomLeaveNotifyDelegate_Parms \
 { \
 	FString RoomID; \
@@ -198,7 +200,7 @@ static inline void FOnRoomLeaveNotifyDelegate_DelegateWrapper(const FMulticastSc
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_263_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_112_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnMatchmakingCancel2NotifyDelegate_Parms \
 { \
 	bool bWasSuccessful; \
@@ -211,7 +213,7 @@ static inline void FOnMatchmakingCancel2NotifyDelegate_DelegateWrapper(const FMu
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_262_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_111_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnGameStateResetNotifyDelegate_Parms \
 { \
 	bool bWasSuccessful; \
@@ -224,7 +226,7 @@ static inline void FOnGameStateResetNotifyDelegate_DelegateWrapper(const FMultic
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_261_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_110_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnGameRequestFailedNotifyDelegate_Parms \
 { \
 	int32 Result; \
@@ -239,7 +241,7 @@ static inline void FOnGameRequestFailedNotifyDelegate_DelegateWrapper(const FMul
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_260_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_109_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnGameConnectionNotifyDelegate_Parms \
 { \
 	int32 Result; \
@@ -254,7 +256,7 @@ static inline void FOnGameConnectionNotifyDelegate_DelegateWrapper(const FMultic
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_258_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_107_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventPicoManagerOnJoinSessionCompleteDelegate_Parms \
 { \
 	FName SessionName; \
@@ -269,7 +271,7 @@ static inline void FPicoManagerOnJoinSessionCompleteDelegate_DelegateWrapper(con
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_257_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_106_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventPicoManagerOnSingleSessionResultCompleteDelegate_Parms \
 { \
 	int32 LocalUserNum; \
@@ -286,7 +288,7 @@ static inline void FPicoManagerOnSingleSessionResultCompleteDelegate_DelegateWra
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_256_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_105_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventPicoManagerOnFindSessionCompleteDelegate_Parms \
 { \
 	bool bWasSuccessful; \
@@ -299,7 +301,7 @@ static inline void FPicoManagerOnFindSessionCompleteDelegate_DelegateWrapper(con
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_253_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_102_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventPicoManagerOnMatchmakingCompleteDelegate_Parms \
 { \
 	FName SessionName; \
@@ -314,7 +316,7 @@ static inline void FPicoManagerOnMatchmakingCompleteDelegate_DelegateWrapper(con
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_252_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_101_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventPicoManagerOnCancelMatchmakingCompleteDelegate_Parms \
 { \
 	FName SessionName; \
@@ -329,7 +331,7 @@ static inline void FPicoManagerOnCancelMatchmakingCompleteDelegate_DelegateWrapp
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_251_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_100_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventPicoManagerOnDestroySessionCompleteDelegate_Parms \
 { \
 	FName SessionName; \
@@ -344,7 +346,7 @@ static inline void FPicoManagerOnDestroySessionCompleteDelegate_DelegateWrapper(
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_250_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_99_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventPicoManagerOnEndSessionCompleteDelegate_Parms \
 { \
 	FName SessionName; \
@@ -359,7 +361,7 @@ static inline void FPicoManagerOnEndSessionCompleteDelegate_DelegateWrapper(cons
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_249_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_98_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventPicoManagerOnUpdateSessionCompleteDelegate_Parms \
 { \
 	FName SessionName; \
@@ -374,7 +376,7 @@ static inline void FPicoManagerOnUpdateSessionCompleteDelegate_DelegateWrapper(c
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_248_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_97_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventPicoManagerOnStartSessionCompleteDelegate_Parms \
 { \
 	FName SessionName; \
@@ -389,7 +391,7 @@ static inline void FPicoManagerOnStartSessionCompleteDelegate_DelegateWrapper(co
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_247_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_96_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventPicoManagerOnCreateSessionCompleteDelegate_Parms \
 { \
 	FName SessionName; \
@@ -404,7 +406,287 @@ static inline void FPicoManagerOnCreateSessionCompleteDelegate_DelegateWrapper(c
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_244_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_92_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventApplicationLifecycleStringResultDelegate_Parms \
+{ \
+	FString MessageString; \
+}; \
+static inline void FApplicationLifecycleStringResultDelegate_DelegateWrapper(const FMulticastScriptDelegate& ApplicationLifecycleStringResultDelegate, const FString& MessageString) \
+{ \
+	_Script_OnlineSubsystemPico_eventApplicationLifecycleStringResultDelegate_Parms Parms; \
+	Parms.MessageString=MessageString; \
+	ApplicationLifecycleStringResultDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_89_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerApplicationLifecycleReadDetailsDelegate_Parms \
+{ \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerApplicationLifecycleReadDetailsDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerApplicationLifecycleReadDetailsDelegate, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerApplicationLifecycleReadDetailsDelegate_Parms Parms; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerApplicationLifecycleReadDetailsDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_86_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerGetVersionDelegate_Parms \
+{ \
+	FString StringMessage; \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerGetVersionDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerGetVersionDelegate, const FString& StringMessage, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerGetVersionDelegate_Parms Parms; \
+	Parms.StringMessage=StringMessage; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerGetVersionDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_85_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerLaunchOtherAppByPresenceDelegate_Parms \
+{ \
+	FString StringMessage; \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerLaunchOtherAppByPresenceDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerLaunchOtherAppByPresenceDelegate, const FString& StringMessage, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerLaunchOtherAppByPresenceDelegate_Parms Parms; \
+	Parms.StringMessage=StringMessage; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerLaunchOtherAppByPresenceDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_84_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerLaunchOtherAppDelegate_Parms \
+{ \
+	FString StringMessage; \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerLaunchOtherAppDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerLaunchOtherAppDelegate, const FString& StringMessage, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerLaunchOtherAppDelegate_Parms Parms; \
+	Parms.StringMessage=StringMessage; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerLaunchOtherAppDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_81_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventPresenceLeaveIntentReceivedDelegate_Parms \
+{ \
+	FString DestinationApiName; \
+	FString LobbySessionId; \
+	FString MatchSessionId; \
+}; \
+static inline void FPresenceLeaveIntentReceivedDelegate_DelegateWrapper(const FMulticastScriptDelegate& PresenceLeaveIntentReceivedDelegate, const FString& DestinationApiName, const FString& LobbySessionId, const FString& MatchSessionId) \
+{ \
+	_Script_OnlineSubsystemPico_eventPresenceLeaveIntentReceivedDelegate_Parms Parms; \
+	Parms.DestinationApiName=DestinationApiName; \
+	Parms.LobbySessionId=LobbySessionId; \
+	Parms.MatchSessionId=MatchSessionId; \
+	PresenceLeaveIntentReceivedDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_80_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventPresenceJoinIntentReceivedDelegate_Parms \
+{ \
+	FString DeeplinkMessage; \
+	FString DestinationApiName; \
+	FString LobbySessionId; \
+	FString MatchSessionId; \
+}; \
+static inline void FPresenceJoinIntentReceivedDelegate_DelegateWrapper(const FMulticastScriptDelegate& PresenceJoinIntentReceivedDelegate, const FString& DeeplinkMessage, const FString& DestinationApiName, const FString& LobbySessionId, const FString& MatchSessionId) \
+{ \
+	_Script_OnlineSubsystemPico_eventPresenceJoinIntentReceivedDelegate_Parms Parms; \
+	Parms.DeeplinkMessage=DeeplinkMessage; \
+	Parms.DestinationApiName=DestinationApiName; \
+	Parms.LobbySessionId=LobbySessionId; \
+	Parms.MatchSessionId=MatchSessionId; \
+	PresenceJoinIntentReceivedDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_78_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerPresenceGetDestinationsDelegate_Parms \
+{ \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerPresenceGetDestinationsDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerPresenceGetDestinationsDelegate, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerPresenceGetDestinationsDelegate_Parms Parms; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerPresenceGetDestinationsDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_77_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerPresenceSentInvitesDelegate_Parms \
+{ \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerPresenceSentInvitesDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerPresenceSentInvitesDelegate, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerPresenceSentInvitesDelegate_Parms Parms; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerPresenceSentInvitesDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_76_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerPresenceReadSentInvitesDelegate_Parms \
+{ \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerPresenceReadSentInvitesDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerPresenceReadSentInvitesDelegate, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerPresenceReadSentInvitesDelegate_Parms Parms; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerPresenceReadSentInvitesDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_75_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerPresenceSetExtraDelegate_Parms \
+{ \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerPresenceSetExtraDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerPresenceSetExtraDelegate, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerPresenceSetExtraDelegate_Parms Parms; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerPresenceSetExtraDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_74_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerPresenceSetMatchSessionDelegate_Parms \
+{ \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerPresenceSetMatchSessionDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerPresenceSetMatchSessionDelegate, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerPresenceSetMatchSessionDelegate_Parms Parms; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerPresenceSetMatchSessionDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_73_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerPresenceSetLobbySessionDelegate_Parms \
+{ \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerPresenceSetLobbySessionDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerPresenceSetLobbySessionDelegate, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerPresenceSetLobbySessionDelegate_Parms Parms; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerPresenceSetLobbySessionDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_72_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerPresenceSetIsJoinableDelegate_Parms \
+{ \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerPresenceSetIsJoinableDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerPresenceSetIsJoinableDelegate, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerPresenceSetIsJoinableDelegate_Parms Parms; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerPresenceSetIsJoinableDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_71_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerPresenceSetDestinationDelegate_Parms \
+{ \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerPresenceSetDestinationDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerPresenceSetDestinationDelegate, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerPresenceSetDestinationDelegate_Parms Parms; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerPresenceSetDestinationDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_70_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerPresenceSetDelegate_Parms \
+{ \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerPresenceSetDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerPresenceSetDelegate, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerPresenceSetDelegate_Parms Parms; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerPresenceSetDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_69_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerPresenceReadInvitableUserDelegate_Parms \
+{ \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerPresenceReadInvitableUserDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerPresenceReadInvitableUserDelegate, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerPresenceReadInvitableUserDelegate_Parms Parms; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerPresenceReadInvitableUserDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_68_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventOnlineManagerPresenceClearDelegate_Parms \
+{ \
+	bool IsSuccessed; \
+	FString ErrorMessage; \
+}; \
+static inline void FOnlineManagerPresenceClearDelegate_DelegateWrapper(const FScriptDelegate& OnlineManagerPresenceClearDelegate, bool IsSuccessed, const FString& ErrorMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventOnlineManagerPresenceClearDelegate_Parms Parms; \
+	Parms.IsSuccessed=IsSuccessed ? true : false; \
+	Parms.ErrorMessage=ErrorMessage; \
+	OnlineManagerPresenceClearDelegate.ProcessDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_65_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnlineManagerRtcGetTokenDelegate_Parms \
 { \
 	FString Token; \
@@ -421,7 +703,145 @@ static inline void FOnlineManagerRtcGetTokenDelegate_DelegateWrapper(const FScri
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_242_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_63_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventRtcOnTokenWilExpireCallbackDelegate_Parms \
+{ \
+	FString StringMessage; \
+}; \
+static inline void FRtcOnTokenWilExpireCallbackDelegate_DelegateWrapper(const FMulticastScriptDelegate& RtcOnTokenWilExpireCallbackDelegate, const FString& StringMessage) \
+{ \
+	_Script_OnlineSubsystemPico_eventRtcOnTokenWilExpireCallbackDelegate_Parms Parms; \
+	Parms.StringMessage=StringMessage; \
+	RtcOnTokenWilExpireCallbackDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_62_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventRtcUserMessageReceivedDelegate_Parms \
+{ \
+	FString RoomId; \
+	FString UserId; \
+	FString Message; \
+}; \
+static inline void FRtcUserMessageReceivedDelegate_DelegateWrapper(const FMulticastScriptDelegate& RtcUserMessageReceivedDelegate, const FString& RoomId, const FString& UserId, const FString& Message) \
+{ \
+	_Script_OnlineSubsystemPico_eventRtcUserMessageReceivedDelegate_Parms Parms; \
+	Parms.RoomId=RoomId; \
+	Parms.UserId=UserId; \
+	Parms.Message=Message; \
+	RtcUserMessageReceivedDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_61_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventRtcRoomMessageReceivedDelegate_Parms \
+{ \
+	FString RoomId; \
+	FString UserId; \
+	FString Message; \
+}; \
+static inline void FRtcRoomMessageReceivedDelegate_DelegateWrapper(const FMulticastScriptDelegate& RtcRoomMessageReceivedDelegate, const FString& RoomId, const FString& UserId, const FString& Message) \
+{ \
+	_Script_OnlineSubsystemPico_eventRtcRoomMessageReceivedDelegate_Parms Parms; \
+	Parms.RoomId=RoomId; \
+	Parms.UserId=UserId; \
+	Parms.Message=Message; \
+	RtcRoomMessageReceivedDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_60_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventRtcBinaryMessageReceivedDelegate_Parms \
+{ \
+	FString RoomId; \
+	FString UserId; \
+	FString Info; \
+}; \
+static inline void FRtcBinaryMessageReceivedDelegate_DelegateWrapper(const FMulticastScriptDelegate& RtcBinaryMessageReceivedDelegate, const FString& RoomId, const FString& UserId, const FString& Info) \
+{ \
+	_Script_OnlineSubsystemPico_eventRtcBinaryMessageReceivedDelegate_Parms Parms; \
+	Parms.RoomId=RoomId; \
+	Parms.UserId=UserId; \
+	Parms.Info=Info; \
+	RtcBinaryMessageReceivedDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_59_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventRtcMessageSendResultDelegate_Parms \
+{ \
+	int64 MessageId; \
+	int32 Error; \
+	FString RoomId; \
+}; \
+static inline void FRtcMessageSendResultDelegate_DelegateWrapper(const FMulticastScriptDelegate& RtcMessageSendResultDelegate, int64 MessageId, int32 Error, const FString& RoomId) \
+{ \
+	_Script_OnlineSubsystemPico_eventRtcMessageSendResultDelegate_Parms Parms; \
+	Parms.MessageId=MessageId; \
+	Parms.Error=Error; \
+	Parms.RoomId=RoomId; \
+	RtcMessageSendResultDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_58_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventGetRtcStreamSyncInfoDelegate_Parms \
+{ \
+	FString RoomId; \
+	FString UserId; \
+	ERtcStreamIndex StreamIndex; \
+	ERtcSyncInfoStreamType RtcSyncInfoStreamType; \
+	FString Info; \
+}; \
+static inline void FGetRtcStreamSyncInfoDelegate_DelegateWrapper(const FMulticastScriptDelegate& GetRtcStreamSyncInfoDelegate, const FString& RoomId, const FString& UserId, ERtcStreamIndex StreamIndex, ERtcSyncInfoStreamType RtcSyncInfoStreamType, const FString& Info) \
+{ \
+	_Script_OnlineSubsystemPico_eventGetRtcStreamSyncInfoDelegate_Parms Parms; \
+	Parms.RoomId=RoomId; \
+	Parms.UserId=UserId; \
+	Parms.StreamIndex=StreamIndex; \
+	Parms.RtcSyncInfoStreamType=RtcSyncInfoStreamType; \
+	Parms.Info=Info; \
+	GetRtcStreamSyncInfoDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_57_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventRtcUserUnPublishInfoDelegate_Parms \
+{ \
+	FString RoomId; \
+	FString UserId; \
+	ERtcMediaStreamType MediaStreamType; \
+	ERtcStreamRemoveReason Reason; \
+}; \
+static inline void FRtcUserUnPublishInfoDelegate_DelegateWrapper(const FMulticastScriptDelegate& RtcUserUnPublishInfoDelegate, const FString& RoomId, const FString& UserId, ERtcMediaStreamType MediaStreamType, ERtcStreamRemoveReason Reason) \
+{ \
+	_Script_OnlineSubsystemPico_eventRtcUserUnPublishInfoDelegate_Parms Parms; \
+	Parms.RoomId=RoomId; \
+	Parms.UserId=UserId; \
+	Parms.MediaStreamType=MediaStreamType; \
+	Parms.Reason=Reason; \
+	RtcUserUnPublishInfoDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_56_DELEGATE \
+struct _Script_OnlineSubsystemPico_eventRtcUserPublishInfoDelegate_Parms \
+{ \
+	FString RoomId; \
+	FString UserId; \
+	ERtcMediaStreamType MediaStreamType; \
+}; \
+static inline void FRtcUserPublishInfoDelegate_DelegateWrapper(const FMulticastScriptDelegate& RtcUserPublishInfoDelegate, const FString& RoomId, const FString& UserId, ERtcMediaStreamType MediaStreamType) \
+{ \
+	_Script_OnlineSubsystemPico_eventRtcUserPublishInfoDelegate_Parms Parms; \
+	Parms.RoomId=RoomId; \
+	Parms.UserId=UserId; \
+	Parms.MediaStreamType=MediaStreamType; \
+	RtcUserPublishInfoDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_53_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcUserStopAudioCaptureDelegate_Parms \
 { \
 	FString StringMessage; \
@@ -434,7 +854,7 @@ static inline void FRtcUserStopAudioCaptureDelegate_DelegateWrapper(const FMulti
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_241_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_52_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcUserStartAudioCaptureDelegate_Parms \
 { \
 	FString StringMessage; \
@@ -447,7 +867,7 @@ static inline void FRtcUserStartAudioCaptureDelegate_DelegateWrapper(const FMult
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_240_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_51_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcConnectStateChangedDelegate_Parms \
 { \
 	FString StringMessage; \
@@ -460,7 +880,7 @@ static inline void FRtcConnectStateChangedDelegate_DelegateWrapper(const FMultic
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_239_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_50_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcErrorDelegate_Parms \
 { \
 	int32 MessageCode; \
@@ -473,7 +893,7 @@ static inline void FRtcErrorDelegate_DelegateWrapper(const FMulticastScriptDeleg
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_238_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_49_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcWarnDelegate_Parms \
 { \
 	int32 MessageCode; \
@@ -486,7 +906,7 @@ static inline void FRtcWarnDelegate_DelegateWrapper(const FMulticastScriptDelega
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_236_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_47_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcRemoteAudioPropertiesReportDelegate_Parms \
 { \
 	int32 TotalRemoteVolume; \
@@ -507,7 +927,7 @@ static inline void FRtcRemoteAudioPropertiesReportDelegate_DelegateWrapper(const
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_235_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_46_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcLocalAudioPropertiesReportDelegate_Parms \
 { \
 	TArray<ERtcStreamIndex> StreamIndexs; \
@@ -522,7 +942,7 @@ static inline void FRtcLocalAudioPropertiesReportDelegate_DelegateWrapper(const 
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_234_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_45_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcMediaDeviceChangeInfoDelegate_Parms \
 { \
 	FString DeviceId; \
@@ -541,7 +961,7 @@ static inline void FRtcMediaDeviceChangeInfoDelegate_DelegateWrapper(const FMult
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_233_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_44_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcAudioChangePlaybackDeviceDelegate_Parms \
 { \
 	ERtcAudioPlaybackDevice RtcAudioPlaybackDevice; \
@@ -554,7 +974,7 @@ static inline void FRtcAudioChangePlaybackDeviceDelegate_DelegateWrapper(const F
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_232_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_43_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcRoomMuteStateDelegate_Parms \
 { \
 	FString UserId; \
@@ -569,7 +989,7 @@ static inline void FRtcRoomMuteStateDelegate_DelegateWrapper(const FMulticastScr
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_231_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_42_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcRoomErrorDelegate_Parms \
 { \
 	int32 Code; \
@@ -584,7 +1004,7 @@ static inline void FRtcRoomErrorDelegate_DelegateWrapper(const FMulticastScriptD
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_230_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_41_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcRoomWarnDelegate_Parms \
 { \
 	int32 Code; \
@@ -599,7 +1019,7 @@ static inline void FRtcRoomWarnDelegate_DelegateWrapper(const FMulticastScriptDe
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_229_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_40_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcUserLeaveInfoDelegate_Parms \
 { \
 	FString UserId; \
@@ -616,7 +1036,7 @@ static inline void FRtcUserLeaveInfoDelegate_DelegateWrapper(const FMulticastScr
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_228_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_39_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcUserJoinInfoDelegate_Parms \
 { \
 	FString UserId; \
@@ -635,7 +1055,7 @@ static inline void FRtcUserJoinInfoDelegate_DelegateWrapper(const FMulticastScri
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_227_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_38_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcRoomStateDelegate_Parms \
 { \
 	int32 TotalDuration; \
@@ -652,7 +1072,7 @@ static inline void FRtcRoomStateDelegate_DelegateWrapper(const FMulticastScriptD
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_226_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_37_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcLeaveRoomResultDelegate_Parms \
 { \
 	FString RoomId; \
@@ -665,7 +1085,7 @@ static inline void FRtcLeaveRoomResultDelegate_DelegateWrapper(const FMulticastS
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_225_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_36_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventRtcJoinRoomResultDelegate_Parms \
 { \
 	FString RoomId; \
@@ -686,7 +1106,7 @@ static inline void FRtcJoinRoomResultDelegate_DelegateWrapper(const FMulticastSc
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_222_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_33_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnlineManagerReadFriendListDelegate_Parms \
 { \
 	int32 LocalUserNum; \
@@ -705,7 +1125,7 @@ static inline void FOnlineManagerReadFriendListDelegate_DelegateWrapper(const FS
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_219_DELEGATE \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_30_DELEGATE \
 struct _Script_OnlineSubsystemPico_eventOnlineManagerLoginCompleteDelegate_Parms \
 { \
 	int32 LocalUserNum; \
@@ -724,10 +1144,10 @@ static inline void FOnlineManagerLoginCompleteDelegate_DelegateWrapper(const FSc
 }
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_SPARSE_DATA
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_RPC_WRAPPERS
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_RPC_WRAPPERS_NO_PURE_DECLS
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_INCLASS_NO_PURE_DECLS \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_SPARSE_DATA
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_RPC_WRAPPERS
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_RPC_WRAPPERS_NO_PURE_DECLS
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUOnlineSubsystemPicoManager(); \
 	friend struct Z_Construct_UClass_UOnlineSubsystemPicoManager_Statics; \
@@ -736,7 +1156,7 @@ public: \
 	DECLARE_SERIALIZER(UOnlineSubsystemPicoManager)
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_INCLASS \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_INCLASS \
 private: \
 	static void StaticRegisterNativesUOnlineSubsystemPicoManager(); \
 	friend struct Z_Construct_UClass_UOnlineSubsystemPicoManager_Statics; \
@@ -745,7 +1165,7 @@ public: \
 	DECLARE_SERIALIZER(UOnlineSubsystemPicoManager)
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_STANDARD_CONSTRUCTORS \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UOnlineSubsystemPicoManager(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UOnlineSubsystemPicoManager) \
@@ -758,7 +1178,7 @@ private: \
 public:
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_ENHANCED_CONSTRUCTORS \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UOnlineSubsystemPicoManager(UOnlineSubsystemPicoManager&&); \
@@ -769,28 +1189,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UOnlineSubsystemPicoManager)
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_PRIVATE_PROPERTY_OFFSET
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_274_PROLOG
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_GENERATED_BODY_LEGACY \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_PRIVATE_PROPERTY_OFFSET
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_130_PROLOG
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_PRIVATE_PROPERTY_OFFSET \
-	Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_SPARSE_DATA \
-	Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_RPC_WRAPPERS \
-	Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_INCLASS \
-	Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_STANDARD_CONSTRUCTORS \
+	Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_PRIVATE_PROPERTY_OFFSET \
+	Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_SPARSE_DATA \
+	Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_RPC_WRAPPERS \
+	Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_INCLASS \
+	Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_GENERATED_BODY \
+#define Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_PRIVATE_PROPERTY_OFFSET \
-	Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_SPARSE_DATA \
-	Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_RPC_WRAPPERS_NO_PURE_DECLS \
-	Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_INCLASS_NO_PURE_DECLS \
-	Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_277_ENHANCED_CONSTRUCTORS \
+	Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_PRIVATE_PROPERTY_OFFSET \
+	Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_SPARSE_DATA \
+	Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_RPC_WRAPPERS_NO_PURE_DECLS \
+	Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_INCLASS_NO_PURE_DECLS \
+	Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h_133_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -798,48 +1218,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> ONLINESUBSYSTEMPICO_API UClass* StaticClass<class UOnlineSubsystemPicoManager>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID Stereo_Layer_main_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h
+#define CURRENT_FILE_ID Stereo_Layer_Plugins_OnlineSubsystemPico_Source_OnlineSubsystemPico_Private_OnlineSubsystemPicoManager_h
 
-
-#define FOREACH_ENUM_EONLINESESSIONSTATEPICOTYPE(op) \
-	op(EOnlineSessionStatePicoType::NoSession) \
-	op(EOnlineSessionStatePicoType::Creating) \
-	op(EOnlineSessionStatePicoType::Pending) \
-	op(EOnlineSessionStatePicoType::Starting) \
-	op(EOnlineSessionStatePicoType::InProgress) \
-	op(EOnlineSessionStatePicoType::Ending) \
-	op(EOnlineSessionStatePicoType::Ended) \
-	op(EOnlineSessionStatePicoType::Destroying) 
-
-enum class EOnlineSessionStatePicoType : uint8;
-template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<EOnlineSessionStatePicoType>();
-
-#define FOREACH_ENUM_EONJOINSESSIONCOMPLETERESULTPICOTYPE(op) \
-	op(EOnJoinSessionCompleteResultPicoType::Success) \
-	op(EOnJoinSessionCompleteResultPicoType::SessionIsFull) \
-	op(EOnJoinSessionCompleteResultPicoType::SessionDoesNotExist) \
-	op(EOnJoinSessionCompleteResultPicoType::CouldNotRetrieveAddress) \
-	op(EOnJoinSessionCompleteResultPicoType::AlreadyInSession) \
-	op(EOnJoinSessionCompleteResultPicoType::UnknownError) 
-
-enum class EOnJoinSessionCompleteResultPicoType : uint8;
-template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<EOnJoinSessionCompleteResultPicoType>();
-
-#define FOREACH_ENUM_EONLINEASYNCTASKSTATEPICOTYPE(op) \
-	op(EOnlineAsyncTaskStatePicoType::NotStarted) \
-	op(EOnlineAsyncTaskStatePicoType::InProgress) \
-	op(EOnlineAsyncTaskStatePicoType::Done) \
-	op(EOnlineAsyncTaskStatePicoType::Failed) 
-
-enum class EOnlineAsyncTaskStatePicoType : uint8;
-template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<EOnlineAsyncTaskStatePicoType>();
-
-#define FOREACH_ENUM_EPRESENCESTATUS(op) \
-	op(EPresenceStatus::Unknow) \
-	op(EPresenceStatus::OnLine) \
-	op(EPresenceStatus::OffLine) 
-
-enum class EPresenceStatus : uint8;
-template<> ONLINESUBSYSTEMPICO_API UEnum* StaticEnum<EPresenceStatus>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

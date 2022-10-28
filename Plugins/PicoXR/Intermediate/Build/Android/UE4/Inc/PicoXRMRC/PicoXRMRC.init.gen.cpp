@@ -10,19 +10,19 @@
 #pragma warning (disable : 4883)
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-void EmptyLinkFunctionForGeneratedCodePicoXRMRC_init() {}
-	UPackage* Z_Construct_UPackage__Script_PicoXRMRC()
+void EmptyLinkFunctionForGeneratedCodePICOXRMRC_init() {}
+	UPackage* Z_Construct_UPackage__Script_PICOXRMRC()
 	{
 		static UPackage* ReturnPackage = nullptr;
 		if (!ReturnPackage)
 		{
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
-				"/Script/PicoXRMRC",
+				"/Script/PICOXRMRC",
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x0C39FAE2,
-				0x50ABF0AA,
+				0xDD174F64,
+				0x424EECC8,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

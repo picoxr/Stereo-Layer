@@ -8,24 +8,92 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+enum class EPICOXRVibrateController : uint8;
+enum class EPICOXRChannelFlip : uint8;
+enum class EPICOXRActiveInputDevice : uint8;
+enum class EPICOXRHandType : uint8;
+enum class EPICOXRHandFinger : uint8;
+enum class EPICOXRHandTrackingConfidence : uint8;
+struct FTransform;
+enum class EPICOXRHandJoint : uint8;
+struct FVector;
+struct FQuat;
+class USoundWave;
+enum class EPICOXRCacheConfig : uint8;
 enum class EPxrControllerKeyMap : uint8;
 enum class EControllerHand : uint8;
-struct FVector;
 struct FRotator;
-enum class EPicoXRControllerType : uint8;
-enum class EPicoXRHandedness : uint8;
-enum class EPicoXRArmModelJoint : uint8;
-enum class EPicoXRGazeBehavior : uint8;
-enum class EPicoXRControllerDeviceType : uint8;
+enum class EPICOXRControllerType : uint8;
+enum class EPICOXRHandedness : uint8;
+enum class EPICOXRArmModelJoint : uint8;
+enum class EPICOXRGazeBehavior : uint8;
+enum class EPICOXRControllerDeviceType : uint8;
 #ifdef PICOXRINPUT_PXR_InputFunctionLibrary_generated_h
 #error "PXR_InputFunctionLibrary.generated.h already included, missing '#pragma once' in PXR_InputFunctionLibrary.h"
 #endif
 #define PICOXRINPUT_PXR_InputFunctionLibrary_generated_h
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_SPARSE_DATA
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_RPC_WRAPPERS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_202_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FPHFData_Statics; \
+	static class UScriptStruct* StaticStruct(); \
+	typedef FTableRowBase Super;
+
+
+template<> PICOXRINPUT_API UScriptStruct* StaticStruct<struct FPHFData>();
+
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_191_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FPHFDataContent_Statics; \
+	PICOXRINPUT_API static class UScriptStruct* StaticStruct();
+
+
+template<> PICOXRINPUT_API UScriptStruct* StaticStruct<struct FPHFDataContent>();
+
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_172_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FAudioClipData_Statics; \
+	PICOXRINPUT_API static class UScriptStruct* StaticStruct();
+
+
+template<> PICOXRINPUT_API UScriptStruct* StaticStruct<struct FAudioClipData>();
+
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_SPARSE_DATA
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execPXR_UpdateVibrateParams); \
+	DECLARE_FUNCTION(execPXR_ResumeVibrate); \
+	DECLARE_FUNCTION(execPXR_PauseVibrate); \
+	DECLARE_FUNCTION(execPXR_StartVibrateByPHF); \
+	DECLARE_FUNCTION(execGetActiveInputDevice); \
+	DECLARE_FUNCTION(execGetFingerPinchStrength); \
+	DECLARE_FUNCTION(execGetFingerIsPinching); \
+	DECLARE_FUNCTION(execGetDominantHand); \
+	DECLARE_FUNCTION(execIsHandTrackingEnabled); \
+	DECLARE_FUNCTION(execGetClickStrength); \
+	DECLARE_FUNCTION(execGetHandScale); \
+	DECLARE_FUNCTION(execGetTrackingConfidence); \
+	DECLARE_FUNCTION(execIsMenuPressed); \
+	DECLARE_FUNCTION(execIsDominantHand); \
+	DECLARE_FUNCTION(execIsSystemGestureInProgress); \
+	DECLARE_FUNCTION(execIsAimRayTouchedValid); \
+	DECLARE_FUNCTION(execIsAimValid); \
+	DECLARE_FUNCTION(execIsHandTracked); \
+	DECLARE_FUNCTION(execGetPointerPose); \
+	DECLARE_FUNCTION(execGetHandRootPose); \
+	DECLARE_FUNCTION(execIsBonePositionTracked); \
+	DECLARE_FUNCTION(execIsBoneOrientationTracked); \
+	DECLARE_FUNCTION(execIsBonePositionValid); \
+	DECLARE_FUNCTION(execIsBoneOrientationValid); \
+	DECLARE_FUNCTION(execGetBoneRadii); \
+	DECLARE_FUNCTION(execGetBoneLocation); \
+	DECLARE_FUNCTION(execGetBoneRotation); \
+	DECLARE_FUNCTION(execPXR_ClearVibrateByCache); \
+	DECLARE_FUNCTION(execPXR_StartVibrateByCache); \
+	DECLARE_FUNCTION(execPXR_SaveVibrateByCache); \
 	DECLARE_FUNCTION(execPXR_SetControllerEnableKey); \
+	DECLARE_FUNCTION(execPXR_StartVibrateBySharem); \
+	DECLARE_FUNCTION(execPXR_SetControllerVibrationEvent); \
+	DECLARE_FUNCTION(execPXR_StopControllerVCMotor); \
+	DECLARE_FUNCTION(execPXR_SetControllerAmp); \
+	DECLARE_FUNCTION(execPXR_StartControllerVCMotor); \
 	DECLARE_FUNCTION(execPXR_GetControllerPredictedLocationAndRotation); \
 	DECLARE_FUNCTION(execPXR_SetControllerOriginOffset); \
 	DECLARE_FUNCTION(execPXR_GetControllerEnableHomekey); \
@@ -43,9 +111,44 @@ enum class EPicoXRControllerDeviceType : uint8;
 	DECLARE_FUNCTION(execPXR_GetControllerPower);
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execPXR_UpdateVibrateParams); \
+	DECLARE_FUNCTION(execPXR_ResumeVibrate); \
+	DECLARE_FUNCTION(execPXR_PauseVibrate); \
+	DECLARE_FUNCTION(execPXR_StartVibrateByPHF); \
+	DECLARE_FUNCTION(execGetActiveInputDevice); \
+	DECLARE_FUNCTION(execGetFingerPinchStrength); \
+	DECLARE_FUNCTION(execGetFingerIsPinching); \
+	DECLARE_FUNCTION(execGetDominantHand); \
+	DECLARE_FUNCTION(execIsHandTrackingEnabled); \
+	DECLARE_FUNCTION(execGetClickStrength); \
+	DECLARE_FUNCTION(execGetHandScale); \
+	DECLARE_FUNCTION(execGetTrackingConfidence); \
+	DECLARE_FUNCTION(execIsMenuPressed); \
+	DECLARE_FUNCTION(execIsDominantHand); \
+	DECLARE_FUNCTION(execIsSystemGestureInProgress); \
+	DECLARE_FUNCTION(execIsAimRayTouchedValid); \
+	DECLARE_FUNCTION(execIsAimValid); \
+	DECLARE_FUNCTION(execIsHandTracked); \
+	DECLARE_FUNCTION(execGetPointerPose); \
+	DECLARE_FUNCTION(execGetHandRootPose); \
+	DECLARE_FUNCTION(execIsBonePositionTracked); \
+	DECLARE_FUNCTION(execIsBoneOrientationTracked); \
+	DECLARE_FUNCTION(execIsBonePositionValid); \
+	DECLARE_FUNCTION(execIsBoneOrientationValid); \
+	DECLARE_FUNCTION(execGetBoneRadii); \
+	DECLARE_FUNCTION(execGetBoneLocation); \
+	DECLARE_FUNCTION(execGetBoneRotation); \
+	DECLARE_FUNCTION(execPXR_ClearVibrateByCache); \
+	DECLARE_FUNCTION(execPXR_StartVibrateByCache); \
+	DECLARE_FUNCTION(execPXR_SaveVibrateByCache); \
 	DECLARE_FUNCTION(execPXR_SetControllerEnableKey); \
+	DECLARE_FUNCTION(execPXR_StartVibrateBySharem); \
+	DECLARE_FUNCTION(execPXR_SetControllerVibrationEvent); \
+	DECLARE_FUNCTION(execPXR_StopControllerVCMotor); \
+	DECLARE_FUNCTION(execPXR_SetControllerAmp); \
+	DECLARE_FUNCTION(execPXR_StartControllerVCMotor); \
 	DECLARE_FUNCTION(execPXR_GetControllerPredictedLocationAndRotation); \
 	DECLARE_FUNCTION(execPXR_SetControllerOriginOffset); \
 	DECLARE_FUNCTION(execPXR_GetControllerEnableHomekey); \
@@ -63,80 +166,78 @@ enum class EPicoXRControllerDeviceType : uint8;
 	DECLARE_FUNCTION(execPXR_GetControllerPower);
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_INCLASS_NO_PURE_DECLS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_INCLASS_NO_PURE_DECLS \
 private: \
-	static void StaticRegisterNativesUPicoXRInputFunctionLibrary(); \
-	friend struct Z_Construct_UClass_UPicoXRInputFunctionLibrary_Statics; \
+	static void StaticRegisterNativesUPICOXRInputFunctionLibrary(); \
+	friend struct Z_Construct_UClass_UPICOXRInputFunctionLibrary_Statics; \
 public: \
-	DECLARE_CLASS(UPicoXRInputFunctionLibrary, UBlueprintFunctionLibrary, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/PicoXRInput"), NO_API) \
-	DECLARE_SERIALIZER(UPicoXRInputFunctionLibrary)
+	DECLARE_CLASS(UPICOXRInputFunctionLibrary, UBlueprintFunctionLibrary, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/PICOXRInput"), NO_API) \
+	DECLARE_SERIALIZER(UPICOXRInputFunctionLibrary)
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_INCLASS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_INCLASS \
 private: \
-	static void StaticRegisterNativesUPicoXRInputFunctionLibrary(); \
-	friend struct Z_Construct_UClass_UPicoXRInputFunctionLibrary_Statics; \
+	static void StaticRegisterNativesUPICOXRInputFunctionLibrary(); \
+	friend struct Z_Construct_UClass_UPICOXRInputFunctionLibrary_Statics; \
 public: \
-	DECLARE_CLASS(UPicoXRInputFunctionLibrary, UBlueprintFunctionLibrary, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/PicoXRInput"), NO_API) \
-	DECLARE_SERIALIZER(UPicoXRInputFunctionLibrary)
+	DECLARE_CLASS(UPICOXRInputFunctionLibrary, UBlueprintFunctionLibrary, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/PICOXRInput"), NO_API) \
+	DECLARE_SERIALIZER(UPICOXRInputFunctionLibrary)
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_STANDARD_CONSTRUCTORS \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UPicoXRInputFunctionLibrary(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UPicoXRInputFunctionLibrary) \
-	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPicoXRInputFunctionLibrary); \
-	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPicoXRInputFunctionLibrary); \
+	NO_API UPICOXRInputFunctionLibrary(const FObjectInitializer& ObjectInitializer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UPICOXRInputFunctionLibrary) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPICOXRInputFunctionLibrary); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPICOXRInputFunctionLibrary); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API UPicoXRInputFunctionLibrary(UPicoXRInputFunctionLibrary&&); \
-	NO_API UPicoXRInputFunctionLibrary(const UPicoXRInputFunctionLibrary&); \
+	NO_API UPICOXRInputFunctionLibrary(UPICOXRInputFunctionLibrary&&); \
+	NO_API UPICOXRInputFunctionLibrary(const UPICOXRInputFunctionLibrary&); \
 public:
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UPicoXRInputFunctionLibrary(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
-	NO_API UPicoXRInputFunctionLibrary(UPicoXRInputFunctionLibrary&&); \
-	NO_API UPicoXRInputFunctionLibrary(const UPicoXRInputFunctionLibrary&); \
+	NO_API UPICOXRInputFunctionLibrary(UPICOXRInputFunctionLibrary&&); \
+	NO_API UPICOXRInputFunctionLibrary(const UPICOXRInputFunctionLibrary&); \
 public: \
-	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPicoXRInputFunctionLibrary); \
-	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPicoXRInputFunctionLibrary); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UPicoXRInputFunctionLibrary)
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPICOXRInputFunctionLibrary); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPICOXRInputFunctionLibrary); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UPICOXRInputFunctionLibrary)
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_PRIVATE_PROPERTY_OFFSET
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_73_PROLOG
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_GENERATED_BODY_LEGACY \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_PRIVATE_PROPERTY_OFFSET
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_208_PROLOG
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_PRIVATE_PROPERTY_OFFSET \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_SPARSE_DATA \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_RPC_WRAPPERS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_INCLASS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_STANDARD_CONSTRUCTORS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_PRIVATE_PROPERTY_OFFSET \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_SPARSE_DATA \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_RPC_WRAPPERS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_INCLASS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_GENERATED_BODY \
+#define Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_PRIVATE_PROPERTY_OFFSET \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_SPARSE_DATA \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_RPC_WRAPPERS_NO_PURE_DECLS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_INCLASS_NO_PURE_DECLS \
-	Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h_76_ENHANCED_CONSTRUCTORS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_PRIVATE_PROPERTY_OFFSET \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_SPARSE_DATA \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_RPC_WRAPPERS_NO_PURE_DECLS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_INCLASS_NO_PURE_DECLS \
+	Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h_211_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-template<> PICOXRINPUT_API UClass* StaticClass<class UPicoXRInputFunctionLibrary>();
+template<> PICOXRINPUT_API UClass* StaticClass<class UPICOXRInputFunctionLibrary>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID Stereo_Layer_main_Plugins_PicoXR_Source_PicoXRInput_Public_PXR_InputFunctionLibrary_h
+#define CURRENT_FILE_ID Stereo_Layer_Plugins_PICOXR_Source_PICOXRInput_Public_PXR_InputFunctionLibrary_h
 
 
 #define FOREACH_ENUM_EPXRCONTROLLERKEYMAP(op) \
@@ -161,45 +262,133 @@ template<> PICOXRINPUT_API UClass* StaticClass<class UPicoXRInputFunctionLibrary
 enum class EPxrControllerKeyMap : uint8;
 template<> PICOXRINPUT_API UEnum* StaticEnum<EPxrControllerKeyMap>();
 
-#define FOREACH_ENUM_EPICOXRCONTROLLERDEVICETYPE(op) \
-	op(EPicoXRControllerDeviceType::UnKnown) \
-	op(EPicoXRControllerDeviceType::G2) \
-	op(EPicoXRControllerDeviceType::Neo2) \
-	op(EPicoXRControllerDeviceType::Neo3) 
+#define FOREACH_ENUM_EPICOXRCACHECONFIG(op) \
+	op(EPICOXRCacheConfig::CacheAndVibrate) \
+	op(EPICOXRCacheConfig::CacheNoVibrate) 
 
-enum class EPicoXRControllerDeviceType : uint8;
-template<> PICOXRINPUT_API UEnum* StaticEnum<EPicoXRControllerDeviceType>();
+enum class EPICOXRCacheConfig : uint8;
+template<> PICOXRINPUT_API UEnum* StaticEnum<EPICOXRCacheConfig>();
+
+#define FOREACH_ENUM_EPICOXRCHANNELFLIP(op) \
+	op(EPICOXRChannelFlip::No) \
+	op(EPICOXRChannelFlip::Yes) 
+
+enum class EPICOXRChannelFlip : uint8;
+template<> PICOXRINPUT_API UEnum* StaticEnum<EPICOXRChannelFlip>();
+
+#define FOREACH_ENUM_EPICOXRVIBRATECONTROLLER(op) \
+	op(EPICOXRVibrateController::No) \
+	op(EPICOXRVibrateController::Left) \
+	op(EPICOXRVibrateController::Right) \
+	op(EPICOXRVibrateController::LeftAndRight) 
+
+enum class EPICOXRVibrateController : uint8;
+template<> PICOXRINPUT_API UEnum* StaticEnum<EPICOXRVibrateController>();
+
+#define FOREACH_ENUM_EPICOXRCONTROLLERDEVICETYPE(op) \
+	op(EPICOXRControllerDeviceType::UnKnown) \
+	op(EPICOXRControllerDeviceType::G2) \
+	op(EPICOXRControllerDeviceType::Neo2) \
+	op(EPICOXRControllerDeviceType::Neo3) \
+	op(EPICOXRControllerDeviceType::PICO_4) 
+
+enum class EPICOXRControllerDeviceType : uint8;
+template<> PICOXRINPUT_API UEnum* StaticEnum<EPICOXRControllerDeviceType>();
 
 #define FOREACH_ENUM_EPICOXRGAZEBEHAVIOR(op) \
-	op(EPicoXRGazeBehavior::Never) \
-	op(EPicoXRGazeBehavior::DuringMotion) \
-	op(EPicoXRGazeBehavior::Always) 
+	op(EPICOXRGazeBehavior::Never) \
+	op(EPICOXRGazeBehavior::DuringMotion) \
+	op(EPICOXRGazeBehavior::Always) 
 
-enum class EPicoXRGazeBehavior : uint8;
-template<> PICOXRINPUT_API UEnum* StaticEnum<EPicoXRGazeBehavior>();
+enum class EPICOXRGazeBehavior : uint8;
+template<> PICOXRINPUT_API UEnum* StaticEnum<EPICOXRGazeBehavior>();
 
 #define FOREACH_ENUM_EPICOXRARMMODELJOINT(op) \
-	op(EPicoXRArmModelJoint::Controller) \
-	op(EPicoXRArmModelJoint::Wrist) \
-	op(EPicoXRArmModelJoint::Elbow) \
-	op(EPicoXRArmModelJoint::Shoulder) 
+	op(EPICOXRArmModelJoint::Controller) \
+	op(EPICOXRArmModelJoint::Wrist) \
+	op(EPICOXRArmModelJoint::Elbow) \
+	op(EPICOXRArmModelJoint::Shoulder) 
 
-enum class EPicoXRArmModelJoint : uint8;
-template<> PICOXRINPUT_API UEnum* StaticEnum<EPicoXRArmModelJoint>();
+enum class EPICOXRArmModelJoint : uint8;
+template<> PICOXRINPUT_API UEnum* StaticEnum<EPICOXRArmModelJoint>();
 
 #define FOREACH_ENUM_EPICOXRCONTROLLERTYPE(op) \
-	op(EPicoXRControllerType::LeftHand) \
-	op(EPicoXRControllerType::RightHand) \
-	op(EPicoXRControllerType::G2Hand) 
+	op(EPICOXRControllerType::LeftHand) \
+	op(EPICOXRControllerType::RightHand) \
+	op(EPICOXRControllerType::G2Hand) 
 
-enum class EPicoXRControllerType : uint8;
-template<> PICOXRINPUT_API UEnum* StaticEnum<EPicoXRControllerType>();
+enum class EPICOXRControllerType : uint8;
+template<> PICOXRINPUT_API UEnum* StaticEnum<EPICOXRControllerType>();
 
 #define FOREACH_ENUM_EPICOXRHANDEDNESS(op) \
-	op(EPicoXRHandedness::LeftHand) \
-	op(EPicoXRHandedness::RightHand) 
+	op(EPICOXRHandedness::LeftHand) \
+	op(EPICOXRHandedness::RightHand) 
 
-enum class EPicoXRHandedness : uint8;
-template<> PICOXRINPUT_API UEnum* StaticEnum<EPicoXRHandedness>();
+enum class EPICOXRHandedness : uint8;
+template<> PICOXRINPUT_API UEnum* StaticEnum<EPICOXRHandedness>();
+
+#define FOREACH_ENUM_EPICOXRHANDTYPE(op) \
+	op(EPICOXRHandType::None) \
+	op(EPICOXRHandType::HandLeft) \
+	op(EPICOXRHandType::HandRight) 
+
+enum class EPICOXRHandType : uint8;
+template<> PICOXRINPUT_API UEnum* StaticEnum<EPICOXRHandType>();
+
+#define FOREACH_ENUM_EPICOXRHANDJOINT(op) \
+	op(EPICOXRHandJoint::Palm) \
+	op(EPICOXRHandJoint::Wrist) \
+	op(EPICOXRHandJoint::ThumbMetacarpal) \
+	op(EPICOXRHandJoint::ThumbProximal) \
+	op(EPICOXRHandJoint::ThumbDistal) \
+	op(EPICOXRHandJoint::ThumbTip) \
+	op(EPICOXRHandJoint::IndexMetacarpal) \
+	op(EPICOXRHandJoint::IndexProximal) \
+	op(EPICOXRHandJoint::IndexIntermediate) \
+	op(EPICOXRHandJoint::IndexDistal) \
+	op(EPICOXRHandJoint::IndexTip) \
+	op(EPICOXRHandJoint::MiddleMetacarpal) \
+	op(EPICOXRHandJoint::MiddleProximal) \
+	op(EPICOXRHandJoint::MiddleIntermediate) \
+	op(EPICOXRHandJoint::MiddleDistal) \
+	op(EPICOXRHandJoint::MiddleTip) \
+	op(EPICOXRHandJoint::RingMetacarpal) \
+	op(EPICOXRHandJoint::RingProximal) \
+	op(EPICOXRHandJoint::RingIntermediate) \
+	op(EPICOXRHandJoint::RingDistal) \
+	op(EPICOXRHandJoint::RingTip) \
+	op(EPICOXRHandJoint::LittleMetacarpal) \
+	op(EPICOXRHandJoint::LittleProximal) \
+	op(EPICOXRHandJoint::LittleIntermediate) \
+	op(EPICOXRHandJoint::LittleDistal) \
+	op(EPICOXRHandJoint::LittleTip) 
+
+enum class EPICOXRHandJoint : uint8;
+template<> PICOXRINPUT_API UEnum* StaticEnum<EPICOXRHandJoint>();
+
+#define FOREACH_ENUM_EPICOXRHANDFINGER(op) \
+	op(EPICOXRHandFinger::None) \
+	op(EPICOXRHandFinger::Index) \
+	op(EPICOXRHandFinger::Middle) \
+	op(EPICOXRHandFinger::Ring) \
+	op(EPICOXRHandFinger::Pinky) 
+
+enum class EPICOXRHandFinger : uint8;
+template<> PICOXRINPUT_API UEnum* StaticEnum<EPICOXRHandFinger>();
+
+#define FOREACH_ENUM_EPICOXRACTIVEINPUTDEVICE(op) \
+	op(EPICOXRActiveInputDevice::NoneActive) \
+	op(EPICOXRActiveInputDevice::ControllerActive) \
+	op(EPICOXRActiveInputDevice::HandTrackingActive) 
+
+enum class EPICOXRActiveInputDevice : uint8;
+template<> PICOXRINPUT_API UEnum* StaticEnum<EPICOXRActiveInputDevice>();
+
+#define FOREACH_ENUM_EPICOXRHANDTRACKINGCONFIDENCE(op) \
+	op(EPICOXRHandTrackingConfidence::Low) \
+	op(EPICOXRHandTrackingConfidence::High) 
+
+enum class EPICOXRHandTrackingConfidence : uint8;
+template<> PICOXRINPUT_API UEnum* StaticEnum<EPICOXRHandTrackingConfidence>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

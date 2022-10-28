@@ -11,6 +11,7 @@
 DECLARE_DELEGATE_TwoParams(FPicoMessageOnCompleteDelegate, ppfMessageHandle, bool /*bIsTimeOut or bIsError*/);
 DECLARE_MULTICAST_DELEGATE_TwoParams(FPicoMulticastMessageOnCompleteDelegate, ppfMessageHandle, bool);
 
+
 class FOnlineAsyncTaskPico : public FOnlineAsyncTaskBasic<class FOnlineSubsystemPico>
 {
 
@@ -35,27 +36,27 @@ public:
     virtual ~FOnlineAsyncTaskPico()
     {
     }
-    /**
-     *	Get a human readable description of task
-     */
-    virtual FString ToString() const override;
+	/**
+	 *	Get a human readable description of task
+	 */
+	virtual FString ToString() const override;
 
-    /**
-     * Give the async task time to do its work
-     * Can only be called on the async task manager thread
-     */
-    virtual void Tick() override;
+	/**
+	 * Give the async task time to do its work
+	 * Can only be called on the async task manager thread
+	 */
+	virtual void Tick() override;
 
-    /**
-     * Give the async task a chance to marshal its data back to the game thread
-     * Can only be called on the game thread by the async task manager
-     */
-    virtual void Finalize() override;
+	/**
+	 * Give the async task a chance to marshal its data back to the game thread
+	 * Can only be called on the game thread by the async task manager
+	 */
+	virtual void Finalize() override;
 
-    /**
-     *	Async task is given a chance to trigger it's delegates
-     */
-    virtual void TriggerDelegates() override;
+	/**
+	 *	Async task is given a chance to trigger it's delegates
+	 */
+	virtual void TriggerDelegates() override;
 
     /**
      * Check the state of the async task
@@ -133,7 +134,7 @@ class FOnlineAsyncTaskManagerPico : public FOnlineAsyncTaskManager
 private:
     TMap<ppfMessageType, FPicoMulticastMessageOnCompleteDelegate> NotificationMap;
 
-    TMap<ppfRequest, FOnlineAsyncTaskPico*> RequestTaskMap;
+    TMap<uint64, FOnlineAsyncTaskPico*> RequestTaskMap;
 
 protected:
 
@@ -151,6 +152,8 @@ public:
 
     // FOnlineAsyncTaskManager
     virtual void OnlineTick() override;
+
+    void TickTask();
 
     void CollectedRequestTask(ppfRequest Request, FOnlineAsyncTaskPico* InTask);
 
